@@ -1,0 +1,696 @@
+{
+  "version": "hidden_layer_selection_result_v1",
+  "model": "Skywork-Reward-V2-Qwen3-1.7B",
+  "scope": "layer_discovery_only",
+  "candidate_count": 4525,
+  "fold_training": [
+    {
+      "fold": 0,
+      "training_candidates": 3603,
+      "validation_candidates": 922,
+      "training_pairs": 9346,
+      "final_epoch_loss": 0.024368477323192767
+    },
+    {
+      "fold": 1,
+      "training_candidates": 3623,
+      "validation_candidates": 902,
+      "training_pairs": 9215,
+      "final_epoch_loss": 0.024656406383328767
+    },
+    {
+      "fold": 2,
+      "training_candidates": 3642,
+      "validation_candidates": 883,
+      "training_pairs": 9291,
+      "final_epoch_loss": 0.022700556343297644
+    },
+    {
+      "fold": 3,
+      "training_candidates": 3630,
+      "validation_candidates": 895,
+      "training_pairs": 9115,
+      "final_epoch_loss": 0.02464914309066269
+    },
+    {
+      "fold": 4,
+      "training_candidates": 3602,
+      "validation_candidates": 923,
+      "training_pairs": 9089,
+      "final_epoch_loss": 0.024198635811958982
+    }
+  ],
+  "layer_results": [
+    {
+      "layer": 1,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.6705882352941176,
+        "pair_macro_strict": 0.7732087173447468
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.6197183098591549,
+        "pair_macro_strict": 0.5940051273294483
+      },
+      "dataset_macro_pair_macro_strict": 0.6836069223370975,
+      "dataset_macro_top1": 0.6451532725766362,
+      "fold_macro_pair_scores": [
+        0.7039062495192059,
+        0.699492476605089,
+        0.648833641119618,
+        0.7045884598011699,
+        0.6599243210784702
+      ],
+      "standard_error": 0.011988228765237573
+    },
+    {
+      "layer": 2,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.6411764705882353,
+        "pair_macro_strict": 0.7605647933221462
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.6408450704225352,
+        "pair_macro_strict": 0.6209071739051618
+      },
+      "dataset_macro_pair_macro_strict": 0.690735983613654,
+      "dataset_macro_top1": 0.6410107705053854,
+      "fold_macro_pair_scores": [
+        0.6551959454742162,
+        0.6793898984418942,
+        0.6438693290058837,
+        0.7453020587605672,
+        0.7308655362883305
+      ],
+      "standard_error": 0.020218767315815768
+    },
+    {
+      "layer": 3,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.5823529411764706,
+        "pair_macro_strict": 0.706874134852076
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.6408450704225352,
+        "pair_macro_strict": 0.6162651657577463
+      },
+      "dataset_macro_pair_macro_strict": 0.6615696503049111,
+      "dataset_macro_top1": 0.6115990057995029,
+      "fold_macro_pair_scores": [
+        0.6468373516297578,
+        0.6746869881787749,
+        0.6230556733182784,
+        0.7232034378436689,
+        0.6403747714606434
+      ],
+      "standard_error": 0.017493368800321516
+    },
+    {
+      "layer": 4,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.5882352941176471,
+        "pair_macro_strict": 0.7128785287424995
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.6690140845070423,
+        "pair_macro_strict": 0.6169742756312173
+      },
+      "dataset_macro_pair_macro_strict": 0.6649264021868584,
+      "dataset_macro_top1": 0.6286246893123446,
+      "fold_macro_pair_scores": [
+        0.6329243026618786,
+        0.6886794063002046,
+        0.6250169743013756,
+        0.7052236483171357,
+        0.6738111833700069
+      ],
+      "standard_error": 0.015626419748016828
+    },
+    {
+      "layer": 5,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.6647058823529411,
+        "pair_macro_strict": 0.7482626292552764
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.6690140845070423,
+        "pair_macro_strict": 0.6155370885495381
+      },
+      "dataset_macro_pair_macro_strict": 0.6818998589024072,
+      "dataset_macro_top1": 0.6668599834299918,
+      "fold_macro_pair_scores": [
+        0.6563101544237447,
+        0.685841904640577,
+        0.6643211798608333,
+        0.7031897753273804,
+        0.7013364980801956
+      ],
+      "standard_error": 0.00951308575059046
+    },
+    {
+      "layer": 6,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.711764705882353,
+        "pair_macro_strict": 0.7588359101410573
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.676056338028169,
+        "pair_macro_strict": 0.6102652588115364
+      },
+      "dataset_macro_pair_macro_strict": 0.6845505844762969,
+      "dataset_macro_top1": 0.693910521955261,
+      "fold_macro_pair_scores": [
+        0.6648571796695528,
+        0.684341792984442,
+        0.6959571960097171,
+        0.7262152194794002,
+        0.6518686196798067
+      ],
+      "standard_error": 0.012887959023637345
+    },
+    {
+      "layer": 7,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.7470588235294118,
+        "pair_macro_strict": 0.7731352287418464
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.6549295774647887,
+        "pair_macro_strict": 0.6076438916642638
+      },
+      "dataset_macro_pair_macro_strict": 0.6903895602030551,
+      "dataset_macro_top1": 0.7009942004971003,
+      "fold_macro_pair_scores": [
+        0.6396405063880977,
+        0.7278522109685178,
+        0.6903144955534664,
+        0.6945744498265506,
+        0.7003151833771581
+      ],
+      "standard_error": 0.014308810892302156
+    },
+    {
+      "layer": 8,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.7411764705882353,
+        "pair_macro_strict": 0.7855673051077464
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.676056338028169,
+        "pair_macro_strict": 0.5952017251369616
+      },
+      "dataset_macro_pair_macro_strict": 0.690384515122354,
+      "dataset_macro_top1": 0.7086164043082022,
+      "fold_macro_pair_scores": [
+        0.6502350857837039,
+        0.7155786023482886,
+        0.6837343877916358,
+        0.716313635011114,
+        0.6869692214492635
+      ],
+      "standard_error": 0.012195821759020651
+    },
+    {
+      "layer": 9,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.7588235294117647,
+        "pair_macro_strict": 0.810126936652672
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.6408450704225352,
+        "pair_macro_strict": 0.6382575878551735
+      },
+      "dataset_macro_pair_macro_strict": 0.7241922622539227,
+      "dataset_macro_top1": 0.69983429991715,
+      "fold_macro_pair_scores": [
+        0.6846929190536568,
+        0.7527303971701882,
+        0.7105247185801282,
+        0.7545646842653144,
+        0.7193985641070726
+      ],
+      "standard_error": 0.013241427565151172
+    },
+    {
+      "layer": 10,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.8,
+        "pair_macro_strict": 0.8285087114682703
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.7112676056338029,
+        "pair_macro_strict": 0.6587172366114772
+      },
+      "dataset_macro_pair_macro_strict": 0.7436129740398738,
+      "dataset_macro_top1": 0.7556338028169014,
+      "fold_macro_pair_scores": [
+        0.7041886998533171,
+        0.757695813686378,
+        0.7400597928565367,
+        0.7715473310536336,
+        0.7457910121119155
+      ],
+      "standard_error": 0.011291590717139725
+    },
+    {
+      "layer": 11,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.7294117647058823,
+        "pair_macro_strict": 0.8162698174646704
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.704225352112676,
+        "pair_macro_strict": 0.6496203652893793
+      },
+      "dataset_macro_pair_macro_strict": 0.7329450913770248,
+      "dataset_macro_top1": 0.7168185584092792,
+      "fold_macro_pair_scores": [
+        0.7203235597299364,
+        0.7286146066366022,
+        0.7077653346692212,
+        0.7650334769688761,
+        0.7439079451224935
+      ],
+      "standard_error": 0.009903928199385076
+    },
+    {
+      "layer": 12,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.7764705882352941,
+        "pair_macro_strict": 0.8133146857227739
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.6901408450704225,
+        "pair_macro_strict": 0.6495369587748864
+      },
+      "dataset_macro_pair_macro_strict": 0.7314258222488301,
+      "dataset_macro_top1": 0.7333057166528583,
+      "fold_macro_pair_scores": [
+        0.7270477725358557,
+        0.7407606562706535,
+        0.7174170862983889,
+        0.7239813947140628,
+        0.7479114244279685
+      ],
+      "standard_error": 0.005611353160040515
+    },
+    {
+      "layer": 13,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.7470588235294118,
+        "pair_macro_strict": 0.8218784639924346
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.7253521126760564,
+        "pair_macro_strict": 0.6729971521696875
+      },
+      "dataset_macro_pair_macro_strict": 0.7474378080810611,
+      "dataset_macro_top1": 0.7362054681027341,
+      "fold_macro_pair_scores": [
+        0.7292281014333499,
+        0.7580345057335423,
+        0.7204926053074687,
+        0.7559797739025681,
+        0.7739731299473946
+      ],
+      "standard_error": 0.009866513995651093
+    },
+    {
+      "layer": 14,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.8117647058823529,
+        "pair_macro_strict": 0.8428662935648229
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.7605633802816901,
+        "pair_macro_strict": 0.6887522770237812
+      },
+      "dataset_macro_pair_macro_strict": 0.765809285294302,
+      "dataset_macro_top1": 0.7861640430820216,
+      "fold_macro_pair_scores": [
+        0.7339777488893234,
+        0.7708850788895523,
+        0.7546905618793749,
+        0.7719978390540365,
+        0.7986459890871656
+      ],
+      "standard_error": 0.010674546478380236
+    },
+    {
+      "layer": 15,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.7705882352941177,
+        "pair_macro_strict": 0.8468146334874278
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.7112676056338029,
+        "pair_macro_strict": 0.7084703525385115
+      },
+      "dataset_macro_pair_macro_strict": 0.7776424930129697,
+      "dataset_macro_top1": 0.7409279204639603,
+      "fold_macro_pair_scores": [
+        0.7479145466696178,
+        0.7818789265498554,
+        0.7864525399320568,
+        0.7732219752702946,
+        0.799829630278685
+      ],
+      "standard_error": 0.008633914567276475
+    },
+    {
+      "layer": 16,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.8294117647058824,
+        "pair_macro_strict": 0.863455893235305
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.7394366197183099,
+        "pair_macro_strict": 0.7182962219053768
+      },
+      "dataset_macro_pair_macro_strict": 0.7908760575703409,
+      "dataset_macro_top1": 0.7844241922120961,
+      "fold_macro_pair_scores": [
+        0.7599233256085437,
+        0.7763527009834692,
+        0.8020486190785561,
+        0.7967396996677458,
+        0.8208576767925508
+      ],
+      "standard_error": 0.010551374398668836
+    },
+    {
+      "layer": 17,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.888235294117647,
+        "pair_macro_strict": 0.8669302966913262
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.7605633802816901,
+        "pair_macro_strict": 0.7363171909877141
+      },
+      "dataset_macro_pair_macro_strict": 0.8016237438395202,
+      "dataset_macro_top1": 0.8243993371996685,
+      "fold_macro_pair_scores": [
+        0.7821776449172493,
+        0.7742955613876181,
+        0.8216173257861807,
+        0.8116503244654505,
+        0.8191962604777732
+      ],
+      "standard_error": 0.009833400590648104
+    },
+    {
+      "layer": 18,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.8588235294117647,
+        "pair_macro_strict": 0.8921766706877001
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.7746478873239436,
+        "pair_macro_strict": 0.7400089986816596
+      },
+      "dataset_macro_pair_macro_strict": 0.8160928346846799,
+      "dataset_macro_top1": 0.8167357083678541,
+      "fold_macro_pair_scores": [
+        0.8146563047776917,
+        0.8110809014614071,
+        0.8195724484918288,
+        0.8047052489410684,
+        0.8309006897242193
+      ],
+      "standard_error": 0.004405676616575832
+    },
+    {
+      "layer": 19,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.8941176470588236,
+        "pair_macro_strict": 0.8940743651773063
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.7676056338028169,
+        "pair_macro_strict": 0.7210780661510038
+      },
+      "dataset_macro_pair_macro_strict": 0.807576215664155,
+      "dataset_macro_top1": 0.8308616404308202,
+      "fold_macro_pair_scores": [
+        0.7909011767920869,
+        0.8001017448917513,
+        0.8086453506227665,
+        0.8094772640991128,
+        0.8297292707875692
+      ],
+      "standard_error": 0.006439137718444425
+    },
+    {
+      "layer": 20,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.8529411764705882,
+        "pair_macro_strict": 0.8976768724195197
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.7535211267605634,
+        "pair_macro_strict": 0.7251964233415441
+      },
+      "dataset_macro_pair_macro_strict": 0.8114366478805319,
+      "dataset_macro_top1": 0.8032311516155758,
+      "fold_macro_pair_scores": [
+        0.798188152327351,
+        0.8058860292067151,
+        0.8054499111221801,
+        0.8117703185586589,
+        0.8365238553657672
+      ],
+      "standard_error": 0.006601407738974714
+    },
+    {
+      "layer": 21,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.888235294117647,
+        "pair_macro_strict": 0.9066391104810223
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.7605633802816901,
+        "pair_macro_strict": 0.7217997503604898
+      },
+      "dataset_macro_pair_macro_strict": 0.8142194304207561,
+      "dataset_macro_top1": 0.8243993371996685,
+      "fold_macro_pair_scores": [
+        0.7890631143375819,
+        0.8222674773178704,
+        0.8211455706991421,
+        0.7893352533321021,
+        0.8498699720272724
+      ],
+      "standard_error": 0.01147976009518144
+    },
+    {
+      "layer": 22,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.8941176470588236,
+        "pair_macro_strict": 0.9088200144082496
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.7676056338028169,
+        "pair_macro_strict": 0.7452002263144113
+      },
+      "dataset_macro_pair_macro_strict": 0.8270101203613305,
+      "dataset_macro_top1": 0.8308616404308202,
+      "fold_macro_pair_scores": [
+        0.8125328419772511,
+        0.8292943480626852,
+        0.8364992699682825,
+        0.814408990577583,
+        0.842536885820762
+      ],
+      "standard_error": 0.0059359596110375125
+    },
+    {
+      "layer": 23,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.8941176470588236,
+        "pair_macro_strict": 0.9055449071625542
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.7816901408450704,
+        "pair_macro_strict": 0.7667686109813876
+      },
+      "dataset_macro_pair_macro_strict": 0.836156759071971,
+      "dataset_macro_top1": 0.837903893951947,
+      "fold_macro_pair_scores": [
+        0.8321285647879841,
+        0.8342236789887834,
+        0.8393331701367417,
+        0.8151764785168146,
+        0.859865452591293
+      ],
+      "standard_error": 0.007184449938193021
+    },
+    {
+      "layer": 24,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.8705882352941177,
+        "pair_macro_strict": 0.9001104328677858
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.795774647887324,
+        "pair_macro_strict": 0.7679013239117616
+      },
+      "dataset_macro_pair_macro_strict": 0.8340058783897737,
+      "dataset_macro_top1": 0.8331814415907208,
+      "fold_macro_pair_scores": [
+        0.8420253189944493,
+        0.8395698439598759,
+        0.8161545365523831,
+        0.8088137192522697,
+        0.8627751049429097
+      ],
+      "standard_error": 0.009685446206965952
+    },
+    {
+      "layer": 25,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.8588235294117647,
+        "pair_macro_strict": 0.8966065300440301
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.8028169014084507,
+        "pair_macro_strict": 0.7800666455256496
+      },
+      "dataset_macro_pair_macro_strict": 0.8383365877848399,
+      "dataset_macro_top1": 0.8308202154101076,
+      "fold_macro_pair_scores": [
+        0.8423119339200729,
+        0.8293994254522001,
+        0.8287981259422962,
+        0.8189348918471818,
+        0.8725090512117823
+      ],
+      "standard_error": 0.00930276015704787
+    },
+    {
+      "layer": 26,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.8823529411764706,
+        "pair_macro_strict": 0.9006385539841424
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.8309859154929577,
+        "pair_macro_strict": 0.773937760321689
+      },
+      "dataset_macro_pair_macro_strict": 0.8372881571529157,
+      "dataset_macro_top1": 0.8566694283347142,
+      "fold_macro_pair_scores": [
+        0.8348493024329738,
+        0.8299266259818907,
+        0.8263660568151115,
+        0.824460100182264,
+        0.8713288258193721
+      ],
+      "standard_error": 0.008668075200478713
+    },
+    {
+      "layer": 27,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.9058823529411765,
+        "pair_macro_strict": 0.8959494957656723
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.823943661971831,
+        "pair_macro_strict": 0.7682430367019151
+      },
+      "dataset_macro_pair_macro_strict": 0.8320962662337936,
+      "dataset_macro_top1": 0.8649130074565037,
+      "fold_macro_pair_scores": [
+        0.8412139996394561,
+        0.8352812443098774,
+        0.8070004976058022,
+        0.8086212165518889,
+        0.8679586111834011
+      ],
+      "standard_error": 0.011314211340486055
+    },
+    {
+      "layer": 28,
+      "gsm8k": {
+        "questions": 170,
+        "top1": 0.9294117647058824,
+        "pair_macro_strict": 0.9056300018064724
+      },
+      "math": {
+        "questions": 142,
+        "top1": 0.8028169014084507,
+        "pair_macro_strict": 0.7974796432561775
+      },
+      "dataset_macro_pair_macro_strict": 0.851554822531325,
+      "dataset_macro_top1": 0.8661143330571666,
+      "fold_macro_pair_scores": [
+        0.8537676587343802,
+        0.8592768026064082,
+        0.8291626100712235,
+        0.833593655993866,
+        0.8814156584836732
+      ],
+      "standard_error": 0.009434372301668784
+    }
+  ],
+  "best_raw_layer": 28,
+  "reference_final_layer": 28,
+  "macro_improvement_over_final": 0.0,
+  "per_dataset_guard_passed": true,
+  "selected_layer": 28,
+  "selection_reason": "Intermediate-layer advantage did not clear the pre-registered threshold; use final layer.",
+  "peak_gpu_gb": 1.825
+}
