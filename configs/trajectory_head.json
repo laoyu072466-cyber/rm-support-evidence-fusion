@@ -1,0 +1,69 @@
+{
+  "version": "trajectory_head_v1",
+  "selected_layer": 28,
+  "hidden_size": 2048,
+  "architecture": {
+    "prefix_probe": "linear",
+    "layer_norm_affine": false,
+    "gate_hidden_size": 32,
+    "alpha_hidden_size": 16,
+    "alpha_initial_value": 0.9,
+    "single_chunk_behavior": "force_alpha_1_and_return_normalized_original",
+    "prefix_bce_weight": 0.0
+  },
+  "default_method": {
+    "gamma": 0.9,
+    "tau_list": 1.0,
+    "tau_bt": 1.0,
+    "tau_cal": 1.0,
+    "lambda_bt": 0.5,
+    "lambda_cal": 0.1
+  },
+  "optimizer": {
+    "name": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0
+  },
+  "pilot_search": {
+    "gamma": [
+      0.8,
+      0.9,
+      1.0
+    ],
+    "lambda_bt": [
+      0.5,
+      1.0
+    ],
+    "lambda_cal": [
+      0.0,
+      0.1
+    ],
+    "total_configurations": 12,
+    "max_epochs": 30,
+    "early_stopping_patience": 5,
+    "selection_primary": "dataset_macro_top1",
+    "top1_tie_band": 0.005,
+    "selection_secondary": "dataset_macro_pair_macro_strict",
+    "selection_tertiary": "damage_rate"
+  },
+  "training_modes": [
+    "gsm_only",
+    "math_only",
+    "joint_dataset_balanced"
+  ],
+  "hyperparameter_selection_mode": "joint_dataset_balanced_only",
+  "final_seeds": [
+    20260829,
+    20260830,
+    20260831
+  ],
+  "normalization": {
+    "reward": "train_only_mean_std",
+    "chunk_count": "train_only_log1p_mean_std",
+    "response_token_length": "train_only_log1p_mean_std",
+    "joint_statistics": "equal_weight_per_dataset"
+  },
+  "final_test_used": false,
+  "ood_used": false
+}

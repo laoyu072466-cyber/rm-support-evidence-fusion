@@ -1,0 +1,87 @@
+{
+  "version": "trajectory_normalization_v1",
+  "scope": "train_only",
+  "selected_layer": 28,
+  "weighting": {
+    "gsm_only": "candidate_weighted within GSM8K",
+    "math_only": "candidate_weighted within MATH",
+    "joint_dataset_balanced": "equal mixture of GSM8K and MATH candidate distributions"
+  },
+  "modes": {
+    "gsm_only": {
+      "reward_mean": 3.018398242467086,
+      "reward_std": 3.8233083352055512,
+      "log_t_mean": 1.8356041847551745,
+      "log_t_std": 0.43397284115909196,
+      "log_l_mean": 4.741981391397024,
+      "log_l_std": 0.45260517511248805
+    },
+    "math_only": {
+      "reward_mean": 6.192991815790671,
+      "reward_std": 3.4512349250587206,
+      "log_t_mean": 1.885369991955736,
+      "log_t_std": 0.5533436110070303,
+      "log_l_mean": 4.95608122673003,
+      "log_l_std": 0.5421435619652797
+    },
+    "joint_dataset_balanced": {
+      "reward_mean": 4.605695029128878,
+      "reward_std": 3.972891347110504,
+      "log_t_mean": 1.8604870883554554,
+      "log_t_std": 0.49787543446586935,
+      "log_l_mean": 4.849031309063527,
+      "log_l_std": 0.5107300931332629
+    }
+  },
+  "raw_statistics": {
+    "gsm_train": {
+      "reward": {
+        "mean": 3.018398242467086,
+        "std": 3.8233083352055512,
+        "min": -11.3125,
+        "max": 13.125,
+        "count": 24221
+      },
+      "chunk_count": {
+        "mean": 5.978200734899468,
+        "std": 3.881244075179643,
+        "min": 1.0,
+        "max": 37.0,
+        "count": 24221
+      },
+      "response_token_length": {
+        "mean": 125.28871640312126,
+        "std": 56.00630173503951,
+        "min": 6.0,
+        "max": 509.0,
+        "count": 24221
+      }
+    },
+    "math_train": {
+      "reward": {
+        "mean": 6.192991815790671,
+        "std": 3.4512349250587206,
+        "min": -8.625,
+        "max": 15.0625,
+        "count": 16229
+      },
+      "chunk_count": {
+        "mean": 6.789019656171051,
+        "std": 5.426476305895848,
+        "min": 1.0,
+        "max": 106.0,
+        "count": 16229
+      },
+      "response_token_length": {
+        "mean": 164.18842812249676,
+        "std": 102.06788833296733,
+        "min": 11.0,
+        "max": 1022.0,
+        "count": 16229
+      }
+    }
+  },
+  "pilot_used": false,
+  "test_used": false,
+  "ood_used": false
+}
