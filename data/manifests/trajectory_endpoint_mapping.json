@@ -284,6 +284,147 @@
         "mean": 2
       },
       "cache_sha256": "a3c8af4613cc7afc7ea130dee01678e1aba9eb2382828a2b48a773d3de17f8cf"
+    },
+    "gsm_id_test_mixed.jsonl": {
+      "source": "/root/autodl-tmp/rm_traj_project/data/processed/prototype_v2/gsm_id_test_mixed.jsonl",
+      "cache": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_chunks_v1/Skywork-Reward-V2-Qwen3-1.7B/gsm_id_test_mixed.jsonl",
+      "candidates": 17902,
+      "total_endpoints": 104141,
+      "chunk_count": {
+        "min": 1,
+        "p10": 3,
+        "median": 5.0,
+        "p90": 10,
+        "p95": 15,
+        "p99": 21,
+        "max": 46,
+        "mean": 5.817
+      },
+      "input_length": {
+        "min": 52,
+        "p10": 120,
+        "median": 185.0,
+        "p90": 283,
+        "p95": 319,
+        "p99": 405,
+        "max": 595,
+        "mean": 195.728
+      },
+      "actual_chunk_token_length": {
+        "min": 1,
+        "p10": 4,
+        "median": 19,
+        "p90": 40,
+        "p95": 48,
+        "p99": 76,
+        "max": 129,
+        "mean": 21.058
+      },
+      "terminal_gap_tokens": {
+        "min": 2,
+        "p10": 2,
+        "median": 2.0,
+        "p90": 2,
+        "p95": 2,
+        "p99": 2,
+        "max": 2,
+        "mean": 2
+      },
+      "cache_sha256": "3955b3cda8a0699137cdbc69c7c9efdb33b2a6e4d61a8b1fcb7aaf2ee44aa6ca"
+    },
+    "math_id_test_mixed.jsonl": {
+      "source": "/root/autodl-tmp/rm_traj_project/data/processed/prototype_v2/math_id_test_mixed.jsonl",
+      "cache": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_chunks_v1/Skywork-Reward-V2-Qwen3-1.7B/math_id_test_mixed.jsonl",
+      "candidates": 4167,
+      "total_endpoints": 29621,
+      "chunk_count": {
+        "min": 1,
+        "p10": 2,
+        "median": 5,
+        "p90": 14,
+        "p95": 18,
+        "p99": 29,
+        "max": 55,
+        "mean": 7.108
+      },
+      "input_length": {
+        "min": 49,
+        "p10": 117,
+        "median": 212,
+        "p90": 455,
+        "p95": 575,
+        "p99": 844,
+        "max": 1263,
+        "mean": 256.719
+      },
+      "actual_chunk_token_length": {
+        "min": 1,
+        "p10": 3,
+        "median": 19,
+        "p90": 55,
+        "p95": 71,
+        "p99": 113,
+        "max": 129,
+        "mean": 25.291
+      },
+      "terminal_gap_tokens": {
+        "min": 2,
+        "p10": 2,
+        "median": 2,
+        "p90": 2,
+        "p95": 2,
+        "p99": 2,
+        "max": 2,
+        "mean": 2
+      },
+      "cache_sha256": "e2e82405998444e721c1f40bb9e4696d8f0c69733ee9b2a7a1cdea51cf953bb8"
+    },
+    "svamp_ood_mixed.jsonl": {
+      "source": "/root/autodl-tmp/rm_traj_project/data/processed/prototype_v2/svamp_ood_mixed.jsonl",
+      "cache": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_chunks_v1/Skywork-Reward-V2-Qwen3-1.7B/svamp_ood_mixed.jsonl",
+      "candidates": 13913,
+      "total_endpoints": 67216,
+      "chunk_count": {
+        "min": 2,
+        "p10": 2,
+        "median": 4,
+        "p90": 10,
+        "p95": 15,
+        "p99": 19,
+        "max": 79,
+        "mean": 4.831
+      },
+      "input_length": {
+        "min": 46,
+        "p10": 86,
+        "median": 129,
+        "p90": 207,
+        "p95": 237,
+        "p99": 319,
+        "max": 567,
+        "mean": 140.241
+      },
+      "actual_chunk_token_length": {
+        "min": 1,
+        "p10": 3,
+        "median": 12.0,
+        "p90": 39,
+        "p95": 48,
+        "p99": 76,
+        "max": 129,
+        "mean": 17.57
+      },
+      "terminal_gap_tokens": {
+        "min": 2,
+        "p10": 2,
+        "median": 2,
+        "p90": 2,
+        "p95": 2,
+        "p99": 2,
+        "max": 2,
+        "mean": 2
+      },
+      "cache_sha256": "1a405948ada089e24890a917f6256532e1a8377d8874874a6d96ba563cd6145c"
     }
   }
 }

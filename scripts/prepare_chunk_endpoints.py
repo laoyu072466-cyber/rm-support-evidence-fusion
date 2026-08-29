@@ -32,6 +32,9 @@ FILES = [
     "math_train.jsonl",
     "gsm_pilot_validation.jsonl",
     "math_pilot_validation.jsonl",
+    "gsm_id_test_mixed.jsonl",
+    "math_id_test_mixed.jsonl",
+    "svamp_ood_mixed.jsonl",
 ]
 
 

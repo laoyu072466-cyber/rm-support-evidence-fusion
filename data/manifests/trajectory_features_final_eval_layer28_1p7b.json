@@ -1,0 +1,130 @@
+{
+  "version": "trajectory_features_v1",
+  "model": "/root/autodl-tmp/rm_traj_project/models/reward/Skywork-Reward-V2-Qwen3-1.7B",
+  "selected_layer": 28,
+  "hidden_size": 2048,
+  "feature_dtype": "float16",
+  "batch_size": 16,
+  "max_length": 2048,
+  "scope": "train_and_pilot_only",
+  "final_test_used": false,
+  "files": {
+    "gsm_id_test": {
+      "file": "gsm_id_test_mixed.jsonl",
+      "dataset": "GSM8K",
+      "role": "id_test_mixed",
+      "candidates": 17902,
+      "total_endpoints": 104141,
+      "feature_shape": [
+        104141,
+        2048
+      ],
+      "feature_file_gb": 0.3973,
+      "elapsed_seconds": 74.409,
+      "candidates_per_second": 240.59,
+      "peak_gpu_gb": 4.463,
+      "baseline_metrics": {
+        "questions": 1142,
+        "candidates": 17902,
+        "top1": 0.8309982486865148,
+        "pair_macro_strict": 0.8574641352153393,
+        "pair_tie_rate": 0.0009070831361413473,
+        "positive_score_mean": 4.1437249183654785,
+        "negative_score_mean": -0.779179573059082
+      },
+      "pilot_baseline_reproduction": null,
+      "files": {
+        "features": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/gsm_id_test.chunk_states_f16.npy",
+        "scores": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/gsm_id_test.scores_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/gsm_id_test.labels_i8.npy",
+        "offsets": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/gsm_id_test.offsets_i64.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/gsm_id_test.metadata.jsonl"
+      },
+      "sha256": {
+        "features": "d323eef98c81d6fce7202a0d93997e31e54c609448d659da14569ae466c41eda",
+        "scores": "1caddc5b3523dc076c6649ac2818ff8cf74893ce2c1959ef4d87677c8f114f7b",
+        "labels": "9d8fef99f722ab15ce697ce50ac5d67a62b87127b8a06563fa74c242fbbad0fb",
+        "offsets": "64e0cafe494d827d9a867937648d3ad167805d64e8c457cafec0f58610eb4dee",
+        "metadata": "ee8f0dd8ce25b86e7ec2cd4fbd54c509bd60f6b4d7d75d3747641cbd5f4849ec"
+      }
+    },
+    "math_id_test": {
+      "file": "math_id_test_mixed.jsonl",
+      "dataset": "MATH",
+      "role": "id_test_mixed",
+      "candidates": 4167,
+      "total_endpoints": 29621,
+      "feature_shape": [
+        29621,
+        2048
+      ],
+      "feature_file_gb": 0.113,
+      "elapsed_seconds": 23.14,
+      "candidates_per_second": 180.077,
+      "peak_gpu_gb": 5.795,
+      "baseline_metrics": {
+        "questions": 340,
+        "candidates": 4167,
+        "top1": 0.7235294117647059,
+        "pair_macro_strict": 0.7850603178334271,
+        "pair_tie_rate": 0.0021092102179517225,
+        "positive_score_mean": 6.8846588134765625,
+        "negative_score_mean": 2.848630428314209
+      },
+      "pilot_baseline_reproduction": null,
+      "files": {
+        "features": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/math_id_test.chunk_states_f16.npy",
+        "scores": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/math_id_test.scores_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/math_id_test.labels_i8.npy",
+        "offsets": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/math_id_test.offsets_i64.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/math_id_test.metadata.jsonl"
+      },
+      "sha256": {
+        "features": "ea65d95c42228a22c17e3155e04b1450ca50f0460afc3b21800aa8b1576249e8",
+        "scores": "a9d4ed6c792f4fe90940d71357c94f35330b2b28dad579ffcf50e7c18fe6632f",
+        "labels": "0dc25b7f8dc38e5c1f577a72f95c59a0cddac7ff799cc1e756d82d4cff988995",
+        "offsets": "f4330816470a5bfd506afb49e5fbadda0383754958ea943a486ac1aeca29be57",
+        "metadata": "b8214cfdbafda14754ec7627941d195fe507253d18a2f4891ae27231c045dfd9"
+      }
+    },
+    "svamp_ood": {
+      "file": "svamp_ood_mixed.jsonl",
+      "dataset": "SVAMP",
+      "role": "ood_mixed",
+      "candidates": 13913,
+      "total_endpoints": 67216,
+      "feature_shape": [
+        67216,
+        2048
+      ],
+      "feature_file_gb": 0.2564,
+      "elapsed_seconds": 42.979,
+      "candidates_per_second": 323.714,
+      "peak_gpu_gb": 4.426,
+      "baseline_metrics": {
+        "questions": 883,
+        "candidates": 13913,
+        "top1": 0.869762174405436,
+        "pair_macro_strict": 0.8501259922269871,
+        "pair_tie_rate": 0.0009072763563781528,
+        "positive_score_mean": 1.0583794116973877,
+        "negative_score_mean": -3.298919677734375
+      },
+      "pilot_baseline_reproduction": null,
+      "files": {
+        "features": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/svamp_ood.chunk_states_f16.npy",
+        "scores": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/svamp_ood.scores_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/svamp_ood.labels_i8.npy",
+        "offsets": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/svamp_ood.offsets_i64.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/svamp_ood.metadata.jsonl"
+      },
+      "sha256": {
+        "features": "37018701a9317813a58d28e6f3ddfddf84ad74162aae9846137d1b817fd0d4ac",
+        "scores": "1c2d55be44bf5c93a432415e5861989912d63c44c53b4a0e1593a0edbd9b65f8",
+        "labels": "439af2661dc38af8b3a0f0a89eaf834634418f5c694cf5fc77dc28d06a76a0c7",
+        "offsets": "70da797b010d063f867e03549f6cedfda003dfc624d099ed6af5e67e88551c1e",
+        "metadata": "15f50e4d9ac1c2810732eb5694900d375353e7758cad237fbf903349881efb0f"
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "version": "final_evaluation_v3",
+  "scope": "prototype_main_evaluation",
+  "datasets": {
+    "gsm_id_test": "in-distribution arithmetic",
+    "math_id_test": "in-distribution difficult mathematics",
+    "svamp_ood": "simple out-of-distribution arithmetic"
+  },
+  "deferred_external_hard_ood": {
+    "RewardBench2-Math": "extreme sequence incompatibility",
+    "ProcessBench": "extreme sequence incompatibility"
+  },
+  "frozen_hyperparameters": {
+    "selected_layer": 28,
+    "gamma": 0.8,
+    "lambda_bt": 0.5,
+    "lambda_cal": 0.1,
+    "seeds": [
+      20260829,
+      20260830,
+      20260831
+    ]
+  },
+  "test_labels_used_for_training_or_tuning": false
+}
