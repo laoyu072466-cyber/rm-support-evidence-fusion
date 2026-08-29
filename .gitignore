@@ -1,0 +1,9 @@
+models/
+data/raw/
+data/interim/
+data/candidates/
+data/cache/
+outputs/
+*.pyc
+__pycache__/
+.ipynb_checkpoints/

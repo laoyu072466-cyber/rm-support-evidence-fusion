@@ -1,0 +1,71 @@
+
+[JSONL] /root/autodl-tmp/rm_traj_project/data/raw/Omni-MATH/test.jsonl
+rows: 4428
+keys: ['answer', 'difficulty', 'domain', 'problem', 'solution', 'source']
+  domain: "['Mathematics -> Algebra -> Other']"
+  difficulty: '8.0'
+  problem: 'Let $ n(\\ge2) $ be a positive integer. Find the minimum $ m $, so that there exists $x_{ij}(1\\le i ,j\\le n)$ satisfying:\n(1)For every $1\\le i ,j\\le n, x_{ij}=ma'
+  solution: '\nLet \\( n (\\geq 2) \\) be a positive integer. We aim to find the minimum \\( m \\) such that there exists \\( x_{ij} \\) (for \\( 1 \\leq i, j \\leq n \\)) satisfying th'
+  answer: '1 + \\left\\lceil \\frac{n}{2} \\right\\rceil'
+  source: 'china_team_selection_test'
+
+[JSON] /root/autodl-tmp/rm_traj_project/data/raw/ProcessBench/dataset_infos.json
+rows/items: 1
+top type: dict
+sample keys: ['features', 'splits']
+  features: "{'problem': {'_type': 'Value'}, 'final_answer_correct': {'_type': 'Value'}, 'label': {'_type': 'Value'}, 'id': {'_type': 'Value'}, 'steps': {'_type': 'Value'}, "
+  splits: "{'gsm8k': {'name': 'gsm8k', 'dataset_name': 'ProcessBench'}, 'math': {'name': 'math', 'dataset_name': 'ProcessBench'}, 'olympiadbench': {'name': 'olympiadbench'"
+
+[JSON] /root/autodl-tmp/rm_traj_project/data/raw/ProcessBench/gsm8k.json
+rows/items: 400
+top type: list
+sample keys: ['final_answer_correct', 'generator', 'id', 'label', 'problem', 'steps']
+  id: 'gsm8k-0'
+  generator: 'Qwen2-7B-Instruct'
+  problem: 'Sue lives in a fun neighborhood.  One weekend, the neighbors decided to play a prank on Sue.  On Friday morning, the neighbors placed 18 pink plastic flamingos '
+  steps: "['To find out how many more pink plastic flamingos were out than white plastic flamingos at noon on Sunday, we can break down the problem into steps. First, on "
+  final_answer_correct: 'False'
+  label: '1'
+
+[JSON] /root/autodl-tmp/rm_traj_project/data/raw/ProcessBench/math.json
+rows/items: 1000
+top type: list
+sample keys: ['final_answer_correct', 'generator', 'id', 'label', 'problem', 'steps']
+  id: 'math-0'
+  generator: 'Meta-Llama-3-8B-Instruct'
+  problem: 'Determine the remainder of 194 (mod 11).'
+  steps: '["To determine the remainder of 194 (mod 11), I\'ll perform the following steps: First, divide 194 by 11: 194 ÷ 11 = 17 with a remainder of 9. This means that 19'
+  final_answer_correct: 'False'
+  label: '0'
+
+[JSON] /root/autodl-tmp/rm_traj_project/data/raw/ProcessBench/olympiadbench.json
+rows/items: 1000
+top type: list
+sample keys: ['final_answer_correct', 'generator', 'id', 'label', 'problem', 'steps']
+  id: 'olympiadbench-0'
+  generator: 'Llama-3.1-70B-Instruct'
+  problem: 'Find the smallest number $n$ such that there exist polynomials $f_{1}, f_{2}, \\ldots, f_{n}$ with rational coefficients satisfying\n\n$$\nx^{2}+7=f_{1}(x)^{2}+f_{2'
+  steps: "['To find the smallest number \\\\( n \\\\), we start by considering the given equation: \\\\( x^2 + 7 = f_1(x)^2 + f_2(x)^2 + \\\\cdots + f_n(x)^2 \\\\). Notice that \\\\("
+  final_answer_correct: 'False'
+  label: '2'
+
+[JSON] /root/autodl-tmp/rm_traj_project/data/raw/ProcessBench/omnimath.json
+rows/items: 1000
+top type: list
+sample keys: ['final_answer_correct', 'generator', 'id', 'label', 'problem', 'steps']
+  id: 'omnimath-0'
+  generator: 'Qwen2.5-7B-Instruct'
+  problem: 'Can one find 4004 positive integers such that the sum of any 2003 of them is not divisible by 2003?'
+  steps: "['To solve the problem of finding 4004 positive integers such that the sum of any 2003 of them is not divisible by 2003, we can proceed as follows: First, defin"
+  final_answer_correct: 'False'
+  label: '2'
+
+[PARQUET] /root/autodl-tmp/rm_traj_project/data/raw/reward-bench-2/data/test-00000-of-00001.parquet
+rows: 1865
+row groups: 2
+columns: ['id', 'prompt', 'chosen', 'rejected', 'num_correct', 'num_incorrect', 'total_completions', 'models', 'subset', 'additional_metadata']
+
+[PARQUET] /root/autodl-tmp/rm_traj_project/data/raw/OlympiadBench/OlympiadBench/OE_TO_maths_en_COMP/OE_TO_maths_en_COMP.parquet
+rows: 674
+row groups: 7
+columns: ['id', 'question', 'solution', 'final_answer', 'context', 'image_1', 'image_2', 'image_3', 'image_4', 'image_5', 'image_6', 'image_7', 'image_8', 'image_9', 'modality', 'difficulty', 'is_multiple_answer', 'unit', 'answer_type', 'error', 'question_type', 'subfield', 'subject', 'language']
