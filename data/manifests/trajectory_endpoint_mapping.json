@@ -1,0 +1,101 @@
+{
+  "version": "trajectory_endpoint_mapping_v1",
+  "tokenizer": "/root/autodl-tmp/rm_traj_project/models/reward/Skywork-Reward-V2-Qwen3-1.7B",
+  "chunk_config": "/root/autodl-tmp/rm_traj_project/configs/trajectory_chunking.json",
+  "files": {
+    "gsm_layer_discovery.jsonl": {
+      "source": "/root/autodl-tmp/rm_traj_project/data/processed/prototype_v2/gsm_layer_discovery.jsonl",
+      "cache": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_chunks_v1/Skywork-Reward-V2-Qwen3-1.7B/gsm_layer_discovery.jsonl",
+      "candidates": 2685,
+      "total_endpoints": 15466,
+      "chunk_count": {
+        "min": 1,
+        "p10": 3,
+        "median": 5,
+        "p90": 10,
+        "p95": 14,
+        "p99": 20,
+        "max": 35,
+        "mean": 5.76
+      },
+      "input_length": {
+        "min": 57,
+        "p10": 112,
+        "median": 180,
+        "p90": 277,
+        "p95": 308,
+        "p99": 391,
+        "max": 533,
+        "mean": 189.391
+      },
+      "actual_chunk_token_length": {
+        "min": 1,
+        "p10": 4,
+        "median": 19.0,
+        "p90": 39,
+        "p95": 46,
+        "p99": 71,
+        "max": 128,
+        "mean": 20.712
+      },
+      "terminal_gap_tokens": {
+        "min": 2,
+        "p10": 2,
+        "median": 2,
+        "p90": 2,
+        "p95": 2,
+        "p99": 2,
+        "max": 2,
+        "mean": 2
+      },
+      "cache_sha256": "c07ac4ad36fe6cfb357c184b73728118a39eb148697ed0e92c06ca44a94d25e7"
+    },
+    "math_layer_discovery.jsonl": {
+      "source": "/root/autodl-tmp/rm_traj_project/data/processed/prototype_v2/math_layer_discovery.jsonl",
+      "cache": "/root/autodl-tmp/rm_traj_project/data/cache/trajectory_chunks_v1/Skywork-Reward-V2-Qwen3-1.7B/math_layer_discovery.jsonl",
+      "candidates": 1840,
+      "total_endpoints": 12367,
+      "chunk_count": {
+        "min": 1,
+        "p10": 2,
+        "median": 5.0,
+        "p90": 13,
+        "p95": 17,
+        "p99": 29,
+        "max": 62,
+        "mean": 6.721
+      },
+      "input_length": {
+        "min": 59,
+        "p10": 121,
+        "median": 199.0,
+        "p90": 381,
+        "p95": 475,
+        "p99": 928,
+        "max": 1505,
+        "mean": 236.787
+      },
+      "actual_chunk_token_length": {
+        "min": 1,
+        "p10": 3,
+        "median": 19,
+        "p90": 51,
+        "p95": 64,
+        "p99": 99,
+        "max": 129,
+        "mean": 24.336
+      },
+      "terminal_gap_tokens": {
+        "min": 2,
+        "p10": 2,
+        "median": 2.0,
+        "p90": 2,
+        "p95": 2,
+        "p99": 2,
+        "max": 2,
+        "mean": 2
+      },
+      "cache_sha256": "9fb0fff9947425b93570cb99bb50ff1e458976371b4b93948a491261a8faa93b"
+    }
+  }
+}
