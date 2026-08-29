@@ -1,0 +1,101 @@
+{
+  "version": "trajectory_head_final_seeds_pilot_v1",
+  "fixed_hyperparameters": {
+    "gamma": 0.8,
+    "lambda_bt": 0.5,
+    "lambda_cal": 0.1
+  },
+  "seeds": [
+    20260829,
+    20260830,
+    20260831
+  ],
+  "per_seed": [
+    {
+      "seed": 20260829,
+      "best_epoch": 11,
+      "macro_top1": 0.9207856138235886,
+      "macro_pair": 0.8753132716526411,
+      "macro_damage": 0.01070107244883623,
+      "gsm_top1": 0.9365079365079365,
+      "gsm_pair": 0.928948976263791,
+      "math_top1": 0.9050632911392406,
+      "math_pair": 0.8216775670414911,
+      "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/trajectory_head_grid_g0p8_bt0p5_cal0p1_seed20260829.pt",
+      "result_file": "/root/autodl-tmp/rm_traj_project/outputs/trajectory_head_grid_g0p8_bt0p5_cal0p1_seed20260829.json"
+    },
+    {
+      "seed": 20260830,
+      "best_epoch": 4,
+      "macro_top1": 0.9044437746969392,
+      "macro_pair": 0.864386687247451,
+      "macro_damage": 0.04280428979534492,
+      "gsm_top1": 0.9417989417989417,
+      "gsm_pair": 0.9244577731449425,
+      "math_top1": 0.8670886075949367,
+      "math_pair": 0.8043156013499595,
+      "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/trajectory_head_final_g0p8_bt0p5_cal0p1_seed20260830.pt",
+      "result_file": "/root/autodl-tmp/rm_traj_project/outputs/trajectory_head_final_g0p8_bt0p5_cal0p1_seed20260830.json"
+    },
+    {
+      "seed": 20260831,
+      "best_epoch": 8,
+      "macro_top1": 0.8954691581273859,
+      "macro_pair": 0.8682865527814585,
+      "macro_damage": 0.031353908115955606,
+      "gsm_top1": 0.9365079365079365,
+      "gsm_pair": 0.931672909566428,
+      "math_top1": 0.8544303797468354,
+      "math_pair": 0.804900195996489,
+      "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/trajectory_head_final_g0p8_bt0p5_cal0p1_seed20260831.pt",
+      "result_file": "/root/autodl-tmp/rm_traj_project/outputs/trajectory_head_final_g0p8_bt0p5_cal0p1_seed20260831.json"
+    }
+  ],
+  "aggregate": {
+    "macro_top1": {
+      "mean": 0.9068995155493046,
+      "std": 0.01283564293695218,
+      "min": 0.8954691581273859,
+      "max": 0.9207856138235886
+    },
+    "macro_pair": {
+      "mean": 0.8693288372271836,
+      "std": 0.005537357613545078,
+      "min": 0.864386687247451,
+      "max": 0.8753132716526411
+    },
+    "macro_damage": {
+      "mean": 0.02828642345337892,
+      "std": 0.01626994891250896,
+      "min": 0.01070107244883623,
+      "max": 0.04280428979534492
+    },
+    "gsm_top1": {
+      "mean": 0.9382716049382717,
+      "std": 0.0030547633290456066,
+      "min": 0.9365079365079365,
+      "max": 0.9417989417989417
+    },
+    "gsm_pair": {
+      "mean": 0.9283598863250537,
+      "std": 0.0036434624482904678,
+      "min": 0.9244577731449425,
+      "max": 0.931672909566428
+    },
+    "math_top1": {
+      "mean": 0.8755274261603376,
+      "std": 0.02635020252488779,
+      "min": 0.8544303797468354,
+      "max": 0.9050632911392406
+    },
+    "math_pair": {
+      "mean": 0.8102977881293132,
+      "std": 0.009859511336406297,
+      "min": 0.8043156013499595,
+      "max": 0.8216775670414911
+    }
+  },
+  "evaluation_scope": "pilot_validation_only",
+  "test_used": false,
+  "ood_used": false
+}

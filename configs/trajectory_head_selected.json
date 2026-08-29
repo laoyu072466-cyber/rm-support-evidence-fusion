@@ -1,0 +1,22 @@
+{
+  "version": "trajectory_head_selected_v1",
+  "selection_scope": "pilot_validation_only",
+  "training_mode": "joint_dataset_balanced",
+  "selected_layer": 28,
+  "gamma": 0.8,
+  "lambda_bt": 0.5,
+  "lambda_cal": 0.1,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "gradient_clip": 1.0,
+  "max_epochs": 30,
+  "early_stopping_patience": 5,
+  "final_seeds": [
+    20260829,
+    20260830,
+    20260831
+  ],
+  "selection_manifest": "data/manifests/trajectory_head_pilot_grid_seed20260829.json",
+  "test_used_for_selection": false,
+  "ood_used_for_selection": false
+}
