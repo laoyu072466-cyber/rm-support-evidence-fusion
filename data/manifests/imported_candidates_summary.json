@@ -1,0 +1,98 @@
+{
+  "gsm_train": {
+    "candidate_rows": 26967,
+    "unique_problems": 1701,
+    "duplicate_candidate_rows": 61,
+    "mixed_problems": 1701,
+    "all_correct_problems": 0,
+    "all_wrong_problems": 0,
+    "candidate_min": 7,
+    "candidate_median": 16,
+    "candidate_p90": 16,
+    "candidate_max": 16
+  },
+  "gsm_val": {
+    "candidate_rows": 2988,
+    "unique_problems": 189,
+    "duplicate_candidate_rows": 3,
+    "mixed_problems": 189,
+    "all_correct_problems": 0,
+    "all_wrong_problems": 0,
+    "candidate_min": 13,
+    "candidate_median": 16,
+    "candidate_p90": 16,
+    "candidate_max": 16
+  },
+  "gsm_test": {
+    "candidate_rows": 17925,
+    "unique_problems": 1142,
+    "duplicate_candidate_rows": 23,
+    "mixed_problems": 1142,
+    "all_correct_problems": 0,
+    "all_wrong_problems": 0,
+    "candidate_min": 10,
+    "candidate_median": 16.0,
+    "candidate_p90": 16,
+    "candidate_max": 16
+  },
+  "math_train": {
+    "candidate_rows": 18133,
+    "unique_problems": 1418,
+    "duplicate_candidate_rows": 66,
+    "mixed_problems": 1418,
+    "all_correct_problems": 0,
+    "all_wrong_problems": 0,
+    "candidate_min": 5,
+    "candidate_median": 13.0,
+    "candidate_p90": 15,
+    "candidate_max": 16
+  },
+  "math_val": {
+    "candidate_rows": 2046,
+    "unique_problems": 158,
+    "duplicate_candidate_rows": 6,
+    "mixed_problems": 158,
+    "all_correct_problems": 0,
+    "all_wrong_problems": 0,
+    "candidate_min": 8,
+    "candidate_median": 13.0,
+    "candidate_p90": 15,
+    "candidate_max": 16
+  },
+  "math_test": {
+    "candidate_rows": 4174,
+    "unique_problems": 340,
+    "duplicate_candidate_rows": 7,
+    "mixed_problems": 340,
+    "all_correct_problems": 0,
+    "all_wrong_problems": 0,
+    "candidate_min": 4,
+    "candidate_median": 13.0,
+    "candidate_p90": 15,
+    "candidate_max": 16
+  },
+  "math_probe_raw": {
+    "candidate_rows": 3200,
+    "unique_problems": 200,
+    "duplicate_candidate_rows": 20,
+    "mixed_problems": 175,
+    "all_correct_problems": 22,
+    "all_wrong_problems": 3,
+    "candidate_min": 16,
+    "candidate_median": 16.0,
+    "candidate_p90": 16,
+    "candidate_max": 16
+  },
+  "svamp_test": {
+    "candidate_rows": 13941,
+    "unique_problems": 883,
+    "duplicate_candidate_rows": 32,
+    "mixed_problems": 883,
+    "all_correct_problems": 0,
+    "all_wrong_problems": 0,
+    "candidate_min": 10,
+    "candidate_median": 16,
+    "candidate_p90": 16,
+    "candidate_max": 16
+  }
+}

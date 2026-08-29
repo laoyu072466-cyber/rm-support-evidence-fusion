@@ -1,0 +1,17 @@
+{
+  "version": "prototype_v1",
+  "seed": 20260829,
+  "variable_candidates_per_question": true,
+  "candidate_range_expected": [
+    4,
+    16
+  ],
+  "training_distribution": "MATH/Qwen2-7B",
+  "layer_discovery_ratio": 0.1,
+  "pilot_distribution": "MATH/Qwen2-7B",
+  "id_test_distribution": "MATH-500/Qwen2-7B",
+  "ood_distributions": [
+    "GSM8K/Qwen2-1.5B",
+    "SVAMP/Qwen2-1.5B"
+  ]
+}

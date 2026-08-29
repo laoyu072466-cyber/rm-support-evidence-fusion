@@ -1,0 +1,82 @@
+{
+  "version": "prototype_v1",
+  "seed": 20260829,
+  "purpose": "engineering feasibility, not final main experiment",
+  "layer_discovery_source": "deterministic 10% question-level split from prepared MATH training data",
+  "ignored_file": "math_gen7b/raw_train_probe.jsonl because it overlaps train/validation",
+  "duplicates_removed": {
+    "math_train": 64,
+    "math_pilot": 6,
+    "math_test": 7,
+    "gsm8k_ood": 23,
+    "svamp_ood": 28
+  },
+  "cross_dataset_exact_overlap_removed": {
+    "gsm8k": 0,
+    "svamp": 0
+  },
+  "roles": {
+    "math_train": {
+      "questions": 1276,
+      "candidates": 16229,
+      "positive_candidates": 10406,
+      "negative_candidates": 5823,
+      "candidate_min": 5,
+      "candidate_median": 13.0,
+      "candidate_max": 16
+    },
+    "math_layer_discovery": {
+      "questions": 142,
+      "candidates": 1840,
+      "positive_candidates": 1210,
+      "negative_candidates": 630,
+      "candidate_min": 6,
+      "candidate_median": 13.0,
+      "candidate_max": 16
+    },
+    "math_pilot_validation": {
+      "questions": 158,
+      "candidates": 2040,
+      "positive_candidates": 1337,
+      "negative_candidates": 703,
+      "candidate_min": 8,
+      "candidate_median": 13.0,
+      "candidate_max": 16
+    },
+    "math_id_test_mixed": {
+      "questions": 340,
+      "candidates": 4167,
+      "positive_candidates": 1972,
+      "negative_candidates": 2195,
+      "candidate_min": 4,
+      "candidate_median": 13.0,
+      "candidate_max": 16
+    },
+    "gsm8k_ood_mixed": {
+      "questions": 1142,
+      "candidates": 17902,
+      "positive_candidates": 7869,
+      "negative_candidates": 10033,
+      "candidate_min": 10,
+      "candidate_median": 16.0,
+      "candidate_max": 16
+    },
+    "svamp_ood_mixed": {
+      "questions": 883,
+      "candidates": 13913,
+      "positive_candidates": 7282,
+      "negative_candidates": 6631,
+      "candidate_min": 10,
+      "candidate_median": 16,
+      "candidate_max": 16
+    }
+  },
+  "sha256": {
+    "math_train.jsonl": "21af8ba32f42164c48d220fc2bb68e40d80673427833c7a0f6a8cf74c8d9c6de",
+    "math_layer_discovery.jsonl": "342618253c10bfb68cbe87edfd25a02af49ffb40098e9e26d12fa644d2e3759b",
+    "math_pilot_validation.jsonl": "eba33790e2a52c74e5dc6e79bd46f26082034f785330fdd630606cf67044334b",
+    "math_id_test_mixed.jsonl": "cb84caba48d26e39fa0f1a4e4a0fe26ec180793f817cce80ef8e50b4ed5b1cdb",
+    "gsm8k_ood_mixed.jsonl": "2eba547c9edd76d15e309fdaa217afbc16e90a5532dc31f084e56bb5af622b50",
+    "svamp_ood_mixed.jsonl": "d7621b8b1d631251ea717150b3bfdf9c22b8e7cfb86afa745191b1cb2fff8077"
+  }
+}
