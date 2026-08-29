@@ -1,0 +1,21 @@
+{
+  "version": "reward_model_plan_v1",
+  "selection_scope": "pilot_validation_only",
+  "final_test_status": "unseen",
+  "development_model": {
+    "name": "Skywork-Reward-V2-Qwen3-1.7B",
+    "path": "/root/autodl-tmp/rm_traj_project/models/reward/Skywork-Reward-V2-Qwen3-1.7B",
+    "role": "pipeline development and primary efficient experiment"
+  },
+  "strong_validation_model": {
+    "name": "Skywork-Reward-V2-Qwen3-4B",
+    "path": "/root/autodl-tmp/rm_traj_project/models/reward/Skywork-Reward-V2-Qwen3-4B",
+    "role": "strong reward-model replication"
+  },
+  "inference": {
+    "dtype": "bfloat16",
+    "batch_size": 32,
+    "max_length": 16384,
+    "attention_implementation": "sdpa"
+  }
+}

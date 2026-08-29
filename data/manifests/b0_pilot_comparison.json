@@ -1,0 +1,87 @@
+{
+  "version": "b0_pilot_comparison_v1",
+  "evaluation_scope": "pilot_validation_only",
+  "decision": {
+    "development_model": "Skywork-Reward-V2-Qwen3-1.7B",
+    "strong_validation_model": "Skywork-Reward-V2-Qwen3-4B",
+    "reason": "Both models retain headroom; 1.7B is about 2.3x faster while maintaining a credible baseline."
+  },
+  "results": {
+    "qwen3_1p7b": {
+      "model": "/root/autodl-tmp/rm_traj_project/models/reward/Skywork-Reward-V2-Qwen3-1.7B",
+      "evaluation_scope": "pilot_validation_only",
+      "batch_size": 32,
+      "datasets": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "top1": 0.8624338624338624,
+          "top1_tie_aware": 0.8650793650793651,
+          "pair_macro_strict": 0.7885050133826589,
+          "pair_macro_half_ties": 0.789375629820405,
+          "pair_tie_rate": 0.0019401963022141063,
+          "positive_score_mean": 4.410171337341994,
+          "negative_score_mean": 0.8617678953328013,
+          "elapsed_seconds": 15.238,
+          "candidates_per_second": 195.893
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "top1": 0.8291139240506329,
+          "top1_tie_aware": 0.8291139240506329,
+          "pair_macro_strict": 0.8177070045435778,
+          "pair_macro_half_ties": 0.8185767763271153,
+          "pair_tie_rate": 0.0017474879860200961,
+          "positive_score_mean": 7.6998180654749735,
+          "negative_score_mean": 3.6652293307004578,
+          "elapsed_seconds": 14.873,
+          "candidates_per_second": 137.158
+        }
+      },
+      "dataset_macro": {
+        "top1": 0.8457738932422476,
+        "pair_macro_strict": 0.8031060089631183
+      },
+      "total_elapsed_seconds": 30.517
+    },
+    "qwen3_4b": {
+      "model": "/root/autodl-tmp/rm_traj_project/models/reward/Skywork-Reward-V2-Qwen3-4B",
+      "evaluation_scope": "pilot_validation_only",
+      "batch_size": 32,
+      "datasets": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "top1": 0.8941798941798942,
+          "top1_tie_aware": 0.8941798941798942,
+          "pair_macro_strict": 0.8242276688870604,
+          "pair_macro_half_ties": 0.8257906219050399,
+          "pair_tie_rate": 0.003423875827436658,
+          "positive_score_mean": 11.75076520908574,
+          "negative_score_mean": 7.482671183924521,
+          "elapsed_seconds": 35.404,
+          "candidates_per_second": 84.313
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "top1": 0.8670886075949367,
+          "top1_tie_aware": 0.8670886075949367,
+          "pair_macro_strict": 0.8484378236039628,
+          "pair_macro_half_ties": 0.8504295290303427,
+          "pair_tie_rate": 0.003931847968545216,
+          "positive_score_mean": 15.53326009723261,
+          "negative_score_mean": 10.74232919185633,
+          "elapsed_seconds": 34.797,
+          "candidates_per_second": 58.625
+        }
+      },
+      "dataset_macro": {
+        "top1": 0.8806342508874154,
+        "pair_macro_strict": 0.8363327462455117
+      },
+      "total_elapsed_seconds": 70.596
+    }
+  }
+}
