@@ -1,0 +1,17 @@
+{
+  "dataset": "AI-ModelScope/Omni-MATH",
+  "input": "data/raw/Omni-MATH/test.jsonl",
+  "seed": 20260829,
+  "fuzzy_remove_threshold": 96.0,
+  "split_ratios": {
+    "train": 0.65,
+    "layer_discovery": 0.1,
+    "pilot_validation": 0.1,
+    "id_test": 0.15
+  },
+  "stratification": [
+    "primary_domain",
+    "rounded_difficulty"
+  ],
+  "candidate_count_per_question": 8
+}
