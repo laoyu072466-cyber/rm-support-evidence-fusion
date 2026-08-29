@@ -1,0 +1,238 @@
+{
+  "version": "sgldsv_full_features_v1",
+  "backbone": "/root/autodl-tmp/rm_traj_project/models/reward/Skywork-Reward-V2-Qwen3-1.7B",
+  "backbone_frozen": true,
+  "block_number": 21,
+  "hidden_size": 2048,
+  "feature_dtype": "float16",
+  "response_tokens_only": true,
+  "datasets": {
+    "gsm_train": {
+      "prefix": "gsm_train",
+      "candidates": 24221,
+      "response_tokens": 3034618,
+      "feature_shape": [
+        3034618,
+        2048
+      ],
+      "feature_gb": 11.5761,
+      "input_tokens": {
+        "min": 41,
+        "median": 190.0,
+        "max": 620
+      },
+      "response_token_length": {
+        "min": 6,
+        "median": 117.0,
+        "max": 509
+      },
+      "elapsed_seconds": 200.798,
+      "files": {
+        "features": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_train.response_states_f16.npy",
+        "offsets": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_train.offsets_i64.npy",
+        "scores": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_train.rm_scores_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_train.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_train.metadata.jsonl"
+      },
+      "questions": 1531,
+      "dataset": "GSM8K",
+      "role": "train",
+      "source_file": "gsm_train.jsonl"
+    },
+    "gsm_pilot": {
+      "prefix": "gsm_pilot",
+      "candidates": 2985,
+      "response_tokens": 364769,
+      "feature_shape": [
+        364769,
+        2048
+      ],
+      "feature_gb": 1.3915,
+      "input_tokens": {
+        "min": 70,
+        "median": 184.0,
+        "max": 571
+      },
+      "response_token_length": {
+        "min": 13,
+        "median": 114.0,
+        "max": 504
+      },
+      "elapsed_seconds": 22.437,
+      "files": {
+        "features": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_pilot.response_states_f16.npy",
+        "offsets": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_pilot.offsets_i64.npy",
+        "scores": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_pilot.rm_scores_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_pilot.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_pilot.metadata.jsonl"
+      },
+      "questions": 189,
+      "dataset": "GSM8K",
+      "role": "validation",
+      "source_file": "gsm_pilot_validation.jsonl"
+    },
+    "gsm_id_test": {
+      "prefix": "gsm_id_test",
+      "candidates": 17902,
+      "response_tokens": 2193040,
+      "feature_shape": [
+        2193040,
+        2048
+      ],
+      "feature_gb": 8.3658,
+      "input_tokens": {
+        "min": 52,
+        "median": 185.0,
+        "max": 595
+      },
+      "response_token_length": {
+        "min": 6,
+        "median": 113.0,
+        "max": 509
+      },
+      "elapsed_seconds": 144.662,
+      "files": {
+        "features": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_id_test.response_states_f16.npy",
+        "offsets": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_id_test.offsets_i64.npy",
+        "scores": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_id_test.rm_scores_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_id_test.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/gsm_id_test.metadata.jsonl"
+      },
+      "questions": 1142,
+      "dataset": "GSM8K",
+      "role": "id_test",
+      "source_file": "gsm_id_test_mixed.jsonl"
+    },
+    "math_train": {
+      "prefix": "math_train",
+      "candidates": 16229,
+      "response_tokens": 2664614,
+      "feature_shape": [
+        2664614,
+        2048
+      ],
+      "feature_gb": 10.1647,
+      "input_tokens": {
+        "min": 42,
+        "median": 202.0,
+        "max": 1586
+      },
+      "response_token_length": {
+        "min": 11,
+        "median": 140.0,
+        "max": 1022
+      },
+      "elapsed_seconds": 214.975,
+      "files": {
+        "features": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_train.response_states_f16.npy",
+        "offsets": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_train.offsets_i64.npy",
+        "scores": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_train.rm_scores_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_train.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_train.metadata.jsonl"
+      },
+      "questions": 1276,
+      "dataset": "MATH",
+      "role": "train",
+      "source_file": "math_train.jsonl"
+    },
+    "math_pilot": {
+      "prefix": "math_pilot",
+      "candidates": 2040,
+      "response_tokens": 319710,
+      "feature_shape": [
+        319710,
+        2048
+      ],
+      "feature_gb": 1.2196,
+      "input_tokens": {
+        "min": 53,
+        "median": 199.0,
+        "max": 1612
+      },
+      "response_token_length": {
+        "min": 14,
+        "median": 135.0,
+        "max": 867
+      },
+      "elapsed_seconds": 27.563,
+      "files": {
+        "features": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_pilot.response_states_f16.npy",
+        "offsets": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_pilot.offsets_i64.npy",
+        "scores": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_pilot.rm_scores_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_pilot.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_pilot.metadata.jsonl"
+      },
+      "questions": 158,
+      "dataset": "MATH",
+      "role": "validation",
+      "source_file": "math_pilot_validation.jsonl"
+    },
+    "math_id_test": {
+      "prefix": "math_id_test",
+      "candidates": 4167,
+      "response_tokens": 749131,
+      "feature_shape": [
+        749131,
+        2048
+      ],
+      "feature_gb": 2.8577,
+      "input_tokens": {
+        "min": 49,
+        "median": 212.0,
+        "max": 1263
+      },
+      "response_token_length": {
+        "min": 13,
+        "median": 145.0,
+        "max": 1021
+      },
+      "elapsed_seconds": 61.374,
+      "files": {
+        "features": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_id_test.response_states_f16.npy",
+        "offsets": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_id_test.offsets_i64.npy",
+        "scores": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_id_test.rm_scores_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_id_test.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/math_id_test.metadata.jsonl"
+      },
+      "questions": 340,
+      "dataset": "MATH",
+      "role": "id_test",
+      "source_file": "math_id_test_mixed.jsonl"
+    },
+    "svamp_ood": {
+      "prefix": "svamp_ood",
+      "candidates": 13913,
+      "response_tokens": 1180982,
+      "feature_shape": [
+        1180982,
+        2048
+      ],
+      "feature_gb": 4.5051,
+      "input_tokens": {
+        "min": 46,
+        "median": 129.0,
+        "max": 567
+      },
+      "response_token_length": {
+        "min": 10,
+        "median": 73.0,
+        "max": 513
+      },
+      "elapsed_seconds": 88.02,
+      "files": {
+        "features": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/svamp_ood.response_states_f16.npy",
+        "offsets": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/svamp_ood.offsets_i64.npy",
+        "scores": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/svamp_ood.rm_scores_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/svamp_ood.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/sgldsv_full_v1/Skywork-Reward-V2-Qwen3-1.7B/block_21/svamp_ood.metadata.jsonl"
+      },
+      "questions": 883,
+      "dataset": "SVAMP",
+      "role": "ood_test",
+      "source_file": "svamp_ood_mixed.jsonl"
+    }
+  },
+  "total_feature_gb": 40.0805,
+  "elapsed_seconds": 824.417,
+  "remaining_disk_gb": 230.421
+}
