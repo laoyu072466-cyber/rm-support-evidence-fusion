@@ -1,0 +1,62 @@
+{
+  "version": "hidden_layer_selection_v1",
+  "scope": "layer_discovery_only",
+  "models_frozen": true,
+  "candidate_layers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "representation": "last content chunk hidden state h_T",
+  "training_objective": "pairwise logistic ranking",
+  "cross_validation": {
+    "folds": 5,
+    "group": "dataset plus question_uid",
+    "seed": 20260829,
+    "dataset_stratified": true
+  },
+  "feature_normalization": "per-layer per-dimension std from training fold",
+  "pair_weighting": "equal total weight per dataset and per question",
+  "optimizer": {
+    "name": "AdamW",
+    "learning_rate": 0.03,
+    "weight_decay": 0.0001,
+    "epochs": 60,
+    "pair_batch_size": 1024,
+    "scheduler": "cosine"
+  },
+  "selection": {
+    "primary_metric": "dataset_macro_pair_macro_strict",
+    "reference_layer": 28,
+    "minimum_macro_improvement_over_final": 0.01,
+    "maximum_allowed_per_dataset_regression": 0.005,
+    "fallback": 28
+  },
+  "pilot_used": false,
+  "final_test_used": false
+}

@@ -1,0 +1,107 @@
+{
+  "version": "layer_discovery_features_v1",
+  "model": "/root/autodl-tmp/rm_traj_project/models/reward/Skywork-Reward-V2-Qwen3-1.7B",
+  "scope": "layer_discovery_only",
+  "representation": "last content chunk hidden state h_T",
+  "cached_layers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "dtype": "float16",
+  "batch_size": 16,
+  "max_length": 2048,
+  "files": {
+    "gsm_layer_discovery.jsonl": {
+      "source_file": "gsm_layer_discovery.jsonl",
+      "candidates": 2685,
+      "feature_shape": [
+        28,
+        2685,
+        2048
+      ],
+      "feature_file_gb": 0.2868,
+      "elapsed_seconds": 11.629,
+      "candidates_per_second": 230.879,
+      "peak_gpu_gb": 4.256,
+      "baseline_discovery_metrics": {
+        "questions": 170,
+        "candidates": 2685,
+        "top1": 0.9235294117647059,
+        "pair_macro_strict": 0.8067342828739887,
+        "positive_score_mean": 4.24953031539917,
+        "negative_score_mean": 0.7087622880935669
+      },
+      "files": {
+        "features": "/root/autodl-tmp/rm_traj_project/data/cache/layer_discovery_v1/Skywork-Reward-V2-Qwen3-1.7B/gsm_layer_discovery.terminal_states_f16.npy",
+        "scores": "/root/autodl-tmp/rm_traj_project/data/cache/layer_discovery_v1/Skywork-Reward-V2-Qwen3-1.7B/gsm_layer_discovery.scores_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/layer_discovery_v1/Skywork-Reward-V2-Qwen3-1.7B/gsm_layer_discovery.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/layer_discovery_v1/Skywork-Reward-V2-Qwen3-1.7B/gsm_layer_discovery.metadata.jsonl"
+      },
+      "sha256": {
+        "features": "50c70fc0ac4a23b87c2e99ce9f64c7b505ea70421e6369fb18257942373829c0",
+        "scores": "1f75612a295b6f026a9db16c8fd37261e2e36d786bae3abc099d4cbf957caee1",
+        "labels": "9de4463a4a8efe7b1d2ff476ba0151a7b7666855a00706ef256655edb1121ef8",
+        "metadata": "c19c8384b8fa32b1534b83ac074074c8686fb0ce72e8bdd4948780fb3cd370a9"
+      }
+    },
+    "math_layer_discovery.jsonl": {
+      "source_file": "math_layer_discovery.jsonl",
+      "candidates": 1840,
+      "feature_shape": [
+        28,
+        1840,
+        2048
+      ],
+      "feature_file_gb": 0.1965,
+      "elapsed_seconds": 9.88,
+      "candidates_per_second": 186.236,
+      "peak_gpu_gb": 6.865,
+      "baseline_discovery_metrics": {
+        "questions": 142,
+        "candidates": 1840,
+        "top1": 0.8661971830985915,
+        "pair_macro_strict": 0.8222226402407489,
+        "positive_score_mean": 7.589585304260254,
+        "negative_score_mean": 3.9232828617095947
+      },
+      "files": {
+        "features": "/root/autodl-tmp/rm_traj_project/data/cache/layer_discovery_v1/Skywork-Reward-V2-Qwen3-1.7B/math_layer_discovery.terminal_states_f16.npy",
+        "scores": "/root/autodl-tmp/rm_traj_project/data/cache/layer_discovery_v1/Skywork-Reward-V2-Qwen3-1.7B/math_layer_discovery.scores_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/layer_discovery_v1/Skywork-Reward-V2-Qwen3-1.7B/math_layer_discovery.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/layer_discovery_v1/Skywork-Reward-V2-Qwen3-1.7B/math_layer_discovery.metadata.jsonl"
+      },
+      "sha256": {
+        "features": "d42c8e9a7808b9f8c033e07b6847e3795d7a37ad8c334ed4afe22d2d2ee060d8",
+        "scores": "bf731655fa0821cd8638ccbb4f3575bffede41f90aa221fa6be2767c07d6908a",
+        "labels": "79fc51f740eeff1635260777fcb88a753d050e6588e7bcc8d62bc6e4b1051032",
+        "metadata": "f2b676b6108675d9e42450fc106b247b7f3b6d9660d5d817518c81168d7eaf71"
+      }
+    }
+  }
+}
