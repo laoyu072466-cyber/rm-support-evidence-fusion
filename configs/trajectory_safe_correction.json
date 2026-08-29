@@ -1,0 +1,14 @@
+{
+  "version": "trajectory_safe_correction_v1",
+  "status": "test_informed_exploratory",
+  "formula": "safe_score = normalized_original + beta * (mean_seed_score - normalized_original)",
+  "seed_ensemble": "arithmetic_mean",
+  "seeds": [
+    20260829,
+    20260830,
+    20260831
+  ],
+  "beta": 0.1,
+  "reason": "trajectory signal is useful but the unconstrained correction is overly aggressive under distribution shift",
+  "reporting_constraint": "Results on GSM8K ID, MATH ID and SVAMP OOD are exploratory because beta was selected after observing them"
+}
