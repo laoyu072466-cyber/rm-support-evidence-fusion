@@ -1,0 +1,35 @@
+{
+  "version": "trajectory_chunks_v1_audit",
+  "selection_scope": "layer_discovery_only",
+  "gsm_layer_discovery": {
+    "candidates": 2685,
+    "original_endpoints": 15305,
+    "final_endpoints": 15466,
+    "endpoint_multiplier": 1.010519,
+    "original_single_rate": 0.00149,
+    "final_single_rate": 0.000745,
+    "median_final_chunks": 5,
+    "max_final_chunks": 35,
+    "max_chunk_tokens": 128,
+    "sentence_splits_added": 161,
+    "hard_token_splits_added": 0
+  },
+  "math_layer_discovery": {
+    "candidates": 1840,
+    "original_endpoints": 10602,
+    "final_endpoints": 12367,
+    "endpoint_multiplier": 1.166478,
+    "original_single_rate": 0.24837,
+    "final_single_rate": 0.013043,
+    "median_final_chunks": 5,
+    "max_final_chunks": 62,
+    "max_chunk_tokens": 128,
+    "sentence_splits_added": 1622,
+    "hard_token_splits_added": 143
+  },
+  "content_validation": {
+    "gsm_whitespace_normalized_mismatches": 0,
+    "math_whitespace_normalized_mismatches": 0,
+    "solution_text_is_never_rewritten": true
+  }
+}

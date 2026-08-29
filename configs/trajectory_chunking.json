@@ -1,0 +1,25 @@
+{
+  "version": "trajectory_chunks_v1",
+  "selection_scope": [
+    "gsm_layer_discovery",
+    "math_layer_discovery"
+  ],
+  "source_text": "solution_text",
+  "preserve_exact_solution_text": true,
+  "base_boundaries": "nonempty line endings",
+  "single_line_policy": {
+    "sentence_split": true,
+    "max_tokens": 64
+  },
+  "general_policy": {
+    "sentence_split_if_over_tokens": 128,
+    "max_tokens": 128
+  },
+  "sentence_boundary_pattern": "(?<=[.!?])\\s+(?=[A-Z0-9#`$\\\\])",
+  "fallback": "fixed token split",
+  "tokenizer": "Skywork-Reward-V2-Qwen3-1.7B",
+  "model_sequence_max_tokens": 2048,
+  "endpoint_definition": "last content token at each chunk boundary in the exact full assistant response",
+  "label_independent": true,
+  "final_test_used": false
+}
