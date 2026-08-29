@@ -1,0 +1,523 @@
+{
+  "version": "trajectory_head_joint_default_v1",
+  "seed": 20260829,
+  "training_mode": "joint_dataset_balanced",
+  "evaluation_scope": "pilot_validation_only",
+  "test_used": false,
+  "ood_used": false,
+  "configuration": {
+    "selected_layer": 28,
+    "hidden_size": 2048,
+    "gamma": 0.9,
+    "lambda_bt": 0.5,
+    "lambda_cal": 0.1,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "max_epochs": 30,
+    "patience": 5,
+    "questions_per_dataset_per_batch": 8
+  },
+  "train_data": {
+    "GSM8K": {
+      "questions": 1531,
+      "candidates": 24221
+    },
+    "MATH": {
+      "questions": 1276,
+      "candidates": 16229
+    }
+  },
+  "trainable_parameters": 133331,
+  "baseline_pilot": {
+    "GSM8K": {
+      "top1": 0.8624338624338624,
+      "pair_macro_strict": 0.7888214885007213
+    },
+    "MATH": {
+      "top1": 0.8291139240506329,
+      "pair_macro_strict": 0.8177070045435778
+    },
+    "dataset_macro": {
+      "top1": 0.8457738932422476,
+      "pair_macro_strict": 0.8032642465221496
+    }
+  },
+  "initial_untrained_head_pilot": {
+    "GSM8K": {
+      "questions": 189,
+      "candidates": 2985,
+      "raw_top1": 0.8624338624338624,
+      "corrected_top1": 0.8624338624338624,
+      "corrected_pair_macro_strict": 0.7932697121123047,
+      "correction_rate": 0.0,
+      "damage_rate": 0.0
+    },
+    "MATH": {
+      "questions": 158,
+      "candidates": 2040,
+      "raw_top1": 0.8291139240506329,
+      "corrected_top1": 0.8354430379746836,
+      "corrected_pair_macro_strict": 0.8195943686110955,
+      "correction_rate": 0.037037037037037035,
+      "damage_rate": 0.0
+    },
+    "dataset_macro": {
+      "top1": 0.8489384502042729,
+      "pair_macro_strict": 0.8064320403617,
+      "damage_rate": 0.0
+    }
+  },
+  "best_epoch": 9,
+  "best_pilot": {
+    "GSM8K": {
+      "questions": 189,
+      "candidates": 2985,
+      "raw_top1": 0.8624338624338624,
+      "corrected_top1": 0.9365079365079365,
+      "corrected_pair_macro_strict": 0.9276110462386918,
+      "correction_rate": 0.6153846153846154,
+      "damage_rate": 0.012269938650306749
+    },
+    "MATH": {
+      "questions": 158,
+      "candidates": 2040,
+      "raw_top1": 0.8291139240506329,
+      "corrected_top1": 0.879746835443038,
+      "corrected_pair_macro_strict": 0.8097236100163314,
+      "correction_rate": 0.5185185185185185,
+      "damage_rate": 0.04580152671755725
+    },
+    "dataset_macro": {
+      "top1": 0.9081273859754873,
+      "pair_macro_strict": 0.8686673281275117,
+      "damage_rate": 0.029035732683932
+    }
+  },
+  "epochs_completed": 14,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.5328334633571407,
+      "elapsed_seconds": 8.458,
+      "pilot": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "raw_top1": 0.8624338624338624,
+          "corrected_top1": 0.91005291005291,
+          "corrected_pair_macro_strict": 0.9080034060589618,
+          "correction_rate": 0.46153846153846156,
+          "damage_rate": 0.018404907975460124
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "raw_top1": 0.8291139240506329,
+          "corrected_top1": 0.8291139240506329,
+          "corrected_pair_macro_strict": 0.8106671878202167,
+          "correction_rate": 0.25925925925925924,
+          "damage_rate": 0.05343511450381679
+        },
+        "dataset_macro": {
+          "top1": 0.8695834170517714,
+          "pair_macro_strict": 0.8593352969395893,
+          "damage_rate": 0.03592001123963846
+        }
+      }
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.4382163044841339,
+      "elapsed_seconds": 8.66,
+      "pilot": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "raw_top1": 0.8624338624338624,
+          "corrected_top1": 0.9206349206349206,
+          "corrected_pair_macro_strict": 0.9226894501001643,
+          "correction_rate": 0.6153846153846154,
+          "damage_rate": 0.03067484662576687
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "raw_top1": 0.8291139240506329,
+          "corrected_top1": 0.810126582278481,
+          "corrected_pair_macro_strict": 0.7994405782165728,
+          "correction_rate": 0.2222222222222222,
+          "damage_rate": 0.06870229007633588
+        },
+        "dataset_macro": {
+          "top1": 0.8653807514567008,
+          "pair_macro_strict": 0.8610650141583686,
+          "damage_rate": 0.04968856835105138
+        }
+      }
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.40721948879460496,
+      "elapsed_seconds": 8.707,
+      "pilot": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "raw_top1": 0.8624338624338624,
+          "corrected_top1": 0.9312169312169312,
+          "corrected_pair_macro_strict": 0.9247033065650792,
+          "correction_rate": 0.5769230769230769,
+          "damage_rate": 0.012269938650306749
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "raw_top1": 0.8291139240506329,
+          "corrected_top1": 0.8354430379746836,
+          "corrected_pair_macro_strict": 0.8036422094163957,
+          "correction_rate": 0.3333333333333333,
+          "damage_rate": 0.061068702290076333
+        },
+        "dataset_macro": {
+          "top1": 0.8833299845958074,
+          "pair_macro_strict": 0.8641727579907375,
+          "damage_rate": 0.036669320470191544
+        }
+      }
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.3833198918728158,
+      "elapsed_seconds": 8.681,
+      "pilot": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "raw_top1": 0.8624338624338624,
+          "corrected_top1": 0.9312169312169312,
+          "corrected_pair_macro_strict": 0.918461958137884,
+          "correction_rate": 0.5769230769230769,
+          "damage_rate": 0.012269938650306749
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "raw_top1": 0.8291139240506329,
+          "corrected_top1": 0.8481012658227848,
+          "corrected_pair_macro_strict": 0.8165465026066292,
+          "correction_rate": 0.37037037037037035,
+          "damage_rate": 0.05343511450381679
+        },
+        "dataset_macro": {
+          "top1": 0.889659098519858,
+          "pair_macro_strict": 0.8675042303722567,
+          "damage_rate": 0.03285252657706177
+        }
+      }
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.38312389569667477,
+      "elapsed_seconds": 8.685,
+      "pilot": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "raw_top1": 0.8624338624338624,
+          "corrected_top1": 0.9312169312169312,
+          "corrected_pair_macro_strict": 0.926611851429973,
+          "correction_rate": 0.6153846153846154,
+          "damage_rate": 0.018404907975460124
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "raw_top1": 0.8291139240506329,
+          "corrected_top1": 0.8417721518987342,
+          "corrected_pair_macro_strict": 0.8170136799691503,
+          "correction_rate": 0.37037037037037035,
+          "damage_rate": 0.061068702290076333
+        },
+        "dataset_macro": {
+          "top1": 0.8864945415578327,
+          "pair_macro_strict": 0.8718127656995617,
+          "damage_rate": 0.03973680513276823
+        }
+      }
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.36147556201710057,
+      "elapsed_seconds": 8.443,
+      "pilot": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "raw_top1": 0.8624338624338624,
+          "corrected_top1": 0.9417989417989417,
+          "corrected_pair_macro_strict": 0.9279298563723167,
+          "correction_rate": 0.7307692307692307,
+          "damage_rate": 0.024539877300613498
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "raw_top1": 0.8291139240506329,
+          "corrected_top1": 0.8607594936708861,
+          "corrected_pair_macro_strict": 0.8148420138982978,
+          "correction_rate": 0.4074074074074074,
+          "damage_rate": 0.04580152671755725
+        },
+        "dataset_macro": {
+          "top1": 0.9012792177349139,
+          "pair_macro_strict": 0.8713859351353073,
+          "damage_rate": 0.035170702009085376
+        }
+      }
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.339775671561559,
+      "elapsed_seconds": 8.133,
+      "pilot": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "raw_top1": 0.8624338624338624,
+          "corrected_top1": 0.9417989417989417,
+          "corrected_pair_macro_strict": 0.9280937448794593,
+          "correction_rate": 0.7307692307692307,
+          "damage_rate": 0.024539877300613498
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "raw_top1": 0.8291139240506329,
+          "corrected_top1": 0.8354430379746836,
+          "corrected_pair_macro_strict": 0.8103880306118101,
+          "correction_rate": 0.37037037037037035,
+          "damage_rate": 0.06870229007633588
+        },
+        "dataset_macro": {
+          "top1": 0.8886209898868127,
+          "pair_macro_strict": 0.8692408877456347,
+          "damage_rate": 0.04662108368847469
+        }
+      }
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.32096760203906644,
+      "elapsed_seconds": 7.571,
+      "pilot": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "raw_top1": 0.8624338624338624,
+          "corrected_top1": 0.9365079365079365,
+          "corrected_pair_macro_strict": 0.9283136973745441,
+          "correction_rate": 0.6153846153846154,
+          "damage_rate": 0.012269938650306749
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "raw_top1": 0.8291139240506329,
+          "corrected_top1": 0.8607594936708861,
+          "corrected_pair_macro_strict": 0.8146163672406891,
+          "correction_rate": 0.4444444444444444,
+          "damage_rate": 0.05343511450381679
+        },
+        "dataset_macro": {
+          "top1": 0.8986337150894113,
+          "pair_macro_strict": 0.8714650323076165,
+          "damage_rate": 0.03285252657706177
+        }
+      }
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.30706770621084917,
+      "elapsed_seconds": 8.785,
+      "pilot": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "raw_top1": 0.8624338624338624,
+          "corrected_top1": 0.9365079365079365,
+          "corrected_pair_macro_strict": 0.9276110462386918,
+          "correction_rate": 0.6153846153846154,
+          "damage_rate": 0.012269938650306749
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "raw_top1": 0.8291139240506329,
+          "corrected_top1": 0.879746835443038,
+          "corrected_pair_macro_strict": 0.8097236100163314,
+          "correction_rate": 0.5185185185185185,
+          "damage_rate": 0.04580152671755725
+        },
+        "dataset_macro": {
+          "top1": 0.9081273859754873,
+          "pair_macro_strict": 0.8686673281275117,
+          "damage_rate": 0.029035732683932
+        }
+      }
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.2994749358234306,
+      "elapsed_seconds": 7.803,
+      "pilot": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "raw_top1": 0.8624338624338624,
+          "corrected_top1": 0.9206349206349206,
+          "corrected_pair_macro_strict": 0.9232511368457137,
+          "correction_rate": 0.5,
+          "damage_rate": 0.012269938650306749
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "raw_top1": 0.8291139240506329,
+          "corrected_top1": 0.8607594936708861,
+          "corrected_pair_macro_strict": 0.8047637524637976,
+          "correction_rate": 0.48148148148148145,
+          "damage_rate": 0.061068702290076333
+        },
+        "dataset_macro": {
+          "top1": 0.8906972071529033,
+          "pair_macro_strict": 0.8640074446547557,
+          "damage_rate": 0.036669320470191544
+        }
+      }
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.2808156529208645,
+      "elapsed_seconds": 8.544,
+      "pilot": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "raw_top1": 0.8624338624338624,
+          "corrected_top1": 0.9417989417989417,
+          "corrected_pair_macro_strict": 0.9272502902496289,
+          "correction_rate": 0.6538461538461539,
+          "damage_rate": 0.012269938650306749
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "raw_top1": 0.8291139240506329,
+          "corrected_top1": 0.8544303797468354,
+          "corrected_pair_macro_strict": 0.8101912551064901,
+          "correction_rate": 0.5185185185185185,
+          "damage_rate": 0.07633587786259542
+        },
+        "dataset_macro": {
+          "top1": 0.8981146607728886,
+          "pair_macro_strict": 0.8687207726780595,
+          "damage_rate": 0.044302908256451085
+        }
+      }
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.26445648400112987,
+      "elapsed_seconds": 8.601,
+      "pilot": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "raw_top1": 0.8624338624338624,
+          "corrected_top1": 0.9365079365079365,
+          "corrected_pair_macro_strict": 0.9276626174873529,
+          "correction_rate": 0.6153846153846154,
+          "damage_rate": 0.012269938650306749
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "raw_top1": 0.8291139240506329,
+          "corrected_top1": 0.8607594936708861,
+          "corrected_pair_macro_strict": 0.8099257127659026,
+          "correction_rate": 0.4444444444444444,
+          "damage_rate": 0.05343511450381679
+        },
+        "dataset_macro": {
+          "top1": 0.8986337150894113,
+          "pair_macro_strict": 0.8687941651266278,
+          "damage_rate": 0.03285252657706177
+        }
+      }
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.248167374675783,
+      "elapsed_seconds": 8.368,
+      "pilot": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "raw_top1": 0.8624338624338624,
+          "corrected_top1": 0.9259259259259259,
+          "corrected_pair_macro_strict": 0.9219992156334749,
+          "correction_rate": 0.5,
+          "damage_rate": 0.006134969325153374
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "raw_top1": 0.8291139240506329,
+          "corrected_top1": 0.8481012658227848,
+          "corrected_pair_macro_strict": 0.8067225365134497,
+          "correction_rate": 0.4074074074074074,
+          "damage_rate": 0.061068702290076333
+        },
+        "dataset_macro": {
+          "top1": 0.8870135958743554,
+          "pair_macro_strict": 0.8643608760734622,
+          "damage_rate": 0.033601835807614854
+        }
+      }
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.24737978332753605,
+      "elapsed_seconds": 6.872,
+      "pilot": {
+        "GSM8K": {
+          "questions": 189,
+          "candidates": 2985,
+          "raw_top1": 0.8624338624338624,
+          "corrected_top1": 0.9470899470899471,
+          "corrected_pair_macro_strict": 0.9269910263164232,
+          "correction_rate": 0.6538461538461539,
+          "damage_rate": 0.006134969325153374
+        },
+        "MATH": {
+          "questions": 158,
+          "candidates": 2040,
+          "raw_top1": 0.8291139240506329,
+          "corrected_top1": 0.8481012658227848,
+          "corrected_pair_macro_strict": 0.8050679086585506,
+          "correction_rate": 0.5185185185185185,
+          "damage_rate": 0.08396946564885496
+        },
+        "dataset_macro": {
+          "top1": 0.8975956064563659,
+          "pair_macro_strict": 0.8660294674874869,
+          "damage_rate": 0.04505221748700417
+        }
+      }
+    }
+  ],
+  "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/trajectory_head_joint_default_seed20260829.pt",
+  "total_elapsed_seconds": 118.517,
+  "peak_gpu_gb": 2.23
+}
