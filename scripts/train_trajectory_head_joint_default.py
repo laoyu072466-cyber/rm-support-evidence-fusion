@@ -3,6 +3,7 @@ from collections import defaultdict
 import copy
 import json
 import math
+import os
 import random
 import time
 
@@ -21,24 +22,40 @@ CACHE = (
 STATS_PATH = (
     ROOT / "data/manifests/trajectory_normalization_stats.json"
 )
+RUN_TAG = os.environ.get(
+    "TRAJ_RUN_TAG",
+    "joint_default_seed20260829",
+)
 OUTPUT_PATH = (
-    ROOT / "outputs/trajectory_head_joint_default_seed20260829.json"
+    ROOT / f"outputs/trajectory_head_{RUN_TAG}.json"
 )
 CHECKPOINT_PATH = (
-    ROOT / "outputs/checkpoints/"
-    "trajectory_head_joint_default_seed20260829.pt"
+    ROOT / "outputs/checkpoints"
+    / f"trajectory_head_{RUN_TAG}.pt"
 )
 
 DEVICE = torch.device("cuda")
-SEED = 20260829
-MAX_EPOCHS = 30
-PATIENCE = 5
-QUESTIONS_PER_DATASET_PER_BATCH = 8
+SEED = int(os.environ.get("TRAJ_SEED", "20260829"))
+MAX_EPOCHS = int(
+    os.environ.get("TRAJ_MAX_EPOCHS", "30")
+)
+PATIENCE = int(
+    os.environ.get("TRAJ_PATIENCE", "5")
+)
+QUESTIONS_PER_DATASET_PER_BATCH = int(
+    os.environ.get("TRAJ_QUESTIONS_PER_DATASET", "8")
+)
 
-GAMMA = 0.9
-LAMBDA_BT = 0.5
-LAMBDA_CAL = 0.1
-LEARNING_RATE = 1e-3
+GAMMA = float(os.environ.get("TRAJ_GAMMA", "0.9"))
+LAMBDA_BT = float(
+    os.environ.get("TRAJ_LAMBDA_BT", "0.5")
+)
+LAMBDA_CAL = float(
+    os.environ.get("TRAJ_LAMBDA_CAL", "0.1")
+)
+LEARNING_RATE = float(
+    os.environ.get("TRAJ_LEARNING_RATE", "0.001")
+)
 WEIGHT_DECAY = 1e-4
 GRAD_CLIP = 1.0
 
@@ -972,7 +989,8 @@ def main():
     )
 
     result = {
-        "version": "trajectory_head_joint_default_v1",
+        "version": "trajectory_head_joint_grid_v1",
+        "run_tag": RUN_TAG,
         "seed": SEED,
         "training_mode": "joint_dataset_balanced",
         "evaluation_scope": "pilot_validation_only",
