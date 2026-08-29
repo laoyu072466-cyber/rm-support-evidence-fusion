@@ -28,6 +28,10 @@ MANIFEST_PATH = (
 FILES = [
     "gsm_layer_discovery.jsonl",
     "math_layer_discovery.jsonl",
+    "gsm_train.jsonl",
+    "math_train.jsonl",
+    "gsm_pilot_validation.jsonl",
+    "math_pilot_validation.jsonl",
 ]
 
 
