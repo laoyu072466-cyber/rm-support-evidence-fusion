@@ -1,0 +1,358 @@
+{
+  "version": "final_evaluation_1p7b_v1",
+  "model": "Skywork-Reward-V2-Qwen3-1.7B",
+  "selected_layer": 28,
+  "frozen_hyperparameters": {
+    "gamma": 0.8,
+    "lambda_bt": 0.5,
+    "lambda_cal": 0.1
+  },
+  "seeds": [
+    20260829,
+    20260830,
+    20260831
+  ],
+  "evaluation_scope": {
+    "id": [
+      "GSM8K",
+      "MATH"
+    ],
+    "ood": [
+      "SVAMP"
+    ]
+  },
+  "hyperparameters_frozen_before_test": true,
+  "test_labels_used_for_training": false,
+  "baselines": {
+    "GSM8K_ID": {
+      "questions": 1142,
+      "candidates": 17902,
+      "top1": 0.8309982486865148,
+      "pair_macro_strict": 0.8574641352153393
+    },
+    "MATH_ID": {
+      "questions": 340,
+      "candidates": 4167,
+      "top1": 0.7235294117647059,
+      "pair_macro_strict": 0.7850603178334271
+    },
+    "SVAMP_OOD": {
+      "questions": 883,
+      "candidates": 13913,
+      "top1": 0.869762174405436,
+      "pair_macro_strict": 0.8501259922269871
+    },
+    "ID_MACRO": {
+      "top1": 0.7772638302256103,
+      "pair_macro_strict": 0.8212622265243832
+    }
+  },
+  "per_seed": [
+    {
+      "seed": 20260829,
+      "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/trajectory_head_grid_g0p8_bt0p5_cal0p1_seed20260829.pt",
+      "datasets": {
+        "GSM8K_ID": {
+          "questions": 1142,
+          "candidates": 17902,
+          "raw_top1": 0.8309982486865148,
+          "raw_pair_macro_strict": 0.8574641352153393,
+          "corrected_top1": 0.8371278458844134,
+          "corrected_pair_macro_strict": 0.8762564707945618,
+          "top1_delta": 0.0061295971978985175,
+          "pair_delta": 0.018792335579222552,
+          "correction_rate": 0.3316062176165803,
+          "damage_rate": 0.06006322444678609,
+          "prediction_file": "/root/autodl-tmp/rm_traj_project/outputs/final_predictions/gsm_id_test.seed_20260829.scores_f32.npy"
+        },
+        "MATH_ID": {
+          "questions": 340,
+          "candidates": 4167,
+          "raw_top1": 0.7235294117647059,
+          "raw_pair_macro_strict": 0.7850603178334271,
+          "corrected_top1": 0.7205882352941176,
+          "corrected_pair_macro_strict": 0.7884048822131804,
+          "top1_delta": -0.002941176470588225,
+          "pair_delta": 0.0033445643797532787,
+          "correction_rate": 0.26595744680851063,
+          "damage_rate": 0.10569105691056911,
+          "prediction_file": "/root/autodl-tmp/rm_traj_project/outputs/final_predictions/math_id_test.seed_20260829.scores_f32.npy"
+        },
+        "SVAMP_OOD": {
+          "questions": 883,
+          "candidates": 13913,
+          "raw_top1": 0.869762174405436,
+          "raw_pair_macro_strict": 0.8501259922269871,
+          "corrected_top1": 0.8369195922989807,
+          "corrected_pair_macro_strict": 0.8611382096649448,
+          "top1_delta": -0.0328425821064553,
+          "pair_delta": 0.011012217437957661,
+          "correction_rate": 0.2956521739130435,
+          "damage_rate": 0.08203125,
+          "prediction_file": "/root/autodl-tmp/rm_traj_project/outputs/final_predictions/svamp_ood.seed_20260829.scores_f32.npy"
+        }
+      },
+      "id_macro": {
+        "corrected_top1": 0.7788580405892656,
+        "corrected_pair_macro_strict": 0.8323306765038712,
+        "top1_delta": 0.0015942103636551463,
+        "pair_delta": 0.011068449979487915,
+        "damage_rate": 0.0828771406786776
+      }
+    },
+    {
+      "seed": 20260830,
+      "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/trajectory_head_final_g0p8_bt0p5_cal0p1_seed20260830.pt",
+      "datasets": {
+        "GSM8K_ID": {
+          "questions": 1142,
+          "candidates": 17902,
+          "raw_top1": 0.8309982486865148,
+          "raw_pair_macro_strict": 0.8574641352153393,
+          "corrected_top1": 0.8248686514886164,
+          "corrected_pair_macro_strict": 0.8657189906642621,
+          "top1_delta": -0.0061295971978984065,
+          "pair_delta": 0.008254855448922793,
+          "correction_rate": 0.31088082901554404,
+          "damage_rate": 0.07060063224446786,
+          "prediction_file": "/root/autodl-tmp/rm_traj_project/outputs/final_predictions/gsm_id_test.seed_20260830.scores_f32.npy"
+        },
+        "MATH_ID": {
+          "questions": 340,
+          "candidates": 4167,
+          "raw_top1": 0.7235294117647059,
+          "raw_pair_macro_strict": 0.7850603178334271,
+          "corrected_top1": 0.6941176470588235,
+          "corrected_pair_macro_strict": 0.7674691042889572,
+          "top1_delta": -0.02941176470588236,
+          "pair_delta": -0.017591213544469908,
+          "correction_rate": 0.19148936170212766,
+          "damage_rate": 0.11382113821138211,
+          "prediction_file": "/root/autodl-tmp/rm_traj_project/outputs/final_predictions/math_id_test.seed_20260830.scores_f32.npy"
+        },
+        "SVAMP_OOD": {
+          "questions": 883,
+          "candidates": 13913,
+          "raw_top1": 0.869762174405436,
+          "raw_pair_macro_strict": 0.8501259922269871,
+          "corrected_top1": 0.7180067950169875,
+          "corrected_pair_macro_strict": 0.8141101979229911,
+          "top1_delta": -0.15175537938844852,
+          "pair_delta": -0.03601579430399604,
+          "correction_rate": 0.14782608695652175,
+          "damage_rate": 0.19661458333333334,
+          "prediction_file": "/root/autodl-tmp/rm_traj_project/outputs/final_predictions/svamp_ood.seed_20260830.scores_f32.npy"
+        }
+      },
+      "id_macro": {
+        "corrected_top1": 0.75949314927372,
+        "corrected_pair_macro_strict": 0.8165940474766096,
+        "top1_delta": -0.017770680951890383,
+        "pair_delta": -0.004668179047773557,
+        "damage_rate": 0.09221088522792498
+      }
+    },
+    {
+      "seed": 20260831,
+      "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/trajectory_head_final_g0p8_bt0p5_cal0p1_seed20260831.pt",
+      "datasets": {
+        "GSM8K_ID": {
+          "questions": 1142,
+          "candidates": 17902,
+          "raw_top1": 0.8309982486865148,
+          "raw_pair_macro_strict": 0.8574641352153393,
+          "corrected_top1": 0.8353765323992994,
+          "corrected_pair_macro_strict": 0.8728364622218607,
+          "top1_delta": 0.004378283712784592,
+          "pair_delta": 0.015372327006521469,
+          "correction_rate": 0.35233160621761656,
+          "damage_rate": 0.06638566912539515,
+          "prediction_file": "/root/autodl-tmp/rm_traj_project/outputs/final_predictions/gsm_id_test.seed_20260831.scores_f32.npy"
+        },
+        "MATH_ID": {
+          "questions": 340,
+          "candidates": 4167,
+          "raw_top1": 0.7235294117647059,
+          "raw_pair_macro_strict": 0.7850603178334271,
+          "corrected_top1": 0.7323529411764705,
+          "corrected_pair_macro_strict": 0.7719618945091634,
+          "top1_delta": 0.008823529411764675,
+          "pair_delta": -0.013098423324263697,
+          "correction_rate": 0.3191489361702128,
+          "damage_rate": 0.10975609756097561,
+          "prediction_file": "/root/autodl-tmp/rm_traj_project/outputs/final_predictions/math_id_test.seed_20260831.scores_f32.npy"
+        },
+        "SVAMP_OOD": {
+          "questions": 883,
+          "candidates": 13913,
+          "raw_top1": 0.869762174405436,
+          "raw_pair_macro_strict": 0.8501259922269871,
+          "corrected_top1": 0.7587768969422424,
+          "corrected_pair_macro_strict": 0.8241822638755781,
+          "top1_delta": -0.11098527746319364,
+          "pair_delta": -0.025943728351409012,
+          "correction_rate": 0.19130434782608696,
+          "damage_rate": 0.15625,
+          "prediction_file": "/root/autodl-tmp/rm_traj_project/outputs/final_predictions/svamp_ood.seed_20260831.scores_f32.npy"
+        }
+      },
+      "id_macro": {
+        "corrected_top1": 0.783864736787885,
+        "corrected_pair_macro_strict": 0.822399178365512,
+        "top1_delta": 0.006600906562274633,
+        "pair_delta": 0.001136951841128886,
+        "damage_rate": 0.08807088334318539
+      }
+    }
+  ],
+  "aggregate": {
+    "GSM8K_ID": {
+      "corrected_top1": {
+        "mean": 0.8324576765907764,
+        "std": 0.006630365844483705,
+        "min": 0.8248686514886164,
+        "max": 0.8371278458844134
+      },
+      "corrected_pair_macro_strict": {
+        "mean": 0.8716039745602281,
+        "std": 0.005375768898601657,
+        "min": 0.8657189906642621,
+        "max": 0.8762564707945618
+      },
+      "top1_delta": {
+        "mean": 0.0014594279042615677,
+        "std": 0.006630365844483705,
+        "min": -0.0061295971978984065,
+        "max": 0.0061295971978985175
+      },
+      "pair_delta": {
+        "mean": 0.014139839344888938,
+        "std": 0.005375768898601657,
+        "min": 0.008254855448922793,
+        "max": 0.018792335579222552
+      },
+      "correction_rate": {
+        "mean": 0.3316062176165803,
+        "std": 0.02072538860103626,
+        "min": 0.31088082901554404,
+        "max": 0.35233160621761656
+      },
+      "damage_rate": {
+        "mean": 0.06568317527221637,
+        "std": 0.005303712283295221,
+        "min": 0.06006322444678609,
+        "max": 0.07060063224446786
+      }
+    },
+    "MATH_ID": {
+      "corrected_top1": {
+        "mean": 0.7156862745098039,
+        "std": 0.019583317995527618,
+        "min": 0.6941176470588235,
+        "max": 0.7323529411764705
+      },
+      "corrected_pair_macro_strict": {
+        "mean": 0.7759452936704337,
+        "std": 0.011021674146045334,
+        "min": 0.7674691042889572,
+        "max": 0.7884048822131804
+      },
+      "top1_delta": {
+        "mean": -0.00784313725490197,
+        "std": 0.019583317995527618,
+        "min": -0.02941176470588236,
+        "max": 0.008823529411764675
+      },
+      "pair_delta": {
+        "mean": -0.009115024162993443,
+        "std": 0.011021674146045334,
+        "min": -0.017591213544469908,
+        "max": 0.0033445643797532787
+      },
+      "correction_rate": {
+        "mean": 0.2588652482269504,
+        "std": 0.06412461461001817,
+        "min": 0.19148936170212766,
+        "max": 0.3191489361702128
+      },
+      "damage_rate": {
+        "mean": 0.10975609756097561,
+        "std": 0.004065040650406498,
+        "min": 0.10569105691056911,
+        "max": 0.11382113821138211
+      }
+    },
+    "SVAMP_OOD": {
+      "corrected_top1": {
+        "mean": 0.7712344280860702,
+        "std": 0.06042727778914655,
+        "min": 0.7180067950169875,
+        "max": 0.8369195922989807
+      },
+      "corrected_pair_macro_strict": {
+        "mean": 0.8331435571545046,
+        "std": 0.024761604451721913,
+        "min": 0.8141101979229911,
+        "max": 0.8611382096649448
+      },
+      "top1_delta": {
+        "mean": -0.09852774631936582,
+        "std": 0.060427277789146555,
+        "min": -0.15175537938844852,
+        "max": -0.0328425821064553
+      },
+      "pair_delta": {
+        "mean": -0.016982435072482465,
+        "std": 0.024761604451721913,
+        "min": -0.03601579430399604,
+        "max": 0.011012217437957661
+      },
+      "correction_rate": {
+        "mean": 0.21159420289855072,
+        "std": 0.07597299954829657,
+        "min": 0.14782608695652175,
+        "max": 0.2956521739130435
+      },
+      "damage_rate": {
+        "mean": 0.1449652777777778,
+        "std": 0.058119220453899605,
+        "min": 0.08203125,
+        "max": 0.19661458333333334
+      }
+    },
+    "ID_MACRO": {
+      "corrected_top1": {
+        "mean": 0.7740719755502902,
+        "std": 0.012871417303783123,
+        "min": 0.75949314927372,
+        "max": 0.783864736787885
+      },
+      "corrected_pair_macro_strict": {
+        "mean": 0.8237746341153308,
+        "std": 0.007957969726958967,
+        "min": 0.8165940474766096,
+        "max": 0.8323306765038712
+      },
+      "top1_delta": {
+        "mean": -0.0031918546753202013,
+        "std": 0.012871417303783123,
+        "min": -0.017770680951890383,
+        "max": 0.006600906562274633
+      },
+      "pair_delta": {
+        "mean": 0.002512407590947748,
+        "std": 0.007957969726958907,
+        "min": -0.004668179047773557,
+        "max": 0.011068449979487915
+      },
+      "damage_rate": {
+        "mean": 0.08771963641659598,
+        "std": 0.004676775345281206,
+        "min": 0.0828771406786776,
+        "max": 0.09221088522792498
+      }
+    }
+  },
+  "total_elapsed_seconds": 3.263,
+  "peak_gpu_gb": 1.382
+}
