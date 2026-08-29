@@ -1,0 +1,381 @@
+{
+  "version": "safe_trajectory_bootstrap_v1",
+  "status": "test_informed_exploratory",
+  "warning": "beta was selected after observing these datasets; confidence intervals are diagnostic, not confirmatory.",
+  "method": {
+    "beta": 0.1,
+    "ensemble": "mean_of_three_seeds",
+    "bootstrap_unit": "question",
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20260901
+  },
+  "datasets": {
+    "GSM8K_ID": {
+      "questions": 1142,
+      "candidates": 17902,
+      "raw_top1": 0.8309982486865148,
+      "safe_top1": 0.8677758318739054,
+      "raw_pair": 0.8574641352153393,
+      "safe_pair": 0.8903767010783211,
+      "top1_effect": {
+        "point_estimate": 0.03677758318739054,
+        "ci_95": [
+          0.025394045534150613,
+          0.04903677758318739
+        ],
+        "exploratory_two_sided_p": 0.00019998000199980003,
+        "ci_excludes_zero": true
+      },
+      "pair_effect": {
+        "point_estimate": 0.032912565862981795,
+        "ci_95": [
+          0.02899748693215473,
+          0.036922176525900796
+        ],
+        "exploratory_two_sided_p": 0.00019998000199980003,
+        "ci_excludes_zero": true
+      },
+      "correction_rate": 0.23834196891191708,
+      "damage_rate": 0.004214963119072708
+    },
+    "MATH_ID": {
+      "questions": 340,
+      "candidates": 4167,
+      "raw_top1": 0.7235294117647059,
+      "safe_top1": 0.7352941176470589,
+      "raw_pair": 0.7850603178334271,
+      "safe_pair": 0.7927991510318191,
+      "top1_effect": {
+        "point_estimate": 0.011764705882352941,
+        "ci_95": [
+          -0.008823529411764706,
+          0.03235294117647059
+        ],
+        "exploratory_two_sided_p": 0.3521647835216478,
+        "ci_excludes_zero": false
+      },
+      "pair_effect": {
+        "point_estimate": 0.007738833198392022,
+        "ci_95": [
+          0.003067107761908183,
+          0.012629758744989837
+        ],
+        "exploratory_two_sided_p": 0.0013998600139986002,
+        "ci_excludes_zero": true
+      },
+      "correction_rate": 0.09574468085106383,
+      "damage_rate": 0.02032520325203252
+    },
+    "SVAMP_OOD": {
+      "questions": 883,
+      "candidates": 13913,
+      "raw_top1": 0.869762174405436,
+      "safe_top1": 0.869762174405436,
+      "raw_pair": 0.8501259922269871,
+      "safe_pair": 0.8660707777933956,
+      "top1_effect": {
+        "point_estimate": 0.0,
+        "ci_95": [
+          -0.009060022650056626,
+          0.009060022650056626
+        ],
+        "exploratory_two_sided_p": 1.0,
+        "ci_excludes_zero": false
+      },
+      "pair_effect": {
+        "point_estimate": 0.01594478556640828,
+        "ci_95": [
+          0.012042457506821584,
+          0.019958801208652063
+        ],
+        "exploratory_two_sided_p": 0.00019998000199980003,
+        "ci_excludes_zero": true
+      },
+      "correction_rate": 0.0782608695652174,
+      "damage_rate": 0.01171875
+    }
+  },
+  "aggregate": {
+    "ID_MACRO": {
+      "datasets": [
+        "GSM8K_ID",
+        "MATH_ID"
+      ],
+      "top1_effect": {
+        "point_estimate": 0.024271144534871742,
+        "ci_95": [
+          0.011944988152879366,
+          0.03675440403832286
+        ],
+        "exploratory_two_sided_p": 0.00039996000399960006,
+        "ci_excludes_zero": true
+      },
+      "pair_effect": {
+        "point_estimate": 0.020325699530686907,
+        "ci_95": [
+          0.01728228588964968,
+          0.023561411170250426
+        ],
+        "exploratory_two_sided_p": 0.00019998000199980003,
+        "ci_excludes_zero": true
+      }
+    },
+    "ALL_DATASET_MACRO": {
+      "datasets": [
+        "GSM8K_ID",
+        "MATH_ID",
+        "SVAMP_OOD"
+      ],
+      "top1_effect": {
+        "point_estimate": 0.016180763023247828,
+        "ci_95": [
+          0.00729385889538176,
+          0.025032547643695263
+        ],
+        "exploratory_two_sided_p": 0.000999900009999,
+        "ci_excludes_zero": true
+      },
+      "pair_effect": {
+        "point_estimate": 0.018865394875927366,
+        "ci_95": [
+          0.01644656193264818,
+          0.0213752905564575
+        ],
+        "exploratory_two_sided_p": 0.00019998000199980003,
+        "ci_excludes_zero": true
+      }
+    }
+  },
+  "ablation": {
+    "raw_beta_0": {
+      "beta": 0.0,
+      "macro_top1": 0.8080966116188856,
+      "macro_pair": 0.8308834817585845,
+      "macro_damage": 0.0,
+      "datasets": {
+        "GSM8K_ID": {
+          "raw_top1": 0.8309982486865148,
+          "raw_pair": 0.8574641352153393,
+          "corrected_top1": 0.8309982486865148,
+          "corrected_pair": 0.8574641352153393,
+          "top1_delta": 0.0,
+          "pair_delta": 0.0,
+          "correction_rate": 0.0,
+          "damage_rate": 0.0
+        },
+        "MATH_ID": {
+          "raw_top1": 0.7235294117647059,
+          "raw_pair": 0.7850603178334271,
+          "corrected_top1": 0.7235294117647059,
+          "corrected_pair": 0.7850603178334271,
+          "top1_delta": 0.0,
+          "pair_delta": 0.0,
+          "correction_rate": 0.0,
+          "damage_rate": 0.0
+        },
+        "SVAMP_OOD": {
+          "raw_top1": 0.869762174405436,
+          "raw_pair": 0.8501259922269871,
+          "corrected_top1": 0.869762174405436,
+          "corrected_pair": 0.8501259922269871,
+          "top1_delta": 0.0,
+          "pair_delta": 0.0,
+          "correction_rate": 0.0,
+          "damage_rate": 0.0
+        }
+      }
+    },
+    "safe_beta_0p1": {
+      "beta": 0.1,
+      "macro_top1": 0.8242773746421334,
+      "macro_pair": 0.8497488766345119,
+      "macro_damage": 0.012086305457035077,
+      "datasets": {
+        "GSM8K_ID": {
+          "raw_top1": 0.8309982486865148,
+          "raw_pair": 0.8574641352153393,
+          "corrected_top1": 0.8677758318739054,
+          "corrected_pair": 0.8903767010783211,
+          "top1_delta": 0.03677758318739055,
+          "pair_delta": 0.03291256586298186,
+          "correction_rate": 0.23834196891191708,
+          "damage_rate": 0.004214963119072708
+        },
+        "MATH_ID": {
+          "raw_top1": 0.7235294117647059,
+          "raw_pair": 0.7850603178334271,
+          "corrected_top1": 0.7352941176470589,
+          "corrected_pair": 0.7927991510318191,
+          "top1_delta": 0.01176470588235301,
+          "pair_delta": 0.00773883319839197,
+          "correction_rate": 0.09574468085106383,
+          "damage_rate": 0.02032520325203252
+        },
+        "SVAMP_OOD": {
+          "raw_top1": 0.869762174405436,
+          "raw_pair": 0.8501259922269871,
+          "corrected_top1": 0.869762174405436,
+          "corrected_pair": 0.8660707777933956,
+          "top1_delta": 0.0,
+          "pair_delta": 0.015944785566408437,
+          "correction_rate": 0.0782608695652174,
+          "damage_rate": 0.01171875
+        }
+      }
+    },
+    "unconstrained_beta_1": {
+      "beta": 1.0,
+      "macro_top1": 0.792344722646086,
+      "macro_pair": 0.8379190908617309,
+      "macro_damage": 0.08483855938072025,
+      "datasets": {
+        "GSM8K_ID": {
+          "raw_top1": 0.8309982486865148,
+          "raw_pair": 0.8574641352153393,
+          "corrected_top1": 0.8476357267950964,
+          "corrected_pair": 0.8805614143672376,
+          "top1_delta": 0.016637478108581516,
+          "pair_delta": 0.023097279151898298,
+          "correction_rate": 0.3626943005181347,
+          "damage_rate": 0.05374077976817703
+        },
+        "MATH_ID": {
+          "raw_top1": 0.7235294117647059,
+          "raw_pair": 0.7850603178334271,
+          "corrected_top1": 0.7411764705882353,
+          "corrected_pair": 0.7881158022649619,
+          "top1_delta": 0.01764705882352946,
+          "pair_delta": 0.003055484431534805,
+          "correction_rate": 0.2553191489361702,
+          "damage_rate": 0.07317073170731707
+        },
+        "SVAMP_OOD": {
+          "raw_top1": 0.869762174405436,
+          "raw_pair": 0.8501259922269871,
+          "corrected_top1": 0.7882219705549264,
+          "corrected_pair": 0.8450800559529932,
+          "top1_delta": -0.08154020385050964,
+          "pair_delta": -0.005045936273993967,
+          "correction_rate": 0.22608695652173913,
+          "damage_rate": 0.12760416666666666
+        }
+      }
+    },
+    "safe_per_seed": {
+      "20260829": {
+        "beta": 0.1,
+        "macro_top1": 0.8296898269931882,
+        "macro_pair": 0.8500362499990174,
+        "macro_damage": 0.015498826410484863,
+        "datasets": {
+          "GSM8K_ID": {
+            "raw_top1": 0.8309982486865148,
+            "raw_pair": 0.8574641352153393,
+            "corrected_top1": 0.8695271453590193,
+            "corrected_pair": 0.8882872299548088,
+            "top1_delta": 0.038528896672504476,
+            "pair_delta": 0.030823094739469536,
+            "correction_rate": 0.25906735751295334,
+            "damage_rate": 0.006322444678609062
+          },
+          "MATH_ID": {
+            "raw_top1": 0.7235294117647059,
+            "raw_pair": 0.7850603178334271,
+            "corrected_top1": 0.7441176470588236,
+            "corrected_pair": 0.7934527916255858,
+            "top1_delta": 0.020588235294117685,
+            "pair_delta": 0.008392473792158683,
+            "correction_rate": 0.14893617021276595,
+            "damage_rate": 0.028455284552845527
+          },
+          "SVAMP_OOD": {
+            "raw_top1": 0.869762174405436,
+            "raw_pair": 0.8501259922269871,
+            "corrected_top1": 0.8754246885617214,
+            "corrected_pair": 0.8683687284166576,
+            "top1_delta": 0.005662514156285381,
+            "pair_delta": 0.018242736189670428,
+            "correction_rate": 0.12173913043478261,
+            "damage_rate": 0.01171875
+          }
+        }
+      },
+      "20260830": {
+        "beta": 0.1,
+        "macro_top1": 0.8174054943868173,
+        "macro_pair": 0.8446890891396359,
+        "macro_damage": 0.019428155992900813,
+        "datasets": {
+          "GSM8K_ID": {
+            "raw_top1": 0.8309982486865148,
+            "raw_pair": 0.8574641352153393,
+            "corrected_top1": 0.861646234676007,
+            "corrected_pair": 0.8860785544197323,
+            "top1_delta": 0.030647985989492144,
+            "pair_delta": 0.028614419204393005,
+            "correction_rate": 0.21761658031088082,
+            "damage_rate": 0.007376185458377239
+          },
+          "MATH_ID": {
+            "raw_top1": 0.7235294117647059,
+            "raw_pair": 0.7850603178334271,
+            "corrected_top1": 0.7264705882352941,
+            "corrected_pair": 0.7868840292527268,
+            "top1_delta": 0.002941176470588225,
+            "pair_delta": 0.0018237114192997117,
+            "correction_rate": 0.10638297872340426,
+            "damage_rate": 0.036585365853658534
+          },
+          "SVAMP_OOD": {
+            "raw_top1": 0.869762174405436,
+            "raw_pair": 0.8501259922269871,
+            "corrected_top1": 0.8640996602491506,
+            "corrected_pair": 0.8611046837464489,
+            "top1_delta": -0.005662514156285381,
+            "pair_delta": 0.010978691519461736,
+            "correction_rate": 0.05217391304347826,
+            "damage_rate": 0.014322916666666666
+          }
+        }
+      },
+      "20260831": {
+        "beta": 0.1,
+        "macro_top1": 0.8183826859330207,
+        "macro_pair": 0.8487132408307722,
+        "macro_damage": 0.020813020177422533,
+        "datasets": {
+          "GSM8K_ID": {
+            "raw_top1": 0.8309982486865148,
+            "raw_pair": 0.8574641352153393,
+            "corrected_top1": 0.8686514886164624,
+            "corrected_pair": 0.8914462735325258,
+            "top1_delta": 0.03765323992994751,
+            "pair_delta": 0.03398213831718655,
+            "correction_rate": 0.2538860103626943,
+            "damage_rate": 0.006322444678609062
+          },
+          "MATH_ID": {
+            "raw_top1": 0.7235294117647059,
+            "raw_pair": 0.7850603178334271,
+            "corrected_top1": 0.7235294117647059,
+            "corrected_pair": 0.7886433293208504,
+            "top1_delta": 0.0,
+            "pair_delta": 0.0035830114874232377,
+            "correction_rate": 0.09574468085106383,
+            "damage_rate": 0.036585365853658534
+          },
+          "SVAMP_OOD": {
+            "raw_top1": 0.869762174405436,
+            "raw_pair": 0.8501259922269871,
+            "corrected_top1": 0.8629671574178935,
+            "corrected_pair": 0.8660501196389401,
+            "top1_delta": -0.006795016987542479,
+            "pair_delta": 0.015924127411952926,
+            "correction_rate": 0.0782608695652174,
+            "damage_rate": 0.01953125
+          }
+        }
+      }
+    }
+  }
+}
