@@ -1,0 +1,178 @@
+{
+  "version": "prototype_v2",
+  "seed": 20260829,
+  "experiments": {
+    "gsm_only": {
+      "train": "gsm_train.jsonl",
+      "discovery": "gsm_layer_discovery.jsonl",
+      "pilot": "gsm_pilot_validation.jsonl",
+      "id_test": "gsm_id_test_mixed.jsonl"
+    },
+    "math_only": {
+      "train": "math_train.jsonl",
+      "discovery": "math_layer_discovery.jsonl",
+      "pilot": "math_pilot_validation.jsonl",
+      "id_test": "math_id_test_mixed.jsonl"
+    },
+    "joint": {
+      "train": "joint_train.jsonl",
+      "discovery": "joint_layer_discovery.jsonl",
+      "pilot": "joint_pilot_validation.jsonl",
+      "dataset_balanced_sampling": "50% GSM8K + 50% MATH",
+      "id_tests": [
+        "gsm_id_test_mixed.jsonl",
+        "math_id_test_mixed.jsonl"
+      ]
+    }
+  },
+  "ood": {
+    "simple": "svamp_ood_mixed.jsonl",
+    "hard_ranking": "rewardbench2_math_hard_ood.jsonl",
+    "hard_mechanism": "processbench_hard_mechanism.jsonl"
+  },
+  "gsm_duplicates_removed": {
+    "train": 61,
+    "pilot": 3
+  },
+  "roles": {
+    "gsm_train": {
+      "questions": 1531,
+      "candidates": 24221,
+      "positive": 14952,
+      "negative": 9269,
+      "candidate_min": 7,
+      "candidate_median": 16,
+      "candidate_max": 16
+    },
+    "gsm_layer_discovery": {
+      "questions": 170,
+      "candidates": 2685,
+      "positive": 1739,
+      "negative": 946,
+      "candidate_min": 13,
+      "candidate_median": 16.0,
+      "candidate_max": 16
+    },
+    "gsm_pilot_validation": {
+      "questions": 189,
+      "candidates": 2985,
+      "positive": 1869,
+      "negative": 1116,
+      "candidate_min": 13,
+      "candidate_median": 16,
+      "candidate_max": 16
+    },
+    "gsm_id_test_mixed": {
+      "questions": 1142,
+      "candidates": 17902,
+      "positive": 7869,
+      "negative": 10033,
+      "candidate_min": 10,
+      "candidate_median": 16.0,
+      "candidate_max": 16
+    },
+    "math_train": {
+      "questions": 1276,
+      "candidates": 16229,
+      "positive": 10406,
+      "negative": 5823,
+      "candidate_min": 5,
+      "candidate_median": 13.0,
+      "candidate_max": 16
+    },
+    "math_layer_discovery": {
+      "questions": 142,
+      "candidates": 1840,
+      "positive": 1210,
+      "negative": 630,
+      "candidate_min": 6,
+      "candidate_median": 13.0,
+      "candidate_max": 16
+    },
+    "math_pilot_validation": {
+      "questions": 158,
+      "candidates": 2040,
+      "positive": 1337,
+      "negative": 703,
+      "candidate_min": 8,
+      "candidate_median": 13.0,
+      "candidate_max": 16
+    },
+    "math_id_test_mixed": {
+      "questions": 340,
+      "candidates": 4167,
+      "positive": 1972,
+      "negative": 2195,
+      "candidate_min": 4,
+      "candidate_median": 13.0,
+      "candidate_max": 16
+    },
+    "svamp_ood_mixed": {
+      "questions": 883,
+      "candidates": 13913,
+      "positive": 7282,
+      "negative": 6631,
+      "candidate_min": 10,
+      "candidate_median": 16,
+      "candidate_max": 16
+    },
+    "rewardbench2_math_hard_ood": {
+      "questions": 183,
+      "candidates": 732,
+      "positive": 183,
+      "negative": 549,
+      "candidate_min": 4,
+      "candidate_median": 4,
+      "candidate_max": 4
+    },
+    "joint_train": {
+      "questions": 2807,
+      "candidates": 40450,
+      "positive": 25358,
+      "negative": 15092,
+      "candidate_min": 5,
+      "candidate_median": 15,
+      "candidate_max": 16
+    },
+    "joint_layer_discovery": {
+      "questions": 312,
+      "candidates": 4525,
+      "positive": 2949,
+      "negative": 1576,
+      "candidate_min": 6,
+      "candidate_median": 15.0,
+      "candidate_max": 16
+    },
+    "joint_pilot_validation": {
+      "questions": 347,
+      "candidates": 5025,
+      "positive": 3206,
+      "negative": 1819,
+      "candidate_min": 8,
+      "candidate_median": 15,
+      "candidate_max": 16
+    },
+    "processbench_hard_mechanism": {
+      "samples": 2000,
+      "unique_questions": 1512,
+      "correct": 1000,
+      "incorrect": 1000
+    }
+  },
+  "sha256": {
+    "gsm_train.jsonl": "ab4713ddc3f2493d88e70a971f3f8e90b65f9a69f1ca409ff9f31568cb337860",
+    "gsm_layer_discovery.jsonl": "e08e538a31ab22269ac423f99c3bf7c8e0818623eb003d05d9fe8004053b945f",
+    "gsm_pilot_validation.jsonl": "26e1652192504c2e8fe609c65290fdff86d9cd8e0b5d34a56e4050099bd60a3f",
+    "gsm_id_test_mixed.jsonl": "9e41ca864144410060f519bb15bc3f94251ff6a3645d2412a4feac9d3af6e834",
+    "math_train.jsonl": "21af8ba32f42164c48d220fc2bb68e40d80673427833c7a0f6a8cf74c8d9c6de",
+    "math_layer_discovery.jsonl": "342618253c10bfb68cbe87edfd25a02af49ffb40098e9e26d12fa644d2e3759b",
+    "math_pilot_validation.jsonl": "eba33790e2a52c74e5dc6e79bd46f26082034f785330fdd630606cf67044334b",
+    "math_id_test_mixed.jsonl": "cb84caba48d26e39fa0f1a4e4a0fe26ec180793f817cce80ef8e50b4ed5b1cdb",
+    "svamp_ood_mixed.jsonl": "d7621b8b1d631251ea717150b3bfdf9c22b8e7cfb86afa745191b1cb2fff8077",
+    "rewardbench2_math_hard_ood.jsonl": "8a9f096283e8b73d133d15fe2838dcb6ac34f736efdef47baf32ba35989d5fed",
+    "joint_train.jsonl": "2d7a167b8fcfcc9f10704cf2c81475a742811cc2a9b980f7901d893dc890c265",
+    "joint_layer_discovery.jsonl": "3a3affe914f51813048775dc5d09ef3641ed51a7f1d9964a09878305f20f45d4",
+    "joint_pilot_validation.jsonl": "fdb5b605c5d2494b82747f188ba045eb1789a6ab8c0de665dda00223dcb4a80e",
+    "processbench_hard_mechanism.jsonl": "ad0f661c5a4bfc26ab90f338626b46b780fd6430b2d983bb63d2dab00dd722e5"
+  }
+}

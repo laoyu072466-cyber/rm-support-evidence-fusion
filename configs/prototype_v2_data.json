@@ -1,0 +1,16 @@
+{
+  "version": "prototype_v2",
+  "training_modes": [
+    "gsm_only",
+    "math_only",
+    "joint"
+  ],
+  "joint_dataset_sampling": {
+    "GSM8K": 0.5,
+    "MATH": 0.5
+  },
+  "joint_selection_metric": "mean(PairMacro_GSM8K, PairMacro_MATH)",
+  "simple_ood": "SVAMP",
+  "hard_ranking_ood": "RewardBench2 Math",
+  "mechanism_ood": "ProcessBench OlympiadBench + Omni-MATH"
+}
