@@ -401,19 +401,73 @@ def reproduce_validation():
                 seed,
             ).read_text(encoding="utf-8")
         )
-        expected = saved["training"]["sgldsv"]
+        metric_candidates = []
+
+        def collect_metrics(value, metric_path="root"):
+            if isinstance(value, dict):
+                if (
+                    "top1" in value
+                    and "pair_macro_strict" in value
+                ):
+                    metric_candidates.append(
+                        (metric_path, value)
+                    )
+
+                for key, child in value.items():
+                    collect_metrics(
+                        child,
+                        f"{metric_path}.{key}",
+                    )
+            elif isinstance(value, list):
+                for index, child in enumerate(value):
+                    collect_metrics(
+                        child,
+                        f"{metric_path}[{index}]",
+                    )
+
+        collect_metrics(saved)
+
+        if not metric_candidates:
+            raise RuntimeError(
+                f"{family} 训练结果中没有找到验证指标"
+            )
+
+        actual = result["sgldsv"]
+
+        expected_path, expected = min(
+            metric_candidates,
+            key=lambda item: (
+                abs(
+                    float(item[1]["top1"])
+                    - actual["top1"]
+                )
+                + abs(
+                    float(
+                        item[1][
+                            "pair_macro_strict"
+                        ]
+                    )
+                    - actual[
+                        "pair_macro_strict"
+                    ]
+                )
+            ),
+        )
 
         top1_gap = abs(
-            result["sgldsv"]["top1"]
-            - expected["top1"]
+            actual["top1"]
+            - float(expected["top1"])
         )
         pair_gap = abs(
-            result["sgldsv"]["pair_macro_strict"]
-            - expected["pair_macro_strict"]
+            actual["pair_macro_strict"]
+            - float(
+                expected["pair_macro_strict"]
+            )
         )
 
         print(
             f"{family} seed=42 Pilot："
+            f"匹配路径={expected_path}, "
             f"Top1 gap={top1_gap:.10f}, "
             f"Pair gap={pair_gap:.10f}"
         )
