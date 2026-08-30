@@ -1,0 +1,741 @@
+{
+  "version": "sgldsv_rm_residual_pilot_v1",
+  "scope": "exploratory_after_exact_transfer_failure",
+  "tests_loaded": false,
+  "architecture": {
+    "endpoint": "frozen_original_RM_score",
+    "local_branch": "SG-LDSV gated local dynamics",
+    "initial_correction": 0.0,
+    "correction": "0.5 * tanh(local_score)",
+    "residual_penalty": 0.1
+  },
+  "selection": {
+    "primary": "pilot_pair_macro_strict",
+    "top1_damage_guard": 0.005,
+    "epoch_zero_raw_fallback": true
+  },
+  "results": {
+    "GSM8K": {
+      "42": {
+        "family": "GSM8K",
+        "seed": 42,
+        "best_epoch": 1,
+        "fallback_to_raw_rm": false,
+        "raw_pilot": {
+          "questions": 189,
+          "candidates": 2985,
+          "top1": 0.8624338624338624,
+          "pair_macro_strict": 0.7885050133826589,
+          "positive_score_mean": 0.364568829536438,
+          "negative_score_mean": -0.5634990930557251
+        },
+        "best_pilot": {
+          "questions": 189,
+          "candidates": 2985,
+          "top1": 0.9047619047619048,
+          "pair_macro_strict": 0.8809084791359922,
+          "positive_score_mean": 0.7394866943359375,
+          "negative_score_mean": -0.8623223900794983
+        },
+        "best_transition": {
+          "correction_rate": 0.4230769230769231,
+          "damage_rate": 0.018404907975460124,
+          "corrected_questions": 11,
+          "damaged_questions": 3
+        },
+        "best_correction_abs_mean": 0.4698013961315155,
+        "history": [
+          {
+            "epoch": 1,
+            "loss": 0.31931014826048665,
+            "validation": {
+              "questions": 189,
+              "candidates": 2985,
+              "top1": 0.9047619047619048,
+              "pair_macro_strict": 0.8809084791359922,
+              "positive_score_mean": 0.7394866943359375,
+              "negative_score_mean": -0.8623223900794983
+            },
+            "transition": {
+              "correction_rate": 0.4230769230769231,
+              "damage_rate": 0.018404907975460124,
+              "corrected_questions": 11,
+              "damaged_questions": 3
+            },
+            "correction_abs_mean": 0.4698013961315155,
+            "eligible": true,
+            "selected": true
+          },
+          {
+            "epoch": 2,
+            "loss": 0.29285991281500123,
+            "validation": {
+              "questions": 189,
+              "candidates": 2985,
+              "top1": 0.9153439153439153,
+              "pair_macro_strict": 0.8796818653862304,
+              "positive_score_mean": 0.7559347748756409,
+              "negative_score_mean": -0.8426349759101868
+            },
+            "transition": {
+              "correction_rate": 0.46153846153846156,
+              "damage_rate": 0.012269938650306749,
+              "corrected_questions": 12,
+              "damaged_questions": 2
+            },
+            "correction_abs_mean": 0.4789407551288605,
+            "eligible": true,
+            "selected": false
+          },
+          {
+            "epoch": 3,
+            "loss": 0.28159151522485665,
+            "validation": {
+              "questions": 189,
+              "candidates": 2985,
+              "top1": 0.9047619047619048,
+              "pair_macro_strict": 0.8792448741489747,
+              "positive_score_mean": 0.7506601810455322,
+              "negative_score_mean": -0.8699058890342712
+            },
+            "transition": {
+              "correction_rate": 0.38461538461538464,
+              "damage_rate": 0.012269938650306749,
+              "corrected_questions": 10,
+              "damaged_questions": 2
+            },
+            "correction_abs_mean": 0.4865996539592743,
+            "eligible": true,
+            "selected": false
+          }
+        ],
+        "reward_normalization": {
+          "mean": 3.0162675380706787,
+          "std": 3.8234305381774902,
+          "scope": "train_only"
+        },
+        "parameter_count": 272738,
+        "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_rm_residual_gsm8k_seed42.pt",
+        "peak_gpu_gb": 0.5
+      },
+      "123": {
+        "family": "GSM8K",
+        "seed": 123,
+        "best_epoch": 1,
+        "fallback_to_raw_rm": false,
+        "raw_pilot": {
+          "questions": 189,
+          "candidates": 2985,
+          "top1": 0.8624338624338624,
+          "pair_macro_strict": 0.7885050133826589,
+          "positive_score_mean": 0.364568829536438,
+          "negative_score_mean": -0.5634990930557251
+        },
+        "best_pilot": {
+          "questions": 189,
+          "candidates": 2985,
+          "top1": 0.9206349206349206,
+          "pair_macro_strict": 0.8839226072526337,
+          "positive_score_mean": 0.8177757263183594,
+          "negative_score_mean": -0.7620156407356262
+        },
+        "best_transition": {
+          "correction_rate": 0.46153846153846156,
+          "damage_rate": 0.006134969325153374,
+          "corrected_questions": 12,
+          "damaged_questions": 1
+        },
+        "best_correction_abs_mean": 0.4772971272468567,
+        "history": [
+          {
+            "epoch": 1,
+            "loss": 0.3205298666148529,
+            "validation": {
+              "questions": 189,
+              "candidates": 2985,
+              "top1": 0.9206349206349206,
+              "pair_macro_strict": 0.8839226072526337,
+              "positive_score_mean": 0.8177757263183594,
+              "negative_score_mean": -0.7620156407356262
+            },
+            "transition": {
+              "correction_rate": 0.46153846153846156,
+              "damage_rate": 0.006134969325153374,
+              "corrected_questions": 12,
+              "damaged_questions": 1
+            },
+            "correction_abs_mean": 0.4772971272468567,
+            "eligible": true,
+            "selected": true
+          },
+          {
+            "epoch": 2,
+            "loss": 0.29463615576803603,
+            "validation": {
+              "questions": 189,
+              "candidates": 2985,
+              "top1": 0.9206349206349206,
+              "pair_macro_strict": 0.882315860090331,
+              "positive_score_mean": 0.8143832683563232,
+              "negative_score_mean": -0.8043942451477051
+            },
+            "transition": {
+              "correction_rate": 0.46153846153846156,
+              "damage_rate": 0.006134969325153374,
+              "corrected_questions": 12,
+              "damaged_questions": 1
+            },
+            "correction_abs_mean": 0.48708274960517883,
+            "eligible": true,
+            "selected": false
+          },
+          {
+            "epoch": 3,
+            "loss": 0.2838540344567711,
+            "validation": {
+              "questions": 189,
+              "candidates": 2985,
+              "top1": 0.9417989417989417,
+              "pair_macro_strict": 0.8810970558688811,
+              "positive_score_mean": 0.7153171300888062,
+              "negative_score_mean": -0.9038300514221191
+            },
+            "transition": {
+              "correction_rate": 0.6153846153846154,
+              "damage_rate": 0.006134969325153374,
+              "corrected_questions": 16,
+              "damaged_questions": 1
+            },
+            "correction_abs_mean": 0.48513269424438477,
+            "eligible": true,
+            "selected": false
+          }
+        ],
+        "reward_normalization": {
+          "mean": 3.0162675380706787,
+          "std": 3.8234305381774902,
+          "scope": "train_only"
+        },
+        "parameter_count": 272738,
+        "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_rm_residual_gsm8k_seed123.pt",
+        "peak_gpu_gb": 0.509
+      },
+      "456": {
+        "family": "GSM8K",
+        "seed": 456,
+        "best_epoch": 3,
+        "fallback_to_raw_rm": false,
+        "raw_pilot": {
+          "questions": 189,
+          "candidates": 2985,
+          "top1": 0.8624338624338624,
+          "pair_macro_strict": 0.7885050133826589,
+          "positive_score_mean": 0.364568829536438,
+          "negative_score_mean": -0.5634990930557251
+        },
+        "best_pilot": {
+          "questions": 189,
+          "candidates": 2985,
+          "top1": 0.9153439153439153,
+          "pair_macro_strict": 0.881876945193744,
+          "positive_score_mean": 0.7626209855079651,
+          "negative_score_mean": -0.8689746260643005
+        },
+        "best_transition": {
+          "correction_rate": 0.4230769230769231,
+          "damage_rate": 0.006134969325153374,
+          "corrected_questions": 11,
+          "damaged_questions": 1
+        },
+        "best_correction_abs_mean": 0.4874342083930969,
+        "history": [
+          {
+            "epoch": 1,
+            "loss": 0.3193685526777209,
+            "validation": {
+              "questions": 189,
+              "candidates": 2985,
+              "top1": 0.9153439153439153,
+              "pair_macro_strict": 0.8780267361484294,
+              "positive_score_mean": 0.6737054586410522,
+              "negative_score_mean": -0.939832329750061
+            },
+            "transition": {
+              "correction_rate": 0.46153846153846156,
+              "damage_rate": 0.012269938650306749,
+              "corrected_questions": 12,
+              "damaged_questions": 2
+            },
+            "correction_abs_mean": 0.47597941756248474,
+            "eligible": true,
+            "selected": true
+          },
+          {
+            "epoch": 2,
+            "loss": 0.29397828029809847,
+            "validation": {
+              "questions": 189,
+              "candidates": 2985,
+              "top1": 0.9312169312169312,
+              "pair_macro_strict": 0.8804912586923168,
+              "positive_score_mean": 0.7446682453155518,
+              "negative_score_mean": -0.8806139230728149
+            },
+            "transition": {
+              "correction_rate": 0.5384615384615384,
+              "damage_rate": 0.006134969325153374,
+              "corrected_questions": 14,
+              "damaged_questions": 1
+            },
+            "correction_abs_mean": 0.4813666343688965,
+            "eligible": true,
+            "selected": true
+          },
+          {
+            "epoch": 3,
+            "loss": 0.28334573137037683,
+            "validation": {
+              "questions": 189,
+              "candidates": 2985,
+              "top1": 0.9153439153439153,
+              "pair_macro_strict": 0.881876945193744,
+              "positive_score_mean": 0.7626209855079651,
+              "negative_score_mean": -0.8689746260643005
+            },
+            "transition": {
+              "correction_rate": 0.4230769230769231,
+              "damage_rate": 0.006134969325153374,
+              "corrected_questions": 11,
+              "damaged_questions": 1
+            },
+            "correction_abs_mean": 0.4874342083930969,
+            "eligible": true,
+            "selected": true
+          },
+          {
+            "epoch": 4,
+            "loss": 0.2776082442430607,
+            "validation": {
+              "questions": 189,
+              "candidates": 2985,
+              "top1": 0.8994708994708994,
+              "pair_macro_strict": 0.8806137096051116,
+              "positive_score_mean": 0.736445963382721,
+              "negative_score_mean": -0.8767643570899963
+            },
+            "transition": {
+              "correction_rate": 0.4230769230769231,
+              "damage_rate": 0.024539877300613498,
+              "corrected_questions": 11,
+              "damaged_questions": 4
+            },
+            "correction_abs_mean": 0.48761236667633057,
+            "eligible": true,
+            "selected": false
+          },
+          {
+            "epoch": 5,
+            "loss": 0.27360286690001573,
+            "validation": {
+              "questions": 189,
+              "candidates": 2985,
+              "top1": 0.91005291005291,
+              "pair_macro_strict": 0.8814314459056521,
+              "positive_score_mean": 0.7406455278396606,
+              "negative_score_mean": -0.8778362274169922
+            },
+            "transition": {
+              "correction_rate": 0.38461538461538464,
+              "damage_rate": 0.006134969325153374,
+              "corrected_questions": 10,
+              "damaged_questions": 1
+            },
+            "correction_abs_mean": 0.48811885714530945,
+            "eligible": true,
+            "selected": false
+          }
+        ],
+        "reward_normalization": {
+          "mean": 3.0162675380706787,
+          "std": 3.8234305381774902,
+          "scope": "train_only"
+        },
+        "parameter_count": 272738,
+        "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_rm_residual_gsm8k_seed456.pt",
+        "peak_gpu_gb": 0.49
+      }
+    },
+    "MATH": {
+      "42": {
+        "family": "MATH",
+        "seed": 42,
+        "best_epoch": 1,
+        "fallback_to_raw_rm": false,
+        "raw_pilot": {
+          "questions": 158,
+          "candidates": 2040,
+          "top1": 0.8291139240506329,
+          "pair_macro_strict": 0.8177070045435778,
+          "positive_score_mean": 0.4371970295906067,
+          "negative_score_mean": -0.7318509221076965
+        },
+        "best_pilot": {
+          "questions": 158,
+          "candidates": 2040,
+          "top1": 0.8734177215189873,
+          "pair_macro_strict": 0.8348249582946692,
+          "positive_score_mean": 0.6702275276184082,
+          "negative_score_mean": -0.9346860647201538
+        },
+        "best_transition": {
+          "correction_rate": 0.3333333333333333,
+          "damage_rate": 0.015267175572519083,
+          "corrected_questions": 9,
+          "damaged_questions": 2
+        },
+        "best_correction_abs_mean": 0.43452343344688416,
+        "history": [
+          {
+            "epoch": 1,
+            "loss": 0.369952622158774,
+            "validation": {
+              "questions": 158,
+              "candidates": 2040,
+              "top1": 0.8734177215189873,
+              "pair_macro_strict": 0.8348249582946692,
+              "positive_score_mean": 0.6702275276184082,
+              "negative_score_mean": -0.9346860647201538
+            },
+            "transition": {
+              "correction_rate": 0.3333333333333333,
+              "damage_rate": 0.015267175572519083,
+              "corrected_questions": 9,
+              "damaged_questions": 2
+            },
+            "correction_abs_mean": 0.43452343344688416,
+            "eligible": true,
+            "selected": true
+          },
+          {
+            "epoch": 2,
+            "loss": 0.3003328079557374,
+            "validation": {
+              "questions": 158,
+              "candidates": 2040,
+              "top1": 0.8481012658227848,
+              "pair_macro_strict": 0.8249666790161818,
+              "positive_score_mean": 0.639051616191864,
+              "negative_score_mean": -0.8896732926368713
+            },
+            "transition": {
+              "correction_rate": 0.25925925925925924,
+              "damage_rate": 0.030534351145038167,
+              "corrected_questions": 7,
+              "damaged_questions": 4
+            },
+            "correction_abs_mean": 0.45066139101982117,
+            "eligible": true,
+            "selected": false
+          },
+          {
+            "epoch": 3,
+            "loss": 0.2773596559410771,
+            "validation": {
+              "questions": 158,
+              "candidates": 2040,
+              "top1": 0.8354430379746836,
+              "pair_macro_strict": 0.8155250779877814,
+              "positive_score_mean": 0.6031509041786194,
+              "negative_score_mean": -0.938555896282196
+            },
+            "transition": {
+              "correction_rate": 0.1111111111111111,
+              "damage_rate": 0.015267175572519083,
+              "corrected_questions": 3,
+              "damaged_questions": 2
+            },
+            "correction_abs_mean": 0.46250322461128235,
+            "eligible": true,
+            "selected": false
+          }
+        ],
+        "reward_normalization": {
+          "mean": 6.190974712371826,
+          "std": 3.4511749744415283,
+          "scope": "train_only"
+        },
+        "parameter_count": 272738,
+        "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_rm_residual_math_seed42.pt",
+        "peak_gpu_gb": 1.021
+      },
+      "123": {
+        "family": "MATH",
+        "seed": 123,
+        "best_epoch": 3,
+        "fallback_to_raw_rm": false,
+        "raw_pilot": {
+          "questions": 158,
+          "candidates": 2040,
+          "top1": 0.8291139240506329,
+          "pair_macro_strict": 0.8177070045435778,
+          "positive_score_mean": 0.4371970295906067,
+          "negative_score_mean": -0.7318509221076965
+        },
+        "best_pilot": {
+          "questions": 158,
+          "candidates": 2040,
+          "top1": 0.8481012658227848,
+          "pair_macro_strict": 0.8273709330569639,
+          "positive_score_mean": 0.7164957523345947,
+          "negative_score_mean": -0.8332147002220154
+        },
+        "best_transition": {
+          "correction_rate": 0.18518518518518517,
+          "damage_rate": 0.015267175572519083,
+          "corrected_questions": 5,
+          "damaged_questions": 2
+        },
+        "best_correction_abs_mean": 0.4680175185203552,
+        "history": [
+          {
+            "epoch": 1,
+            "loss": 0.3633849837323382,
+            "validation": {
+              "questions": 158,
+              "candidates": 2040,
+              "top1": 0.8481012658227848,
+              "pair_macro_strict": 0.8195770684174843,
+              "positive_score_mean": 0.68214350938797,
+              "negative_score_mean": -0.8520473837852478
+            },
+            "transition": {
+              "correction_rate": 0.18518518518518517,
+              "damage_rate": 0.015267175572519083,
+              "corrected_questions": 5,
+              "damaged_questions": 2
+            },
+            "correction_abs_mean": 0.44090479612350464,
+            "eligible": true,
+            "selected": true
+          },
+          {
+            "epoch": 2,
+            "loss": 0.29679847755169936,
+            "validation": {
+              "questions": 158,
+              "candidates": 2040,
+              "top1": 0.8607594936708861,
+              "pair_macro_strict": 0.826092414007197,
+              "positive_score_mean": 0.6474881172180176,
+              "negative_score_mean": -0.9280714392662048
+            },
+            "transition": {
+              "correction_rate": 0.25925925925925924,
+              "damage_rate": 0.015267175572519083,
+              "corrected_questions": 7,
+              "damaged_questions": 2
+            },
+            "correction_abs_mean": 0.45878711342811584,
+            "eligible": true,
+            "selected": true
+          },
+          {
+            "epoch": 3,
+            "loss": 0.27658441093405717,
+            "validation": {
+              "questions": 158,
+              "candidates": 2040,
+              "top1": 0.8481012658227848,
+              "pair_macro_strict": 0.8273709330569639,
+              "positive_score_mean": 0.7164957523345947,
+              "negative_score_mean": -0.8332147002220154
+            },
+            "transition": {
+              "correction_rate": 0.18518518518518517,
+              "damage_rate": 0.015267175572519083,
+              "corrected_questions": 5,
+              "damaged_questions": 2
+            },
+            "correction_abs_mean": 0.4680175185203552,
+            "eligible": true,
+            "selected": true
+          },
+          {
+            "epoch": 4,
+            "loss": 0.26740520531511264,
+            "validation": {
+              "questions": 158,
+              "candidates": 2040,
+              "top1": 0.8544303797468354,
+              "pair_macro_strict": 0.8217213466829201,
+              "positive_score_mean": 0.6476806402206421,
+              "negative_score_mean": -0.9126856923103333
+            },
+            "transition": {
+              "correction_rate": 0.25925925925925924,
+              "damage_rate": 0.022900763358778626,
+              "corrected_questions": 7,
+              "damaged_questions": 3
+            },
+            "correction_abs_mean": 0.4677165448665619,
+            "eligible": true,
+            "selected": false
+          },
+          {
+            "epoch": 5,
+            "loss": 0.2613326660795736,
+            "validation": {
+              "questions": 158,
+              "candidates": 2040,
+              "top1": 0.8227848101265823,
+              "pair_macro_strict": 0.8144666267778836,
+              "positive_score_mean": 0.6411393880844116,
+              "negative_score_mean": -0.9161962270736694
+            },
+            "transition": {
+              "correction_rate": 0.14814814814814814,
+              "damage_rate": 0.03816793893129771,
+              "corrected_questions": 4,
+              "damaged_questions": 5
+            },
+            "correction_abs_mean": 0.47080692648887634,
+            "eligible": false,
+            "selected": false
+          }
+        ],
+        "reward_normalization": {
+          "mean": 6.190974712371826,
+          "std": 3.4511749744415283,
+          "scope": "train_only"
+        },
+        "parameter_count": 272738,
+        "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_rm_residual_math_seed123.pt",
+        "peak_gpu_gb": 1.021
+      },
+      "456": {
+        "family": "MATH",
+        "seed": 456,
+        "best_epoch": 2,
+        "fallback_to_raw_rm": false,
+        "raw_pilot": {
+          "questions": 158,
+          "candidates": 2040,
+          "top1": 0.8291139240506329,
+          "pair_macro_strict": 0.8177070045435778,
+          "positive_score_mean": 0.4371970295906067,
+          "negative_score_mean": -0.7318509221076965
+        },
+        "best_pilot": {
+          "questions": 158,
+          "candidates": 2040,
+          "top1": 0.8481012658227848,
+          "pair_macro_strict": 0.8261070898661313,
+          "positive_score_mean": 0.6142157316207886,
+          "negative_score_mean": -0.96026611328125
+        },
+        "best_transition": {
+          "correction_rate": 0.25925925925925924,
+          "damage_rate": 0.030534351145038167,
+          "corrected_questions": 7,
+          "damaged_questions": 4
+        },
+        "best_correction_abs_mean": 0.45694124698638916,
+        "history": [
+          {
+            "epoch": 1,
+            "loss": 0.3667147553978073,
+            "validation": {
+              "questions": 158,
+              "candidates": 2040,
+              "top1": 0.8417721518987342,
+              "pair_macro_strict": 0.825309072917572,
+              "positive_score_mean": 0.6420287489891052,
+              "negative_score_mean": -0.9194467663764954
+            },
+            "transition": {
+              "correction_rate": 0.14814814814814814,
+              "damage_rate": 0.015267175572519083,
+              "corrected_questions": 4,
+              "damaged_questions": 2
+            },
+            "correction_abs_mean": 0.44324371218681335,
+            "eligible": true,
+            "selected": true
+          },
+          {
+            "epoch": 2,
+            "loss": 0.3052100000654773,
+            "validation": {
+              "questions": 158,
+              "candidates": 2040,
+              "top1": 0.8481012658227848,
+              "pair_macro_strict": 0.8261070898661313,
+              "positive_score_mean": 0.6142157316207886,
+              "negative_score_mean": -0.96026611328125
+            },
+            "transition": {
+              "correction_rate": 0.25925925925925924,
+              "damage_rate": 0.030534351145038167,
+              "corrected_questions": 7,
+              "damaged_questions": 4
+            },
+            "correction_abs_mean": 0.45694124698638916,
+            "eligible": true,
+            "selected": true
+          },
+          {
+            "epoch": 3,
+            "loss": 0.2831734310964058,
+            "validation": {
+              "questions": 158,
+              "candidates": 2040,
+              "top1": 0.8417721518987342,
+              "pair_macro_strict": 0.8243124429652459,
+              "positive_score_mean": 0.6993972659111023,
+              "negative_score_mean": -0.8352183699607849
+            },
+            "transition": {
+              "correction_rate": 0.25925925925925924,
+              "damage_rate": 0.03816793893129771,
+              "corrected_questions": 7,
+              "damaged_questions": 5
+            },
+            "correction_abs_mean": 0.46538662910461426,
+            "eligible": true,
+            "selected": false
+          },
+          {
+            "epoch": 4,
+            "loss": 0.27446512615469604,
+            "validation": {
+              "questions": 158,
+              "candidates": 2040,
+              "top1": 0.8354430379746836,
+              "pair_macro_strict": 0.8209340364527978,
+              "positive_score_mean": 0.6020137667655945,
+              "negative_score_mean": -0.9767005443572998
+            },
+            "transition": {
+              "correction_rate": 0.18518518518518517,
+              "damage_rate": 0.030534351145038167,
+              "corrected_questions": 5,
+              "damaged_questions": 4
+            },
+            "correction_abs_mean": 0.46978339552879333,
+            "eligible": true,
+            "selected": false
+          }
+        ],
+        "reward_normalization": {
+          "mean": 6.190974712371826,
+          "std": 3.4511749744415283,
+          "scope": "train_only"
+        },
+        "parameter_count": 272738,
+        "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_rm_residual_math_seed456.pt",
+        "peak_gpu_gb": 0.975
+      }
+    }
+  },
+  "elapsed_seconds": 4038.609
+}
