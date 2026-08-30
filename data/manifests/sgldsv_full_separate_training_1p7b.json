@@ -1,0 +1,550 @@
+{
+  "version": "sgldsv_full_separate_training_v1",
+  "protocol": {
+    "separate_heads": true,
+    "datasets": [
+      "GSM8K",
+      "MATH"
+    ],
+    "seeds": [
+      42,
+      123,
+      456
+    ],
+    "validation_selection": "pair_macro_strict",
+    "max_epochs": 5,
+    "early_stopping_patience": 2,
+    "pair_cap_per_question": 256,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "test_used_during_training": false
+  },
+  "runs": {
+    "GSM8K": {
+      "42": {
+        "version": "sgldsv_full_separate_v1",
+        "dataset": "GSM8K",
+        "seed": 42,
+        "training_mode": "dataset_specific_separate_head",
+        "train_prefix": "gsm_train",
+        "validation_prefix": "gsm_pilot",
+        "reserved_test_prefixes": [
+          "gsm_id_test",
+          "svamp_ood"
+        ],
+        "test_used_during_training": false,
+        "backbone": "Skywork-Reward-V2-Qwen3-1.7B",
+        "block_number": 21,
+        "architecture": "exact_SG-LDSV_token_level_adaptation",
+        "training": {
+          "parameter_count": 814564,
+          "training_pairs": 70742,
+          "best_epoch": 2,
+          "history": [
+            {
+              "epoch": 1,
+              "train_loss": 0.09391527531101157,
+              "validation": {
+                "questions": 189,
+                "candidates": 2985,
+                "top1": 0.8783068783068783,
+                "pair_macro_strict": 0.9130399548521243,
+                "positive_score_mean": 11.69104290008545,
+                "negative_score_mean": 2.4471263885498047
+              },
+              "local_scale": 1.0615544319152832
+            },
+            {
+              "epoch": 2,
+              "train_loss": 0.026840477165448837,
+              "validation": {
+                "questions": 189,
+                "candidates": 2985,
+                "top1": 0.9206349206349206,
+                "pair_macro_strict": 0.9191188411823332,
+                "positive_score_mean": 14.048321723937988,
+                "negative_score_mean": -0.3111272156238556
+              },
+              "local_scale": 1.0999311208724976
+            },
+            {
+              "epoch": 3,
+              "train_loss": 0.014125435023804948,
+              "validation": {
+                "questions": 189,
+                "candidates": 2985,
+                "top1": 0.9259259259259259,
+                "pair_macro_strict": 0.9128803973314555,
+                "positive_score_mean": 18.003623962402344,
+                "negative_score_mean": 1.5716084241867065
+              },
+              "local_scale": 1.1133568286895752
+            },
+            {
+              "epoch": 4,
+              "train_loss": 0.009520576277103364,
+              "validation": {
+                "questions": 189,
+                "candidates": 2985,
+                "top1": 0.9047619047619048,
+                "pair_macro_strict": 0.9033498285713896,
+                "positive_score_mean": 16.24968719482422,
+                "negative_score_mean": -1.752358317375183
+              },
+              "local_scale": 1.1050864458084106
+            }
+          ],
+          "validation_raw_rm": {
+            "questions": 189,
+            "candidates": 2985,
+            "top1": 0.8624338624338624,
+            "pair_macro_strict": 0.7885050133826589,
+            "positive_score_mean": 4.4101715087890625,
+            "negative_score_mean": 0.8617678880691528
+          },
+          "validation_sgldsv": {
+            "questions": 189,
+            "candidates": 2985,
+            "top1": 0.9206349206349206,
+            "pair_macro_strict": 0.9191188411823332,
+            "positive_score_mean": 14.048321723937988,
+            "negative_score_mean": -0.3111272156238556
+          },
+          "local_scale": 1.0999311208724976,
+          "endpoint_score_std": 7.3520612716674805,
+          "local_score_std": 5.29860258102417,
+          "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_gsm8k_seed42.pt"
+        },
+        "elapsed_seconds": 664.024,
+        "peak_gpu_gb": 0.507,
+        "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_gsm8k_seed42.pt"
+      },
+      "123": {
+        "version": "sgldsv_full_separate_v1",
+        "dataset": "GSM8K",
+        "seed": 123,
+        "training_mode": "dataset_specific_separate_head",
+        "train_prefix": "gsm_train",
+        "validation_prefix": "gsm_pilot",
+        "reserved_test_prefixes": [
+          "gsm_id_test",
+          "svamp_ood"
+        ],
+        "test_used_during_training": false,
+        "backbone": "Skywork-Reward-V2-Qwen3-1.7B",
+        "block_number": 21,
+        "architecture": "exact_SG-LDSV_token_level_adaptation",
+        "training": {
+          "parameter_count": 814564,
+          "training_pairs": 70742,
+          "best_epoch": 1,
+          "history": [
+            {
+              "epoch": 1,
+              "train_loss": 0.09281482558963043,
+              "validation": {
+                "questions": 189,
+                "candidates": 2985,
+                "top1": 0.9047619047619048,
+                "pair_macro_strict": 0.9144702792553322,
+                "positive_score_mean": 9.9042387008667,
+                "negative_score_mean": 0.7001952528953552
+              },
+              "local_scale": 1.0718059539794922
+            },
+            {
+              "epoch": 2,
+              "train_loss": 0.024114094440228852,
+              "validation": {
+                "questions": 189,
+                "candidates": 2985,
+                "top1": 0.8941798941798942,
+                "pair_macro_strict": 0.9112750141784534,
+                "positive_score_mean": 18.095447540283203,
+                "negative_score_mean": 4.20411491394043
+              },
+              "local_scale": 1.1117936372756958
+            },
+            {
+              "epoch": 3,
+              "train_loss": 0.012787122302160649,
+              "validation": {
+                "questions": 189,
+                "candidates": 2985,
+                "top1": 0.9047619047619048,
+                "pair_macro_strict": 0.9085389982347655,
+                "positive_score_mean": 15.833385467529297,
+                "negative_score_mean": 0.5395405888557434
+              },
+              "local_scale": 1.1241707801818848
+            }
+          ],
+          "validation_raw_rm": {
+            "questions": 189,
+            "candidates": 2985,
+            "top1": 0.8624338624338624,
+            "pair_macro_strict": 0.7885050133826589,
+            "positive_score_mean": 4.4101715087890625,
+            "negative_score_mean": 0.8617678880691528
+          },
+          "validation_sgldsv": {
+            "questions": 189,
+            "candidates": 2985,
+            "top1": 0.9047619047619048,
+            "pair_macro_strict": 0.9144702792553322,
+            "positive_score_mean": 9.9042387008667,
+            "negative_score_mean": 0.7001952528953552
+          },
+          "local_scale": 1.0718059539794922,
+          "endpoint_score_std": 4.815195083618164,
+          "local_score_std": 3.1048812866210938,
+          "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_gsm8k_seed123.pt"
+        },
+        "elapsed_seconds": 495.333,
+        "peak_gpu_gb": 0.516,
+        "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_gsm8k_seed123.pt"
+      },
+      "456": {
+        "version": "sgldsv_full_separate_v1",
+        "dataset": "GSM8K",
+        "seed": 456,
+        "training_mode": "dataset_specific_separate_head",
+        "train_prefix": "gsm_train",
+        "validation_prefix": "gsm_pilot",
+        "reserved_test_prefixes": [
+          "gsm_id_test",
+          "svamp_ood"
+        ],
+        "test_used_during_training": false,
+        "backbone": "Skywork-Reward-V2-Qwen3-1.7B",
+        "block_number": 21,
+        "architecture": "exact_SG-LDSV_token_level_adaptation",
+        "training": {
+          "parameter_count": 814564,
+          "training_pairs": 70742,
+          "best_epoch": 1,
+          "history": [
+            {
+              "epoch": 1,
+              "train_loss": 0.0950541259963493,
+              "validation": {
+                "questions": 189,
+                "candidates": 2985,
+                "top1": 0.9365079365079365,
+                "pair_macro_strict": 0.9217336345312535,
+                "positive_score_mean": 7.4966959953308105,
+                "negative_score_mean": -2.371032238006592
+              },
+              "local_scale": 1.0884772539138794
+            },
+            {
+              "epoch": 2,
+              "train_loss": 0.027563238494760268,
+              "validation": {
+                "questions": 189,
+                "candidates": 2985,
+                "top1": 0.9153439153439153,
+                "pair_macro_strict": 0.9120387265096259,
+                "positive_score_mean": 8.514875411987305,
+                "negative_score_mean": -3.736581802368164
+              },
+              "local_scale": 1.1080461740493774
+            },
+            {
+              "epoch": 3,
+              "train_loss": 0.013302047408798335,
+              "validation": {
+                "questions": 189,
+                "candidates": 2985,
+                "top1": 0.9153439153439153,
+                "pair_macro_strict": 0.9124846037511383,
+                "positive_score_mean": 12.55427360534668,
+                "negative_score_mean": -3.6090500354766846
+              },
+              "local_scale": 1.1325017213821411
+            }
+          ],
+          "validation_raw_rm": {
+            "questions": 189,
+            "candidates": 2985,
+            "top1": 0.8624338624338624,
+            "pair_macro_strict": 0.7885050133826589,
+            "positive_score_mean": 4.4101715087890625,
+            "negative_score_mean": 0.8617678880691528
+          },
+          "validation_sgldsv": {
+            "questions": 189,
+            "candidates": 2985,
+            "top1": 0.9365079365079365,
+            "pair_macro_strict": 0.9217336345312535,
+            "positive_score_mean": 7.4966959953308105,
+            "negative_score_mean": -2.371032238006592
+          },
+          "local_scale": 1.0884772539138794,
+          "endpoint_score_std": 4.830159664154053,
+          "local_score_std": 3.7676899433135986,
+          "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_gsm8k_seed456.pt"
+        },
+        "elapsed_seconds": 490.812,
+        "peak_gpu_gb": 0.497,
+        "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_gsm8k_seed456.pt"
+      }
+    },
+    "MATH": {
+      "42": {
+        "version": "sgldsv_full_separate_v1",
+        "dataset": "MATH",
+        "seed": 42,
+        "training_mode": "dataset_specific_separate_head",
+        "train_prefix": "math_train",
+        "validation_prefix": "math_pilot",
+        "reserved_test_prefixes": [
+          "math_id_test"
+        ],
+        "test_used_during_training": false,
+        "backbone": "Skywork-Reward-V2-Qwen3-1.7B",
+        "block_number": 21,
+        "architecture": "exact_SG-LDSV_token_level_adaptation",
+        "training": {
+          "parameter_count": 814564,
+          "training_pairs": 34324,
+          "best_epoch": 1,
+          "history": [
+            {
+              "epoch": 1,
+              "train_loss": 0.22948187647885596,
+              "validation": {
+                "questions": 158,
+                "candidates": 2040,
+                "top1": 0.8291139240506329,
+                "pair_macro_strict": 0.8024714681959257,
+                "positive_score_mean": -1.16484797000885,
+                "negative_score_mean": -5.995104789733887
+              },
+              "local_scale": 1.1339685916900635
+            },
+            {
+              "epoch": 2,
+              "train_loss": 0.056120477737162354,
+              "validation": {
+                "questions": 158,
+                "candidates": 2040,
+                "top1": 0.8227848101265823,
+                "pair_macro_strict": 0.7753556311580723,
+                "positive_score_mean": 1.6220496892929077,
+                "negative_score_mean": -5.019961833953857
+              },
+              "local_scale": 1.2078351974487305
+            },
+            {
+              "epoch": 3,
+              "train_loss": 0.02990113607262184,
+              "validation": {
+                "questions": 158,
+                "candidates": 2040,
+                "top1": 0.8227848101265823,
+                "pair_macro_strict": 0.7893987859471585,
+                "positive_score_mean": 9.204947471618652,
+                "negative_score_mean": -0.40802180767059326
+              },
+              "local_scale": 1.239366888999939
+            }
+          ],
+          "validation_raw_rm": {
+            "questions": 158,
+            "candidates": 2040,
+            "top1": 0.8291139240506329,
+            "pair_macro_strict": 0.8177070045435778,
+            "positive_score_mean": 7.699817657470703,
+            "negative_score_mean": 3.665229320526123
+          },
+          "validation_sgldsv": {
+            "questions": 158,
+            "candidates": 2040,
+            "top1": 0.8291139240506329,
+            "pair_macro_strict": 0.8024714681959257,
+            "positive_score_mean": -1.16484797000885,
+            "negative_score_mean": -5.995104789733887
+          },
+          "local_scale": 1.1339685916900635,
+          "endpoint_score_std": 1.2482357025146484,
+          "local_score_std": 3.433175802230835,
+          "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_math_seed42.pt"
+        },
+        "elapsed_seconds": 377.557,
+        "peak_gpu_gb": 1.028,
+        "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_math_seed42.pt"
+      },
+      "123": {
+        "version": "sgldsv_full_separate_v1",
+        "dataset": "MATH",
+        "seed": 123,
+        "training_mode": "dataset_specific_separate_head",
+        "train_prefix": "math_train",
+        "validation_prefix": "math_pilot",
+        "reserved_test_prefixes": [
+          "math_id_test"
+        ],
+        "test_used_during_training": false,
+        "backbone": "Skywork-Reward-V2-Qwen3-1.7B",
+        "block_number": 21,
+        "architecture": "exact_SG-LDSV_token_level_adaptation",
+        "training": {
+          "parameter_count": 814564,
+          "training_pairs": 34324,
+          "best_epoch": 1,
+          "history": [
+            {
+              "epoch": 1,
+              "train_loss": 0.2171445970257739,
+              "validation": {
+                "questions": 158,
+                "candidates": 2040,
+                "top1": 0.7848101265822784,
+                "pair_macro_strict": 0.7891553014496052,
+                "positive_score_mean": 5.935618877410889,
+                "negative_score_mean": 0.6463645100593567
+              },
+              "local_scale": 1.1574763059616089
+            },
+            {
+              "epoch": 2,
+              "train_loss": 0.053155627759981366,
+              "validation": {
+                "questions": 158,
+                "candidates": 2040,
+                "top1": 0.7974683544303798,
+                "pair_macro_strict": 0.7846472226286874,
+                "positive_score_mean": 5.335233211517334,
+                "negative_score_mean": -1.8663599491119385
+              },
+              "local_scale": 1.2167682647705078
+            },
+            {
+              "epoch": 3,
+              "train_loss": 0.027602324746385506,
+              "validation": {
+                "questions": 158,
+                "candidates": 2040,
+                "top1": 0.8354430379746836,
+                "pair_macro_strict": 0.7781037532472886,
+                "positive_score_mean": 8.90500545501709,
+                "negative_score_mean": -0.8226328492164612
+              },
+              "local_scale": 1.2588008642196655
+            }
+          ],
+          "validation_raw_rm": {
+            "questions": 158,
+            "candidates": 2040,
+            "top1": 0.8291139240506329,
+            "pair_macro_strict": 0.8177070045435778,
+            "positive_score_mean": 7.699817657470703,
+            "negative_score_mean": 3.665229320526123
+          },
+          "validation_sgldsv": {
+            "questions": 158,
+            "candidates": 2040,
+            "top1": 0.7848101265822784,
+            "pair_macro_strict": 0.7891553014496052,
+            "positive_score_mean": 5.935618877410889,
+            "negative_score_mean": 0.6463645100593567
+          },
+          "local_scale": 1.1574763059616089,
+          "endpoint_score_std": 1.4903395175933838,
+          "local_score_std": 3.6398229598999023,
+          "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_math_seed123.pt"
+        },
+        "elapsed_seconds": 373.281,
+        "peak_gpu_gb": 0.986,
+        "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_math_seed123.pt"
+      },
+      "456": {
+        "version": "sgldsv_full_separate_v1",
+        "dataset": "MATH",
+        "seed": 456,
+        "training_mode": "dataset_specific_separate_head",
+        "train_prefix": "math_train",
+        "validation_prefix": "math_pilot",
+        "reserved_test_prefixes": [
+          "math_id_test"
+        ],
+        "test_used_during_training": false,
+        "backbone": "Skywork-Reward-V2-Qwen3-1.7B",
+        "block_number": 21,
+        "architecture": "exact_SG-LDSV_token_level_adaptation",
+        "training": {
+          "parameter_count": 814564,
+          "training_pairs": 34324,
+          "best_epoch": 1,
+          "history": [
+            {
+              "epoch": 1,
+              "train_loss": 0.2197452745967148,
+              "validation": {
+                "questions": 158,
+                "candidates": 2040,
+                "top1": 0.8291139240506329,
+                "pair_macro_strict": 0.7795039547469476,
+                "positive_score_mean": -1.4871037006378174,
+                "negative_score_mean": -6.030142784118652
+              },
+              "local_scale": 1.151979923248291
+            },
+            {
+              "epoch": 2,
+              "train_loss": 0.05830307837375175,
+              "validation": {
+                "questions": 158,
+                "candidates": 2040,
+                "top1": 0.810126582278481,
+                "pair_macro_strict": 0.770162040466064,
+                "positive_score_mean": -1.1716779470443726,
+                "negative_score_mean": -8.48063850402832
+              },
+              "local_scale": 1.2252068519592285
+            },
+            {
+              "epoch": 3,
+              "train_loss": 0.028776288312713744,
+              "validation": {
+                "questions": 158,
+                "candidates": 2040,
+                "top1": 0.8291139240506329,
+                "pair_macro_strict": 0.7666536963722769,
+                "positive_score_mean": 1.138231635093689,
+                "negative_score_mean": -7.979323863983154
+              },
+              "local_scale": 1.2687426805496216
+            }
+          ],
+          "validation_raw_rm": {
+            "questions": 158,
+            "candidates": 2040,
+            "top1": 0.8291139240506329,
+            "pair_macro_strict": 0.8177070045435778,
+            "positive_score_mean": 7.699817657470703,
+            "negative_score_mean": 3.665229320526123
+          },
+          "validation_sgldsv": {
+            "questions": 158,
+            "candidates": 2040,
+            "top1": 0.8291139240506329,
+            "pair_macro_strict": 0.7795039547469476,
+            "positive_score_mean": -1.4871037006378174,
+            "negative_score_mean": -6.030142784118652
+          },
+          "local_scale": 1.151979923248291,
+          "endpoint_score_std": 1.466731071472168,
+          "local_score_std": 3.369283676147461,
+          "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_math_seed456.pt"
+        },
+        "elapsed_seconds": 375.483,
+        "peak_gpu_gb": 0.982,
+        "checkpoint": "/root/autodl-tmp/rm_traj_project/outputs/checkpoints/sgldsv_math_seed456.pt"
+      }
+    }
+  },
+  "total_elapsed_seconds": 2777.961
+}
