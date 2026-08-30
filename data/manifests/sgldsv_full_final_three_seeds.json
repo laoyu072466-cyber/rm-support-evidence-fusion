@@ -1,0 +1,476 @@
+{
+  "version": "sgldsv_full_final_three_seeds_v1",
+  "protocol": {
+    "backbone": "Skywork-Reward-V2-Qwen3-1.7B",
+    "block_number": 21,
+    "separate_dataset_heads": true,
+    "seeds": [
+      42,
+      123,
+      456
+    ],
+    "checkpoint_selection": "pilot_pair_macro_strict",
+    "test_used_for_training_or_selection": false,
+    "gsm_head_tests": [
+      "GSM8K_ID",
+      "SVAMP_OOD"
+    ],
+    "math_head_tests": [
+      "MATH_ID"
+    ]
+  },
+  "per_seed": {
+    "42": {
+      "GSM8K_ID": {
+        "raw_rm": {
+          "questions": 1142,
+          "candidates": 17902,
+          "top1": 0.8309982486865148,
+          "pair_macro_strict": 0.857061426707333,
+          "positive_score_mean": 4.141045093536377,
+          "negative_score_mean": -0.7799725532531738
+        },
+        "sgldsv": {
+          "questions": 1142,
+          "candidates": 17902,
+          "top1": 0.7285464098073555,
+          "pair_macro_strict": 0.8499738693516057,
+          "positive_score_mean": 13.591955184936523,
+          "negative_score_mean": 1.7754474878311157
+        },
+        "delta_top1": -0.10245183887915932,
+        "delta_pair_macro_strict": -0.007087557355727303,
+        "raw_correct_questions": 949,
+        "raw_wrong_questions": 193,
+        "corrected_questions": 70,
+        "damaged_questions": 187,
+        "correction_rate": 0.3626943005181347,
+        "damage_rate": 0.1970495258166491
+      },
+      "SVAMP_OOD": {
+        "raw_rm": {
+          "questions": 883,
+          "candidates": 13913,
+          "top1": 0.8686296715741789,
+          "pair_macro_strict": 0.8503868459784777,
+          "positive_score_mean": 1.0545333623886108,
+          "negative_score_mean": -3.3004066944122314
+        },
+        "sgldsv": {
+          "questions": 883,
+          "candidates": 13913,
+          "top1": 0.7565118912797282,
+          "pair_macro_strict": 0.8355767352296029,
+          "positive_score_mean": 12.38354778289795,
+          "negative_score_mean": 1.3538298606872559
+        },
+        "delta_top1": -0.11211778029445074,
+        "delta_pair_macro_strict": -0.014810110748874838,
+        "raw_correct_questions": 767,
+        "raw_wrong_questions": 116,
+        "corrected_questions": 26,
+        "damaged_questions": 125,
+        "correction_rate": 0.22413793103448276,
+        "damage_rate": 0.16297262059973924
+      },
+      "MATH_ID": {
+        "raw_rm": {
+          "questions": 340,
+          "candidates": 4167,
+          "top1": 0.7235294117647059,
+          "pair_macro_strict": 0.7852514943040153,
+          "positive_score_mean": 6.885110378265381,
+          "negative_score_mean": 2.848383903503418
+        },
+        "sgldsv": {
+          "questions": 340,
+          "candidates": 4167,
+          "top1": 0.6529411764705882,
+          "pair_macro_strict": 0.7457290809680516,
+          "positive_score_mean": -1.7457574605941772,
+          "negative_score_mean": -6.4197773933410645
+        },
+        "delta_top1": -0.07058823529411762,
+        "delta_pair_macro_strict": -0.039522413335963735,
+        "raw_correct_questions": 246,
+        "raw_wrong_questions": 94,
+        "corrected_questions": 19,
+        "damaged_questions": 43,
+        "correction_rate": 0.20212765957446807,
+        "damage_rate": 0.17479674796747968
+      }
+    },
+    "123": {
+      "GSM8K_ID": {
+        "raw_rm": {
+          "questions": 1142,
+          "candidates": 17902,
+          "top1": 0.8309982486865148,
+          "pair_macro_strict": 0.857061426707333,
+          "positive_score_mean": 4.141045093536377,
+          "negative_score_mean": -0.7799725532531738
+        },
+        "sgldsv": {
+          "questions": 1142,
+          "candidates": 17902,
+          "top1": 0.6952714535901926,
+          "pair_macro_strict": 0.8447605080874564,
+          "positive_score_mean": 9.574719429016113,
+          "negative_score_mean": 2.2682511806488037
+        },
+        "delta_top1": -0.13572679509632224,
+        "delta_pair_macro_strict": -0.012300918619876589,
+        "raw_correct_questions": 949,
+        "raw_wrong_questions": 193,
+        "corrected_questions": 63,
+        "damaged_questions": 218,
+        "correction_rate": 0.32642487046632124,
+        "damage_rate": 0.2297154899894626
+      },
+      "SVAMP_OOD": {
+        "raw_rm": {
+          "questions": 883,
+          "candidates": 13913,
+          "top1": 0.8686296715741789,
+          "pair_macro_strict": 0.8503868459784777,
+          "positive_score_mean": 1.0545333623886108,
+          "negative_score_mean": -3.3004066944122314
+        },
+        "sgldsv": {
+          "questions": 883,
+          "candidates": 13913,
+          "top1": 0.7870894677236693,
+          "pair_macro_strict": 0.8382175480074283,
+          "positive_score_mean": 9.276932716369629,
+          "negative_score_mean": 2.2302401065826416
+        },
+        "delta_top1": -0.08154020385050964,
+        "delta_pair_macro_strict": -0.012169297971049375,
+        "raw_correct_questions": 767,
+        "raw_wrong_questions": 116,
+        "corrected_questions": 31,
+        "damaged_questions": 103,
+        "correction_rate": 0.2672413793103448,
+        "damage_rate": 0.13428943937418514
+      },
+      "MATH_ID": {
+        "raw_rm": {
+          "questions": 340,
+          "candidates": 4167,
+          "top1": 0.7235294117647059,
+          "pair_macro_strict": 0.7852514943040153,
+          "positive_score_mean": 6.885110378265381,
+          "negative_score_mean": 2.848383903503418
+        },
+        "sgldsv": {
+          "questions": 340,
+          "candidates": 4167,
+          "top1": 0.6352941176470588,
+          "pair_macro_strict": 0.7449494512451444,
+          "positive_score_mean": 5.2181596755981445,
+          "negative_score_mean": -0.1751709282398224
+        },
+        "delta_top1": -0.08823529411764708,
+        "delta_pair_macro_strict": -0.04030204305887086,
+        "raw_correct_questions": 246,
+        "raw_wrong_questions": 94,
+        "corrected_questions": 22,
+        "damaged_questions": 52,
+        "correction_rate": 0.23404255319148937,
+        "damage_rate": 0.21138211382113822
+      }
+    },
+    "456": {
+      "GSM8K_ID": {
+        "raw_rm": {
+          "questions": 1142,
+          "candidates": 17902,
+          "top1": 0.8309982486865148,
+          "pair_macro_strict": 0.857061426707333,
+          "positive_score_mean": 4.141045093536377,
+          "negative_score_mean": -0.7799725532531738
+        },
+        "sgldsv": {
+          "questions": 1142,
+          "candidates": 17902,
+          "top1": 0.7075306479859895,
+          "pair_macro_strict": 0.8506421348726515,
+          "positive_score_mean": 7.294259071350098,
+          "negative_score_mean": -1.0184077024459839
+        },
+        "delta_top1": -0.12346760070052532,
+        "delta_pair_macro_strict": -0.006419291834681484,
+        "raw_correct_questions": 949,
+        "raw_wrong_questions": 193,
+        "corrected_questions": 66,
+        "damaged_questions": 207,
+        "correction_rate": 0.34196891191709844,
+        "damage_rate": 0.21812434141201265
+      },
+      "SVAMP_OOD": {
+        "raw_rm": {
+          "questions": 883,
+          "candidates": 13913,
+          "top1": 0.8686296715741789,
+          "pair_macro_strict": 0.8503868459784777,
+          "positive_score_mean": 1.0545333623886108,
+          "negative_score_mean": -3.3004066944122314
+        },
+        "sgldsv": {
+          "questions": 883,
+          "candidates": 13913,
+          "top1": 0.7451868629671574,
+          "pair_macro_strict": 0.8279506074550363,
+          "positive_score_mean": 6.221251964569092,
+          "negative_score_mean": -1.4952692985534668
+        },
+        "delta_top1": -0.1234428086070215,
+        "delta_pair_macro_strict": -0.022436238523441343,
+        "raw_correct_questions": 767,
+        "raw_wrong_questions": 116,
+        "corrected_questions": 19,
+        "damaged_questions": 128,
+        "correction_rate": 0.16379310344827586,
+        "damage_rate": 0.16688396349413298
+      },
+      "MATH_ID": {
+        "raw_rm": {
+          "questions": 340,
+          "candidates": 4167,
+          "top1": 0.7235294117647059,
+          "pair_macro_strict": 0.7852514943040153,
+          "positive_score_mean": 6.885110378265381,
+          "negative_score_mean": 2.848383903503418
+        },
+        "sgldsv": {
+          "questions": 340,
+          "candidates": 4167,
+          "top1": 0.6647058823529411,
+          "pair_macro_strict": 0.7449858272757433,
+          "positive_score_mean": -2.022874355316162,
+          "negative_score_mean": -6.811585426330566
+        },
+        "delta_top1": -0.05882352941176472,
+        "delta_pair_macro_strict": -0.040265667028272056,
+        "raw_correct_questions": 246,
+        "raw_wrong_questions": 94,
+        "corrected_questions": 27,
+        "damaged_questions": 47,
+        "correction_rate": 0.2872340425531915,
+        "damage_rate": 0.1910569105691057
+      }
+    }
+  },
+  "aggregate": {
+    "GSM8K_ID": {
+      "delta_top1": {
+        "mean": -0.12054874489200229,
+        "std": 0.01682841249900711,
+        "values": [
+          -0.10245183887915932,
+          -0.13572679509632224,
+          -0.12346760070052532
+        ]
+      },
+      "delta_pair_macro_strict": {
+        "mean": -0.008602589270095126,
+        "std": 0.00322022898040588,
+        "values": [
+          -0.007087557355727303,
+          -0.012300918619876589,
+          -0.006419291834681484
+        ]
+      },
+      "damage_rate": {
+        "mean": 0.21496311907270813,
+        "std": 0.016560836296629827,
+        "values": [
+          0.1970495258166491,
+          0.2297154899894626,
+          0.21812434141201265
+        ]
+      },
+      "correction_rate": {
+        "mean": 0.3436960276338515,
+        "std": 0.01819629318281994,
+        "values": [
+          0.3626943005181347,
+          0.32642487046632124,
+          0.34196891191709844
+        ]
+      },
+      "sgldsv_top1": {
+        "mean": 0.7104495037945125,
+        "std": 0.01682841249900711,
+        "values": [
+          0.7285464098073555,
+          0.6952714535901926,
+          0.7075306479859895
+        ]
+      },
+      "sgldsv_pair": {
+        "mean": 0.8484588374372378,
+        "std": 0.00322022898040588,
+        "values": [
+          0.8499738693516057,
+          0.8447605080874564,
+          0.8506421348726515
+        ]
+      }
+    },
+    "MATH_ID": {
+      "delta_top1": {
+        "mean": -0.07254901960784314,
+        "std": 0.014803596931903435,
+        "values": [
+          -0.07058823529411762,
+          -0.08823529411764708,
+          -0.05882352941176472
+        ]
+      },
+      "delta_pair_macro_strict": {
+        "mean": -0.040030041141035554,
+        "std": 0.0004399946536743981,
+        "values": [
+          -0.039522413335963735,
+          -0.04030204305887086,
+          -0.040265667028272056
+        ]
+      },
+      "damage_rate": {
+        "mean": 0.1924119241192412,
+        "std": 0.018330283548060548,
+        "values": [
+          0.17479674796747968,
+          0.21138211382113822,
+          0.1910569105691057
+        ]
+      },
+      "correction_rate": {
+        "mean": 0.24113475177304966,
+        "std": 0.0429941689822062,
+        "values": [
+          0.20212765957446807,
+          0.23404255319148937,
+          0.2872340425531915
+        ]
+      },
+      "sgldsv_top1": {
+        "mean": 0.6509803921568627,
+        "std": 0.014803596931903435,
+        "values": [
+          0.6529411764705882,
+          0.6352941176470588,
+          0.6647058823529411
+        ]
+      },
+      "sgldsv_pair": {
+        "mean": 0.7452214531629798,
+        "std": 0.0004399946536743981,
+        "values": [
+          0.7457290809680516,
+          0.7449494512451444,
+          0.7449858272757433
+        ]
+      }
+    },
+    "SVAMP_OOD": {
+      "delta_top1": {
+        "mean": -0.10570026425066063,
+        "std": 0.021675918791929913,
+        "values": [
+          -0.11211778029445074,
+          -0.08154020385050964,
+          -0.1234428086070215
+        ]
+      },
+      "delta_pair_macro_strict": {
+        "mean": -0.016471882414455186,
+        "std": 0.005331381704397269,
+        "values": [
+          -0.014810110748874838,
+          -0.012169297971049375,
+          -0.022436238523441343
+        ]
+      },
+      "damage_rate": {
+        "mean": 0.15471534115601912,
+        "std": 0.01779712753537007,
+        "values": [
+          0.16297262059973924,
+          0.13428943937418514,
+          0.16688396349413298
+        ]
+      },
+      "correction_rate": {
+        "mean": 0.21839080459770113,
+        "std": 0.05196304977018713,
+        "values": [
+          0.22413793103448276,
+          0.2672413793103448,
+          0.16379310344827586
+        ]
+      },
+      "sgldsv_top1": {
+        "mean": 0.7629294073235183,
+        "std": 0.021675918791929913,
+        "values": [
+          0.7565118912797282,
+          0.7870894677236693,
+          0.7451868629671574
+        ]
+      },
+      "sgldsv_pair": {
+        "mean": 0.8339149635640225,
+        "std": 0.005331381704397269,
+        "values": [
+          0.8355767352296029,
+          0.8382175480074283,
+          0.8279506074550363
+        ]
+      }
+    },
+    "ID_MACRO": {
+      "top1": {
+        "mean": 0.6807149479756877,
+        "std": 0.013563281443301716,
+        "values": [
+          0.6907437931389719,
+          0.6652827856186256,
+          0.6861182651694653
+        ]
+      },
+      "pair_macro_strict": {
+        "mean": 0.7968401453001088,
+        "std": 0.0017193060800377036,
+        "values": [
+          0.7978514751598287,
+          0.7948549796663005,
+          0.7978139810741973
+        ]
+      }
+    },
+    "ALL_DATASET_MACRO": {
+      "top1": {
+        "mean": 0.7081197677582979,
+        "std": 0.0039377684144954565,
+        "values": [
+          0.7126664925192241,
+          0.7058850129869736,
+          0.705807797768696
+        ]
+      },
+      "pair_macro_strict": {
+        "mean": 0.8091984180547467,
+        "std": 0.0012870979774667693,
+        "values": [
+          0.8104265618497534,
+          0.809309169113343,
+          0.8078595232011437
+        ]
+      }
+    }
+  },
+  "elapsed_seconds": 128.137,
+  "peak_gpu_gb": 0.678
+}
