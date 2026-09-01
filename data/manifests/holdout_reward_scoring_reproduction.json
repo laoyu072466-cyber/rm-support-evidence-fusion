@@ -1,0 +1,12 @@
+{
+  "candidates": 302,
+  "changed_questions": 151,
+  "pearson_correlation": 0.9998773248510845,
+  "mean_absolute_error": 0.026779477959437085,
+  "median_absolute_error": 0.0,
+  "max_absolute_error": 0.21875,
+  "mean_signed_error": -0.0007679920322847682,
+  "pair_preference_agreement": 0.9735099337748344,
+  "exact_score_match_rate": 0.5827814569536424,
+  "peak_gpu_gb": 3.5188164710998535
+}

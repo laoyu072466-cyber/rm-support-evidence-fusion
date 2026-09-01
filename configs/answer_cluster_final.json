@@ -1,0 +1,72 @@
+{
+  "version": "answer_cluster_rm_support_final_v1",
+  "status": "frozen",
+  "selection_unit": "normalized_final_answer_cluster",
+  "candidate_within_selected_cluster": "highest original 1.7B reward score",
+  "base_reward_model": "Skywork-Reward-V2-Qwen3-1.7B",
+  "features": [
+    "log_cluster_count",
+    "cluster_fraction",
+    "log_unique_solution_count",
+    "relative_reward_max",
+    "relative_reward_mean",
+    "relative_reward_logmeanexp",
+    "relative_reward_std",
+    "raw_top_answer_indicator"
+  ],
+  "excluded_from_final_method": {
+    "generator_token_nll": "no stable full-scale improvement",
+    "generator_hidden_state": "no stable full-scale improvement",
+    "trajectory_correction": "inferior Top1 and Pair improvement"
+  },
+  "domain_parameters": {
+    "GSM8K_and_SVAMP": {
+      "regularization": 0.1,
+      "beta": 2.0,
+      "switch_threshold": 0.25
+    },
+    "MATH": {
+      "regularization": 0.001,
+      "beta": 2.0,
+      "switch_threshold": 0.25
+    }
+  },
+  "frozen_test_macro": {
+    "raw_top1": 0.808097,
+    "method_top1": 0.830445,
+    "top1_delta": 0.022349,
+    "top1_delta_ci95": [
+      0.009487,
+      0.034607
+    ],
+    "raw_pair_macro": 0.830883,
+    "method_pair_macro": 0.909742,
+    "pair_delta": 0.078859,
+    "pair_delta_ci95": [
+      0.069251,
+      0.088275
+    ],
+    "damage_rate": 0.021721,
+    "best_at_4_delta": 0.057225,
+    "best_at_4_delta_ci95": [
+      0.05022,
+      0.064261
+    ],
+    "best_at_8_delta": 0.046716,
+    "best_at_8_delta_ci95": [
+      0.036738,
+      0.056946
+    ],
+    "oracle_gap_closed_at_4": 0.47496,
+    "oracle_gap_closed_at_8": 0.28075
+  },
+  "holdout_reward_judges": {
+    "role": "diagnostic only",
+    "conclusion": "larger pointwise Skywork reward models do not reliably recognize the ground-truth improvement",
+    "majority_prefers_new_rate_changed_only": 0.1986754966887417,
+    "majority_prefers_raw_rate_changed_only": 0.5496688741721855,
+    "label_change_alignment_rate": 0.5097087378640777,
+    "scoring_reproduction_pair_agreement": 0.9735099337748344
+  },
+  "test_labels_used_for_training_or_tuning": false
+}
