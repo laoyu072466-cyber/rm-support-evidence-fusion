@@ -1,0 +1,42 @@
+{
+  "version": "fresh_math_2026_source_v1",
+  "created_at_utc": "2026-09-01T07:21:15.059409+00:00",
+  "project_git_head_before_import": "203a30fc4f912984da2db8e3f90fdd1b7a639ecc",
+  "protocol": {
+    "role": "sealed_blind_test",
+    "method_retraining_allowed": false,
+    "hyperparameter_tuning_allowed": false,
+    "labels_used_for_generation": false,
+    "labels_used_for_ranking": false,
+    "evaluation_after_predictions_frozen": true
+  },
+  "sources": {
+    "AIME_2026": {
+      "hf_dataset": "MathArena/aime_2026",
+      "split": "train",
+      "expected_rows": 30,
+      "license": "CC BY-NC-SA 4.0",
+      "rows": 30,
+      "dataset_fingerprint": "85259d1420f14076",
+      "question_uid_sha256": "e5fe27dad5893c8462d8b9ccbcf7583310cf1b16b8d624a5552a5a69fa883b2a"
+    },
+    "HMMT_FEB_2026": {
+      "hf_dataset": "MathArena/hmmt_feb_2026",
+      "split": "train",
+      "expected_rows": 33,
+      "license": "CC BY-NC-SA 4.0",
+      "rows": 33,
+      "dataset_fingerprint": "b231e2c4e92300c4",
+      "question_uid_sha256": "947a7cca1a4334bf0abbb55af5b602231082c1ff1cf9a21448ffadf8c2d482e5"
+    }
+  },
+  "total_questions": 63,
+  "files": {
+    "questions": "data/external/fresh_math_2026/questions.jsonl",
+    "sealed_labels": "data/external/fresh_math_2026/sealed_labels.jsonl"
+  },
+  "sha256": {
+    "questions": "2f755042ba8bbf29cb7ece2cb8f70064854717fe38927300726b41b7d070ffeb",
+    "sealed_labels": "72393fceb6ddc114b48d3bca7a1c4e0f17b944635757310f0231e98d5b7260df"
+  }
+}
