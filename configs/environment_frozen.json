@@ -1,0 +1,32 @@
+{
+  "version": "final_environment_v1",
+  "git_tag": "answer-cluster-final-v1",
+  "git_commit": "0e8d5dbe9ce07e52668ae52ccb79f419d8cdb202",
+  "python": "Python 3.12.3",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.51.3",
+    "accelerate": "1.7.0",
+    "numpy": "2.3.2",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.0",
+    "huggingface-hub": "0.36.2",
+    "tokenizers": "0.21.4",
+    "safetensors": "0.5.3",
+    "sentencepiece": "0.2.0"
+  },
+  "torch_runtime": {
+    "version": "2.8.0+cu128",
+    "cuda_version": "12.8",
+    "cuda_available": true,
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "gpu_memory_gb": 31.358
+  },
+  "source_file_sha256": {
+    "configs/answer_cluster_final.json": "f02ed283158b86406ce34c0065bdab6a1caa6c45f47544f4978f7dcf6f833cc1",
+    "data/manifests/answer_cluster_generator_full_v1.json": "a945fe19bc11bb00a3f901d834e5411c9c5e80032d601b1da9912fa276e59b05",
+    "data/manifests/answer_cluster_rm_support_bootstrap_v1.json": "f37676f4af9cff2241984e81c81aa3abf3c111de36a685f787582f838099034c",
+    "data/manifests/answer_cluster_holdout_rewards_v1.json": "2993d2d59e7d69440fb0dd2d914e25937e4168d9c9744c8df29269ee34a4d50f",
+    "data/manifests/holdout_reward_scoring_reproduction.json": "1ca17b19ffffe00927e2b6a5671bdb22c55f2e9dbc2d4a9052283e33951df4db"
+  }
+}
