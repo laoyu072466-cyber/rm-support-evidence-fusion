@@ -1,0 +1,416 @@
+{
+  "version": "generator_hidden_smoke_v1",
+  "selection_seed": 20260901,
+  "prompt_templates": {
+    "problem_solution": "Problem:\n{problem}\n\nSolution:\n",
+    "question_answer": "Question: {problem}\nAnswer:\n"
+  },
+  "results": {
+    "Qwen2-1.5B/problem_solution/gsm_train_smoke": {
+      "dataset": "gsm_train_smoke",
+      "model": "Qwen2-1.5B",
+      "prompt": "problem_solution",
+      "questions": 128,
+      "candidates": 2015,
+      "hidden_shape": [
+        29,
+        2015,
+        1536
+      ],
+      "hidden_gb": 0.1672,
+      "nll_columns": [
+        "mean_nll",
+        "p90_nll",
+        "max_nll",
+        "last8_mean_nll",
+        "nll_std"
+      ],
+      "mean_nll_positive": 0.32978132367134094,
+      "mean_nll_negative": 0.4031568467617035,
+      "elapsed_seconds": 14.567,
+      "files": {
+        "hidden": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/gsm_train_smoke.terminal_layers_f16.npy",
+        "nll": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/gsm_train_smoke.token_nll_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/gsm_train_smoke.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/gsm_train_smoke.metadata.jsonl"
+      }
+    },
+    "Qwen2-1.5B/problem_solution/gsm_pilot_smoke": {
+      "dataset": "gsm_pilot_smoke",
+      "model": "Qwen2-1.5B",
+      "prompt": "problem_solution",
+      "questions": 64,
+      "candidates": 1010,
+      "hidden_shape": [
+        29,
+        1010,
+        1536
+      ],
+      "hidden_gb": 0.0838,
+      "nll_columns": [
+        "mean_nll",
+        "p90_nll",
+        "max_nll",
+        "last8_mean_nll",
+        "nll_std"
+      ],
+      "mean_nll_positive": 0.3443777859210968,
+      "mean_nll_negative": 0.3866311013698578,
+      "elapsed_seconds": 6.86,
+      "files": {
+        "hidden": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/gsm_pilot_smoke.terminal_layers_f16.npy",
+        "nll": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/gsm_pilot_smoke.token_nll_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/gsm_pilot_smoke.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/gsm_pilot_smoke.metadata.jsonl"
+      }
+    },
+    "Qwen2-1.5B/problem_solution/gsm_id_smoke": {
+      "dataset": "gsm_id_smoke",
+      "model": "Qwen2-1.5B",
+      "prompt": "problem_solution",
+      "questions": 64,
+      "candidates": 1002,
+      "hidden_shape": [
+        29,
+        1002,
+        1536
+      ],
+      "hidden_gb": 0.0831,
+      "nll_columns": [
+        "mean_nll",
+        "p90_nll",
+        "max_nll",
+        "last8_mean_nll",
+        "nll_std"
+      ],
+      "mean_nll_positive": 0.36965855956077576,
+      "mean_nll_negative": 0.49298515915870667,
+      "elapsed_seconds": 6.773,
+      "files": {
+        "hidden": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/gsm_id_smoke.terminal_layers_f16.npy",
+        "nll": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/gsm_id_smoke.token_nll_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/gsm_id_smoke.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/gsm_id_smoke.metadata.jsonl"
+      }
+    },
+    "Qwen2-1.5B/problem_solution/svamp_ood_smoke": {
+      "dataset": "svamp_ood_smoke",
+      "model": "Qwen2-1.5B",
+      "prompt": "problem_solution",
+      "questions": 64,
+      "candidates": 1008,
+      "hidden_shape": [
+        29,
+        1008,
+        1536
+      ],
+      "hidden_gb": 0.0836,
+      "nll_columns": [
+        "mean_nll",
+        "p90_nll",
+        "max_nll",
+        "last8_mean_nll",
+        "nll_std"
+      ],
+      "mean_nll_positive": 0.5691400170326233,
+      "mean_nll_negative": 0.574354887008667,
+      "elapsed_seconds": 5.661,
+      "files": {
+        "hidden": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/svamp_ood_smoke.terminal_layers_f16.npy",
+        "nll": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/svamp_ood_smoke.token_nll_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/svamp_ood_smoke.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/problem_solution/svamp_ood_smoke.metadata.jsonl"
+      }
+    },
+    "Qwen2-1.5B/question_answer/gsm_train_smoke": {
+      "dataset": "gsm_train_smoke",
+      "model": "Qwen2-1.5B",
+      "prompt": "question_answer",
+      "questions": 128,
+      "candidates": 2015,
+      "hidden_shape": [
+        29,
+        2015,
+        1536
+      ],
+      "hidden_gb": 0.1672,
+      "nll_columns": [
+        "mean_nll",
+        "p90_nll",
+        "max_nll",
+        "last8_mean_nll",
+        "nll_std"
+      ],
+      "mean_nll_positive": 0.3293236792087555,
+      "mean_nll_negative": 0.4025100767612457,
+      "elapsed_seconds": 13.909,
+      "files": {
+        "hidden": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/gsm_train_smoke.terminal_layers_f16.npy",
+        "nll": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/gsm_train_smoke.token_nll_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/gsm_train_smoke.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/gsm_train_smoke.metadata.jsonl"
+      }
+    },
+    "Qwen2-1.5B/question_answer/gsm_pilot_smoke": {
+      "dataset": "gsm_pilot_smoke",
+      "model": "Qwen2-1.5B",
+      "prompt": "question_answer",
+      "questions": 64,
+      "candidates": 1010,
+      "hidden_shape": [
+        29,
+        1010,
+        1536
+      ],
+      "hidden_gb": 0.0838,
+      "nll_columns": [
+        "mean_nll",
+        "p90_nll",
+        "max_nll",
+        "last8_mean_nll",
+        "nll_std"
+      ],
+      "mean_nll_positive": 0.3430890142917633,
+      "mean_nll_negative": 0.3858775794506073,
+      "elapsed_seconds": 6.768,
+      "files": {
+        "hidden": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/gsm_pilot_smoke.terminal_layers_f16.npy",
+        "nll": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/gsm_pilot_smoke.token_nll_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/gsm_pilot_smoke.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/gsm_pilot_smoke.metadata.jsonl"
+      }
+    },
+    "Qwen2-1.5B/question_answer/gsm_id_smoke": {
+      "dataset": "gsm_id_smoke",
+      "model": "Qwen2-1.5B",
+      "prompt": "question_answer",
+      "questions": 64,
+      "candidates": 1002,
+      "hidden_shape": [
+        29,
+        1002,
+        1536
+      ],
+      "hidden_gb": 0.0831,
+      "nll_columns": [
+        "mean_nll",
+        "p90_nll",
+        "max_nll",
+        "last8_mean_nll",
+        "nll_std"
+      ],
+      "mean_nll_positive": 0.3690186142921448,
+      "mean_nll_negative": 0.49201664328575134,
+      "elapsed_seconds": 6.732,
+      "files": {
+        "hidden": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/gsm_id_smoke.terminal_layers_f16.npy",
+        "nll": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/gsm_id_smoke.token_nll_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/gsm_id_smoke.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/gsm_id_smoke.metadata.jsonl"
+      }
+    },
+    "Qwen2-1.5B/question_answer/svamp_ood_smoke": {
+      "dataset": "svamp_ood_smoke",
+      "model": "Qwen2-1.5B",
+      "prompt": "question_answer",
+      "questions": 64,
+      "candidates": 1008,
+      "hidden_shape": [
+        29,
+        1008,
+        1536
+      ],
+      "hidden_gb": 0.0836,
+      "nll_columns": [
+        "mean_nll",
+        "p90_nll",
+        "max_nll",
+        "last8_mean_nll",
+        "nll_std"
+      ],
+      "mean_nll_positive": 0.5650696754455566,
+      "mean_nll_negative": 0.5705668330192566,
+      "elapsed_seconds": 5.586,
+      "files": {
+        "hidden": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/svamp_ood_smoke.terminal_layers_f16.npy",
+        "nll": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/svamp_ood_smoke.token_nll_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/svamp_ood_smoke.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-1.5B/question_answer/svamp_ood_smoke.metadata.jsonl"
+      }
+    },
+    "Qwen2-7B/problem_solution/math_train_smoke": {
+      "dataset": "math_train_smoke",
+      "model": "Qwen2-7B",
+      "prompt": "problem_solution",
+      "questions": 128,
+      "candidates": 1662,
+      "hidden_shape": [
+        29,
+        1662,
+        3584
+      ],
+      "hidden_gb": 0.3218,
+      "nll_columns": [
+        "mean_nll",
+        "p90_nll",
+        "max_nll",
+        "last8_mean_nll",
+        "nll_std"
+      ],
+      "mean_nll_positive": 0.3534880578517914,
+      "mean_nll_negative": 0.40799078345298767,
+      "elapsed_seconds": 47.638,
+      "files": {
+        "hidden": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/problem_solution/math_train_smoke.terminal_layers_f16.npy",
+        "nll": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/problem_solution/math_train_smoke.token_nll_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/problem_solution/math_train_smoke.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/problem_solution/math_train_smoke.metadata.jsonl"
+      }
+    },
+    "Qwen2-7B/problem_solution/math_pilot_smoke": {
+      "dataset": "math_pilot_smoke",
+      "model": "Qwen2-7B",
+      "prompt": "problem_solution",
+      "questions": 64,
+      "candidates": 826,
+      "hidden_shape": [
+        29,
+        826,
+        3584
+      ],
+      "hidden_gb": 0.1599,
+      "nll_columns": [
+        "mean_nll",
+        "p90_nll",
+        "max_nll",
+        "last8_mean_nll",
+        "nll_std"
+      ],
+      "mean_nll_positive": 0.3624233901500702,
+      "mean_nll_negative": 0.44666028022766113,
+      "elapsed_seconds": 23.048,
+      "files": {
+        "hidden": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/problem_solution/math_pilot_smoke.terminal_layers_f16.npy",
+        "nll": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/problem_solution/math_pilot_smoke.token_nll_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/problem_solution/math_pilot_smoke.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/problem_solution/math_pilot_smoke.metadata.jsonl"
+      }
+    },
+    "Qwen2-7B/problem_solution/math_id_smoke": {
+      "dataset": "math_id_smoke",
+      "model": "Qwen2-7B",
+      "prompt": "problem_solution",
+      "questions": 64,
+      "candidates": 762,
+      "hidden_shape": [
+        29,
+        762,
+        3584
+      ],
+      "hidden_gb": 0.1475,
+      "nll_columns": [
+        "mean_nll",
+        "p90_nll",
+        "max_nll",
+        "last8_mean_nll",
+        "nll_std"
+      ],
+      "mean_nll_positive": 0.4512895345687866,
+      "mean_nll_negative": 0.48699232935905457,
+      "elapsed_seconds": 24.048,
+      "files": {
+        "hidden": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/problem_solution/math_id_smoke.terminal_layers_f16.npy",
+        "nll": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/problem_solution/math_id_smoke.token_nll_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/problem_solution/math_id_smoke.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/problem_solution/math_id_smoke.metadata.jsonl"
+      }
+    },
+    "Qwen2-7B/question_answer/math_train_smoke": {
+      "dataset": "math_train_smoke",
+      "model": "Qwen2-7B",
+      "prompt": "question_answer",
+      "questions": 128,
+      "candidates": 1662,
+      "hidden_shape": [
+        29,
+        1662,
+        3584
+      ],
+      "hidden_gb": 0.3218,
+      "nll_columns": [
+        "mean_nll",
+        "p90_nll",
+        "max_nll",
+        "last8_mean_nll",
+        "nll_std"
+      ],
+      "mean_nll_positive": 0.35218873620033264,
+      "mean_nll_negative": 0.40705862641334534,
+      "elapsed_seconds": 47.54,
+      "files": {
+        "hidden": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/question_answer/math_train_smoke.terminal_layers_f16.npy",
+        "nll": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/question_answer/math_train_smoke.token_nll_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/question_answer/math_train_smoke.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/question_answer/math_train_smoke.metadata.jsonl"
+      }
+    },
+    "Qwen2-7B/question_answer/math_pilot_smoke": {
+      "dataset": "math_pilot_smoke",
+      "model": "Qwen2-7B",
+      "prompt": "question_answer",
+      "questions": 64,
+      "candidates": 826,
+      "hidden_shape": [
+        29,
+        826,
+        3584
+      ],
+      "hidden_gb": 0.1599,
+      "nll_columns": [
+        "mean_nll",
+        "p90_nll",
+        "max_nll",
+        "last8_mean_nll",
+        "nll_std"
+      ],
+      "mean_nll_positive": 0.3609723746776581,
+      "mean_nll_negative": 0.445529580116272,
+      "elapsed_seconds": 22.894,
+      "files": {
+        "hidden": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/question_answer/math_pilot_smoke.terminal_layers_f16.npy",
+        "nll": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/question_answer/math_pilot_smoke.token_nll_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/question_answer/math_pilot_smoke.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/question_answer/math_pilot_smoke.metadata.jsonl"
+      }
+    },
+    "Qwen2-7B/question_answer/math_id_smoke": {
+      "dataset": "math_id_smoke",
+      "model": "Qwen2-7B",
+      "prompt": "question_answer",
+      "questions": 64,
+      "candidates": 762,
+      "hidden_shape": [
+        29,
+        762,
+        3584
+      ],
+      "hidden_gb": 0.1475,
+      "nll_columns": [
+        "mean_nll",
+        "p90_nll",
+        "max_nll",
+        "last8_mean_nll",
+        "nll_std"
+      ],
+      "mean_nll_positive": 0.4495715796947479,
+      "mean_nll_negative": 0.486944317817688,
+      "elapsed_seconds": 23.993,
+      "files": {
+        "hidden": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/question_answer/math_id_smoke.terminal_layers_f16.npy",
+        "nll": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/question_answer/math_id_smoke.token_nll_f32.npy",
+        "labels": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/question_answer/math_id_smoke.labels_i8.npy",
+        "metadata": "/root/autodl-tmp/rm_traj_project/data/cache/generator_hidden_smoke_v1/Qwen2-7B/question_answer/math_id_smoke.metadata.jsonl"
+      }
+    }
+  }
+}
