@@ -1,0 +1,247 @@
+{
+  "version": "answer_cluster_consensus_v1",
+  "selection_uses_gold_answer": false,
+  "audit": {
+    "GSM8K_PILOT": {
+      "candidates": 2985,
+      "questions": 189,
+      "parse_coverage": 1.0,
+      "parse_methods": {
+        "hash": 2044,
+        "final_phrase": 939,
+        "boxed": 2
+      },
+      "answer_clusters": 959,
+      "pure_clusters": 959,
+      "mixed_clusters": 0,
+      "cluster_purity": 1.0,
+      "unparsed_examples": []
+    },
+    "MATH_PILOT": {
+      "candidates": 2040,
+      "questions": 158,
+      "parse_coverage": 1.0,
+      "parse_methods": {
+        "boxed": 2034,
+        "hash": 6
+      },
+      "answer_clusters": 762,
+      "pure_clusters": 761,
+      "mixed_clusters": 1,
+      "cluster_purity": 0.9986876640419947,
+      "unparsed_examples": []
+    },
+    "GSM8K_ID": {
+      "candidates": 17902,
+      "questions": 1142,
+      "parse_coverage": 0.9999441403195174,
+      "parse_methods": {
+        "hash": 12631,
+        "final_phrase": 5243,
+        "boxed": 25,
+        "last_number": 2,
+        "unparsed": 1
+      },
+      "answer_clusters": 8474,
+      "pure_clusters": 8470,
+      "mixed_clusters": 4,
+      "cluster_purity": 0.9995279679018173,
+      "unparsed_examples": [
+        {
+          "uid": "b3abc330e09d956c",
+          "candidate_index": 3,
+          "preview": "ich is 1.5. And since $n = i - 2$, then $1.5 = 7 - 2$, which is 5.\n\n```python\n# because $n = 1 + c$, then $n = 1 + 0.5 = 1.5$\n\n# so $c$ should be $n - 2$, $c = 1.5 - 2$\nc = 1.5 - 2\nc\n```\nWe execute the code and we get -0.5.\nA better way of interpreting the question would be how many meters are short the life, i.e. in feet?\n\n```python\nc * 3.28084\n```\nWe execute the code and we get 2.4619473684210526.\nBecause of that 2.4619473684210526 meters is how long the banana is.\nThe answer is 3.28\n\nQuestion"
+        }
+      ]
+    },
+    "MATH_ID": {
+      "candidates": 4167,
+      "questions": 340,
+      "parse_coverage": 1.0,
+      "parse_methods": {
+        "boxed": 4154,
+        "hash": 13
+      },
+      "answer_clusters": 2087,
+      "pure_clusters": 2085,
+      "mixed_clusters": 2,
+      "cluster_purity": 0.9990416866315285,
+      "unparsed_examples": []
+    },
+    "SVAMP_OOD": {
+      "candidates": 13913,
+      "questions": 883,
+      "parse_coverage": 1.0,
+      "parse_methods": {
+        "hash": 13893,
+        "final_phrase": 18,
+        "last_number": 2
+      },
+      "answer_clusters": 5452,
+      "pure_clusters": 5452,
+      "mixed_clusters": 0,
+      "cluster_purity": 1.0,
+      "unparsed_examples": []
+    }
+  },
+  "pilot_majority": {
+    "GSM8K_PILOT": {
+      "questions": 189,
+      "raw_top1": 0.8624338624338624,
+      "selected_top1": 0.9206349206349206,
+      "top1_delta": 0.05820105820105814,
+      "damage_rate": 0.03680981595092025,
+      "correction_rate": 0.6538461538461539,
+      "switch_rate": 0.13756613756613756,
+      "net_corrected_questions": 11
+    },
+    "MATH_PILOT": {
+      "questions": 158,
+      "raw_top1": 0.8291139240506329,
+      "selected_top1": 0.9493670886075949,
+      "top1_delta": 0.120253164556962,
+      "damage_rate": 0.0,
+      "correction_rate": 0.7037037037037037,
+      "switch_rate": 0.189873417721519,
+      "net_corrected_questions": 19
+    }
+  },
+  "selected_configuration": {
+    "tau": 4.0,
+    "threshold": 0.0,
+    "pilot": {
+      "tau": 4.0,
+      "threshold": 0.0,
+      "datasets": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "selected_top1": 0.9417989417989417,
+          "top1_delta": 0.0793650793650793,
+          "damage_rate": 0.018404907975460124,
+          "correction_rate": 0.6923076923076923,
+          "switch_rate": 0.12169312169312169,
+          "net_corrected_questions": 15
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "selected_top1": 0.9367088607594937,
+          "top1_delta": 0.10759493670886078,
+          "damage_rate": 0.0,
+          "correction_rate": 0.6296296296296297,
+          "switch_rate": 0.16455696202531644,
+          "net_corrected_questions": 17
+        }
+      },
+      "macro": {
+        "top1": 0.9392539012792177,
+        "damage": 0.009202453987730062,
+        "switch": 0.14312504185921907
+      }
+    }
+  },
+  "test": {
+    "GSM8K_ID": {
+      "raw": {
+        "questions": 1142,
+        "raw_top1": 0.8309982486865148,
+        "selected_top1": 0.8309982486865148,
+        "top1_delta": 0.0,
+        "damage_rate": 0.0,
+        "correction_rate": 0.0,
+        "switch_rate": 0.0,
+        "net_corrected_questions": 0
+      },
+      "majority": {
+        "questions": 1142,
+        "raw_top1": 0.8309982486865148,
+        "selected_top1": 0.7775831873905429,
+        "top1_delta": -0.053415061295971955,
+        "damage_rate": 0.11801896733403583,
+        "correction_rate": 0.26424870466321243,
+        "switch_rate": 0.20577933450087565,
+        "net_corrected_questions": -61
+      },
+      "weighted_consensus": {
+        "questions": 1142,
+        "raw_top1": 0.8309982486865148,
+        "selected_top1": 0.8371278458844134,
+        "top1_delta": 0.0061295971978985175,
+        "damage_rate": 0.04320337197049526,
+        "correction_rate": 0.24870466321243523,
+        "switch_rate": 0.11733800350262696,
+        "net_corrected_questions": 7
+      }
+    },
+    "MATH_ID": {
+      "raw": {
+        "questions": 340,
+        "raw_top1": 0.7235294117647059,
+        "selected_top1": 0.7235294117647059,
+        "top1_delta": 0.0,
+        "damage_rate": 0.0,
+        "correction_rate": 0.0,
+        "switch_rate": 0.0,
+        "net_corrected_questions": 0
+      },
+      "majority": {
+        "questions": 340,
+        "raw_top1": 0.7235294117647059,
+        "selected_top1": 0.7235294117647059,
+        "top1_delta": 0.0,
+        "damage_rate": 0.12195121951219512,
+        "correction_rate": 0.3191489361702128,
+        "switch_rate": 0.2676470588235294,
+        "net_corrected_questions": 0
+      },
+      "weighted_consensus": {
+        "questions": 340,
+        "raw_top1": 0.7235294117647059,
+        "selected_top1": 0.7617647058823529,
+        "top1_delta": 0.038235294117647034,
+        "damage_rate": 0.052845528455284556,
+        "correction_rate": 0.2765957446808511,
+        "switch_rate": 0.18529411764705883,
+        "net_corrected_questions": 13
+      }
+    },
+    "SVAMP_OOD": {
+      "raw": {
+        "questions": 883,
+        "raw_top1": 0.869762174405436,
+        "selected_top1": 0.869762174405436,
+        "top1_delta": 0.0,
+        "damage_rate": 0.0,
+        "correction_rate": 0.0,
+        "switch_rate": 0.0,
+        "net_corrected_questions": 0
+      },
+      "majority": {
+        "questions": 883,
+        "raw_top1": 0.869762174405436,
+        "selected_top1": 0.8278595696489242,
+        "top1_delta": -0.04190260475651186,
+        "damage_rate": 0.0859375,
+        "correction_rate": 0.25217391304347825,
+        "switch_rate": 0.1438278595696489,
+        "net_corrected_questions": -37
+      },
+      "weighted_consensus": {
+        "questions": 883,
+        "raw_top1": 0.869762174405436,
+        "selected_top1": 0.8686296715741789,
+        "top1_delta": -0.0011325028312570984,
+        "damage_rate": 0.0390625,
+        "correction_rate": 0.25217391304347825,
+        "switch_rate": 0.09173272933182333,
+        "net_corrected_questions": -1
+      }
+    }
+  },
+  "weighted_test_macro": {
+    "top1": 0.8225074077803151,
+    "top1_delta": 0.014410796161429484,
+    "damage": 0.04503713347525994
+  }
+}
