@@ -1,0 +1,1556 @@
+{
+  "version": "cast_rm_trust_region_v2",
+  "scope": "pilot_selected_current_tests_exploratory",
+  "rank_beta": 0.3,
+  "selected_evidence_beta": 0.4,
+  "selected_kappa": 0.5,
+  "pilot": {
+    "GSM8K_PILOT": {
+      "questions": 189,
+      "raw_top1": 0.8624338624338624,
+      "top1": 0.9312169312169312,
+      "top1_delta": 0.06878306878306872,
+      "pair_macro_strict": 0.9094532280378842,
+      "damage_rate": 0.006134969325153374,
+      "correction_rate": 0.5384615384615384,
+      "switch_rate": 0.4708994708994709,
+      "authorized_coverage": 0.4603174603174603,
+      "net_corrected_questions": 13
+    },
+    "MATH_PILOT": {
+      "questions": 158,
+      "raw_top1": 0.8291139240506329,
+      "top1": 0.8607594936708861,
+      "top1_delta": 0.03164556962025322,
+      "pair_macro_strict": 0.8334517758127614,
+      "damage_rate": 0.007633587786259542,
+      "correction_rate": 0.2222222222222222,
+      "switch_rate": 0.4430379746835443,
+      "authorized_coverage": 0.43670886075949367,
+      "net_corrected_questions": 5
+    },
+    "macro": {
+      "top1": 0.8959882124439087,
+      "pair_macro_strict": 0.8714525019253228,
+      "damage_rate": 0.006884278555706458,
+      "authorized_coverage": 0.448513160538477
+    },
+    "diagnostics": {
+      "GSM8K_PILOT": {
+        "evidence_mean": 0.20998189446550827,
+        "evidence_positive_rate": 0.4603174603174603,
+        "challenger_uncertainty_mean": 1.2622940497738975
+      },
+      "MATH_PILOT": {
+        "evidence_mean": -0.11262412515433529,
+        "evidence_positive_rate": 0.43670886075949367,
+        "challenger_uncertainty_mean": 1.2713538827492465
+      }
+    }
+  },
+  "test": {
+    "GSM8K_ID": {
+      "questions": 1142,
+      "raw_top1": 0.8309982486865148,
+      "top1": 0.8695271453590193,
+      "top1_delta": 0.038528896672504476,
+      "pair_macro_strict": 0.8913420547434338,
+      "damage_rate": 0.015806111696522657,
+      "correction_rate": 0.30569948186528495,
+      "switch_rate": 0.36427320490367776,
+      "authorized_coverage": 0.36252189141856395,
+      "net_corrected_questions": 44
+    },
+    "MATH_ID": {
+      "questions": 340,
+      "raw_top1": 0.7235294117647059,
+      "top1": 0.7382352941176471,
+      "top1_delta": 0.014705882352941235,
+      "pair_macro_strict": 0.7923845449407425,
+      "damage_rate": 0.036585365853658534,
+      "correction_rate": 0.14893617021276595,
+      "switch_rate": 0.31470588235294117,
+      "authorized_coverage": 0.3235294117647059,
+      "net_corrected_questions": 5
+    },
+    "SVAMP_OOD": {
+      "questions": 883,
+      "raw_top1": 0.869762174405436,
+      "top1": 0.8312570781426953,
+      "top1_delta": -0.03850509626274068,
+      "pair_macro_strict": 0.8663845704058656,
+      "damage_rate": 0.0625,
+      "correction_rate": 0.12173913043478261,
+      "switch_rate": 0.3465458663646659,
+      "authorized_coverage": 0.347678369195923,
+      "net_corrected_questions": -34
+    },
+    "macro": {
+      "top1": 0.8130065058731205,
+      "pair_macro_strict": 0.8500370566966806,
+      "damage_rate": 0.038297159183393735,
+      "authorized_coverage": 0.344576557459731
+    },
+    "diagnostics": {
+      "GSM8K_ID": {
+        "evidence_mean": -0.220260815946108,
+        "evidence_positive_rate": 0.36252189141856395,
+        "challenger_uncertainty_mean": 1.0999716144453102
+      },
+      "MATH_ID": {
+        "evidence_mean": -0.3756643931984025,
+        "evidence_positive_rate": 0.3235294117647059,
+        "challenger_uncertainty_mean": 1.1392870135057498
+      },
+      "SVAMP_OOD": {
+        "evidence_mean": -0.29954198682691274,
+        "evidence_positive_rate": 0.347678369195923,
+        "challenger_uncertainty_mean": 0.8695752553532105
+      }
+    }
+  },
+  "search": [
+    {
+      "evidence_beta": 0.05,
+      "kappa": 0.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.8994708994708994,
+          "top1_delta": 0.03703703703703698,
+          "pair_macro_strict": 0.9086409480192549,
+          "damage_rate": 0.006134969325153374,
+          "correction_rate": 0.3076923076923077,
+          "switch_rate": 0.1693121693121693,
+          "authorized_coverage": 0.18518518518518517,
+          "net_corrected_questions": 7
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8164556962025317,
+          "top1_delta": -0.012658227848101222,
+          "pair_macro_strict": 0.8320691886390351,
+          "damage_rate": 0.022900763358778626,
+          "correction_rate": 0.037037037037037035,
+          "switch_rate": 0.2088607594936709,
+          "authorized_coverage": 0.20253164556962025,
+          "net_corrected_questions": -2
+        },
+        "macro": {
+          "top1": 0.8579632978367155,
+          "pair_macro_strict": 0.870355068329145,
+          "damage_rate": 0.014517866341966,
+          "authorized_coverage": 0.19385841537740273
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.18331625767448848,
+            "evidence_positive_rate": 0.18518518518518517,
+            "challenger_uncertainty_mean": 1.2749798883087735
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.1564945559712905,
+            "evidence_positive_rate": 0.20253164556962025,
+            "challenger_uncertainty_mean": 1.43489840452241
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.05,
+      "kappa": 0.5,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.8941798941798942,
+          "top1_delta": 0.031746031746031744,
+          "pair_macro_strict": 0.9084004477787547,
+          "damage_rate": 0.006134969325153374,
+          "correction_rate": 0.2692307692307692,
+          "switch_rate": 0.15343915343915343,
+          "authorized_coverage": 0.14814814814814814,
+          "net_corrected_questions": 6
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8354430379746836,
+          "top1_delta": 0.006329113924050667,
+          "pair_macro_strict": 0.8324962668351005,
+          "damage_rate": 0.0,
+          "correction_rate": 0.037037037037037035,
+          "switch_rate": 0.12658227848101267,
+          "authorized_coverage": 0.12025316455696203,
+          "net_corrected_questions": 1
+        },
+        "macro": {
+          "top1": 0.8648114660772889,
+          "pair_macro_strict": 0.8704483573069276,
+          "damage_rate": 0.003067484662576687,
+          "authorized_coverage": 0.13420065635255507
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.2149659399640446,
+            "evidence_positive_rate": 0.14814814814814814,
+            "challenger_uncertainty_mean": 1.257114700716797
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.19168177969706587,
+            "evidence_positive_rate": 0.12025316455696203,
+            "challenger_uncertainty_mean": 1.3681672238567961
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.05,
+      "kappa": 1.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.8994708994708994,
+          "top1_delta": 0.03703703703703698,
+          "pair_macro_strict": 0.9084831197364266,
+          "damage_rate": 0.0,
+          "correction_rate": 0.2692307692307692,
+          "switch_rate": 0.13227513227513227,
+          "authorized_coverage": 0.10582010582010581,
+          "net_corrected_questions": 7
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8354430379746836,
+          "top1_delta": 0.006329113924050667,
+          "pair_macro_strict": 0.8324962668351005,
+          "damage_rate": 0.0,
+          "correction_rate": 0.037037037037037035,
+          "switch_rate": 0.08860759493670886,
+          "authorized_coverage": 0.08227848101265822,
+          "net_corrected_questions": 1
+        },
+        "macro": {
+          "top1": 0.8674569687227915,
+          "pair_macro_strict": 0.8704896932857635,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.09404929341638202
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.24586175521188933,
+            "evidence_positive_rate": 0.10582010582010581,
+            "challenger_uncertainty_mean": 1.2165785589743228
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.22500860619379348,
+            "evidence_positive_rate": 0.08227848101265822,
+            "challenger_uncertainty_mean": 1.2924627312753774
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.05,
+      "kappa": 1.5,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.8994708994708994,
+          "top1_delta": 0.03703703703703698,
+          "pair_macro_strict": 0.9084831197364266,
+          "damage_rate": 0.0,
+          "correction_rate": 0.2692307692307692,
+          "switch_rate": 0.1111111111111111,
+          "authorized_coverage": 0.08465608465608465,
+          "net_corrected_questions": 7
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8291139240506329,
+          "top1_delta": 0.0,
+          "pair_macro_strict": 0.8322984820249739,
+          "damage_rate": 0.0,
+          "correction_rate": 0.0,
+          "switch_rate": 0.0759493670886076,
+          "authorized_coverage": 0.056962025316455694,
+          "net_corrected_questions": 0
+        },
+        "macro": {
+          "top1": 0.8642924117607662,
+          "pair_macro_strict": 0.8703908008807002,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.07080905498627017
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.27551423716999435,
+            "evidence_positive_rate": 0.08465608465608465,
+            "challenger_uncertainty_mean": 1.1678264184643037
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.25634179025139847,
+            "evidence_positive_rate": 0.056962025316455694,
+            "challenger_uncertainty_mean": 1.208824334312466
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.05,
+      "kappa": 2.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.8994708994708994,
+          "top1_delta": 0.03703703703703698,
+          "pair_macro_strict": 0.9084831197364266,
+          "damage_rate": 0.0,
+          "correction_rate": 0.2692307692307692,
+          "switch_rate": 0.09523809523809523,
+          "authorized_coverage": 0.06878306878306878,
+          "net_corrected_questions": 7
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8291139240506329,
+          "top1_delta": 0.0,
+          "pair_macro_strict": 0.8322984820249739,
+          "damage_rate": 0.0,
+          "correction_rate": 0.0,
+          "switch_rate": 0.0759493670886076,
+          "authorized_coverage": 0.04430379746835443,
+          "net_corrected_questions": 0
+        },
+        "macro": {
+          "top1": 0.8642924117607662,
+          "pair_macro_strict": 0.8703908008807002,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.056543433125711605
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.3043648808524407,
+            "evidence_positive_rate": 0.06878306878306878,
+            "challenger_uncertainty_mean": 1.1420237821916108
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.2851922309167589,
+            "evidence_positive_rate": 0.04430379746835443,
+            "challenger_uncertainty_mean": 1.100054967582603
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.1,
+      "kappa": 0.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9047619047619048,
+          "top1_delta": 0.042328042328042326,
+          "pair_macro_strict": 0.9087249322302232,
+          "damage_rate": 0.006134969325153374,
+          "correction_rate": 0.34615384615384615,
+          "switch_rate": 0.26455026455026454,
+          "authorized_coverage": 0.2804232804232804,
+          "net_corrected_questions": 8
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8417721518987342,
+          "top1_delta": 0.012658227848101333,
+          "pair_macro_strict": 0.8329469536307241,
+          "damage_rate": 0.015267175572519083,
+          "correction_rate": 0.14814814814814814,
+          "switch_rate": 0.34810126582278483,
+          "authorized_coverage": 0.34177215189873417,
+          "net_corrected_questions": 2
+        },
+        "macro": {
+          "top1": 0.8732670283303194,
+          "pair_macro_strict": 0.8708359429304737,
+          "damage_rate": 0.01070107244883623,
+          "authorized_coverage": 0.3110977161610073
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.12099982191138364,
+            "evidence_positive_rate": 0.2804232804232804,
+            "challenger_uncertainty_mean": 1.3195291385054588
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.13143446473286877,
+            "evidence_positive_rate": 0.34177215189873417,
+            "challenger_uncertainty_mean": 1.4200627186064478
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.1,
+      "kappa": 0.5,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.8994708994708994,
+          "top1_delta": 0.03703703703703698,
+          "pair_macro_strict": 0.9084519835445761,
+          "damage_rate": 0.006134969325153374,
+          "correction_rate": 0.3076923076923077,
+          "switch_rate": 0.2328042328042328,
+          "authorized_coverage": 0.2275132275132275,
+          "net_corrected_questions": 7
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8417721518987342,
+          "top1_delta": 0.012658227848101333,
+          "pair_macro_strict": 0.8327911231742606,
+          "damage_rate": 0.007633587786259542,
+          "correction_rate": 0.1111111111111111,
+          "switch_rate": 0.27848101265822783,
+          "authorized_coverage": 0.2721518987341772,
+          "net_corrected_questions": 2
+        },
+        "macro": {
+          "top1": 0.8706215256848169,
+          "pair_macro_strict": 0.8706215533594184,
+          "damage_rate": 0.006884278555706458,
+          "authorized_coverage": 0.24983256312370236
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.1849814388462436,
+            "evidence_positive_rate": 0.2275132275132275,
+            "challenger_uncertainty_mean": 1.2387199514993914
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.199998045717425,
+            "evidence_positive_rate": 0.2721518987341772,
+            "challenger_uncertainty_mean": 1.3042313904041731
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.1,
+      "kappa": 1.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.8994708994708994,
+          "top1_delta": 0.03703703703703698,
+          "pair_macro_strict": 0.9082941552617477,
+          "damage_rate": 0.0,
+          "correction_rate": 0.2692307692307692,
+          "switch_rate": 0.19047619047619047,
+          "authorized_coverage": 0.164021164021164,
+          "net_corrected_questions": 7
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8481012658227848,
+          "top1_delta": 0.01898734177215189,
+          "pair_macro_strict": 0.8329493510223619,
+          "damage_rate": 0.0,
+          "correction_rate": 0.1111111111111111,
+          "switch_rate": 0.1962025316455696,
+          "authorized_coverage": 0.189873417721519,
+          "net_corrected_questions": 3
+        },
+        "macro": {
+          "top1": 0.8737860826468421,
+          "pair_macro_strict": 0.8706217531420548,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.1769472908713415
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.24458220351928422,
+            "evidence_positive_rate": 0.164021164021164,
+            "challenger_uncertainty_mean": 1.1673510634591655
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.2637810217307975,
+            "evidence_positive_rate": 0.189873417721519,
+            "challenger_uncertainty_mean": 1.2430062126132506
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.1,
+      "kappa": 1.5,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.8994708994708994,
+          "top1_delta": 0.03703703703703698,
+          "pair_macro_strict": 0.9082941552617477,
+          "damage_rate": 0.0,
+          "correction_rate": 0.2692307692307692,
+          "switch_rate": 0.15873015873015872,
+          "authorized_coverage": 0.13227513227513227,
+          "net_corrected_questions": 7
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8354430379746836,
+          "top1_delta": 0.006329113924050667,
+          "pair_macro_strict": 0.8326469600237684,
+          "damage_rate": 0.0,
+          "correction_rate": 0.037037037037037035,
+          "switch_rate": 0.13924050632911392,
+          "authorized_coverage": 0.11392405063291139,
+          "net_corrected_questions": 1
+        },
+        "macro": {
+          "top1": 0.8674569687227915,
+          "pair_macro_strict": 0.870470557642758,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.12309959145402183
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.30082125383522856,
+            "evidence_positive_rate": 0.13227513227513227,
+            "challenger_uncertainty_mean": 1.0950986856900196
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.32318824741553187,
+            "evidence_positive_rate": 0.11392405063291139,
+            "challenger_uncertainty_mean": 1.1409500855716723
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.1,
+      "kappa": 2.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.8994708994708994,
+          "top1_delta": 0.03703703703703698,
+          "pair_macro_strict": 0.9082941552617477,
+          "damage_rate": 0.0,
+          "correction_rate": 0.2692307692307692,
+          "switch_rate": 0.13227513227513227,
+          "authorized_coverage": 0.10582010582010581,
+          "net_corrected_questions": 7
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8291139240506329,
+          "top1_delta": 0.0,
+          "pair_macro_strict": 0.8324491752136417,
+          "damage_rate": 0.0,
+          "correction_rate": 0.0,
+          "switch_rate": 0.12025316455696203,
+          "authorized_coverage": 0.0949367088607595,
+          "net_corrected_questions": 0
+        },
+        "macro": {
+          "top1": 0.8642924117607662,
+          "pair_macro_strict": 0.8703716652376947,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.10037840734043266
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.35410198714170193,
+            "evidence_positive_rate": 0.10582010582010581,
+            "challenger_uncertainty_mean": 1.028859131117031
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.3773351861812363,
+            "evidence_positive_rate": 0.0949367088607595,
+            "challenger_uncertainty_mean": 1.0514585299865356
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.2,
+      "kappa": 0.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9153439153439153,
+          "top1_delta": 0.05291005291005291,
+          "pair_macro_strict": 0.9089333657719901,
+          "damage_rate": 0.006134969325153374,
+          "correction_rate": 0.4230769230769231,
+          "switch_rate": 0.41798941798941797,
+          "authorized_coverage": 0.42328042328042326,
+          "net_corrected_questions": 10
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8481012658227848,
+          "top1_delta": 0.01898734177215189,
+          "pair_macro_strict": 0.8330034635764745,
+          "damage_rate": 0.022900763358778626,
+          "correction_rate": 0.2222222222222222,
+          "switch_rate": 0.45569620253164556,
+          "authorized_coverage": 0.44936708860759494,
+          "net_corrected_questions": 3
+        },
+        "macro": {
+          "top1": 0.8817225905833501,
+          "pair_macro_strict": 0.8709684146742322,
+          "damage_rate": 0.014517866341966,
+          "authorized_coverage": 0.4363237559440091
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": 0.04880038944255344,
+            "evidence_positive_rate": 0.42328042328042326,
+            "challenger_uncertainty_mean": 1.2939144097978161
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.04575147354810298,
+            "evidence_positive_rate": 0.44936708860759494,
+            "challenger_uncertainty_mean": 1.4309402563715283
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.2,
+      "kappa": 0.5,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9153439153439153,
+          "top1_delta": 0.05291005291005291,
+          "pair_macro_strict": 0.9089333657719901,
+          "damage_rate": 0.006134969325153374,
+          "correction_rate": 0.4230769230769231,
+          "switch_rate": 0.37037037037037035,
+          "authorized_coverage": 0.35978835978835977,
+          "net_corrected_questions": 10
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8544303797468354,
+          "top1_delta": 0.025316455696202556,
+          "pair_macro_strict": 0.8332106667108927,
+          "damage_rate": 0.007633587786259542,
+          "correction_rate": 0.18518518518518517,
+          "switch_rate": 0.37341772151898733,
+          "authorized_coverage": 0.3670886075949367,
+          "net_corrected_questions": 4
+        },
+        "macro": {
+          "top1": 0.8848871475453755,
+          "pair_macro_strict": 0.8710720162414414,
+          "damage_rate": 0.006884278555706458,
+          "authorized_coverage": 0.3634384836916482
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.07866610770936681,
+            "evidence_positive_rate": 0.35978835978835977,
+            "challenger_uncertainty_mean": 1.2385816008995765
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.18287892476950265,
+            "evidence_positive_rate": 0.3670886075949367,
+            "challenger_uncertainty_mean": 1.3145708996755412
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.2,
+      "kappa": 1.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.91005291005291,
+          "top1_delta": 0.04761904761904756,
+          "pair_macro_strict": 0.9088076041878951,
+          "damage_rate": 0.0,
+          "correction_rate": 0.34615384615384615,
+          "switch_rate": 0.25925925925925924,
+          "authorized_coverage": 0.23809523809523808,
+          "net_corrected_questions": 9
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8607594936708861,
+          "top1_delta": 0.03164556962025322,
+          "pair_macro_strict": 0.8335095415350843,
+          "damage_rate": 0.0,
+          "correction_rate": 0.18518518518518517,
+          "switch_rate": 0.3037974683544304,
+          "authorized_coverage": 0.2974683544303797,
+          "net_corrected_questions": 5
+        },
+        "macro": {
+          "top1": 0.885406201861898,
+          "pair_macro_strict": 0.8711585728614897,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.2677817962628089
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.19909260923624353,
+            "evidence_positive_rate": 0.23809523809523808,
+            "challenger_uncertainty_mean": 1.149741366584465
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.3070697184929129,
+            "evidence_positive_rate": 0.2974683544303797,
+            "challenger_uncertainty_mean": 1.1517586050720154
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.2,
+      "kappa": 1.5,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.8994708994708994,
+          "top1_delta": 0.03703703703703698,
+          "pair_macro_strict": 0.9084831197364266,
+          "damage_rate": 0.0,
+          "correction_rate": 0.2692307692307692,
+          "switch_rate": 0.21164021164021163,
+          "authorized_coverage": 0.18518518518518517,
+          "net_corrected_questions": 7
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8481012658227848,
+          "top1_delta": 0.01898734177215189,
+          "pair_macro_strict": 0.8329493510223619,
+          "damage_rate": 0.0,
+          "correction_rate": 0.1111111111111111,
+          "switch_rate": 0.21518987341772153,
+          "authorized_coverage": 0.1962025316455696,
+          "net_corrected_questions": 3
+        },
+        "macro": {
+          "top1": 0.8737860826468421,
+          "pair_macro_strict": 0.8707162353793942,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.1906938584153774
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.30877698722871993,
+            "evidence_positive_rate": 0.18518518518518517,
+            "challenger_uncertainty_mean": 1.0589979765591797
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.4189043991397359,
+            "evidence_positive_rate": 0.1962025316455696,
+            "challenger_uncertainty_mean": 1.0892173269692855
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.2,
+      "kappa": 2.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.8994708994708994,
+          "top1_delta": 0.03703703703703698,
+          "pair_macro_strict": 0.9084831197364266,
+          "damage_rate": 0.0,
+          "correction_rate": 0.2692307692307692,
+          "switch_rate": 0.19047619047619047,
+          "authorized_coverage": 0.164021164021164,
+          "net_corrected_questions": 7
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8481012658227848,
+          "top1_delta": 0.01898734177215189,
+          "pair_macro_strict": 0.8329493510223619,
+          "damage_rate": 0.0,
+          "correction_rate": 0.1111111111111111,
+          "switch_rate": 0.18354430379746836,
+          "authorized_coverage": 0.16455696202531644,
+          "net_corrected_questions": 3
+        },
+        "macro": {
+          "top1": 0.8737860826468421,
+          "pair_macro_strict": 0.8707162353793942,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.16428906302324023
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.4100965674000758,
+            "evidence_positive_rate": 0.164021164021164,
+            "challenger_uncertainty_mean": 0.976841299503884
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.521657233185406,
+            "evidence_positive_rate": 0.16455696202531644,
+            "challenger_uncertainty_mean": 1.0015764401966258
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.3,
+      "kappa": 0.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9259259259259259,
+          "top1_delta": 0.06349206349206349,
+          "pair_macro_strict": 0.9091135500791585,
+          "damage_rate": 0.006134969325153374,
+          "correction_rate": 0.5,
+          "switch_rate": 0.4656084656084656,
+          "authorized_coverage": 0.4708994708994709,
+          "net_corrected_questions": 12
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8481012658227848,
+          "top1_delta": 0.01898734177215189,
+          "pair_macro_strict": 0.8328979783444072,
+          "damage_rate": 0.030534351145038167,
+          "correction_rate": 0.25925925925925924,
+          "switch_rate": 0.5189873417721519,
+          "authorized_coverage": 0.5126582278481012,
+          "net_corrected_questions": 3
+        },
+        "macro": {
+          "top1": 0.8870135958743554,
+          "pair_macro_strict": 0.8710057642117828,
+          "damage_rate": 0.018334660235095772,
+          "authorized_coverage": 0.491778849373786
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": 0.25277699533081244,
+            "evidence_positive_rate": 0.4708994708994709,
+            "challenger_uncertainty_mean": 1.3262553720799073
+          },
+          "MATH_PILOT": {
+            "evidence_mean": 0.05453594955556755,
+            "evidence_positive_rate": 0.5126582278481012,
+            "challenger_uncertainty_mean": 1.4402424884559233
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.3,
+      "kappa": 0.5,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9206349206349206,
+          "top1_delta": 0.05820105820105814,
+          "pair_macro_strict": 0.9090173499829585,
+          "damage_rate": 0.006134969325153374,
+          "correction_rate": 0.46153846153846156,
+          "switch_rate": 0.42857142857142855,
+          "authorized_coverage": 0.41798941798941797,
+          "net_corrected_questions": 11
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8544303797468354,
+          "top1_delta": 0.025316455696202556,
+          "pair_macro_strict": 0.8331353201165588,
+          "damage_rate": 0.015267175572519083,
+          "correction_rate": 0.2222222222222222,
+          "switch_rate": 0.43670886075949367,
+          "authorized_coverage": 0.43037974683544306,
+          "net_corrected_questions": 4
+        },
+        "macro": {
+          "top1": 0.887532650190878,
+          "pair_macro_strict": 0.8710763350497586,
+          "damage_rate": 0.01070107244883623,
+          "authorized_coverage": 0.4241845824124305
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": 0.05764479154632205,
+            "evidence_positive_rate": 0.41798941798941797,
+            "challenger_uncertainty_mean": 1.2633998764964638
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.15107111953481844,
+            "evidence_positive_rate": 0.43037974683544306,
+            "challenger_uncertainty_mean": 1.2995514362767528
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.3,
+      "kappa": 1.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.91005291005291,
+          "top1_delta": 0.04761904761904756,
+          "pair_macro_strict": 0.9088076041878951,
+          "damage_rate": 0.0,
+          "correction_rate": 0.34615384615384615,
+          "switch_rate": 0.3333333333333333,
+          "authorized_coverage": 0.31216931216931215,
+          "net_corrected_questions": 9
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8607594936708861,
+          "top1_delta": 0.03164556962025322,
+          "pair_macro_strict": 0.8335095415350843,
+          "damage_rate": 0.0,
+          "correction_rate": 0.18518518518518517,
+          "switch_rate": 0.3291139240506329,
+          "authorized_coverage": 0.3227848101265823,
+          "net_corrected_questions": 5
+        },
+        "macro": {
+          "top1": 0.885406201861898,
+          "pair_macro_strict": 0.8711585728614897,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.3174770611479472
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.1249881899132142,
+            "evidence_positive_rate": 0.31216931216931215,
+            "challenger_uncertainty_mean": 1.184543475587532
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.3352992752849867,
+            "evidence_positive_rate": 0.3227848101265823,
+            "challenger_uncertainty_mean": 1.161086341766994
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.3,
+      "kappa": 1.5,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9047619047619048,
+          "top1_delta": 0.042328042328042326,
+          "pair_macro_strict": 0.9085671039473949,
+          "damage_rate": 0.0,
+          "correction_rate": 0.3076923076923077,
+          "switch_rate": 0.26455026455026454,
+          "authorized_coverage": 0.24338624338624337,
+          "net_corrected_questions": 8
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8544303797468354,
+          "top1_delta": 0.025316455696202556,
+          "pair_macro_strict": 0.8330812075624463,
+          "damage_rate": 0.0,
+          "correction_rate": 0.14814814814814814,
+          "switch_rate": 0.2721518987341772,
+          "authorized_coverage": 0.25316455696202533,
+          "net_corrected_questions": 4
+        },
+        "macro": {
+          "top1": 0.8795961422543701,
+          "pair_macro_strict": 0.8708241557549206,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.24827540017413435
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.2874407952000934,
+            "evidence_positive_rate": 0.24338624338624337,
+            "challenger_uncertainty_mean": 1.0298266303011034
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.5022524953230366,
+            "evidence_positive_rate": 0.25316455696202533,
+            "challenger_uncertainty_mean": 1.0606956499381155
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.3,
+      "kappa": 2.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.8994708994708994,
+          "top1_delta": 0.03703703703703698,
+          "pair_macro_strict": 0.9084831197364266,
+          "damage_rate": 0.0,
+          "correction_rate": 0.2692307692307692,
+          "switch_rate": 0.21164021164021163,
+          "authorized_coverage": 0.19047619047619047,
+          "net_corrected_questions": 7
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8544303797468354,
+          "top1_delta": 0.025316455696202556,
+          "pair_macro_strict": 0.8330812075624463,
+          "damage_rate": 0.0,
+          "correction_rate": 0.14814814814814814,
+          "switch_rate": 0.2088607594936709,
+          "authorized_coverage": 0.189873417721519,
+          "net_corrected_questions": 4
+        },
+        "macro": {
+          "top1": 0.8769506396088674,
+          "pair_macro_strict": 0.8707821636494364,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.19017480409885473
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.4374627461311994,
+            "evidence_positive_rate": 0.19047619047619047,
+            "challenger_uncertainty_mean": 0.9775337787177513
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.6562041464391388,
+            "evidence_positive_rate": 0.189873417721519,
+            "challenger_uncertainty_mean": 0.9907228144569488
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.4,
+      "kappa": 0.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9365079365079365,
+          "top1_delta": 0.07407407407407407,
+          "pair_macro_strict": 0.9096140959765298,
+          "damage_rate": 0.012269938650306749,
+          "correction_rate": 0.6153846153846154,
+          "switch_rate": 0.5502645502645502,
+          "authorized_coverage": 0.5555555555555556,
+          "net_corrected_questions": 14
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8481012658227848,
+          "top1_delta": 0.01898734177215189,
+          "pair_macro_strict": 0.8328979783444072,
+          "damage_rate": 0.030534351145038167,
+          "correction_rate": 0.25925925925925924,
+          "switch_rate": 0.5506329113924051,
+          "authorized_coverage": 0.5443037974683544,
+          "net_corrected_questions": 3
+        },
+        "macro": {
+          "top1": 0.8923046011653606,
+          "pair_macro_strict": 0.8712560371604685,
+          "damage_rate": 0.02140214489767246,
+          "authorized_coverage": 0.549929676511955
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": 0.47073783898460014,
+            "evidence_positive_rate": 0.5555555555555556,
+            "challenger_uncertainty_mean": 1.3435268993809741
+          },
+          "MATH_PILOT": {
+            "evidence_mean": 0.1606476197514353,
+            "evidence_positive_rate": 0.5443037974683544,
+            "challenger_uncertainty_mean": 1.45378704850055
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.4,
+      "kappa": 0.5,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9312169312169312,
+          "top1_delta": 0.06878306878306872,
+          "pair_macro_strict": 0.9094532280378842,
+          "damage_rate": 0.006134969325153374,
+          "correction_rate": 0.5384615384615384,
+          "switch_rate": 0.4708994708994709,
+          "authorized_coverage": 0.4603174603174603,
+          "net_corrected_questions": 13
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8607594936708861,
+          "top1_delta": 0.03164556962025322,
+          "pair_macro_strict": 0.8334517758127614,
+          "damage_rate": 0.007633587786259542,
+          "correction_rate": 0.2222222222222222,
+          "switch_rate": 0.4430379746835443,
+          "authorized_coverage": 0.43670886075949367,
+          "net_corrected_questions": 5
+        },
+        "macro": {
+          "top1": 0.8959882124439087,
+          "pair_macro_strict": 0.8714525019253228,
+          "damage_rate": 0.006884278555706458,
+          "authorized_coverage": 0.448513160538477
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": 0.20998189446550827,
+            "evidence_positive_rate": 0.4603174603174603,
+            "challenger_uncertainty_mean": 1.2622940497738975
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.11262412515433529,
+            "evidence_positive_rate": 0.43670886075949367,
+            "challenger_uncertainty_mean": 1.2713538827492465
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.4,
+      "kappa": 1.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9259259259259259,
+          "top1_delta": 0.06349206349206349,
+          "pair_macro_strict": 0.9093325055064473,
+          "damage_rate": 0.0,
+          "correction_rate": 0.46153846153846156,
+          "switch_rate": 0.3915343915343915,
+          "authorized_coverage": 0.37037037037037035,
+          "net_corrected_questions": 12
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8544303797468354,
+          "top1_delta": 0.025316455696202556,
+          "pair_macro_strict": 0.8333663830058498,
+          "damage_rate": 0.007633587786259542,
+          "correction_rate": 0.18518518518518517,
+          "switch_rate": 0.3670886075949367,
+          "authorized_coverage": 0.36075949367088606,
+          "net_corrected_questions": 4
+        },
+        "macro": {
+          "top1": 0.8901781528363807,
+          "pair_macro_strict": 0.8713494442561485,
+          "damage_rate": 0.003816793893129771,
+          "authorized_coverage": 0.36556493202062823
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.032238923752355195,
+            "evidence_positive_rate": 0.37037037037037035,
+            "challenger_uncertainty_mean": 1.1583296393275893
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.3592105305258515,
+            "evidence_positive_rate": 0.36075949367088606,
+            "challenger_uncertainty_mean": 1.1641823715895792
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.4,
+      "kappa": 1.5,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9153439153439153,
+          "top1_delta": 0.05291005291005291,
+          "pair_macro_strict": 0.9090038218444303,
+          "damage_rate": 0.0,
+          "correction_rate": 0.38461538461538464,
+          "switch_rate": 0.2962962962962963,
+          "authorized_coverage": 0.2751322751322751,
+          "net_corrected_questions": 10
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8607594936708861,
+          "top1_delta": 0.03164556962025322,
+          "pair_macro_strict": 0.8333688945589942,
+          "damage_rate": 0.0,
+          "correction_rate": 0.18518518518518517,
+          "switch_rate": 0.3037974683544304,
+          "authorized_coverage": 0.2848101265822785,
+          "net_corrected_questions": 5
+        },
+        "macro": {
+          "top1": 0.8880517045074008,
+          "pair_macro_strict": 0.8711863582017123,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.2799712008572768
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.24880563829922014,
+            "evidence_positive_rate": 0.2751322751322751,
+            "challenger_uncertainty_mean": 1.018213825113086
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.5822855065447055,
+            "evidence_positive_rate": 0.2848101265822785,
+            "challenger_uncertainty_mean": 1.0593091138650346
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.4,
+      "kappa": 2.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9047619047619048,
+          "top1_delta": 0.042328042328042326,
+          "pair_macro_strict": 0.9088358534224936,
+          "damage_rate": 0.0,
+          "correction_rate": 0.3076923076923077,
+          "switch_rate": 0.24338624338624337,
+          "authorized_coverage": 0.2222222222222222,
+          "net_corrected_questions": 8
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8544303797468354,
+          "top1_delta": 0.025316455696202556,
+          "pair_macro_strict": 0.8330812075624463,
+          "damage_rate": 0.0,
+          "correction_rate": 0.14814814814814814,
+          "switch_rate": 0.24050632911392406,
+          "authorized_coverage": 0.22151898734177214,
+          "net_corrected_questions": 4
+        },
+        "macro": {
+          "top1": 0.8795961422543701,
+          "pair_macro_strict": 0.87095853049247,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.22187060478199716
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.4472847597072364,
+            "evidence_positive_rate": 0.2222222222222222,
+            "challenger_uncertainty_mean": 0.9786006564855891
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.7872294351411394,
+            "evidence_positive_rate": 0.22151898734177214,
+            "challenger_uncertainty_mean": 0.975632277895001
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.5,
+      "kappa": 0.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9365079365079365,
+          "top1_delta": 0.07407407407407407,
+          "pair_macro_strict": 0.9096140959765298,
+          "damage_rate": 0.012269938650306749,
+          "correction_rate": 0.6153846153846154,
+          "switch_rate": 0.582010582010582,
+          "authorized_coverage": 0.582010582010582,
+          "net_corrected_questions": 14
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8544303797468354,
+          "top1_delta": 0.025316455696202556,
+          "pair_macro_strict": 0.8330737870645196,
+          "damage_rate": 0.030534351145038167,
+          "correction_rate": 0.2962962962962963,
+          "switch_rate": 0.569620253164557,
+          "authorized_coverage": 0.5632911392405063,
+          "net_corrected_questions": 4
+        },
+        "macro": {
+          "top1": 0.8954691581273859,
+          "pair_macro_strict": 0.8713439415205246,
+          "damage_rate": 0.02140214489767246,
+          "authorized_coverage": 0.5726508606255442
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": 0.6930337566488162,
+            "evidence_positive_rate": 0.582010582010582,
+            "challenger_uncertainty_mean": 1.3446113078130617
+          },
+          "MATH_PILOT": {
+            "evidence_mean": 0.26926147763299035,
+            "evidence_positive_rate": 0.5632911392405063,
+            "challenger_uncertainty_mean": 1.4565651236644275
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.5,
+      "kappa": 0.5,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9312169312169312,
+          "top1_delta": 0.06878306878306872,
+          "pair_macro_strict": 0.9094532280378842,
+          "damage_rate": 0.006134969325153374,
+          "correction_rate": 0.5384615384615384,
+          "switch_rate": 0.5079365079365079,
+          "authorized_coverage": 0.4973544973544973,
+          "net_corrected_questions": 13
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8607594936708861,
+          "top1_delta": 0.03164556962025322,
+          "pair_macro_strict": 0.833346290580694,
+          "damage_rate": 0.015267175572519083,
+          "correction_rate": 0.25925925925925924,
+          "switch_rate": 0.4620253164556962,
+          "authorized_coverage": 0.45569620253164556,
+          "net_corrected_questions": 5
+        },
+        "macro": {
+          "top1": 0.8959882124439087,
+          "pair_macro_strict": 0.871399759309289,
+          "damage_rate": 0.01070107244883623,
+          "authorized_coverage": 0.47652534994307144
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": 0.36796057575121127,
+            "evidence_positive_rate": 0.4973544973544973,
+            "challenger_uncertainty_mean": 1.2519818542810974
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.07118962813593165,
+            "evidence_positive_rate": 0.45569620253164556,
+            "challenger_uncertainty_mean": 1.2738550203982033
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.5,
+      "kappa": 1.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9312169312169312,
+          "top1_delta": 0.06878306878306872,
+          "pair_macro_strict": 0.909415649875306,
+          "damage_rate": 0.0,
+          "correction_rate": 0.5,
+          "switch_rate": 0.43386243386243384,
+          "authorized_coverage": 0.4126984126984127,
+          "net_corrected_questions": 13
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8544303797468354,
+          "top1_delta": 0.025316455696202556,
+          "pair_macro_strict": 0.8333663830058498,
+          "damage_rate": 0.007633587786259542,
+          "correction_rate": 0.18518518518518517,
+          "switch_rate": 0.379746835443038,
+          "authorized_coverage": 0.37341772151898733,
+          "net_corrected_questions": 4
+        },
+        "macro": {
+          "top1": 0.8928236554818834,
+          "pair_macro_strict": 0.8713910164405778,
+          "damage_rate": 0.003816793893129771,
+          "authorized_coverage": 0.3930580671087
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": 0.06733126120356026,
+            "evidence_positive_rate": 0.4126984126984127,
+            "challenger_uncertainty_mean": 1.1526885918839267
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.3816461193882212,
+            "evidence_positive_rate": 0.37341772151898733,
+            "challenger_uncertainty_mean": 1.1640632407669025
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.5,
+      "kappa": 1.5,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.9153439153439153,
+          "top1_delta": 0.05291005291005291,
+          "pair_macro_strict": 0.9090038218444303,
+          "damage_rate": 0.0,
+          "correction_rate": 0.38461538461538464,
+          "switch_rate": 0.31746031746031744,
+          "authorized_coverage": 0.2962962962962963,
+          "net_corrected_questions": 10
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8544303797468354,
+          "top1_delta": 0.025316455696202556,
+          "pair_macro_strict": 0.8330675081816585,
+          "damage_rate": 0.007633587786259542,
+          "correction_rate": 0.18518518518518517,
+          "switch_rate": 0.3291139240506329,
+          "authorized_coverage": 0.310126582278481,
+          "net_corrected_questions": 4
+        },
+        "macro": {
+          "top1": 0.8848871475453755,
+          "pair_macro_strict": 0.8710356650130444,
+          "damage_rate": 0.003816793893129771,
+          "authorized_coverage": 0.30321143928738864
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.2019785556883093,
+            "evidence_positive_rate": 0.2962962962962963,
+            "challenger_uncertainty_mean": 1.0107579199528252
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.6595345676133905,
+            "evidence_positive_rate": 0.310126582278481,
+            "challenger_uncertainty_mean": 1.0629993557835682
+          }
+        }
+      }
+    },
+    {
+      "evidence_beta": 0.5,
+      "kappa": 2.0,
+      "pilot": {
+        "GSM8K_PILOT": {
+          "questions": 189,
+          "raw_top1": 0.8624338624338624,
+          "top1": 0.91005291005291,
+          "top1_delta": 0.04761904761904756,
+          "pair_macro_strict": 0.908919837633462,
+          "damage_rate": 0.0,
+          "correction_rate": 0.34615384615384615,
+          "switch_rate": 0.25396825396825395,
+          "authorized_coverage": 0.2328042328042328,
+          "net_corrected_questions": 9
+        },
+        "MATH_PILOT": {
+          "questions": 158,
+          "raw_top1": 0.8291139240506329,
+          "top1": 0.8544303797468354,
+          "top1_delta": 0.025316455696202556,
+          "pair_macro_strict": 0.8330812075624463,
+          "damage_rate": 0.0,
+          "correction_rate": 0.14814814814814814,
+          "switch_rate": 0.26582278481012656,
+          "authorized_coverage": 0.2468354430379747,
+          "net_corrected_questions": 4
+        },
+        "macro": {
+          "top1": 0.8822416448998727,
+          "pair_macro_strict": 0.8710005225979541,
+          "damage_rate": 0.0,
+          "authorized_coverage": 0.23981983792110373
+        },
+        "diagnostics": {
+          "GSM8K_PILOT": {
+            "evidence_mean": -0.44854774706499284,
+            "evidence_positive_rate": 0.2328042328042328,
+            "challenger_uncertainty_mean": 0.972455243998892
+          },
+          "MATH_PILOT": {
+            "evidence_mean": -0.9133110758907432,
+            "evidence_positive_rate": 0.2468354430379747,
+            "challenger_uncertainty_mean": 0.9718161918977394
+          }
+        }
+      }
+    }
+  ],
+  "elapsed_seconds": 4.806,
+  "peak_gpu_gb": 1.501
+}
