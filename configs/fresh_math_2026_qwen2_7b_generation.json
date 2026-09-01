@@ -1,0 +1,44 @@
+{
+  "version": "fresh_math_2026_qwen2_7b_generation_v1",
+  "generator_track": "A",
+  "dataset": {
+    "questions": "data/external/fresh_math_2026/questions.jsonl",
+    "questions_sha256": "2f755042ba8bbf29cb7ece2cb8f70064854717fe38927300726b41b7d070ffeb",
+    "expected_questions": 63,
+    "sealed_labels_loaded": false
+  },
+  "model": {
+    "path": "models/generator/Qwen2-7B",
+    "name": "Qwen2-7B",
+    "config_sha256": "d318b49c4a29771e259d93053084eb752f5bfe69c20c4f2e041bd1017884f810",
+    "chat_template_sha256": "af9c0233881b083b52ff773580215222b5440ac3d0beeeca99b76329b048f8db",
+    "dtype": "bfloat16",
+    "attention": "sdpa"
+  },
+  "prompt": {
+    "template": "{problem}\n\nSolve the problem step by step. Put the final answer in \\boxed{}.",
+    "chat_role": "user",
+    "add_generation_prompt": true
+  },
+  "sampling": {
+    "candidates_per_question": 16,
+    "batch_candidates": 4,
+    "base_seed": 20260901,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 0,
+    "total_sequence_limit": 2048
+  },
+  "stopping": {
+    "primary": "first complete nonempty boxed expression",
+    "boxed_content_max_characters": 256,
+    "fallback": "EOS or total sequence limit",
+    "postprocess": "truncate after first valid boxed answer"
+  },
+  "protocol": {
+    "labels_used_for_smoke": false,
+    "labels_used_for_generation": false,
+    "generator_selected_before_label_reveal": true,
+    "failed_or_weak_results_will_be_retained": true
+  }
+}
