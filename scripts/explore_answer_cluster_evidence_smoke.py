@@ -531,20 +531,18 @@ def build_questions(dataset):
                 ),
             })
 
-        if not any(
+        has_positive_cluster = any(
             item["label"] == 1
             for item in cluster_items
-        ):
-            raise RuntimeError(
-                f"{dataset['name']} {uid}: 没有正确簇"
-            )
-        if not any(
+        )
+        has_negative_cluster = any(
             item["label"] == 0
             for item in cluster_items
-        ):
-            raise RuntimeError(
-                f"{dataset['name']} {uid}: 没有错误簇"
-            )
+        )
+        cluster_trainable = (
+            has_positive_cluster
+            and has_negative_cluster
+        )
 
         raw_cluster = next(
             index
@@ -561,6 +559,7 @@ def build_questions(dataset):
             "clusters": cluster_items,
             "raw_local": raw_local,
             "raw_cluster": raw_cluster,
+            "cluster_trainable": cluster_trainable,
         })
 
     dataset["questions"] = questions
@@ -618,6 +617,9 @@ def build_pair_differences(
             if item["label"] == 0
         ]
 
+        if not positives or not negatives:
+            continue
+
         for positive in positives:
             for negative in negatives:
                 positive_features = (
@@ -635,6 +637,11 @@ def build_pair_differences(
                     positive_features
                     - negative_features
                 )
+
+    if not differences:
+        raise RuntimeError(
+            f"{dataset['name']}: 没有可训练的答案簇对"
+        )
 
     return np.stack(differences).astype(np.float32)
 
