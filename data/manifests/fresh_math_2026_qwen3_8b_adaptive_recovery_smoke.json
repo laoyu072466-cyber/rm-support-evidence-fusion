@@ -1,0 +1,27 @@
+{
+  "version": "fresh_math_2026_qwen3_8b_adaptive_recovery_smoke_v1",
+  "labels_loaded": false,
+  "questions": 4,
+  "candidates": 16,
+  "primary_parsed": 11,
+  "primary_parse_rate": 0.6875,
+  "recovery_attempted": 5,
+  "recovery_success": 4,
+  "recovery_success_rate": 0.8,
+  "final_parsed": 15,
+  "final_parse_rate": 0.9375,
+  "questions_with_parsed_candidate": 4,
+  "answer_clusters_per_question": {
+    "min": 1,
+    "median": 1.5,
+    "max": 4
+  },
+  "recovery_modes": {
+    "continue_finalize": 1,
+    "restart_efficient": 4
+  },
+  "elapsed_seconds": 43.409,
+  "peak_gpu_gb": 16.3,
+  "output_file": "outputs/fresh_math_2026/qwen3_8b_adaptive_recovery_smoke_candidates.jsonl",
+  "output_sha256": "b255b99cd65a447470be060cda84c3d6a9ab6c796d57da90b0f1fae77d002596"
+}

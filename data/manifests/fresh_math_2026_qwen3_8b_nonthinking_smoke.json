@@ -1,0 +1,47 @@
+{
+  "version": "fresh_math_2026_qwen2_7b_k16_candidates_v1",
+  "generator_track": "B_nonthinking",
+  "labels_loaded": false,
+  "generation_config": "configs/fresh_math_2026_qwen3_8b_nonthinking_smoke.json",
+  "generation_config_sha256": "d180e7a3be2a1f3860bf29803b00322afdd67a5d689d3c8e78b76b5b8521fdbd",
+  "questions": 4,
+  "candidates_per_question": 4,
+  "candidates": 16,
+  "dataset_questions": {
+    "AIME_2026": 2,
+    "HMMT_FEB_2026": 2
+  },
+  "parse": {
+    "parsed_candidates": 11,
+    "parse_rate": 0.6875,
+    "methods": {
+      "boxed": 11,
+      "unparsed": 5
+    },
+    "boxed_stop_rate": 0.6875
+  },
+  "generated_tokens": {
+    "min": 640,
+    "median": 2429.0,
+    "p90": 3976.0,
+    "p95": 3976.0,
+    "max": 3976,
+    "mean": 2387.5625
+  },
+  "answer_clusters_per_question": {
+    "min": 1,
+    "median": 1.0,
+    "max": 3
+  },
+  "output_file": "outputs/fresh_math_2026/qwen3_8b_nonthinking_smoke_candidates.jsonl",
+  "output_sha256": "5cbde9a7c702f2870245b6dab0fc9885c6b073123e0c76782d44da826f071e3b",
+  "part_files": 4,
+  "part_sha256": {
+    "000_93462cc1ba3a35b5e71a.json": "d96318a963b18e5e4844933aae93125997c5a6e1c2aa08fed60c8042fdc4c9d2",
+    "001_0038838e9559a38d8f6e.json": "ef47e889676bec28863a6f23df660cb521bf69cf2b10fb925865a50e1ebd13d5",
+    "002_5d8b08437b52c83467f1.json": "e8c7aefa90ae458bd8c49db6f030ce8ec86c3b6371ea6f4ca43e74c098a8d348",
+    "003_1699e335ac1cffb75bc9.json": "884e0cf806b05021e90e18b63e1e0ff4bd076574907389bd88ff471fcfc169eb"
+  },
+  "elapsed_this_run_seconds": 266.043,
+  "peak_gpu_gb": 17.771
+}
