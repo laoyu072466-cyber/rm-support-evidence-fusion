@@ -147,6 +147,21 @@ def validate_part(
     return indices == list(range(expected_k))
 
 
+def render_prompt(config, problem):
+    template = config["prompt"]["template"]
+
+    if template.count("{problem}") != 1:
+        raise RuntimeError(
+            "prompt 模板必须且只能包含一个 "
+            "{problem} 占位符"
+        )
+
+    return template.replace(
+        "{problem}",
+        problem,
+    )
+
+
 def generate_question(
     model,
     tokenizer,
@@ -161,8 +176,9 @@ def generate_question(
         "batch_candidates"
     ]
 
-    prompt = config["prompt"]["template"].format(
-        problem=question["problem"]
+    prompt = render_prompt(
+        config,
+        question["problem"],
     )
     formatted = tokenizer.apply_chat_template(
         [{"role": "user", "content": prompt}],
@@ -346,6 +362,27 @@ def main():
         raise RuntimeError(
             f"题数异常：{len(questions)}"
         )
+
+    # 在加载 14GB 模型前预检全部 prompt。
+    rendered_prompts = [
+        render_prompt(
+            config,
+            question["problem"],
+        )
+        for question in questions
+    ]
+    if any(
+        "{problem}" in prompt
+        for prompt in rendered_prompts
+    ):
+        raise RuntimeError(
+            "存在未替换的 problem 占位符"
+        )
+    print(
+        "Prompt 渲染预检通过：",
+        len(rendered_prompts),
+        flush=True,
+    )
 
     k = config["sampling"][
         "candidates_per_question"
