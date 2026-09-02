@@ -1,0 +1,164 @@
+{
+  "version": "multi_reward_full_scoring_v1",
+  "created_at": "2026-09-02T04:11:38.914625+00:00",
+  "model_key": "qwen3_4b",
+  "model_name": "Skywork-Reward-V2-Qwen3-4B",
+  "model_path": "models/reward/Skywork-Reward-V2-Qwen3-4B",
+  "model_config_sha256": "e017d6f50c3ed8e455883af28361d3ca3166e0f42c26af770b75511cd6297703",
+  "scoring": {
+    "input": "chat_template(user=problem, assistant=solution_text)",
+    "output": "single sequence-classification logit",
+    "dtype": "bfloat16",
+    "use_cache": false,
+    "sorting": "character_length",
+    "checkpoint": "numpy memmap after every batch",
+    "labels_used": false
+  },
+  "labels_used_for_scoring": false,
+  "splits": {
+    "gsm_pilot": {
+      "candidates": 2985,
+      "source_file": "data/processed/prototype_v2/gsm_pilot_validation.jsonl",
+      "source_sha256": "26e1652192504c2e8fe609c65290fdff86d9cd8e0b5d34a56e4050099bd60a3f",
+      "score_file": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Qwen3-4B/gsm_pilot.scores_f32.npy",
+      "score_sha256": "a1f94c5c652229809b10a31ba336782e23f0440d37e577403aeeabda05a99d1e",
+      "statistics": {
+        "count": 2985,
+        "min": -7.75,
+        "p05": 2.28125,
+        "median": 10.875,
+        "mean": 10.151736843805617,
+        "p95": 16.25,
+        "max": 19.25,
+        "std": 4.123830747089604
+      },
+      "reused": true,
+      "elapsed_seconds": 0.0
+    },
+    "math_pilot": {
+      "candidates": 2040,
+      "source_file": "data/processed/prototype_v2/math_pilot_validation.jsonl",
+      "source_sha256": "eba33790e2a52c74e5dc6e79bd46f26082034f785330fdd630606cf67044334b",
+      "score_file": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Qwen3-4B/math_pilot.scores_f32.npy",
+      "score_sha256": "7a5f4c971bc3989ecb4aaffb1283d8299c2aab7eb6f0480b5e39a43f80499e00",
+      "statistics": {
+        "count": 2040,
+        "min": -2.21875,
+        "p05": 6.59375,
+        "median": 14.25,
+        "mean": 13.881147556678922,
+        "p95": 19.25,
+        "max": 22.125,
+        "std": 3.877128636658168
+      },
+      "reused": true,
+      "elapsed_seconds": 0.0
+    },
+    "gsm_id_test": {
+      "candidates": 17902,
+      "source_file": "data/processed/prototype_v2/gsm_id_test_mixed.jsonl",
+      "source_sha256": "9e41ca864144410060f519bb15bc3f94251ff6a3645d2412a4feac9d3af6e834",
+      "score_file": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Qwen3-4B/gsm_id_test.scores_f32.npy",
+      "score_sha256": "fcb115d4c94921be3069134d0505982da1e3404c2d3a551f2b4882d948f72080",
+      "statistics": {
+        "count": 17902,
+        "min": -8.0,
+        "p05": -0.12775878906249977,
+        "median": 8.6875,
+        "mean": 8.092506227140627,
+        "p95": 15.0,
+        "max": 20.25,
+        "std": 4.674436028839878
+      },
+      "reused": false,
+      "elapsed_seconds": 212.95
+    },
+    "math_id_test": {
+      "candidates": 4167,
+      "source_file": "data/processed/prototype_v2/math_id_test_mixed.jsonl",
+      "source_sha256": "cb84caba48d26e39fa0f1a4e4a0fe26ec180793f817cce80ef8e50b4ed5b1cdb",
+      "score_file": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Qwen3-4B/math_id_test.scores_f32.npy",
+      "score_sha256": "f181d6945cb887d0290eb65abc2a78fb34fb5983a2321e4f8e560d334c7ec336",
+      "statistics": {
+        "count": 4167,
+        "min": -1.2421875,
+        "p05": 4.665625,
+        "median": 11.9375,
+        "mean": 11.725053245740341,
+        "p95": 17.75,
+        "max": 22.625,
+        "std": 4.0677032496167795
+      },
+      "reused": false,
+      "elapsed_seconds": 73.461
+    },
+    "svamp_ood": {
+      "candidates": 13913,
+      "source_file": "data/processed/prototype_v2/svamp_ood_mixed.jsonl",
+      "source_sha256": "d7621b8b1d631251ea717150b3bfdf9c22b8e7cfb86afa745191b1cb2fff8077",
+      "score_file": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Qwen3-4B/svamp_ood.scores_f32.npy",
+      "score_sha256": "18aaa3420e23b920908efd5b43b095d0672882928a5b04a77fef23bebdf12b9a",
+      "statistics": {
+        "count": 13913,
+        "min": -9.375,
+        "p05": -2.421875,
+        "median": 5.4375,
+        "mean": 4.9414262748986415,
+        "p95": 10.8125,
+        "max": 14.3125,
+        "std": 4.1930176645292425
+      },
+      "reused": false,
+      "elapsed_seconds": 117.097
+    },
+    "gsm_train": {
+      "candidates": 24221,
+      "source_file": "data/processed/prototype_v2/gsm_train.jsonl",
+      "source_sha256": "ab4713ddc3f2493d88e70a971f3f8e90b65f9a69f1ca409ff9f31568cb337860",
+      "score_file": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Qwen3-4B/gsm_train.scores_f32.npy",
+      "score_sha256": "dae91cab7367cf5adf2f9b7fda70412709ae98ea2e374605b6472d249124ce2a",
+      "statistics": {
+        "count": 24221,
+        "min": -7.375,
+        "p05": 2.28125,
+        "median": 10.6875,
+        "mean": 10.091701465832065,
+        "p95": 16.125,
+        "max": 20.25,
+        "std": 4.1510416686457585
+      },
+      "reused": false,
+      "elapsed_seconds": 290.725
+    },
+    "math_train": {
+      "candidates": 16229,
+      "source_file": "data/processed/prototype_v2/math_train.jsonl",
+      "source_sha256": "21af8ba32f42164c48d220fc2bb68e40d80673427833c7a0f6a8cf74c8d9c6de",
+      "score_file": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Qwen3-4B/math_train.scores_f32.npy",
+      "score_sha256": "05bb22bac52cd9a592968d3c6654dffe52ea2e0058ab11900090a3621b8e13eb",
+      "statistics": {
+        "count": 16229,
+        "min": -1.609375,
+        "p05": 6.65625,
+        "median": 14.3125,
+        "mean": 13.738253915998175,
+        "p95": 19.25,
+        "max": 23.375,
+        "std": 3.875996710425765
+      },
+      "reused": false,
+      "elapsed_seconds": 254.686
+    }
+  },
+  "peak_gpu_gb": 9.231,
+  "elapsed_seconds": 953.998,
+  "completed_splits": [
+    "gsm_pilot",
+    "math_pilot",
+    "gsm_id_test",
+    "math_id_test",
+    "svamp_ood",
+    "gsm_train",
+    "math_train"
+  ]
+}
