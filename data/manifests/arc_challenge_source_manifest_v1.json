@@ -1,0 +1,266 @@
+{
+  "version": "arc_challenge_source_v1",
+  "created_at": "2026-09-02T08:48:41.945930+00:00",
+  "source": {
+    "dataset": "allenai/ai2_arc",
+    "config": "ARC-Challenge",
+    "datasets_version": "4.8.4"
+  },
+  "protocol": {
+    "official_splits_retained": true,
+    "train_source": "train",
+    "pilot_source": "validation",
+    "test_source": "test",
+    "generation_reads_label_files": false,
+    "test_labels_sealed_before_generation": true,
+    "label_values_printed": false,
+    "candidate_budget": 16,
+    "shared_stem_policy": "retain when option sets differ; report sensitivity analysis"
+  },
+  "splits": {
+    "train": {
+      "source_split": "train",
+      "role": "train",
+      "source_rows": 1119,
+      "retained_rows": 1119,
+      "official_rows_retained": true,
+      "question_file": "data/external/arc_challenge_v1/train_questions.jsonl",
+      "question_sha256": "15279521ff600dc0e7048ebfa76ae9e5388bfce455233f8b088d29cae6148af4",
+      "label_file": "data/external/arc_challenge_v1/train_labels.jsonl",
+      "label_sha256": "7d1e9d5a4f760f6de428917f1b6473d625e6e297995e586031d6ef47c5f0e2ae",
+      "labels_sealed": false,
+      "choice_counts": {
+        "3": 1,
+        "4": 1117,
+        "5": 1
+      },
+      "choice_label_formats": {
+        "1|2|3|4": 23,
+        "A|B|C": 1,
+        "A|B|C|D": 1094,
+        "A|B|C|D|E": 1
+      },
+      "within_split_duplicate_stems": 1,
+      "within_split_exact_duplicates": 1,
+      "duplicate_stem_records": [
+        {
+          "signature_sha256": "6045daf6d4a5983d2148cb21c43af1cb02a7df61d094c4938f0c1e03497f6358",
+          "count": 2,
+          "source_ids": [
+            "MEA_2011_8_8",
+            "MEA_2012_5_8"
+          ],
+          "question_uids": [
+            "f671360dd1413e934bf6",
+            "c51fa3568fbdb89cf4d6"
+          ],
+          "option_variants": 1
+        }
+      ],
+      "exact_duplicate_records": [
+        {
+          "signature_sha256": "b5f3507f5554173699fae5b856ec72762a6342e3aa6ba815cf9214e25df75b9f",
+          "count": 2,
+          "source_ids": [
+            "MEA_2011_8_8",
+            "MEA_2012_5_8"
+          ],
+          "question_uids": [
+            "f671360dd1413e934bf6",
+            "c51fa3568fbdb89cf4d6"
+          ],
+          "option_variants": 1
+        }
+      ],
+      "dataset_fingerprint": "4cad81c53cd88966"
+    },
+    "pilot": {
+      "source_split": "validation",
+      "role": "pilot",
+      "source_rows": 299,
+      "retained_rows": 299,
+      "official_rows_retained": true,
+      "question_file": "data/external/arc_challenge_v1/pilot_questions.jsonl",
+      "question_sha256": "74d0cda5d3df1d987f7e0383ef4eb86c06185746b87674a94f6987fe9f820acc",
+      "label_file": "data/external/arc_challenge_v1/pilot_labels.jsonl",
+      "label_sha256": "58899ca364b3c9487dd9dc0b13f0a4a2589fcb0788f6acf1613aa0eaa5045daf",
+      "labels_sealed": false,
+      "choice_counts": {
+        "3": 3,
+        "4": 295,
+        "5": 1
+      },
+      "choice_label_formats": {
+        "1|2|3|4": 4,
+        "A|B|C": 3,
+        "A|B|C|D": 291,
+        "A|B|C|D|E": 1
+      },
+      "within_split_duplicate_stems": 0,
+      "within_split_exact_duplicates": 0,
+      "duplicate_stem_records": [],
+      "exact_duplicate_records": [],
+      "dataset_fingerprint": "7ad52fe9b4847f33"
+    },
+    "test": {
+      "source_split": "test",
+      "role": "frozen_test",
+      "source_rows": 1172,
+      "retained_rows": 1172,
+      "official_rows_retained": true,
+      "question_file": "data/external/arc_challenge_v1/test_questions.jsonl",
+      "question_sha256": "437193826a11cab5b6d91b5c5775e11c48e52c918e3ab3076ba379d99c8853c3",
+      "label_file": "data/external/arc_challenge_v1/sealed_test_labels.jsonl",
+      "label_sha256": "1cbb425f61d75dca6d1acc38fd92b2336c39ab18dc07ad04301261e7fbf3ffa8",
+      "labels_sealed": true,
+      "choice_counts": {
+        "3": 4,
+        "4": 1165,
+        "5": 3
+      },
+      "choice_label_formats": {
+        "1|2|3": 1,
+        "1|2|3|4": 21,
+        "A|B|C": 3,
+        "A|B|C|D": 1144,
+        "A|B|C|D|E": 3
+      },
+      "within_split_duplicate_stems": 2,
+      "within_split_exact_duplicates": 0,
+      "duplicate_stem_records": [
+        {
+          "signature_sha256": "4d10426bda399e44089d99c7a4cbe107dd3d44dcf08affe7ddcec1580496b479",
+          "count": 2,
+          "source_ids": [
+            "TIMSS_2003_8_pg47",
+            "Mercury_SC_LBS10597"
+          ],
+          "question_uids": [
+            "9042cc5e64f35440c389",
+            "18fc845ed2d13dc84986"
+          ],
+          "option_variants": 2
+        },
+        {
+          "signature_sha256": "56578f186b66a2ff3a7ad1061b51b59c0036b3af1674929fdcbbec7b580e8489",
+          "count": 2,
+          "source_ids": [
+            "Mercury_7116183",
+            "Mercury_406639"
+          ],
+          "question_uids": [
+            "7c8aa9ff3a3418cf352a",
+            "d9931c34738e2f186dc6"
+          ],
+          "option_variants": 2
+        }
+      ],
+      "exact_duplicate_records": [],
+      "dataset_fingerprint": "a4361c3f3e560fcd"
+    }
+  },
+  "cross_split_audit": {
+    "train__pilot": {
+      "same_question_stems": 0,
+      "same_question_and_choices": 0,
+      "shared_stem_records": [],
+      "exact_content_records": []
+    },
+    "train__test": {
+      "same_question_stems": 6,
+      "same_question_and_choices": 0,
+      "shared_stem_records": [
+        {
+          "stem_sha256": "15d6e7d78e7d2e64899004d67fc80f382ddb5ec00b1eab608b0f962ee57f87d9",
+          "left_source_ids": [
+            "CSZ20740"
+          ],
+          "right_source_ids": [
+            "CSZ_2009_8_CSZ20740"
+          ],
+          "exact_content_match": false
+        },
+        {
+          "stem_sha256": "634a9715bc27034e5e802f8c0861ca59c64e70cbab9c78d78399359cf80d33f5",
+          "left_source_ids": [
+            "Mercury_7107380"
+          ],
+          "right_source_ids": [
+            "Mercury_406136"
+          ],
+          "exact_content_match": false
+        },
+        {
+          "stem_sha256": "b05c8a1e399e15295ce37115fb1000644c905f9ec16483150327293ad01f6f71",
+          "left_source_ids": [
+            "NYSEDREGENTS_2011_4_24"
+          ],
+          "right_source_ids": [
+            "NYSEDREGENTS_2015_4_24"
+          ],
+          "exact_content_match": false
+        },
+        {
+          "stem_sha256": "4d10426bda399e44089d99c7a4cbe107dd3d44dcf08affe7ddcec1580496b479",
+          "left_source_ids": [
+            "TIMSS_1995_8_O11"
+          ],
+          "right_source_ids": [
+            "TIMSS_2003_8_pg47",
+            "Mercury_SC_LBS10597"
+          ],
+          "exact_content_match": false
+        },
+        {
+          "stem_sha256": "04ae1c96b4db451c4d70d5b4171f1be8aa2ef47d41e6f41df3fc436aec647891",
+          "left_source_ids": [
+            "Mercury_7268223"
+          ],
+          "right_source_ids": [
+            "Mercury_7268240"
+          ],
+          "exact_content_match": false
+        },
+        {
+          "stem_sha256": "5b66800a74f14ad0e18f3f6ea5553f72a117d2a42fb5b9f063cdd0c2966c82f4",
+          "left_source_ids": [
+            "ACTAAP_2012_7_13"
+          ],
+          "right_source_ids": [
+            "ACTAAP_2013_7_16"
+          ],
+          "exact_content_match": false
+        }
+      ],
+      "exact_content_records": []
+    },
+    "pilot__test": {
+      "same_question_stems": 2,
+      "same_question_and_choices": 0,
+      "shared_stem_records": [
+        {
+          "stem_sha256": "6232116f7ee4cfab435967c46212890def720b7c93dee910128d154990524d85",
+          "left_source_ids": [
+            "Mercury_7175455"
+          ],
+          "right_source_ids": [
+            "Mercury_410026"
+          ],
+          "exact_content_match": false
+        },
+        {
+          "stem_sha256": "8756f7c9d648ea5a1996a5922ee2dca1425e51fb011bed3dff631197644420f9",
+          "left_source_ids": [
+            "MCAS_2000_8_10"
+          ],
+          "right_source_ids": [
+            "Mercury_7075023"
+          ],
+          "exact_content_match": false
+        }
+      ],
+      "exact_content_records": []
+    }
+  },
+  "decision": "pass_with_documented_variants"
+}
