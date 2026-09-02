@@ -1,0 +1,66 @@
+{
+  "version": "arc_challenge_qwen2_1p5b_nonthinking_smoke_v1",
+  "generator_track": "ARC_qwen2_1p5b_smoke_v1",
+  "labels_loaded": false,
+  "generation_config": "configs/arc_challenge_qwen2_1p5b_nonthinking_smoke_v1.json",
+  "generation_config_sha256": "4675ebc3b5168248924fa3d02141ea9a6fb22b1ce0c1d9961e7931d29ca4c1fa",
+  "questions": 6,
+  "candidates_per_question": 8,
+  "candidates": 48,
+  "dataset_questions": {
+    "train": 4,
+    "pilot": 2
+  },
+  "parse": {
+    "parsed_candidates": 14,
+    "parse_rate": 0.2916666666666667,
+    "methods": {
+      "unparsed": 34,
+      "boxed_choice_label": 14
+    },
+    "boxed_stop_rate": 0.2916666666666667
+  },
+  "generated_tokens": {
+    "min": 95,
+    "median": 577.0,
+    "p90": 902.0,
+    "p95": 928.0,
+    "max": 928,
+    "mean": 554.5625
+  },
+  "answer_clusters_per_question": {
+    "min": 1,
+    "median": 1.0,
+    "max": 2
+  },
+  "output_file": "outputs/arc_challenge_v1/qwen2_1p5b_smoke_candidates.jsonl",
+  "output_sha256": "6c94d027ed4037782a0a47a8367d328652ff6a458c77bcc0aaf28258c9d6dcd8",
+  "part_files": 6,
+  "part_sha256": {
+    "000_2f955b37ec7860b598ea.json": "d846231317963f63b4186d6cc7fcbdac43c4edfa83cb7171caf69d3368c8ff44",
+    "001_438ab7a6dd91f3cc8aa3.json": "aff6ef7cc03ac7dd9cdf4a9227ced75a7e85a2e697a3108b99d1fd2e97c83786",
+    "002_714ca65aa87f7c47d653.json": "f6cf4a5a399cbed4d9d5e1482fdca865fd64bd8485b813441db42459f003dc16",
+    "003_024daeba510f664cf621.json": "a597fb0bbe512cc2d10343df36cb18fd0e464af96548e20136b3fe0984b59a3e",
+    "004_3dc1e2cf5ac5a29f025a.json": "40650707f280a52f1694f2c3e1fd869104e6f40adc4bb00fc3068e3cfb1b0e49",
+    "005_a9c4d3e846b4c0fd814b.json": "16399eed723ca779a82dff0ee5a53bc294aab5a322c2511eccec17fd47dae67d"
+  },
+  "elapsed_this_run_seconds": 141.646,
+  "peak_gpu_gb": 3.028,
+  "task_type": "multiple_choice_science",
+  "sealed_test_labels_loaded": false,
+  "choice_clusters_per_question": {
+    "min": 1,
+    "median": 1.0,
+    "max": 2,
+    "questions_with_no_parsed_choice": 0
+  },
+  "protocol_decision": {
+    "status": "rejected_as_primary_generator",
+    "reason": "low_instruction_following_and_parse_rate",
+    "predeclared_parse_threshold": 0.95,
+    "observed_parse_rate": 0.2916666666666667,
+    "observed_boxed_stop_rate": 0.2916666666666667,
+    "test_split_used": false,
+    "labels_used": false
+  }
+}
