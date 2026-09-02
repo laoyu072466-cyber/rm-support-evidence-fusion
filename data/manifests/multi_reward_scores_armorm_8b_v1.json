@@ -1,0 +1,64 @@
+{
+  "version": "multi_reward_full_scoring_v1",
+  "created_at": "2026-09-02T07:23:22.882793+00:00",
+  "model_key": "armorm_8b",
+  "model_name": "ArmoRM-Llama3-8B-v0.1",
+  "model_path": "models/reward/ArmoRM-Llama3-8B-v0.1",
+  "model_config_sha256": "acdcfe3c365ed76bbbe775fb118b5d40202971d038261ec6af51f4f4367d0fbf",
+  "scoring": {
+    "input": "chat_template(user=problem, assistant=solution_text)",
+    "output": "single sequence-classification logit",
+    "dtype": "bfloat16",
+    "use_cache": false,
+    "sorting": "character_length",
+    "checkpoint": "numpy memmap after every batch",
+    "labels_used": false
+  },
+  "labels_used_for_scoring": false,
+  "splits": {
+    "gsm_pilot": {
+      "candidates": 2985,
+      "source_file": "data/processed/prototype_v2/gsm_pilot_validation.jsonl",
+      "source_sha256": "26e1652192504c2e8fe609c65290fdff86d9cd8e0b5d34a56e4050099bd60a3f",
+      "score_file": "data/cache/reward_scores_full_v1/ArmoRM-Llama3-8B-v0.1/gsm_pilot.scores_f32.npy",
+      "score_sha256": "192c648e970611b45b7b92554df82d47ca17895bd35178f090e4c5fd153a0a9a",
+      "statistics": {
+        "count": 2985,
+        "min": 0.016357421875,
+        "p05": 0.08935546875,
+        "median": 0.150390625,
+        "mean": 0.15175838502407873,
+        "p95": 0.2216796875,
+        "max": 0.318359375,
+        "std": 0.039827298710459216
+      },
+      "reused": true,
+      "elapsed_seconds": 0.0
+    },
+    "math_pilot": {
+      "candidates": 2040,
+      "source_file": "data/processed/prototype_v2/math_pilot_validation.jsonl",
+      "source_sha256": "eba33790e2a52c74e5dc6e79bd46f26082034f785330fdd630606cf67044334b",
+      "score_file": "data/cache/reward_scores_full_v1/ArmoRM-Llama3-8B-v0.1/math_pilot.scores_f32.npy",
+      "score_sha256": "1b7a1532d72f5ec88aa6d2b6a8380b38d00e89f1bd4d1da11839f92978e266bf",
+      "statistics": {
+        "count": 2040,
+        "min": 0.1708984375,
+        "p05": 0.2578125,
+        "median": 0.34765625,
+        "mean": 0.34257860370710785,
+        "p95": 0.416015625,
+        "max": 0.4609375,
+        "std": 0.048313482524687194
+      },
+      "reused": true,
+      "elapsed_seconds": 0.0
+    }
+  },
+  "peak_gpu_gb": 13.991,
+  "elapsed_seconds": 4.977,
+  "completed_splits": [
+    "gsm_pilot",
+    "math_pilot"
+  ]
+}

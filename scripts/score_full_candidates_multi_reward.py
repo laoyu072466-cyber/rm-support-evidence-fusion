@@ -17,7 +17,7 @@ from transformers import (
 
 ROOT = Path("/root/autodl-tmp/rm_traj_project")
 CONFIG_PATH = (
-    ROOT / "configs/multi_reward_full_scoring_v1.json"
+    ROOT / "configs/multi_reward_full_scoring_v2.json"
 )
 DEVICE = torch.device("cuda")
 

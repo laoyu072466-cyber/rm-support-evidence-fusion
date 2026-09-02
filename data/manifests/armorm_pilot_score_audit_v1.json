@@ -1,0 +1,231 @@
+{
+  "version": "armorm_pilot_score_audit_v1",
+  "reward_model": "RLHFlow/ArmoRM-Llama3-8B-v0.1",
+  "score_definition": "official output.score / output.logits",
+  "score_dtype": "model inference bfloat16, cached float32",
+  "labels_used_for_scoring": false,
+  "labels_used_only_for_posthoc_pilot_audit": true,
+  "results": {
+    "GSM8K_PILOT": {
+      "questions": 189,
+      "candidates": 2985,
+      "armorm": {
+        "statistics": {
+          "count": 2985,
+          "min": 0.016357421875,
+          "p05": 0.08935546875,
+          "median": 0.150390625,
+          "mean": 0.15175838502407873,
+          "p95": 0.2216796875,
+          "max": 0.318359375,
+          "std": 0.039827298710459216,
+          "unique_exact_values": 305
+        },
+        "candidate_accuracy": 0.6261306532663317,
+        "correct_score_mean": 0.16117774796013912,
+        "incorrect_score_mean": 0.13598348419298836,
+        "mean_correct_minus_incorrect": 0.025194263767150754,
+        "pooled_auc_diagnostic": 0.701540269363756,
+        "top1": 0.8465608465608465,
+        "top1_correct_questions": 160,
+        "optimistic_tie_top1": 0.8571428571428571,
+        "top_tie_rate": 0.12698412698412698,
+        "all_equal_question_rate": 0.0,
+        "mean_within_question_std": 0.021318357424299578,
+        "pair_questions": 189,
+        "pair_count": 8762,
+        "pair_wins": 6914,
+        "pair_losses": 1752,
+        "pair_ties": 96,
+        "pair_exact_tie_rate": 0.010956402647797306,
+        "pair_micro_strict": 0.7890892490299019,
+        "pair_micro_half_tie": 0.7945674503538005,
+        "pair_macro_strict": 0.7966284521377113,
+        "pair_macro_half_tie": 0.8017765273502707,
+        "composition": {
+          "all_wrong": 0,
+          "mixed": 189,
+          "all_correct": 0
+        }
+      },
+      "skywork_qwen3_1p7b": {
+        "statistics": {
+          "count": 2985,
+          "min": -11.875,
+          "p05": -4.0,
+          "median": 3.59375,
+          "mean": 3.08244295615447,
+          "p95": 8.625,
+          "max": 12.0,
+          "std": 3.786772064389236,
+          "unique_exact_values": 961
+        },
+        "candidate_accuracy": 0.6261306532663317,
+        "correct_score_mean": 4.409512392781902,
+        "incorrect_score_mean": 0.8599583888993896,
+        "mean_correct_minus_incorrect": 3.5495540038825126,
+        "pooled_auc_diagnostic": 0.7761505874952775,
+        "top1": 0.8624338624338624,
+        "top1_correct_questions": 163,
+        "optimistic_tie_top1": 0.8677248677248677,
+        "top_tie_rate": 0.042328042328042326,
+        "all_equal_question_rate": 0.0,
+        "mean_within_question_std": 3.054511334558707,
+        "pair_questions": 189,
+        "pair_count": 8762,
+        "pair_wins": 6877,
+        "pair_losses": 1865,
+        "pair_ties": 20,
+        "pair_exact_tie_rate": 0.0022825838849577723,
+        "pair_micro_strict": 0.7848664688427299,
+        "pair_micro_half_tie": 0.7860077607852088,
+        "pair_macro_strict": 0.7888214885007213,
+        "pair_macro_half_tie": 0.7898444217574508,
+        "composition": {
+          "all_wrong": 0,
+          "mixed": 189,
+          "all_correct": 0
+        }
+      },
+      "cross_reward_model": {
+        "pooled_pearson": 0.4357848840696977,
+        "pooled_spearman": 0.4138938439022384,
+        "within_question_spearman_macro": 0.45841129452367385,
+        "within_question_spearman_questions": 189,
+        "top1_choice_agreement_rate": 0.06349206349206349,
+        "complementarity": {
+          "both_correct": 143,
+          "both_wrong": 9,
+          "armorm_only_correct": 17,
+          "skywork_only_correct": 20
+        }
+      },
+      "bias_diagnostics": {
+        "armorm_character_length_pearson": -0.20112305606047978,
+        "skywork_character_length_pearson": -0.23071023451706438
+      },
+      "files": {
+        "data": "data/processed/prototype_v2/gsm_pilot_validation.jsonl",
+        "data_sha256": "26e1652192504c2e8fe609c65290fdff86d9cd8e0b5d34a56e4050099bd60a3f",
+        "armorm_scores": "data/cache/reward_scores_full_v1/ArmoRM-Llama3-8B-v0.1/gsm_pilot.scores_f32.npy",
+        "armorm_scores_sha256": "192c648e970611b45b7b92554df82d47ca17895bd35178f090e4c5fd153a0a9a",
+        "skywork_scores": "data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/gsm_pilot.scores_f32.npy",
+        "skywork_scores_sha256": "97050e837e1da6de761a5e128cc4bc85e3ca3dfc575e672423bad2f8b3e8cb41"
+      }
+    },
+    "MATH_PILOT": {
+      "questions": 158,
+      "candidates": 2040,
+      "armorm": {
+        "statistics": {
+          "count": 2040,
+          "min": 0.1708984375,
+          "p05": 0.2578125,
+          "median": 0.34765625,
+          "mean": 0.34257860370710785,
+          "p95": 0.416015625,
+          "max": 0.4609375,
+          "std": 0.048313482524687194,
+          "unique_exact_values": 147
+        },
+        "candidate_accuracy": 0.6553921568627451,
+        "correct_score_mean": 0.3547938481675393,
+        "incorrect_score_mean": 0.319347050586771,
+        "mean_correct_minus_incorrect": 0.0354467975807683,
+        "pooled_auc_diagnostic": 0.7049098265686857,
+        "top1": 0.7848101265822784,
+        "top1_correct_questions": 124,
+        "optimistic_tie_top1": 0.7911392405063291,
+        "top_tie_rate": 0.08227848101265822,
+        "all_equal_question_rate": 0.0,
+        "mean_within_question_std": 0.026494952319615437,
+        "pair_questions": 158,
+        "pair_count": 4578,
+        "pair_wins": 3379,
+        "pair_losses": 1135,
+        "pair_ties": 64,
+        "pair_exact_tie_rate": 0.013979903888160769,
+        "pair_micro_strict": 0.7380952380952381,
+        "pair_micro_half_tie": 0.7450851900393185,
+        "pair_macro_strict": 0.7512768423810469,
+        "pair_macro_half_tie": 0.757688774080049,
+        "composition": {
+          "all_wrong": 0,
+          "mixed": 158,
+          "all_correct": 0
+        }
+      },
+      "skywork_qwen3_1p7b": {
+        "statistics": {
+          "count": 2040,
+          "min": -6.9375,
+          "p05": -0.18305664062499993,
+          "median": 6.78125,
+          "mean": 6.309467143638461,
+          "p95": 11.0625,
+          "max": 13.875,
+          "std": 3.492311057212074,
+          "unique_exact_values": 530
+        },
+        "candidate_accuracy": 0.6553921568627451,
+        "correct_score_mean": 7.6998180654749735,
+        "incorrect_score_mean": 3.6652293307004578,
+        "mean_correct_minus_incorrect": 4.034588734774516,
+        "pooled_auc_diagnostic": 0.8295312002944959,
+        "top1": 0.8291139240506329,
+        "top1_correct_questions": 131,
+        "optimistic_tie_top1": 0.8291139240506329,
+        "top_tie_rate": 0.03164556962025317,
+        "all_equal_question_rate": 0.0,
+        "mean_within_question_std": 2.523787337914011,
+        "pair_questions": 158,
+        "pair_count": 4578,
+        "pair_wins": 3681,
+        "pair_losses": 889,
+        "pair_ties": 8,
+        "pair_exact_tie_rate": 0.0017474879860200961,
+        "pair_micro_strict": 0.8040629095674967,
+        "pair_micro_half_tie": 0.8049366535605068,
+        "pair_macro_strict": 0.8177070045435778,
+        "pair_macro_half_tie": 0.8185767763271155,
+        "composition": {
+          "all_wrong": 0,
+          "mixed": 158,
+          "all_correct": 0
+        }
+      },
+      "cross_reward_model": {
+        "pooled_pearson": 0.569358699841659,
+        "pooled_spearman": 0.5396450147423972,
+        "within_question_spearman_macro": 0.5934031028027557,
+        "within_question_spearman_questions": 158,
+        "top1_choice_agreement_rate": 0.22151898734177214,
+        "complementarity": {
+          "both_correct": 114,
+          "both_wrong": 17,
+          "armorm_only_correct": 10,
+          "skywork_only_correct": 17
+        }
+      },
+      "bias_diagnostics": {
+        "armorm_character_length_pearson": -0.31236142445502657,
+        "skywork_character_length_pearson": -0.2887579980397289
+      },
+      "files": {
+        "data": "data/processed/prototype_v2/math_pilot_validation.jsonl",
+        "data_sha256": "eba33790e2a52c74e5dc6e79bd46f26082034f785330fdd630606cf67044334b",
+        "armorm_scores": "data/cache/reward_scores_full_v1/ArmoRM-Llama3-8B-v0.1/math_pilot.scores_f32.npy",
+        "armorm_scores_sha256": "1b7a1532d72f5ec88aa6d2b6a8380b38d00e89f1bd4d1da11839f92978e266bf",
+        "skywork_scores": "data/cache/trajectory_features_v1/Skywork-Reward-V2-Qwen3-1.7B/layer_28/math_pilot.scores_f32.npy",
+        "skywork_scores_sha256": "26bb2134e103548292848ede5797a1127d22863b84fd88d10d1a9552f5cc5690"
+      }
+    }
+  },
+  "macro": {
+    "armorm_top1": 0.8156854865715625,
+    "armorm_pair_macro_strict": 0.7739526472593791,
+    "armorm_pair_macro_half_tie": 0.7797326507151598,
+    "skywork_top1": 0.8457738932422476,
+    "top1_choice_agreement": 0.1425055254169178
+  }
+}
