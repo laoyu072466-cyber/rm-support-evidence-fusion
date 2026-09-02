@@ -45,6 +45,20 @@ MODEL_SPECS = {
             "multi_reward_scores_llama_8b_v2_v1.json"
         ),
     },
+
+    "armorm_8b": {
+        "name": "ArmoRM-Llama3-8B-v0.1",
+        "score_root": (
+            ROOT
+            / "data/cache/reward_scores_full_v1/"
+            "ArmoRM-Llama3-8B-v0.1"
+        ),
+        "score_manifest": (
+            ROOT
+            / "data/manifests/"
+            "multi_reward_scores_armorm_8b_v1.json"
+        ),
+    },
 }
 
 BOOTSTRAP_SAMPLES = 20000

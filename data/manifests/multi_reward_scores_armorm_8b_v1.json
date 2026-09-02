@@ -1,6 +1,6 @@
 {
   "version": "multi_reward_full_scoring_v1",
-  "created_at": "2026-09-02T07:23:22.882793+00:00",
+  "created_at": "2026-09-02T07:56:22.995259+00:00",
   "model_key": "armorm_8b",
   "model_name": "ArmoRM-Llama3-8B-v0.1",
   "model_path": "models/reward/ArmoRM-Llama3-8B-v0.1",
@@ -53,12 +53,112 @@
       },
       "reused": true,
       "elapsed_seconds": 0.0
+    },
+    "gsm_id_test": {
+      "candidates": 17902,
+      "source_file": "data/processed/prototype_v2/gsm_id_test_mixed.jsonl",
+      "source_sha256": "9e41ca864144410060f519bb15bc3f94251ff6a3645d2412a4feac9d3af6e834",
+      "score_file": "data/cache/reward_scores_full_v1/ArmoRM-Llama3-8B-v0.1/gsm_id_test.scores_f32.npy",
+      "score_sha256": "c190e42cf8c757d508f1fc71f14b9738578ccf9504f2805af9a6ac04b184c779",
+      "statistics": {
+        "count": 17902,
+        "min": 0.0037689208984375,
+        "p05": 0.07568359375,
+        "median": 0.1416015625,
+        "mean": 0.14367408057775274,
+        "p95": 0.22265625,
+        "max": 0.35546875,
+        "std": 0.04405559992398173
+      },
+      "reused": true,
+      "elapsed_seconds": 0.0
+    },
+    "math_id_test": {
+      "candidates": 4167,
+      "source_file": "data/processed/prototype_v2/math_id_test_mixed.jsonl",
+      "source_sha256": "cb84caba48d26e39fa0f1a4e4a0fe26ec180793f817cce80ef8e50b4ed5b1cdb",
+      "score_file": "data/cache/reward_scores_full_v1/ArmoRM-Llama3-8B-v0.1/math_id_test.scores_f32.npy",
+      "score_sha256": "4651acd1442e48194d2224f86c5577f9b5844306932751fe5879f4dde9fb12b7",
+      "statistics": {
+        "count": 4167,
+        "min": 0.0537109375,
+        "p05": 0.205078125,
+        "median": 0.326171875,
+        "mean": 0.31932972705933527,
+        "p95": 0.400390625,
+        "max": 0.4765625,
+        "std": 0.05899520592335579
+      },
+      "reused": true,
+      "elapsed_seconds": 0.0
+    },
+    "svamp_ood": {
+      "candidates": 13913,
+      "source_file": "data/processed/prototype_v2/svamp_ood_mixed.jsonl",
+      "source_sha256": "d7621b8b1d631251ea717150b3bfdf9c22b8e7cfb86afa745191b1cb2fff8077",
+      "score_file": "data/cache/reward_scores_full_v1/ArmoRM-Llama3-8B-v0.1/svamp_ood.scores_f32.npy",
+      "score_sha256": "c8ee9916b7ebf47104a04861bfbd7f892b23aec6ecbb9bdc726aac0e3ccfc882",
+      "statistics": {
+        "count": 13913,
+        "min": -0.019775390625,
+        "p05": 0.0517578125,
+        "median": 0.126953125,
+        "mean": 0.12243855718413751,
+        "p95": 0.1826171875,
+        "max": 0.255859375,
+        "std": 0.03963184113623033
+      },
+      "reused": true,
+      "elapsed_seconds": 0.0
+    },
+    "gsm_train": {
+      "candidates": 24221,
+      "source_file": "data/processed/prototype_v2/gsm_train.jsonl",
+      "source_sha256": "ab4713ddc3f2493d88e70a971f3f8e90b65f9a69f1ca409ff9f31568cb337860",
+      "score_file": "data/cache/reward_scores_full_v1/ArmoRM-Llama3-8B-v0.1/gsm_train.scores_f32.npy",
+      "score_sha256": "79dd7c7b31fe0459c007cf5c1ce514f6e445bac242219e0c4a2d6d342b7a935a",
+      "statistics": {
+        "count": 24221,
+        "min": 0.004730224609375,
+        "p05": 0.08935546875,
+        "median": 0.1494140625,
+        "mean": 0.15290756228735847,
+        "p95": 0.228515625,
+        "max": 0.3671875,
+        "std": 0.04219781670250881
+      },
+      "reused": true,
+      "elapsed_seconds": 0.0
+    },
+    "math_train": {
+      "candidates": 16229,
+      "source_file": "data/processed/prototype_v2/math_train.jsonl",
+      "source_sha256": "21af8ba32f42164c48d220fc2bb68e40d80673427833c7a0f6a8cf74c8d9c6de",
+      "score_file": "data/cache/reward_scores_full_v1/ArmoRM-Llama3-8B-v0.1/math_train.scores_f32.npy",
+      "score_sha256": "558d98f810dff270f22b787d77346322fbf962b4c98bfebbf85c83cd06752800",
+      "statistics": {
+        "count": 16229,
+        "min": 0.123046875,
+        "p05": 0.255859375,
+        "median": 0.345703125,
+        "mean": 0.3415513654183868,
+        "p95": 0.408203125,
+        "max": 0.48046875,
+        "std": 0.04668040499959215
+      },
+      "reused": true,
+      "elapsed_seconds": 0.0
     }
   },
   "peak_gpu_gb": 13.991,
-  "elapsed_seconds": 4.977,
+  "elapsed_seconds": 5.519,
   "completed_splits": [
     "gsm_pilot",
-    "math_pilot"
+    "math_pilot",
+    "gsm_id_test",
+    "math_id_test",
+    "svamp_ood",
+    "gsm_train",
+    "math_train"
   ]
 }
