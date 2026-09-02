@@ -1,0 +1,4049 @@
+{
+  "version": "fresh_math_2026_qwen3_8b_rm_baselines_v1",
+  "evaluation_status": "post_track_a_reveal_exploratory",
+  "labels_loaded_for_evaluation": true,
+  "labels_used_for_generation": false,
+  "candidate_parser": "frozen parsed_answer_generation_audit",
+  "candidate_file": "outputs/fresh_math_2026/qwen3_8b_adaptive_k16_candidates.jsonl",
+  "candidate_sha256": "9af1176c0b092608f413d90889315c03ef4ad5d3d994ad8746dadd5e131f4257",
+  "score_file": "data/cache/fresh_math_2026/qwen3_8b_adaptive_k16_rm_1p7b/scores_f32.npy",
+  "score_sha256": "c0f6776946aab3283c667d2d503d3027470419309734c833f11353ab59e555e4",
+  "reward_model": "Skywork-Reward-V2-Qwen3-1.7B",
+  "weighted_consensus_tau": 4.0,
+  "budget_protocol": "exact expectation over every uniform subset without replacement",
+  "pair_protocol": "macro strict over mixed-label questions only",
+  "datasets": {
+    "AIME_2026": {
+      "questions": 30,
+      "candidates": 480,
+      "candidate_parse_rate": 0.9145833333333333,
+      "candidate_accuracy": 0.15625,
+      "question_composition": {
+        "all_wrong": 16,
+        "mixed": 12,
+        "all_correct": 2
+      },
+      "oracle_pass_at_16": 0.4666666666666667,
+      "standard_pass_at_k": {
+        "pass_at_1": 0.15625,
+        "pass_at_4": 0.28304029304029305,
+        "pass_at_8": 0.3696581196581196,
+        "pass_at_16": 0.4666666666666667
+      },
+      "unique_majority": {
+        "top1": 0.2,
+        "correct_questions": 6,
+        "optimistic_tie_top1": 0.23333333333333334,
+        "tie_rate": 0.1,
+        "tie_questions": 3
+      },
+      "methods": {
+        "raw_rm": {
+          "top1": 0.26666666666666666,
+          "top1_correct_questions": 8,
+          "pair_macro_strict": 0.86002886002886,
+          "pair_questions": 12,
+          "best_at_k": {
+            "best_at_1": 0.15625,
+            "best_at_4": 0.23663003663003662,
+            "best_at_8": 0.2732530432530433,
+            "best_at_16": 0.26666666666666666
+          }
+        },
+        "majority_rm_tiebreak": {
+          "top1": 0.23333333333333334,
+          "top1_correct_questions": 7,
+          "pair_macro_strict": 0.6553751803751803,
+          "pair_questions": 12,
+          "best_at_k": {
+            "best_at_1": 0.15625,
+            "best_at_4": 0.22287545787545784,
+            "best_at_8": 0.23499870499870498,
+            "best_at_16": 0.23333333333333334
+          },
+          "relative_to_raw_rm": {
+            "changed_questions": 18,
+            "switch_rate": 0.6,
+            "corrections": 2,
+            "damages": 3,
+            "net_corrected": -1,
+            "correction_rate": 0.09090909090909091,
+            "damage_rate": 0.375
+          }
+        },
+        "weighted_tau4": {
+          "top1": 0.26666666666666666,
+          "top1_correct_questions": 8,
+          "pair_macro_strict": 0.7341630591630591,
+          "pair_questions": 12,
+          "best_at_k": {
+            "best_at_1": 0.15625,
+            "best_at_4": 0.2358058608058608,
+            "best_at_8": 0.26436674436674434,
+            "best_at_16": 0.26666666666666666
+          },
+          "relative_to_raw_rm": {
+            "changed_questions": 14,
+            "switch_rate": 0.4666666666666667,
+            "corrections": 2,
+            "damages": 2,
+            "net_corrected": 0,
+            "correction_rate": 0.09090909090909091,
+            "damage_rate": 0.25
+          }
+        }
+      },
+      "per_question": [
+        {
+          "question_uid": "93462cc1ba3a35b5e71a",
+          "source_dataset": "AIME_2026",
+          "problem_id": 1,
+          "parsed_candidates": 16,
+          "correct_candidates": 16,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": true,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 15,
+              "correct": true,
+              "answer": "number:277/1",
+              "score": 9.8125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 15,
+              "correct": true,
+              "answer": "number:277/1",
+              "score": 9.8125
+            },
+            "weighted_tau4": {
+              "candidate_index": 15,
+              "correct": true,
+              "answer": "number:277/1",
+              "score": 9.8125
+            }
+          }
+        },
+        {
+          "question_uid": "0038838e9559a38d8f6e",
+          "source_dataset": "AIME_2026",
+          "problem_id": 2,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 12,
+              "correct": false,
+              "answer": "number:20/1",
+              "score": 9.25
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 12,
+              "correct": false,
+              "answer": "number:20/1",
+              "score": 9.25
+            },
+            "weighted_tau4": {
+              "candidate_index": 12,
+              "correct": false,
+              "answer": "number:20/1",
+              "score": 9.25
+            }
+          }
+        },
+        {
+          "question_uid": "2815cc49a4f67af53346",
+          "source_dataset": "AIME_2026",
+          "problem_id": 3,
+          "parsed_candidates": 16,
+          "correct_candidates": 1,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 4,
+              "correct": false,
+              "answer": "number:46/1",
+              "score": 8.0
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 14,
+              "correct": false,
+              "answer": "number:19559/1",
+              "score": 6.9375
+            },
+            "weighted_tau4": {
+              "candidate_index": 14,
+              "correct": false,
+              "answer": "number:19559/1",
+              "score": 6.9375
+            }
+          }
+        },
+        {
+          "question_uid": "cb6fd39bd02694a299fe",
+          "source_dataset": "AIME_2026",
+          "problem_id": 4,
+          "parsed_candidates": 16,
+          "correct_candidates": 1,
+          "oracle_correct": true,
+          "unique_majority_tie": true,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 9,
+              "correct": true,
+              "answer": "number:70/1",
+              "score": 7.78125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 11,
+              "correct": false,
+              "answer": "number:75/1",
+              "score": 7.25
+            },
+            "weighted_tau4": {
+              "candidate_index": 11,
+              "correct": false,
+              "answer": "number:75/1",
+              "score": 7.25
+            }
+          }
+        },
+        {
+          "question_uid": "453d1863ac24b8e6fbe1",
+          "source_dataset": "AIME_2026",
+          "problem_id": 5,
+          "parsed_candidates": 16,
+          "correct_candidates": 14,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": true,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 0,
+              "correct": false,
+              "answer": "number:14/1",
+              "score": 10.625
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 3,
+              "correct": true,
+              "answer": "number:65/1",
+              "score": 9.125
+            },
+            "weighted_tau4": {
+              "candidate_index": 3,
+              "correct": true,
+              "answer": "number:65/1",
+              "score": 9.125
+            }
+          }
+        },
+        {
+          "question_uid": "5304a5efebfec88ebfd8",
+          "source_dataset": "AIME_2026",
+          "problem_id": 6,
+          "parsed_candidates": 16,
+          "correct_candidates": 16,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": true,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 7,
+              "correct": true,
+              "answer": "number:441/1",
+              "score": 10.3125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 7,
+              "correct": true,
+              "answer": "number:441/1",
+              "score": 10.3125
+            },
+            "weighted_tau4": {
+              "candidate_index": 7,
+              "correct": true,
+              "answer": "number:441/1",
+              "score": 10.3125
+            }
+          }
+        },
+        {
+          "question_uid": "b89f335f075e033f2bbb",
+          "source_dataset": "AIME_2026",
+          "problem_id": 7,
+          "parsed_candidates": 16,
+          "correct_candidates": 1,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 5,
+              "correct": false,
+              "answer": "number:441/1",
+              "score": 10.625
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 11,
+              "correct": false,
+              "answer": "number:356/1",
+              "score": 8.25
+            },
+            "weighted_tau4": {
+              "candidate_index": 11,
+              "correct": false,
+              "answer": "number:356/1",
+              "score": 8.25
+            }
+          }
+        },
+        {
+          "question_uid": "99431bedd4f86455368f",
+          "source_dataset": "AIME_2026",
+          "problem_id": 8,
+          "parsed_candidates": 15,
+          "correct_candidates": 1,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 0,
+              "correct": false,
+              "answer": "number:458/1",
+              "score": 9.0
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 0,
+              "correct": false,
+              "answer": "number:458/1",
+              "score": 9.0
+            },
+            "weighted_tau4": {
+              "candidate_index": 0,
+              "correct": false,
+              "answer": "number:458/1",
+              "score": 9.0
+            }
+          }
+        },
+        {
+          "question_uid": "db00fc25de0bfb882f6c",
+          "source_dataset": "AIME_2026",
+          "problem_id": 9,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 15,
+              "correct": false,
+              "answer": "number:25/1",
+              "score": 5.34375
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 3,
+              "correct": false,
+              "answer": "number:13/1",
+              "score": 2.203125
+            },
+            "weighted_tau4": {
+              "candidate_index": 3,
+              "correct": false,
+              "answer": "number:13/1",
+              "score": 2.203125
+            }
+          }
+        },
+        {
+          "question_uid": "b9212614ac9968545650",
+          "source_dataset": "AIME_2026",
+          "problem_id": 10,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 12,
+              "correct": false,
+              "answer": "number:73/1",
+              "score": 7.21875
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 14,
+              "correct": false,
+              "answer": "number:168/1",
+              "score": 3.59375
+            },
+            "weighted_tau4": {
+              "candidate_index": 14,
+              "correct": false,
+              "answer": "number:168/1",
+              "score": 3.59375
+            }
+          }
+        },
+        {
+          "question_uid": "b94886b65f64679802ac",
+          "source_dataset": "AIME_2026",
+          "problem_id": 11,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 5,
+              "correct": false,
+              "answer": "number:584/1",
+              "score": 9.0625
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 1,
+              "correct": false,
+              "answer": "number:56/1",
+              "score": 8.875
+            },
+            "weighted_tau4": {
+              "candidate_index": 1,
+              "correct": false,
+              "answer": "number:56/1",
+              "score": 8.875
+            }
+          }
+        },
+        {
+          "question_uid": "d170941b68eeacd5caa8",
+          "source_dataset": "AIME_2026",
+          "problem_id": 12,
+          "parsed_candidates": 16,
+          "correct_candidates": 5,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": true,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 11,
+              "correct": true,
+              "answer": "number:161/1",
+              "score": 6.40625
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 11,
+              "correct": true,
+              "answer": "number:161/1",
+              "score": 6.40625
+            },
+            "weighted_tau4": {
+              "candidate_index": 11,
+              "correct": true,
+              "answer": "number:161/1",
+              "score": 6.40625
+            }
+          }
+        },
+        {
+          "question_uid": "f81e1561ba42ef908861",
+          "source_dataset": "AIME_2026",
+          "problem_id": 13,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 13,
+              "correct": false,
+              "answer": "number:501/1",
+              "score": 9.375
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 13,
+              "correct": false,
+              "answer": "number:501/1",
+              "score": 9.375
+            },
+            "weighted_tau4": {
+              "candidate_index": 13,
+              "correct": false,
+              "answer": "number:501/1",
+              "score": 9.375
+            }
+          }
+        },
+        {
+          "question_uid": "4379f0fdadcab3b9eb27",
+          "source_dataset": "AIME_2026",
+          "problem_id": 14,
+          "parsed_candidates": 15,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 1,
+              "correct": false,
+              "answer": "number:187/1",
+              "score": 7.53125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 0,
+              "correct": false,
+              "answer": "number:494/1",
+              "score": 2.296875
+            },
+            "weighted_tau4": {
+              "candidate_index": 1,
+              "correct": false,
+              "answer": "number:187/1",
+              "score": 7.53125
+            }
+          }
+        },
+        {
+          "question_uid": "68026385a04709a2e62b",
+          "source_dataset": "AIME_2026",
+          "problem_id": 15,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 15,
+              "correct": false,
+              "answer": "number:77146/1",
+              "score": 6.5
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 9,
+              "correct": false,
+              "answer": "number:12/1",
+              "score": 3.5
+            },
+            "weighted_tau4": {
+              "candidate_index": 9,
+              "correct": false,
+              "answer": "number:12/1",
+              "score": 3.5
+            }
+          }
+        },
+        {
+          "question_uid": "ee91c7d1b29876fa5a68",
+          "source_dataset": "AIME_2026",
+          "problem_id": 16,
+          "parsed_candidates": 16,
+          "correct_candidates": 5,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 4,
+              "correct": false,
+              "answer": "number:32/1",
+              "score": 10.5
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 4,
+              "correct": false,
+              "answer": "number:32/1",
+              "score": 10.5
+            },
+            "weighted_tau4": {
+              "candidate_index": 4,
+              "correct": false,
+              "answer": "number:32/1",
+              "score": 10.5
+            }
+          }
+        },
+        {
+          "question_uid": "6b4d1df8d8c5bf687818",
+          "source_dataset": "AIME_2026",
+          "problem_id": 17,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 1,
+              "correct": false,
+              "answer": "number:12/1",
+              "score": 9.875
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 7,
+              "correct": false,
+              "answer": "expr:\\sqrt{11}",
+              "score": 4.46875
+            },
+            "weighted_tau4": {
+              "candidate_index": 1,
+              "correct": false,
+              "answer": "number:12/1",
+              "score": 9.875
+            }
+          }
+        },
+        {
+          "question_uid": "876590de84a371da4cf1",
+          "source_dataset": "AIME_2026",
+          "problem_id": 18,
+          "parsed_candidates": 13,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 10,
+              "correct": false,
+              "answer": "number:506/1",
+              "score": 6.71875
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 7,
+              "correct": false,
+              "answer": "number:1012/1",
+              "score": 5.25
+            },
+            "weighted_tau4": {
+              "candidate_index": 7,
+              "correct": false,
+              "answer": "number:1012/1",
+              "score": 5.25
+            }
+          }
+        },
+        {
+          "question_uid": "c7db66f5ac6c0e639c70",
+          "source_dataset": "AIME_2026",
+          "problem_id": 19,
+          "parsed_candidates": 12,
+          "correct_candidates": 2,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 14,
+              "correct": true,
+              "answer": "number:279/1",
+              "score": 6.875
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 13,
+              "correct": false,
+              "answer": "number:9/1",
+              "score": 5.75
+            },
+            "weighted_tau4": {
+              "candidate_index": 13,
+              "correct": false,
+              "answer": "number:9/1",
+              "score": 5.75
+            }
+          }
+        },
+        {
+          "question_uid": "1e000223befdb82d190b",
+          "source_dataset": "AIME_2026",
+          "problem_id": 20,
+          "parsed_candidates": 14,
+          "correct_candidates": 4,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": true,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 3,
+              "correct": false,
+              "answer": "number:200/1",
+              "score": 9.9375
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 5,
+              "correct": true,
+              "answer": "number:190/1",
+              "score": 9.25
+            },
+            "weighted_tau4": {
+              "candidate_index": 5,
+              "correct": true,
+              "answer": "number:190/1",
+              "score": 9.25
+            }
+          }
+        },
+        {
+          "question_uid": "43a28592bac44560ba95",
+          "source_dataset": "AIME_2026",
+          "problem_id": 21,
+          "parsed_candidates": 16,
+          "correct_candidates": 5,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 1,
+              "correct": true,
+              "answer": "number:50/1",
+              "score": 9.75
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 9,
+              "correct": false,
+              "answer": "number:41/1",
+              "score": 5.0
+            },
+            "weighted_tau4": {
+              "candidate_index": 1,
+              "correct": true,
+              "answer": "number:50/1",
+              "score": 9.75
+            }
+          }
+        },
+        {
+          "question_uid": "1fe14f6c17feb0133acb",
+          "source_dataset": "AIME_2026",
+          "problem_id": 22,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 4,
+              "correct": false,
+              "answer": "number:227/1",
+              "score": 6.59375
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 4,
+              "correct": false,
+              "answer": "number:227/1",
+              "score": 6.59375
+            },
+            "weighted_tau4": {
+              "candidate_index": 4,
+              "correct": false,
+              "answer": "number:227/1",
+              "score": 6.59375
+            }
+          }
+        },
+        {
+          "question_uid": "65f76eb23290b3b01167",
+          "source_dataset": "AIME_2026",
+          "problem_id": 23,
+          "parsed_candidates": 9,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "number:124/1",
+              "score": 6.78125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 9,
+              "correct": false,
+              "answer": "number:25/1",
+              "score": 5.1875
+            },
+            "weighted_tau4": {
+              "candidate_index": 9,
+              "correct": false,
+              "answer": "number:25/1",
+              "score": 5.1875
+            }
+          }
+        },
+        {
+          "question_uid": "102c43ce065d1f172db4",
+          "source_dataset": "AIME_2026",
+          "problem_id": 24,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 8,
+              "correct": false,
+              "answer": "number:111/1",
+              "score": 7.21875
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 7,
+              "correct": false,
+              "answer": "number:222/1",
+              "score": 3.953125
+            },
+            "weighted_tau4": {
+              "candidate_index": 8,
+              "correct": false,
+              "answer": "number:111/1",
+              "score": 7.21875
+            }
+          }
+        },
+        {
+          "question_uid": "953f0ec117bbbda66d76",
+          "source_dataset": "AIME_2026",
+          "problem_id": 25,
+          "parsed_candidates": 14,
+          "correct_candidates": 3,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": true,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 14,
+              "correct": true,
+              "answer": "number:850/1",
+              "score": 10.3125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 14,
+              "correct": true,
+              "answer": "number:850/1",
+              "score": 10.3125
+            },
+            "weighted_tau4": {
+              "candidate_index": 14,
+              "correct": true,
+              "answer": "number:850/1",
+              "score": 10.3125
+            }
+          }
+        },
+        {
+          "question_uid": "b26de0f6b8871eab232f",
+          "source_dataset": "AIME_2026",
+          "problem_id": 26,
+          "parsed_candidates": 3,
+          "correct_candidates": 1,
+          "oracle_correct": true,
+          "unique_majority_tie": true,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 3,
+              "correct": true,
+              "answer": "number:132/1",
+              "score": 8.125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 3,
+              "correct": true,
+              "answer": "number:132/1",
+              "score": 8.125
+            },
+            "weighted_tau4": {
+              "candidate_index": 3,
+              "correct": true,
+              "answer": "number:132/1",
+              "score": 8.125
+            }
+          }
+        },
+        {
+          "question_uid": "114bb98516dcbf392b86",
+          "source_dataset": "AIME_2026",
+          "problem_id": 27,
+          "parsed_candidates": 15,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": true,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 15,
+              "correct": false,
+              "answer": "number:31/1",
+              "score": 2.921875
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 1,
+              "correct": false,
+              "answer": "number:131/1",
+              "score": 2.390625
+            },
+            "weighted_tau4": {
+              "candidate_index": 1,
+              "correct": false,
+              "answer": "number:131/1",
+              "score": 2.390625
+            }
+          }
+        },
+        {
+          "question_uid": "e57e31f8940e0742c22f",
+          "source_dataset": "AIME_2026",
+          "problem_id": 28,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 4,
+              "correct": false,
+              "answer": "number:12/1",
+              "score": 5.875
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 4,
+              "correct": false,
+              "answer": "number:12/1",
+              "score": 5.875
+            },
+            "weighted_tau4": {
+              "candidate_index": 4,
+              "correct": false,
+              "answer": "number:12/1",
+              "score": 5.875
+            }
+          }
+        },
+        {
+          "question_uid": "66feb6b4c1319dcd36f1",
+          "source_dataset": "AIME_2026",
+          "problem_id": 29,
+          "parsed_candidates": 9,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 2,
+              "correct": false,
+              "answer": "number:2048/1",
+              "score": 5.15625
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 5,
+              "correct": false,
+              "answer": "number:12/1",
+              "score": 2.421875
+            },
+            "weighted_tau4": {
+              "candidate_index": 5,
+              "correct": false,
+              "answer": "number:12/1",
+              "score": 2.421875
+            }
+          }
+        },
+        {
+          "question_uid": "d20ec71fe9475af16ef2",
+          "source_dataset": "AIME_2026",
+          "problem_id": 30,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 12,
+              "correct": false,
+              "answer": "number:243/1",
+              "score": 8.9375
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 12,
+              "correct": false,
+              "answer": "number:243/1",
+              "score": 8.9375
+            },
+            "weighted_tau4": {
+              "candidate_index": 12,
+              "correct": false,
+              "answer": "number:243/1",
+              "score": 8.9375
+            }
+          }
+        }
+      ]
+    },
+    "HMMT_FEB_2026": {
+      "questions": 33,
+      "candidates": 528,
+      "candidate_parse_rate": 0.9185606060606061,
+      "candidate_accuracy": 0.13446969696969696,
+      "question_composition": {
+        "all_wrong": 24,
+        "mixed": 9,
+        "all_correct": 0
+      },
+      "oracle_pass_at_16": 0.2727272727272727,
+      "standard_pass_at_k": {
+        "pass_at_1": 0.13446969696969696,
+        "pass_at_4": 0.2248085248085248,
+        "pass_at_8": 0.25035671399307763,
+        "pass_at_16": 0.2727272727272727
+      },
+      "unique_majority": {
+        "top1": 0.21212121212121213,
+        "correct_questions": 7,
+        "optimistic_tie_top1": 0.21212121212121213,
+        "tie_rate": 0.12121212121212122,
+        "tie_questions": 4
+      },
+      "methods": {
+        "raw_rm": {
+          "top1": 0.18181818181818182,
+          "top1_correct_questions": 6,
+          "pair_macro_strict": 0.6471781305114638,
+          "pair_questions": 9,
+          "best_at_k": {
+            "best_at_1": 0.13446969696969696,
+            "best_at_4": 0.16653346653346654,
+            "best_at_8": 0.17191495373313556,
+            "best_at_16": 0.18181818181818182
+          }
+        },
+        "majority_rm_tiebreak": {
+          "top1": 0.21212121212121213,
+          "top1_correct_questions": 7,
+          "pair_macro_strict": 0.8158730158730159,
+          "pair_questions": 9,
+          "best_at_k": {
+            "best_at_1": 0.13446969696969696,
+            "best_at_4": 0.17993672993672993,
+            "best_at_8": 0.20589343316616043,
+            "best_at_16": 0.21212121212121213
+          },
+          "relative_to_raw_rm": {
+            "changed_questions": 8,
+            "switch_rate": 0.24242424242424243,
+            "corrections": 1,
+            "damages": 0,
+            "net_corrected": 1,
+            "correction_rate": 0.037037037037037035,
+            "damage_rate": 0.0
+          }
+        },
+        "weighted_tau4": {
+          "top1": 0.21212121212121213,
+          "top1_correct_questions": 7,
+          "pair_macro_strict": 0.8158730158730159,
+          "pair_questions": 9,
+          "best_at_k": {
+            "best_at_1": 0.13446969696969696,
+            "best_at_4": 0.17698967698967702,
+            "best_at_8": 0.20328930328930328,
+            "best_at_16": 0.21212121212121213
+          },
+          "relative_to_raw_rm": {
+            "changed_questions": 8,
+            "switch_rate": 0.24242424242424243,
+            "corrections": 1,
+            "damages": 0,
+            "net_corrected": 1,
+            "correction_rate": 0.037037037037037035,
+            "damage_rate": 0.0
+          }
+        }
+      },
+      "per_question": [
+        {
+          "question_uid": "5d8b08437b52c83467f1",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 1,
+          "parsed_candidates": 16,
+          "correct_candidates": 15,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": true,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 10,
+              "correct": true,
+              "answer": "number:-1/21",
+              "score": 9.0
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 10,
+              "correct": true,
+              "answer": "number:-1/21",
+              "score": 9.0
+            },
+            "weighted_tau4": {
+              "candidate_index": 10,
+              "correct": true,
+              "answer": "number:-1/21",
+              "score": 9.0
+            }
+          }
+        },
+        {
+          "question_uid": "1699e335ac1cffb75bc9",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 2,
+          "parsed_candidates": 9,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 12,
+              "correct": false,
+              "answer": "number:1962026/1",
+              "score": 8.3125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 12,
+              "correct": false,
+              "answer": "number:1962026/1",
+              "score": 8.3125
+            },
+            "weighted_tau4": {
+              "candidate_index": 12,
+              "correct": false,
+              "answer": "number:1962026/1",
+              "score": 8.3125
+            }
+          }
+        },
+        {
+          "question_uid": "309c497786610bcc8af0",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 3,
+          "parsed_candidates": 13,
+          "correct_candidates": 7,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": true,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 8,
+              "correct": false,
+              "answer": "number:1260/1",
+              "score": 7.875
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 1,
+              "correct": true,
+              "answer": "number:48/1",
+              "score": 5.3125
+            },
+            "weighted_tau4": {
+              "candidate_index": 1,
+              "correct": true,
+              "answer": "number:48/1",
+              "score": 5.3125
+            }
+          }
+        },
+        {
+          "question_uid": "10f8611c14058f3f687a",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 4,
+          "parsed_candidates": 12,
+          "correct_candidates": 6,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": true,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 8,
+              "correct": true,
+              "answer": "number:7/2",
+              "score": 9.5
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 8,
+              "correct": true,
+              "answer": "number:7/2",
+              "score": 9.5
+            },
+            "weighted_tau4": {
+              "candidate_index": 8,
+              "correct": true,
+              "answer": "number:7/2",
+              "score": 9.5
+            }
+          }
+        },
+        {
+          "question_uid": "e85ad260f850a17d7805",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 5,
+          "parsed_candidates": 12,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 14,
+              "correct": false,
+              "answer": "number:450/1",
+              "score": 6.625
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 14,
+              "correct": false,
+              "answer": "number:450/1",
+              "score": 6.625
+            },
+            "weighted_tau4": {
+              "candidate_index": 14,
+              "correct": false,
+              "answer": "number:450/1",
+              "score": 6.625
+            }
+          }
+        },
+        {
+          "question_uid": "d549384d2b3675e5d4ed",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 6,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": true,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 1,
+              "correct": false,
+              "answer": "number:4/1",
+              "score": 7.5625
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 1,
+              "correct": false,
+              "answer": "number:4/1",
+              "score": 7.5625
+            },
+            "weighted_tau4": {
+              "candidate_index": 1,
+              "correct": false,
+              "answer": "number:4/1",
+              "score": 7.5625
+            }
+          }
+        },
+        {
+          "question_uid": "5a4839e88ca4f00234c0",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 7,
+          "parsed_candidates": 5,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 8,
+              "correct": false,
+              "answer": "expr:\\frac{3+\\sqrt{13}}{2}",
+              "score": 3.578125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 12,
+              "correct": false,
+              "answer": "expr:\\sqrt{3}",
+              "score": 0.37109375
+            },
+            "weighted_tau4": {
+              "candidate_index": 8,
+              "correct": false,
+              "answer": "expr:\\frac{3+\\sqrt{13}}{2}",
+              "score": 3.578125
+            }
+          }
+        },
+        {
+          "question_uid": "02dd3288c7c848d0ba67",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 8,
+          "parsed_candidates": 10,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 13,
+              "correct": false,
+              "answer": "number:186/1",
+              "score": 4.4375
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "number:100/1",
+              "score": 2.265625
+            },
+            "weighted_tau4": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "number:100/1",
+              "score": 2.265625
+            }
+          }
+        },
+        {
+          "question_uid": "0cc012634855adc7c39b",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 9,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 14,
+              "correct": false,
+              "answer": "number:200/1",
+              "score": 9.375
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 12,
+              "correct": false,
+              "answer": "number:1/1",
+              "score": 8.6875
+            },
+            "weighted_tau4": {
+              "candidate_index": 12,
+              "correct": false,
+              "answer": "number:1/1",
+              "score": 8.6875
+            }
+          }
+        },
+        {
+          "question_uid": "79d750ca3914585b1f5a",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 10,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 9,
+              "correct": false,
+              "answer": "number:1013/1",
+              "score": 10.25
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 9,
+              "correct": false,
+              "answer": "number:1013/1",
+              "score": 10.25
+            },
+            "weighted_tau4": {
+              "candidate_index": 9,
+              "correct": false,
+              "answer": "number:1013/1",
+              "score": 10.25
+            }
+          }
+        },
+        {
+          "question_uid": "77c8f0e98205b9136e77",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 11,
+          "parsed_candidates": 16,
+          "correct_candidates": 14,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": true,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 0,
+              "correct": true,
+              "answer": "number:2/5",
+              "score": 11.3125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 0,
+              "correct": true,
+              "answer": "number:2/5",
+              "score": 11.3125
+            },
+            "weighted_tau4": {
+              "candidate_index": 0,
+              "correct": true,
+              "answer": "number:2/5",
+              "score": 11.3125
+            }
+          }
+        },
+        {
+          "question_uid": "42bae7ae68abcb89982f",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 12,
+          "parsed_candidates": 16,
+          "correct_candidates": 2,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 7,
+              "correct": false,
+              "answer": "number:10/1",
+              "score": 6.8125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 7,
+              "correct": false,
+              "answer": "number:10/1",
+              "score": 6.8125
+            },
+            "weighted_tau4": {
+              "candidate_index": 7,
+              "correct": false,
+              "answer": "number:10/1",
+              "score": 6.8125
+            }
+          }
+        },
+        {
+          "question_uid": "a4f384211b1f9ca19a56",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 13,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 15,
+              "correct": false,
+              "answer": "number:2160/1",
+              "score": 6.78125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 15,
+              "correct": false,
+              "answer": "number:2160/1",
+              "score": 6.78125
+            },
+            "weighted_tau4": {
+              "candidate_index": 15,
+              "correct": false,
+              "answer": "number:2160/1",
+              "score": 6.78125
+            }
+          }
+        },
+        {
+          "question_uid": "5f670da1305b3fb8d8a0",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 14,
+          "parsed_candidates": 16,
+          "correct_candidates": 9,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": true,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 8,
+              "correct": true,
+              "answer": "number:63/256",
+              "score": 8.25
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 8,
+              "correct": true,
+              "answer": "number:63/256",
+              "score": 8.25
+            },
+            "weighted_tau4": {
+              "candidate_index": 8,
+              "correct": true,
+              "answer": "number:63/256",
+              "score": 8.25
+            }
+          }
+        },
+        {
+          "question_uid": "c448b6f89e037de8a0ce",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 15,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 5,
+              "correct": false,
+              "answer": "expr:\\binom{18}{9}",
+              "score": 8.4375
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 13,
+              "correct": false,
+              "answer": "expr:2^{10}",
+              "score": 6.0625
+            },
+            "weighted_tau4": {
+              "candidate_index": 13,
+              "correct": false,
+              "answer": "expr:2^{10}",
+              "score": 6.0625
+            }
+          }
+        },
+        {
+          "question_uid": "04ce5805228dc619a058",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 16,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 11,
+              "correct": false,
+              "answer": "number:1/1",
+              "score": 5.03125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 11,
+              "correct": false,
+              "answer": "number:1/1",
+              "score": 5.03125
+            },
+            "weighted_tau4": {
+              "candidate_index": 11,
+              "correct": false,
+              "answer": "number:1/1",
+              "score": 5.03125
+            }
+          }
+        },
+        {
+          "question_uid": "7d0d2118cfd609b6fac9",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 17,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 11,
+              "correct": false,
+              "answer": "number:20/1",
+              "score": 4.59375
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 8,
+              "correct": false,
+              "answer": "number:1048574/1",
+              "score": -0.5078125
+            },
+            "weighted_tau4": {
+              "candidate_index": 13,
+              "correct": false,
+              "answer": "number:10/1",
+              "score": 2.59375
+            }
+          }
+        },
+        {
+          "question_uid": "6244b40dd994cc96d937",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 18,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": true,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 9,
+              "correct": false,
+              "answer": "number:33220/1",
+              "score": 7.28125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 9,
+              "correct": false,
+              "answer": "number:33220/1",
+              "score": 7.28125
+            },
+            "weighted_tau4": {
+              "candidate_index": 9,
+              "correct": false,
+              "answer": "number:33220/1",
+              "score": 7.28125
+            }
+          }
+        },
+        {
+          "question_uid": "1cc3f0a14eafda5c56cc",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 19,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 10,
+              "correct": false,
+              "answer": "number:468/1",
+              "score": 7.3125
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 10,
+              "correct": false,
+              "answer": "number:468/1",
+              "score": 7.3125
+            },
+            "weighted_tau4": {
+              "candidate_index": 10,
+              "correct": false,
+              "answer": "number:468/1",
+              "score": 7.3125
+            }
+          }
+        },
+        {
+          "question_uid": "86319a0302e742725293",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 20,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "number:120/1",
+              "score": 6.0
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "number:120/1",
+              "score": 6.0
+            },
+            "weighted_tau4": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "number:120/1",
+              "score": 6.0
+            }
+          }
+        },
+        {
+          "question_uid": "4275e7dfbc2f06602c39",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 21,
+          "parsed_candidates": 16,
+          "correct_candidates": 10,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": true,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 2,
+              "correct": true,
+              "answer": "number:18/1",
+              "score": 10.25
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 2,
+              "correct": true,
+              "answer": "number:18/1",
+              "score": 10.25
+            },
+            "weighted_tau4": {
+              "candidate_index": 2,
+              "correct": true,
+              "answer": "number:18/1",
+              "score": 10.25
+            }
+          }
+        },
+        {
+          "question_uid": "69020a9fc75cca723cfd",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 22,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 0,
+              "correct": false,
+              "answer": "number:177/1",
+              "score": 10.25
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 0,
+              "correct": false,
+              "answer": "number:177/1",
+              "score": 10.25
+            },
+            "weighted_tau4": {
+              "candidate_index": 0,
+              "correct": false,
+              "answer": "number:177/1",
+              "score": 10.25
+            }
+          }
+        },
+        {
+          "question_uid": "59bea6f1ac8ba412ffd2",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 23,
+          "parsed_candidates": 13,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": true,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "number:16/1",
+              "score": 4.59375
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "number:16/1",
+              "score": 4.59375
+            },
+            "weighted_tau4": {
+              "candidate_index": 4,
+              "correct": false,
+              "answer": "number:10/1",
+              "score": 4.34375
+            }
+          }
+        },
+        {
+          "question_uid": "8432308c226e889cb77f",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 24,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 5,
+              "correct": false,
+              "answer": "expr:\\frac{7\\sqrt{3}}{3}",
+              "score": 8.375
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 5,
+              "correct": false,
+              "answer": "expr:\\frac{7\\sqrt{3}}{3}",
+              "score": 8.375
+            },
+            "weighted_tau4": {
+              "candidate_index": 5,
+              "correct": false,
+              "answer": "expr:\\frac{7\\sqrt{3}}{3}",
+              "score": 8.375
+            }
+          }
+        },
+        {
+          "question_uid": "adbaf62231c18a6ebdc8",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 25,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": true,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 14,
+              "correct": false,
+              "answer": "number:18/1",
+              "score": 6.25
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 0,
+              "correct": false,
+              "answer": "expr:8\\sqrt{30}",
+              "score": 3.6875
+            },
+            "weighted_tau4": {
+              "candidate_index": 0,
+              "correct": false,
+              "answer": "expr:8\\sqrt{30}",
+              "score": 3.6875
+            }
+          }
+        },
+        {
+          "question_uid": "97457be62ea0f28b0f68",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 26,
+          "parsed_candidates": 14,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 11,
+              "correct": false,
+              "answer": "number:2/1",
+              "score": 5.75
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 11,
+              "correct": false,
+              "answer": "number:2/1",
+              "score": 5.75
+            },
+            "weighted_tau4": {
+              "candidate_index": 11,
+              "correct": false,
+              "answer": "number:2/1",
+              "score": 5.75
+            }
+          }
+        },
+        {
+          "question_uid": "e28d7a24cf6f192609ed",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 27,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 11,
+              "correct": false,
+              "answer": "expr:96^\\circ",
+              "score": 8.1875
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 11,
+              "correct": false,
+              "answer": "expr:96^\\circ",
+              "score": 8.1875
+            },
+            "weighted_tau4": {
+              "candidate_index": 11,
+              "correct": false,
+              "answer": "expr:96^\\circ",
+              "score": 8.1875
+            }
+          }
+        },
+        {
+          "question_uid": "97e059b825691dff6ca0",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 28,
+          "parsed_candidates": 14,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 0,
+              "correct": false,
+              "answer": "number:25/4",
+              "score": 5.40625
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 0,
+              "correct": false,
+              "answer": "number:25/4",
+              "score": 5.40625
+            },
+            "weighted_tau4": {
+              "candidate_index": 0,
+              "correct": false,
+              "answer": "number:25/4",
+              "score": 5.40625
+            }
+          }
+        },
+        {
+          "question_uid": "9e11e0c4ca24669bc9ff",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 29,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 8,
+              "correct": false,
+              "answer": "expr:\\sqrt{74}",
+              "score": 9.5625
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 8,
+              "correct": false,
+              "answer": "expr:\\sqrt{74}",
+              "score": 9.5625
+            },
+            "weighted_tau4": {
+              "candidate_index": 8,
+              "correct": false,
+              "answer": "expr:\\sqrt{74}",
+              "score": 9.5625
+            }
+          }
+        },
+        {
+          "question_uid": "e36f461bfcb081b6629b",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 30,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "expr:\\sqrt{290}",
+              "score": 6.625
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "expr:\\sqrt{290}",
+              "score": 6.625
+            },
+            "weighted_tau4": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "expr:\\sqrt{290}",
+              "score": 6.625
+            }
+          }
+        },
+        {
+          "question_uid": "35dd002451a205c9b54f",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 31,
+          "parsed_candidates": 16,
+          "correct_candidates": 1,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "expr:2^{2025}",
+              "score": 7.0625
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "expr:2^{2025}",
+              "score": 7.0625
+            },
+            "weighted_tau4": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "expr:2^{2025}",
+              "score": 7.0625
+            }
+          }
+        },
+        {
+          "question_uid": "ee1ee5bd2a18e074f0f5",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 32,
+          "parsed_candidates": 15,
+          "correct_candidates": 7,
+          "oracle_correct": true,
+          "unique_majority_tie": false,
+          "unique_majority_correct": true,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 12,
+              "correct": true,
+              "answer": "number:10/1",
+              "score": 7.0625
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 12,
+              "correct": true,
+              "answer": "number:10/1",
+              "score": 7.0625
+            },
+            "weighted_tau4": {
+              "candidate_index": 12,
+              "correct": true,
+              "answer": "number:10/1",
+              "score": 7.0625
+            }
+          }
+        },
+        {
+          "question_uid": "4ec35449e65d282e0d72",
+          "source_dataset": "HMMT_FEB_2026",
+          "problem_id": 33,
+          "parsed_candidates": 16,
+          "correct_candidates": 0,
+          "oracle_correct": false,
+          "unique_majority_tie": false,
+          "unique_majority_correct": false,
+          "selected": {
+            "raw_rm": {
+              "candidate_index": 4,
+              "correct": false,
+              "answer": "number:11/1",
+              "score": 6.21875
+            },
+            "majority_rm_tiebreak": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "number:2025/1",
+              "score": 4.84375
+            },
+            "weighted_tau4": {
+              "candidate_index": 6,
+              "correct": false,
+              "answer": "number:2025/1",
+              "score": 4.84375
+            }
+          }
+        }
+      ]
+    }
+  },
+  "pooled": {
+    "questions": 63,
+    "candidates": 1008,
+    "candidate_parse_rate": 0.9166666666666666,
+    "candidate_accuracy": 0.14484126984126985,
+    "question_composition": {
+      "all_wrong": 40,
+      "mixed": 21,
+      "all_correct": 2
+    },
+    "oracle_pass_at_16": 0.36507936507936506,
+    "standard_pass_at_k": {
+      "pass_at_1": 0.14484126984126985,
+      "pass_at_4": 0.252537938252224,
+      "pass_at_8": 0.3071669071669072,
+      "pass_at_16": 0.36507936507936506
+    },
+    "unique_majority": {
+      "top1": 0.20634920634920634,
+      "correct_questions": 13,
+      "optimistic_tie_top1": 0.2222222222222222,
+      "tie_rate": 0.1111111111111111,
+      "tie_questions": 7
+    },
+    "methods": {
+      "raw_rm": {
+        "top1": 0.2222222222222222,
+        "top1_correct_questions": 14,
+        "pair_macro_strict": 0.7688071188071189,
+        "pair_questions": 21,
+        "best_at_k": {
+          "best_at_1": 0.14484126984126985,
+          "best_at_4": 0.19991278562707135,
+          "best_at_8": 0.2201711868378535,
+          "best_at_16": 0.2222222222222222
+        }
+      },
+      "majority_rm_tiebreak": {
+        "top1": 0.2222222222222222,
+        "top1_correct_questions": 14,
+        "pair_macro_strict": 0.7241599670171097,
+        "pair_questions": 21,
+        "best_at_k": {
+          "best_at_1": 0.14484126984126985,
+          "best_at_4": 0.2003837432408861,
+          "best_at_8": 0.21975308641975308,
+          "best_at_16": 0.2222222222222222
+        },
+        "relative_to_raw_rm": {
+          "changed_questions": 26,
+          "switch_rate": 0.4126984126984127,
+          "corrections": 3,
+          "damages": 3,
+          "net_corrected": 0,
+          "correction_rate": 0.061224489795918366,
+          "damage_rate": 0.21428571428571427
+        }
+      },
+      "weighted_tau4": {
+        "top1": 0.23809523809523808,
+        "top1_correct_questions": 15,
+        "pair_macro_strict": 0.7691816120387548,
+        "pair_questions": 21,
+        "best_at_k": {
+          "best_at_1": 0.14484126984126985,
+          "best_at_4": 0.20499738356881214,
+          "best_at_8": 0.23237379904046568,
+          "best_at_16": 0.23809523809523808
+        },
+        "relative_to_raw_rm": {
+          "changed_questions": 22,
+          "switch_rate": 0.3492063492063492,
+          "corrections": 3,
+          "damages": 2,
+          "net_corrected": 1,
+          "correction_rate": 0.061224489795918366,
+          "damage_rate": 0.14285714285714285
+        }
+      }
+    },
+    "per_question": [
+      {
+        "question_uid": "93462cc1ba3a35b5e71a",
+        "source_dataset": "AIME_2026",
+        "problem_id": 1,
+        "parsed_candidates": 16,
+        "correct_candidates": 16,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": true,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 15,
+            "correct": true,
+            "answer": "number:277/1",
+            "score": 9.8125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 15,
+            "correct": true,
+            "answer": "number:277/1",
+            "score": 9.8125
+          },
+          "weighted_tau4": {
+            "candidate_index": 15,
+            "correct": true,
+            "answer": "number:277/1",
+            "score": 9.8125
+          }
+        }
+      },
+      {
+        "question_uid": "0038838e9559a38d8f6e",
+        "source_dataset": "AIME_2026",
+        "problem_id": 2,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 12,
+            "correct": false,
+            "answer": "number:20/1",
+            "score": 9.25
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 12,
+            "correct": false,
+            "answer": "number:20/1",
+            "score": 9.25
+          },
+          "weighted_tau4": {
+            "candidate_index": 12,
+            "correct": false,
+            "answer": "number:20/1",
+            "score": 9.25
+          }
+        }
+      },
+      {
+        "question_uid": "2815cc49a4f67af53346",
+        "source_dataset": "AIME_2026",
+        "problem_id": 3,
+        "parsed_candidates": 16,
+        "correct_candidates": 1,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 4,
+            "correct": false,
+            "answer": "number:46/1",
+            "score": 8.0
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 14,
+            "correct": false,
+            "answer": "number:19559/1",
+            "score": 6.9375
+          },
+          "weighted_tau4": {
+            "candidate_index": 14,
+            "correct": false,
+            "answer": "number:19559/1",
+            "score": 6.9375
+          }
+        }
+      },
+      {
+        "question_uid": "cb6fd39bd02694a299fe",
+        "source_dataset": "AIME_2026",
+        "problem_id": 4,
+        "parsed_candidates": 16,
+        "correct_candidates": 1,
+        "oracle_correct": true,
+        "unique_majority_tie": true,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 9,
+            "correct": true,
+            "answer": "number:70/1",
+            "score": 7.78125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 11,
+            "correct": false,
+            "answer": "number:75/1",
+            "score": 7.25
+          },
+          "weighted_tau4": {
+            "candidate_index": 11,
+            "correct": false,
+            "answer": "number:75/1",
+            "score": 7.25
+          }
+        }
+      },
+      {
+        "question_uid": "453d1863ac24b8e6fbe1",
+        "source_dataset": "AIME_2026",
+        "problem_id": 5,
+        "parsed_candidates": 16,
+        "correct_candidates": 14,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": true,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 0,
+            "correct": false,
+            "answer": "number:14/1",
+            "score": 10.625
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 3,
+            "correct": true,
+            "answer": "number:65/1",
+            "score": 9.125
+          },
+          "weighted_tau4": {
+            "candidate_index": 3,
+            "correct": true,
+            "answer": "number:65/1",
+            "score": 9.125
+          }
+        }
+      },
+      {
+        "question_uid": "5304a5efebfec88ebfd8",
+        "source_dataset": "AIME_2026",
+        "problem_id": 6,
+        "parsed_candidates": 16,
+        "correct_candidates": 16,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": true,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 7,
+            "correct": true,
+            "answer": "number:441/1",
+            "score": 10.3125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 7,
+            "correct": true,
+            "answer": "number:441/1",
+            "score": 10.3125
+          },
+          "weighted_tau4": {
+            "candidate_index": 7,
+            "correct": true,
+            "answer": "number:441/1",
+            "score": 10.3125
+          }
+        }
+      },
+      {
+        "question_uid": "b89f335f075e033f2bbb",
+        "source_dataset": "AIME_2026",
+        "problem_id": 7,
+        "parsed_candidates": 16,
+        "correct_candidates": 1,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 5,
+            "correct": false,
+            "answer": "number:441/1",
+            "score": 10.625
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 11,
+            "correct": false,
+            "answer": "number:356/1",
+            "score": 8.25
+          },
+          "weighted_tau4": {
+            "candidate_index": 11,
+            "correct": false,
+            "answer": "number:356/1",
+            "score": 8.25
+          }
+        }
+      },
+      {
+        "question_uid": "99431bedd4f86455368f",
+        "source_dataset": "AIME_2026",
+        "problem_id": 8,
+        "parsed_candidates": 15,
+        "correct_candidates": 1,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 0,
+            "correct": false,
+            "answer": "number:458/1",
+            "score": 9.0
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 0,
+            "correct": false,
+            "answer": "number:458/1",
+            "score": 9.0
+          },
+          "weighted_tau4": {
+            "candidate_index": 0,
+            "correct": false,
+            "answer": "number:458/1",
+            "score": 9.0
+          }
+        }
+      },
+      {
+        "question_uid": "db00fc25de0bfb882f6c",
+        "source_dataset": "AIME_2026",
+        "problem_id": 9,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 15,
+            "correct": false,
+            "answer": "number:25/1",
+            "score": 5.34375
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 3,
+            "correct": false,
+            "answer": "number:13/1",
+            "score": 2.203125
+          },
+          "weighted_tau4": {
+            "candidate_index": 3,
+            "correct": false,
+            "answer": "number:13/1",
+            "score": 2.203125
+          }
+        }
+      },
+      {
+        "question_uid": "b9212614ac9968545650",
+        "source_dataset": "AIME_2026",
+        "problem_id": 10,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 12,
+            "correct": false,
+            "answer": "number:73/1",
+            "score": 7.21875
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 14,
+            "correct": false,
+            "answer": "number:168/1",
+            "score": 3.59375
+          },
+          "weighted_tau4": {
+            "candidate_index": 14,
+            "correct": false,
+            "answer": "number:168/1",
+            "score": 3.59375
+          }
+        }
+      },
+      {
+        "question_uid": "b94886b65f64679802ac",
+        "source_dataset": "AIME_2026",
+        "problem_id": 11,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 5,
+            "correct": false,
+            "answer": "number:584/1",
+            "score": 9.0625
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 1,
+            "correct": false,
+            "answer": "number:56/1",
+            "score": 8.875
+          },
+          "weighted_tau4": {
+            "candidate_index": 1,
+            "correct": false,
+            "answer": "number:56/1",
+            "score": 8.875
+          }
+        }
+      },
+      {
+        "question_uid": "d170941b68eeacd5caa8",
+        "source_dataset": "AIME_2026",
+        "problem_id": 12,
+        "parsed_candidates": 16,
+        "correct_candidates": 5,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": true,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 11,
+            "correct": true,
+            "answer": "number:161/1",
+            "score": 6.40625
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 11,
+            "correct": true,
+            "answer": "number:161/1",
+            "score": 6.40625
+          },
+          "weighted_tau4": {
+            "candidate_index": 11,
+            "correct": true,
+            "answer": "number:161/1",
+            "score": 6.40625
+          }
+        }
+      },
+      {
+        "question_uid": "f81e1561ba42ef908861",
+        "source_dataset": "AIME_2026",
+        "problem_id": 13,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 13,
+            "correct": false,
+            "answer": "number:501/1",
+            "score": 9.375
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 13,
+            "correct": false,
+            "answer": "number:501/1",
+            "score": 9.375
+          },
+          "weighted_tau4": {
+            "candidate_index": 13,
+            "correct": false,
+            "answer": "number:501/1",
+            "score": 9.375
+          }
+        }
+      },
+      {
+        "question_uid": "4379f0fdadcab3b9eb27",
+        "source_dataset": "AIME_2026",
+        "problem_id": 14,
+        "parsed_candidates": 15,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 1,
+            "correct": false,
+            "answer": "number:187/1",
+            "score": 7.53125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 0,
+            "correct": false,
+            "answer": "number:494/1",
+            "score": 2.296875
+          },
+          "weighted_tau4": {
+            "candidate_index": 1,
+            "correct": false,
+            "answer": "number:187/1",
+            "score": 7.53125
+          }
+        }
+      },
+      {
+        "question_uid": "68026385a04709a2e62b",
+        "source_dataset": "AIME_2026",
+        "problem_id": 15,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 15,
+            "correct": false,
+            "answer": "number:77146/1",
+            "score": 6.5
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 9,
+            "correct": false,
+            "answer": "number:12/1",
+            "score": 3.5
+          },
+          "weighted_tau4": {
+            "candidate_index": 9,
+            "correct": false,
+            "answer": "number:12/1",
+            "score": 3.5
+          }
+        }
+      },
+      {
+        "question_uid": "ee91c7d1b29876fa5a68",
+        "source_dataset": "AIME_2026",
+        "problem_id": 16,
+        "parsed_candidates": 16,
+        "correct_candidates": 5,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 4,
+            "correct": false,
+            "answer": "number:32/1",
+            "score": 10.5
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 4,
+            "correct": false,
+            "answer": "number:32/1",
+            "score": 10.5
+          },
+          "weighted_tau4": {
+            "candidate_index": 4,
+            "correct": false,
+            "answer": "number:32/1",
+            "score": 10.5
+          }
+        }
+      },
+      {
+        "question_uid": "6b4d1df8d8c5bf687818",
+        "source_dataset": "AIME_2026",
+        "problem_id": 17,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 1,
+            "correct": false,
+            "answer": "number:12/1",
+            "score": 9.875
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 7,
+            "correct": false,
+            "answer": "expr:\\sqrt{11}",
+            "score": 4.46875
+          },
+          "weighted_tau4": {
+            "candidate_index": 1,
+            "correct": false,
+            "answer": "number:12/1",
+            "score": 9.875
+          }
+        }
+      },
+      {
+        "question_uid": "876590de84a371da4cf1",
+        "source_dataset": "AIME_2026",
+        "problem_id": 18,
+        "parsed_candidates": 13,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 10,
+            "correct": false,
+            "answer": "number:506/1",
+            "score": 6.71875
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 7,
+            "correct": false,
+            "answer": "number:1012/1",
+            "score": 5.25
+          },
+          "weighted_tau4": {
+            "candidate_index": 7,
+            "correct": false,
+            "answer": "number:1012/1",
+            "score": 5.25
+          }
+        }
+      },
+      {
+        "question_uid": "c7db66f5ac6c0e639c70",
+        "source_dataset": "AIME_2026",
+        "problem_id": 19,
+        "parsed_candidates": 12,
+        "correct_candidates": 2,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 14,
+            "correct": true,
+            "answer": "number:279/1",
+            "score": 6.875
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 13,
+            "correct": false,
+            "answer": "number:9/1",
+            "score": 5.75
+          },
+          "weighted_tau4": {
+            "candidate_index": 13,
+            "correct": false,
+            "answer": "number:9/1",
+            "score": 5.75
+          }
+        }
+      },
+      {
+        "question_uid": "1e000223befdb82d190b",
+        "source_dataset": "AIME_2026",
+        "problem_id": 20,
+        "parsed_candidates": 14,
+        "correct_candidates": 4,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": true,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 3,
+            "correct": false,
+            "answer": "number:200/1",
+            "score": 9.9375
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 5,
+            "correct": true,
+            "answer": "number:190/1",
+            "score": 9.25
+          },
+          "weighted_tau4": {
+            "candidate_index": 5,
+            "correct": true,
+            "answer": "number:190/1",
+            "score": 9.25
+          }
+        }
+      },
+      {
+        "question_uid": "43a28592bac44560ba95",
+        "source_dataset": "AIME_2026",
+        "problem_id": 21,
+        "parsed_candidates": 16,
+        "correct_candidates": 5,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 1,
+            "correct": true,
+            "answer": "number:50/1",
+            "score": 9.75
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 9,
+            "correct": false,
+            "answer": "number:41/1",
+            "score": 5.0
+          },
+          "weighted_tau4": {
+            "candidate_index": 1,
+            "correct": true,
+            "answer": "number:50/1",
+            "score": 9.75
+          }
+        }
+      },
+      {
+        "question_uid": "1fe14f6c17feb0133acb",
+        "source_dataset": "AIME_2026",
+        "problem_id": 22,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 4,
+            "correct": false,
+            "answer": "number:227/1",
+            "score": 6.59375
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 4,
+            "correct": false,
+            "answer": "number:227/1",
+            "score": 6.59375
+          },
+          "weighted_tau4": {
+            "candidate_index": 4,
+            "correct": false,
+            "answer": "number:227/1",
+            "score": 6.59375
+          }
+        }
+      },
+      {
+        "question_uid": "65f76eb23290b3b01167",
+        "source_dataset": "AIME_2026",
+        "problem_id": 23,
+        "parsed_candidates": 9,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "number:124/1",
+            "score": 6.78125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 9,
+            "correct": false,
+            "answer": "number:25/1",
+            "score": 5.1875
+          },
+          "weighted_tau4": {
+            "candidate_index": 9,
+            "correct": false,
+            "answer": "number:25/1",
+            "score": 5.1875
+          }
+        }
+      },
+      {
+        "question_uid": "102c43ce065d1f172db4",
+        "source_dataset": "AIME_2026",
+        "problem_id": 24,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 8,
+            "correct": false,
+            "answer": "number:111/1",
+            "score": 7.21875
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 7,
+            "correct": false,
+            "answer": "number:222/1",
+            "score": 3.953125
+          },
+          "weighted_tau4": {
+            "candidate_index": 8,
+            "correct": false,
+            "answer": "number:111/1",
+            "score": 7.21875
+          }
+        }
+      },
+      {
+        "question_uid": "953f0ec117bbbda66d76",
+        "source_dataset": "AIME_2026",
+        "problem_id": 25,
+        "parsed_candidates": 14,
+        "correct_candidates": 3,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": true,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 14,
+            "correct": true,
+            "answer": "number:850/1",
+            "score": 10.3125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 14,
+            "correct": true,
+            "answer": "number:850/1",
+            "score": 10.3125
+          },
+          "weighted_tau4": {
+            "candidate_index": 14,
+            "correct": true,
+            "answer": "number:850/1",
+            "score": 10.3125
+          }
+        }
+      },
+      {
+        "question_uid": "b26de0f6b8871eab232f",
+        "source_dataset": "AIME_2026",
+        "problem_id": 26,
+        "parsed_candidates": 3,
+        "correct_candidates": 1,
+        "oracle_correct": true,
+        "unique_majority_tie": true,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 3,
+            "correct": true,
+            "answer": "number:132/1",
+            "score": 8.125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 3,
+            "correct": true,
+            "answer": "number:132/1",
+            "score": 8.125
+          },
+          "weighted_tau4": {
+            "candidate_index": 3,
+            "correct": true,
+            "answer": "number:132/1",
+            "score": 8.125
+          }
+        }
+      },
+      {
+        "question_uid": "114bb98516dcbf392b86",
+        "source_dataset": "AIME_2026",
+        "problem_id": 27,
+        "parsed_candidates": 15,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": true,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 15,
+            "correct": false,
+            "answer": "number:31/1",
+            "score": 2.921875
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 1,
+            "correct": false,
+            "answer": "number:131/1",
+            "score": 2.390625
+          },
+          "weighted_tau4": {
+            "candidate_index": 1,
+            "correct": false,
+            "answer": "number:131/1",
+            "score": 2.390625
+          }
+        }
+      },
+      {
+        "question_uid": "e57e31f8940e0742c22f",
+        "source_dataset": "AIME_2026",
+        "problem_id": 28,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 4,
+            "correct": false,
+            "answer": "number:12/1",
+            "score": 5.875
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 4,
+            "correct": false,
+            "answer": "number:12/1",
+            "score": 5.875
+          },
+          "weighted_tau4": {
+            "candidate_index": 4,
+            "correct": false,
+            "answer": "number:12/1",
+            "score": 5.875
+          }
+        }
+      },
+      {
+        "question_uid": "66feb6b4c1319dcd36f1",
+        "source_dataset": "AIME_2026",
+        "problem_id": 29,
+        "parsed_candidates": 9,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 2,
+            "correct": false,
+            "answer": "number:2048/1",
+            "score": 5.15625
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 5,
+            "correct": false,
+            "answer": "number:12/1",
+            "score": 2.421875
+          },
+          "weighted_tau4": {
+            "candidate_index": 5,
+            "correct": false,
+            "answer": "number:12/1",
+            "score": 2.421875
+          }
+        }
+      },
+      {
+        "question_uid": "d20ec71fe9475af16ef2",
+        "source_dataset": "AIME_2026",
+        "problem_id": 30,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 12,
+            "correct": false,
+            "answer": "number:243/1",
+            "score": 8.9375
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 12,
+            "correct": false,
+            "answer": "number:243/1",
+            "score": 8.9375
+          },
+          "weighted_tau4": {
+            "candidate_index": 12,
+            "correct": false,
+            "answer": "number:243/1",
+            "score": 8.9375
+          }
+        }
+      },
+      {
+        "question_uid": "5d8b08437b52c83467f1",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 1,
+        "parsed_candidates": 16,
+        "correct_candidates": 15,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": true,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 10,
+            "correct": true,
+            "answer": "number:-1/21",
+            "score": 9.0
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 10,
+            "correct": true,
+            "answer": "number:-1/21",
+            "score": 9.0
+          },
+          "weighted_tau4": {
+            "candidate_index": 10,
+            "correct": true,
+            "answer": "number:-1/21",
+            "score": 9.0
+          }
+        }
+      },
+      {
+        "question_uid": "1699e335ac1cffb75bc9",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 2,
+        "parsed_candidates": 9,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 12,
+            "correct": false,
+            "answer": "number:1962026/1",
+            "score": 8.3125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 12,
+            "correct": false,
+            "answer": "number:1962026/1",
+            "score": 8.3125
+          },
+          "weighted_tau4": {
+            "candidate_index": 12,
+            "correct": false,
+            "answer": "number:1962026/1",
+            "score": 8.3125
+          }
+        }
+      },
+      {
+        "question_uid": "309c497786610bcc8af0",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 3,
+        "parsed_candidates": 13,
+        "correct_candidates": 7,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": true,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 8,
+            "correct": false,
+            "answer": "number:1260/1",
+            "score": 7.875
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 1,
+            "correct": true,
+            "answer": "number:48/1",
+            "score": 5.3125
+          },
+          "weighted_tau4": {
+            "candidate_index": 1,
+            "correct": true,
+            "answer": "number:48/1",
+            "score": 5.3125
+          }
+        }
+      },
+      {
+        "question_uid": "10f8611c14058f3f687a",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 4,
+        "parsed_candidates": 12,
+        "correct_candidates": 6,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": true,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 8,
+            "correct": true,
+            "answer": "number:7/2",
+            "score": 9.5
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 8,
+            "correct": true,
+            "answer": "number:7/2",
+            "score": 9.5
+          },
+          "weighted_tau4": {
+            "candidate_index": 8,
+            "correct": true,
+            "answer": "number:7/2",
+            "score": 9.5
+          }
+        }
+      },
+      {
+        "question_uid": "e85ad260f850a17d7805",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 5,
+        "parsed_candidates": 12,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 14,
+            "correct": false,
+            "answer": "number:450/1",
+            "score": 6.625
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 14,
+            "correct": false,
+            "answer": "number:450/1",
+            "score": 6.625
+          },
+          "weighted_tau4": {
+            "candidate_index": 14,
+            "correct": false,
+            "answer": "number:450/1",
+            "score": 6.625
+          }
+        }
+      },
+      {
+        "question_uid": "d549384d2b3675e5d4ed",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 6,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": true,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 1,
+            "correct": false,
+            "answer": "number:4/1",
+            "score": 7.5625
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 1,
+            "correct": false,
+            "answer": "number:4/1",
+            "score": 7.5625
+          },
+          "weighted_tau4": {
+            "candidate_index": 1,
+            "correct": false,
+            "answer": "number:4/1",
+            "score": 7.5625
+          }
+        }
+      },
+      {
+        "question_uid": "5a4839e88ca4f00234c0",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 7,
+        "parsed_candidates": 5,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 8,
+            "correct": false,
+            "answer": "expr:\\frac{3+\\sqrt{13}}{2}",
+            "score": 3.578125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 12,
+            "correct": false,
+            "answer": "expr:\\sqrt{3}",
+            "score": 0.37109375
+          },
+          "weighted_tau4": {
+            "candidate_index": 8,
+            "correct": false,
+            "answer": "expr:\\frac{3+\\sqrt{13}}{2}",
+            "score": 3.578125
+          }
+        }
+      },
+      {
+        "question_uid": "02dd3288c7c848d0ba67",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 8,
+        "parsed_candidates": 10,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 13,
+            "correct": false,
+            "answer": "number:186/1",
+            "score": 4.4375
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "number:100/1",
+            "score": 2.265625
+          },
+          "weighted_tau4": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "number:100/1",
+            "score": 2.265625
+          }
+        }
+      },
+      {
+        "question_uid": "0cc012634855adc7c39b",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 9,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 14,
+            "correct": false,
+            "answer": "number:200/1",
+            "score": 9.375
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 12,
+            "correct": false,
+            "answer": "number:1/1",
+            "score": 8.6875
+          },
+          "weighted_tau4": {
+            "candidate_index": 12,
+            "correct": false,
+            "answer": "number:1/1",
+            "score": 8.6875
+          }
+        }
+      },
+      {
+        "question_uid": "79d750ca3914585b1f5a",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 10,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 9,
+            "correct": false,
+            "answer": "number:1013/1",
+            "score": 10.25
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 9,
+            "correct": false,
+            "answer": "number:1013/1",
+            "score": 10.25
+          },
+          "weighted_tau4": {
+            "candidate_index": 9,
+            "correct": false,
+            "answer": "number:1013/1",
+            "score": 10.25
+          }
+        }
+      },
+      {
+        "question_uid": "77c8f0e98205b9136e77",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 11,
+        "parsed_candidates": 16,
+        "correct_candidates": 14,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": true,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 0,
+            "correct": true,
+            "answer": "number:2/5",
+            "score": 11.3125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 0,
+            "correct": true,
+            "answer": "number:2/5",
+            "score": 11.3125
+          },
+          "weighted_tau4": {
+            "candidate_index": 0,
+            "correct": true,
+            "answer": "number:2/5",
+            "score": 11.3125
+          }
+        }
+      },
+      {
+        "question_uid": "42bae7ae68abcb89982f",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 12,
+        "parsed_candidates": 16,
+        "correct_candidates": 2,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 7,
+            "correct": false,
+            "answer": "number:10/1",
+            "score": 6.8125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 7,
+            "correct": false,
+            "answer": "number:10/1",
+            "score": 6.8125
+          },
+          "weighted_tau4": {
+            "candidate_index": 7,
+            "correct": false,
+            "answer": "number:10/1",
+            "score": 6.8125
+          }
+        }
+      },
+      {
+        "question_uid": "a4f384211b1f9ca19a56",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 13,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 15,
+            "correct": false,
+            "answer": "number:2160/1",
+            "score": 6.78125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 15,
+            "correct": false,
+            "answer": "number:2160/1",
+            "score": 6.78125
+          },
+          "weighted_tau4": {
+            "candidate_index": 15,
+            "correct": false,
+            "answer": "number:2160/1",
+            "score": 6.78125
+          }
+        }
+      },
+      {
+        "question_uid": "5f670da1305b3fb8d8a0",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 14,
+        "parsed_candidates": 16,
+        "correct_candidates": 9,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": true,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 8,
+            "correct": true,
+            "answer": "number:63/256",
+            "score": 8.25
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 8,
+            "correct": true,
+            "answer": "number:63/256",
+            "score": 8.25
+          },
+          "weighted_tau4": {
+            "candidate_index": 8,
+            "correct": true,
+            "answer": "number:63/256",
+            "score": 8.25
+          }
+        }
+      },
+      {
+        "question_uid": "c448b6f89e037de8a0ce",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 15,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 5,
+            "correct": false,
+            "answer": "expr:\\binom{18}{9}",
+            "score": 8.4375
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 13,
+            "correct": false,
+            "answer": "expr:2^{10}",
+            "score": 6.0625
+          },
+          "weighted_tau4": {
+            "candidate_index": 13,
+            "correct": false,
+            "answer": "expr:2^{10}",
+            "score": 6.0625
+          }
+        }
+      },
+      {
+        "question_uid": "04ce5805228dc619a058",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 16,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 11,
+            "correct": false,
+            "answer": "number:1/1",
+            "score": 5.03125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 11,
+            "correct": false,
+            "answer": "number:1/1",
+            "score": 5.03125
+          },
+          "weighted_tau4": {
+            "candidate_index": 11,
+            "correct": false,
+            "answer": "number:1/1",
+            "score": 5.03125
+          }
+        }
+      },
+      {
+        "question_uid": "7d0d2118cfd609b6fac9",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 17,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 11,
+            "correct": false,
+            "answer": "number:20/1",
+            "score": 4.59375
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 8,
+            "correct": false,
+            "answer": "number:1048574/1",
+            "score": -0.5078125
+          },
+          "weighted_tau4": {
+            "candidate_index": 13,
+            "correct": false,
+            "answer": "number:10/1",
+            "score": 2.59375
+          }
+        }
+      },
+      {
+        "question_uid": "6244b40dd994cc96d937",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 18,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": true,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 9,
+            "correct": false,
+            "answer": "number:33220/1",
+            "score": 7.28125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 9,
+            "correct": false,
+            "answer": "number:33220/1",
+            "score": 7.28125
+          },
+          "weighted_tau4": {
+            "candidate_index": 9,
+            "correct": false,
+            "answer": "number:33220/1",
+            "score": 7.28125
+          }
+        }
+      },
+      {
+        "question_uid": "1cc3f0a14eafda5c56cc",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 19,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 10,
+            "correct": false,
+            "answer": "number:468/1",
+            "score": 7.3125
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 10,
+            "correct": false,
+            "answer": "number:468/1",
+            "score": 7.3125
+          },
+          "weighted_tau4": {
+            "candidate_index": 10,
+            "correct": false,
+            "answer": "number:468/1",
+            "score": 7.3125
+          }
+        }
+      },
+      {
+        "question_uid": "86319a0302e742725293",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 20,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "number:120/1",
+            "score": 6.0
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "number:120/1",
+            "score": 6.0
+          },
+          "weighted_tau4": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "number:120/1",
+            "score": 6.0
+          }
+        }
+      },
+      {
+        "question_uid": "4275e7dfbc2f06602c39",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 21,
+        "parsed_candidates": 16,
+        "correct_candidates": 10,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": true,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 2,
+            "correct": true,
+            "answer": "number:18/1",
+            "score": 10.25
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 2,
+            "correct": true,
+            "answer": "number:18/1",
+            "score": 10.25
+          },
+          "weighted_tau4": {
+            "candidate_index": 2,
+            "correct": true,
+            "answer": "number:18/1",
+            "score": 10.25
+          }
+        }
+      },
+      {
+        "question_uid": "69020a9fc75cca723cfd",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 22,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 0,
+            "correct": false,
+            "answer": "number:177/1",
+            "score": 10.25
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 0,
+            "correct": false,
+            "answer": "number:177/1",
+            "score": 10.25
+          },
+          "weighted_tau4": {
+            "candidate_index": 0,
+            "correct": false,
+            "answer": "number:177/1",
+            "score": 10.25
+          }
+        }
+      },
+      {
+        "question_uid": "59bea6f1ac8ba412ffd2",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 23,
+        "parsed_candidates": 13,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": true,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "number:16/1",
+            "score": 4.59375
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "number:16/1",
+            "score": 4.59375
+          },
+          "weighted_tau4": {
+            "candidate_index": 4,
+            "correct": false,
+            "answer": "number:10/1",
+            "score": 4.34375
+          }
+        }
+      },
+      {
+        "question_uid": "8432308c226e889cb77f",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 24,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 5,
+            "correct": false,
+            "answer": "expr:\\frac{7\\sqrt{3}}{3}",
+            "score": 8.375
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 5,
+            "correct": false,
+            "answer": "expr:\\frac{7\\sqrt{3}}{3}",
+            "score": 8.375
+          },
+          "weighted_tau4": {
+            "candidate_index": 5,
+            "correct": false,
+            "answer": "expr:\\frac{7\\sqrt{3}}{3}",
+            "score": 8.375
+          }
+        }
+      },
+      {
+        "question_uid": "adbaf62231c18a6ebdc8",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 25,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": true,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 14,
+            "correct": false,
+            "answer": "number:18/1",
+            "score": 6.25
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 0,
+            "correct": false,
+            "answer": "expr:8\\sqrt{30}",
+            "score": 3.6875
+          },
+          "weighted_tau4": {
+            "candidate_index": 0,
+            "correct": false,
+            "answer": "expr:8\\sqrt{30}",
+            "score": 3.6875
+          }
+        }
+      },
+      {
+        "question_uid": "97457be62ea0f28b0f68",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 26,
+        "parsed_candidates": 14,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 11,
+            "correct": false,
+            "answer": "number:2/1",
+            "score": 5.75
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 11,
+            "correct": false,
+            "answer": "number:2/1",
+            "score": 5.75
+          },
+          "weighted_tau4": {
+            "candidate_index": 11,
+            "correct": false,
+            "answer": "number:2/1",
+            "score": 5.75
+          }
+        }
+      },
+      {
+        "question_uid": "e28d7a24cf6f192609ed",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 27,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 11,
+            "correct": false,
+            "answer": "expr:96^\\circ",
+            "score": 8.1875
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 11,
+            "correct": false,
+            "answer": "expr:96^\\circ",
+            "score": 8.1875
+          },
+          "weighted_tau4": {
+            "candidate_index": 11,
+            "correct": false,
+            "answer": "expr:96^\\circ",
+            "score": 8.1875
+          }
+        }
+      },
+      {
+        "question_uid": "97e059b825691dff6ca0",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 28,
+        "parsed_candidates": 14,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 0,
+            "correct": false,
+            "answer": "number:25/4",
+            "score": 5.40625
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 0,
+            "correct": false,
+            "answer": "number:25/4",
+            "score": 5.40625
+          },
+          "weighted_tau4": {
+            "candidate_index": 0,
+            "correct": false,
+            "answer": "number:25/4",
+            "score": 5.40625
+          }
+        }
+      },
+      {
+        "question_uid": "9e11e0c4ca24669bc9ff",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 29,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 8,
+            "correct": false,
+            "answer": "expr:\\sqrt{74}",
+            "score": 9.5625
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 8,
+            "correct": false,
+            "answer": "expr:\\sqrt{74}",
+            "score": 9.5625
+          },
+          "weighted_tau4": {
+            "candidate_index": 8,
+            "correct": false,
+            "answer": "expr:\\sqrt{74}",
+            "score": 9.5625
+          }
+        }
+      },
+      {
+        "question_uid": "e36f461bfcb081b6629b",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 30,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "expr:\\sqrt{290}",
+            "score": 6.625
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "expr:\\sqrt{290}",
+            "score": 6.625
+          },
+          "weighted_tau4": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "expr:\\sqrt{290}",
+            "score": 6.625
+          }
+        }
+      },
+      {
+        "question_uid": "35dd002451a205c9b54f",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 31,
+        "parsed_candidates": 16,
+        "correct_candidates": 1,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "expr:2^{2025}",
+            "score": 7.0625
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "expr:2^{2025}",
+            "score": 7.0625
+          },
+          "weighted_tau4": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "expr:2^{2025}",
+            "score": 7.0625
+          }
+        }
+      },
+      {
+        "question_uid": "ee1ee5bd2a18e074f0f5",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 32,
+        "parsed_candidates": 15,
+        "correct_candidates": 7,
+        "oracle_correct": true,
+        "unique_majority_tie": false,
+        "unique_majority_correct": true,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 12,
+            "correct": true,
+            "answer": "number:10/1",
+            "score": 7.0625
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 12,
+            "correct": true,
+            "answer": "number:10/1",
+            "score": 7.0625
+          },
+          "weighted_tau4": {
+            "candidate_index": 12,
+            "correct": true,
+            "answer": "number:10/1",
+            "score": 7.0625
+          }
+        }
+      },
+      {
+        "question_uid": "4ec35449e65d282e0d72",
+        "source_dataset": "HMMT_FEB_2026",
+        "problem_id": 33,
+        "parsed_candidates": 16,
+        "correct_candidates": 0,
+        "oracle_correct": false,
+        "unique_majority_tie": false,
+        "unique_majority_correct": false,
+        "selected": {
+          "raw_rm": {
+            "candidate_index": 4,
+            "correct": false,
+            "answer": "number:11/1",
+            "score": 6.21875
+          },
+          "majority_rm_tiebreak": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "number:2025/1",
+            "score": 4.84375
+          },
+          "weighted_tau4": {
+            "candidate_index": 6,
+            "correct": false,
+            "answer": "number:2025/1",
+            "score": 4.84375
+          }
+        }
+      }
+    ]
+  },
+  "elapsed_seconds": 67.273,
+  "git_head": "bce3f1a76439522d46e195d55cbe9246e538c3c8",
+  "created_utc": "2026-09-02T02:49:58.213925+00:00"
+}

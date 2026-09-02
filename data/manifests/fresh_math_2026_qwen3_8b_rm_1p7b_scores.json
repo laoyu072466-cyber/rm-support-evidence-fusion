@@ -1,0 +1,58 @@
+{
+  "version": "fresh_math_2026_qwen3_8b_rm_1p7b_scores_v1",
+  "evaluation_status": "post_track_a_reveal_exploratory",
+  "labels_loaded": false,
+  "candidate_file": "outputs/fresh_math_2026/qwen3_8b_adaptive_k16_candidates.jsonl",
+  "candidate_sha256": "9af1176c0b092608f413d90889315c03ef4ad5d3d994ad8746dadd5e131f4257",
+  "candidate_order_sha256": "f8fc976e9fd765faf37565d41071ca283e07c2f7170d79d47422bcab7428f282",
+  "questions": 63,
+  "candidates": 1008,
+  "candidates_per_question": 16,
+  "dataset_questions": {
+    "AIME_2026": 30,
+    "HMMT_FEB_2026": 33
+  },
+  "generator": "Qwen3-8B",
+  "generation_config_sha256": "7a10db9ea0106798716971245f19b36412d3da56da777c708bfe99028ac2b54a",
+  "reward_model": {
+    "name": "Skywork-Reward-V2-Qwen3-1.7B",
+    "path": "models/reward/Skywork-Reward-V2-Qwen3-1.7B",
+    "config_sha256": "106d39725452746837071561f56464fd3f1d9a5a1e0ae926de02e6a0a4fa9b11"
+  },
+  "scoring_protocol": {
+    "conversation": [
+      "user: problem",
+      "assistant: solution_text"
+    ],
+    "chat_template": "model tokenizer/template fallback",
+    "add_generation_prompt": false,
+    "padding": true,
+    "truncation": false,
+    "output": "single sequence-classification logit",
+    "implementation": "eval_answer_cluster_holdout_rewards.score_with_judge",
+    "batch_size_initial": 8,
+    "oom_batch_backoff": true
+  },
+  "scores": {
+    "path": "data/cache/fresh_math_2026/qwen3_8b_adaptive_k16_rm_1p7b/scores_f32.npy",
+    "dtype": "float32",
+    "shape": [
+      1008
+    ],
+    "sha256": "c0f6776946aab3283c667d2d503d3027470419309734c833f11353ab59e555e4",
+    "statistics": {
+      "min": -6.28125,
+      "p05": -1.2152342796325684,
+      "median": 4.625,
+      "mean": 4.5952534675598145,
+      "p95": 9.54062271118164,
+      "max": 11.3125,
+      "std": 3.217728614807129
+    }
+  },
+  "cache_file": "data/cache/fresh_math_2026/qwen3_8b_adaptive_k16_rm_1p7b/fresh_qwen3_8b_adaptive_k16_qwen3_1p7b_9af1176c.json",
+  "peak_gpu_gb_current_run": 5.06224250793457,
+  "elapsed_seconds": 68.958,
+  "git_head": "bce3f1a76439522d46e195d55cbe9246e538c3c8",
+  "created_utc": "2026-09-02T02:46:24.413952+00:00"
+}
