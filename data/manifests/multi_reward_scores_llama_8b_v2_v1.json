@@ -1,0 +1,164 @@
+{
+  "version": "multi_reward_full_scoring_v1",
+  "created_at": "2026-09-02T04:32:55.416922+00:00",
+  "model_key": "llama_8b_v2",
+  "model_name": "Skywork-Reward-V2-Llama-3.1-8B",
+  "model_path": "models/reward/Skywork-Reward-V2-Llama-3.1-8B",
+  "model_config_sha256": "88109773c20f5977bf4ba73f7cb0ebd60c31f5e18503d35c5e4573cdf1ad1f64",
+  "scoring": {
+    "input": "chat_template(user=problem, assistant=solution_text)",
+    "output": "single sequence-classification logit",
+    "dtype": "bfloat16",
+    "use_cache": false,
+    "sorting": "character_length",
+    "checkpoint": "numpy memmap after every batch",
+    "labels_used": false
+  },
+  "labels_used_for_scoring": false,
+  "splits": {
+    "gsm_pilot": {
+      "candidates": 2985,
+      "source_file": "data/processed/prototype_v2/gsm_pilot_validation.jsonl",
+      "source_sha256": "26e1652192504c2e8fe609c65290fdff86d9cd8e0b5d34a56e4050099bd60a3f",
+      "score_file": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Llama-3.1-8B/gsm_pilot.scores_f32.npy",
+      "score_sha256": "27cdec86995fa8f950c18ba02c4f814a6840cff946935a191691f0cce9b4356f",
+      "statistics": {
+        "count": 2985,
+        "min": -23.625,
+        "p05": -4.8062499999999995,
+        "median": 7.5625,
+        "mean": 7.266540799548278,
+        "p95": 19.5,
+        "max": 30.625,
+        "std": 7.382774747606417
+      },
+      "reused": false,
+      "elapsed_seconds": 49.29
+    },
+    "math_pilot": {
+      "candidates": 2040,
+      "source_file": "data/processed/prototype_v2/math_pilot_validation.jsonl",
+      "source_sha256": "eba33790e2a52c74e5dc6e79bd46f26082034f785330fdd630606cf67044334b",
+      "score_file": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Llama-3.1-8B/math_pilot.scores_f32.npy",
+      "score_sha256": "87364156275e389dd6dc7e77719e4c247fb2524d0de2b2f574da28c9322ac9f6",
+      "statistics": {
+        "count": 2040,
+        "min": -12.625,
+        "p05": 1.0195312500000007,
+        "median": 17.0,
+        "mean": 16.18651912913603,
+        "p95": 28.0,
+        "max": 34.75,
+        "std": 7.962157084966231
+      },
+      "reused": false,
+      "elapsed_seconds": 47.097
+    },
+    "gsm_id_test": {
+      "candidates": 17902,
+      "source_file": "data/processed/prototype_v2/gsm_id_test_mixed.jsonl",
+      "source_sha256": "9e41ca864144410060f519bb15bc3f94251ff6a3645d2412a4feac9d3af6e834",
+      "score_file": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Llama-3.1-8B/gsm_id_test.scores_f32.npy",
+      "score_sha256": "a0703b4cd09252675eac8eead9af61da8476b0611e34e2a24900eb3945494a20",
+      "statistics": {
+        "count": 17902,
+        "min": -25.75,
+        "p05": -8.875,
+        "median": 5.25,
+        "mean": 4.820459884873263,
+        "p95": 18.125,
+        "max": 29.25,
+        "std": 7.972822003306767
+      },
+      "reused": false,
+      "elapsed_seconds": 302.858
+    },
+    "math_id_test": {
+      "candidates": 4167,
+      "source_file": "data/processed/prototype_v2/math_id_test_mixed.jsonl",
+      "source_sha256": "cb84caba48d26e39fa0f1a4e4a0fe26ec180793f817cce80ef8e50b4ed5b1cdb",
+      "score_file": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Llama-3.1-8B/math_id_test.scores_f32.npy",
+      "score_sha256": "4907df6aca961e48cea393b02d257c73c911841a914fb459a1ee722099cf611b",
+      "statistics": {
+        "count": 4167,
+        "min": -17.0,
+        "p05": -1.9796874999999998,
+        "median": 12.4375,
+        "mean": 12.10197063873562,
+        "p95": 25.0,
+        "max": 35.25,
+        "std": 8.279039429990528
+      },
+      "reused": false,
+      "elapsed_seconds": 106.505
+    },
+    "svamp_ood": {
+      "candidates": 13913,
+      "source_file": "data/processed/prototype_v2/svamp_ood_mixed.jsonl",
+      "source_sha256": "d7621b8b1d631251ea717150b3bfdf9c22b8e7cfb86afa745191b1cb2fff8077",
+      "score_file": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Llama-3.1-8B/svamp_ood.scores_f32.npy",
+      "score_sha256": "5ee492fe10e940ea6a3892d2d3565da54c138490e8c404c5f0db52d5f926258d",
+      "statistics": {
+        "count": 13913,
+        "min": -26.875,
+        "p05": -12.524999999999999,
+        "median": -0.75,
+        "mean": -1.1562637197357004,
+        "p95": 8.75,
+        "max": 20.25,
+        "std": 6.580469032415187
+      },
+      "reused": false,
+      "elapsed_seconds": 174.323
+    },
+    "gsm_train": {
+      "candidates": 24221,
+      "source_file": "data/processed/prototype_v2/gsm_train.jsonl",
+      "source_sha256": "ab4713ddc3f2493d88e70a971f3f8e90b65f9a69f1ca409ff9f31568cb337860",
+      "score_file": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Llama-3.1-8B/gsm_train.scores_f32.npy",
+      "score_sha256": "180b517cabaa6fc51278eec2b9fdd4bb6ed0f65a3109c1a75386df72052f32a3",
+      "statistics": {
+        "count": 24221,
+        "min": -25.375,
+        "p05": -5.5625,
+        "median": 7.25,
+        "mean": 7.108326103856496,
+        "p95": 19.875,
+        "max": 35.5,
+        "std": 7.476601002897748
+      },
+      "reused": false,
+      "elapsed_seconds": 414.674
+    },
+    "math_train": {
+      "candidates": 16229,
+      "source_file": "data/processed/prototype_v2/math_train.jsonl",
+      "source_sha256": "21af8ba32f42164c48d220fc2bb68e40d80673427833c7a0f6a8cf74c8d9c6de",
+      "score_file": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Llama-3.1-8B/math_train.scores_f32.npy",
+      "score_sha256": "b8e86405f2ec92a2afbd6a997ecba360a1fa452aa7b40a0d1c48bd41b5ad9632",
+      "statistics": {
+        "count": 16229,
+        "min": -14.4375,
+        "p05": 1.5109375000000007,
+        "median": 16.75,
+        "mean": 15.939295556777521,
+        "p95": 27.625,
+        "max": 38.75,
+        "std": 7.940934880764892
+      },
+      "reused": false,
+      "elapsed_seconds": 382.017
+    }
+  },
+  "peak_gpu_gb": 15.436,
+  "elapsed_seconds": 1483.107,
+  "completed_splits": [
+    "gsm_pilot",
+    "math_pilot",
+    "gsm_id_test",
+    "math_id_test",
+    "svamp_ood",
+    "gsm_train",
+    "math_train"
+  ]
+}
