@@ -1,0 +1,59 @@
+{
+  "version": "arc_challenge_qwen3_8b_nonthinking_smoke_v1",
+  "generator_track": "ARC_nonthinking_smoke_v1",
+  "labels_loaded": false,
+  "generation_config": "configs/arc_challenge_qwen3_8b_nonthinking_smoke_v1.json",
+  "generation_config_sha256": "33e001bb105218ec191345ee640cf68b06408a52fc48dee87b130340b90c8eaa",
+  "questions": 8,
+  "candidates_per_question": 8,
+  "candidates": 64,
+  "dataset_questions": {
+    "train": 4,
+    "pilot": 2,
+    "test": 2
+  },
+  "parse": {
+    "parsed_candidates": 64,
+    "parse_rate": 1.0,
+    "methods": {
+      "boxed_choice_label": 64
+    },
+    "boxed_stop_rate": 1.0
+  },
+  "generated_tokens": {
+    "min": 49,
+    "median": 230.5,
+    "p90": 322.4,
+    "p95": 332.54999999999995,
+    "max": 437,
+    "mean": 217.21875
+  },
+  "answer_clusters_per_question": {
+    "min": 1,
+    "median": 1.0,
+    "max": 2
+  },
+  "output_file": "outputs/arc_challenge_v1/qwen3_8b_nonthinking_smoke_candidates.jsonl",
+  "output_sha256": "c4f7196414d275f0846b1ecec7a54d3c2733ad00a5330d7c77aab7029b0c9ccc",
+  "part_files": 8,
+  "part_sha256": {
+    "000_2f955b37ec7860b598ea.json": "f9306bb48482faadac0c4420d61c06ae8a4d944bd47bfb6c6172ff08d9b2043c",
+    "001_438ab7a6dd91f3cc8aa3.json": "ec0922f64ba714abd10052cc9735bf51257a384120ab219a517bef136015a270",
+    "002_714ca65aa87f7c47d653.json": "f377c261a4ec30f2f3c8aa186863fb2a573804f224e25352baead659a148f3ea",
+    "003_024daeba510f664cf621.json": "daa4411b7e49ada25b7f20f621d83aca58290def3a941c07b63a7320eb28c2d2",
+    "004_3dc1e2cf5ac5a29f025a.json": "89c088ec3494875ce448a6b6ae0f68cdbf4533475dc3eec3276d349ca69623a8",
+    "005_a9c4d3e846b4c0fd814b.json": "7a9272c12dc85ca8f21f2da5bcc2df92dbe698707cfd06b953d85210a452045d",
+    "006_896bea1b182a5d723715.json": "297cfcae2a281edca178ca9a0c59dd8e4f6abd0030aa572a221bdec7103b4d33",
+    "007_e260f944c117d3cffa22.json": "92d2035e8b8ea535e09a1ae083f1348b2a649505693608375d4fc81478e43e6e"
+  },
+  "elapsed_this_run_seconds": 99.321,
+  "peak_gpu_gb": 15.644,
+  "task_type": "multiple_choice_science",
+  "sealed_test_labels_loaded": false,
+  "choice_clusters_per_question": {
+    "min": 1,
+    "median": 1.0,
+    "max": 2,
+    "questions_with_no_parsed_choice": 0
+  }
+}
