@@ -1,0 +1,800 @@
+{
+  "version": "fresh_math_2026_qwen3_8b_adaptive_oracle_v1",
+  "label_reveal": {
+    "revealed_at_utc": "2026-09-02T02:29:45.250009+00:00",
+    "candidate_freeze_tag": "fresh-math-2026-qwen3-adaptive-k16-candidates-v1",
+    "candidate_freeze_commit": "15af586c59fc5c8b786733349a7f4a09c2eb67c3",
+    "candidate_sha256": "9af1176c0b092608f413d90889315c03ef4ad5d3d994ad8746dadd5e131f4257",
+    "sealed_label_sha256": "72393fceb6ddc114b48d3bca7a1c4e0f17b944635757310f0231e98d5b7260df",
+    "method_or_rm_scores_used": false,
+    "hyperparameters_selected": false
+  },
+  "parser": {
+    "source": "scripts/audit_answer_cluster_consensus.py",
+    "family": "math",
+    "rule": "same frozen parser used by final answer-cluster experiments"
+  },
+  "datasets": {
+    "AIME_2026": {
+      "questions": 30,
+      "candidates": 480,
+      "candidate_parse_rate": 0.9833333333333333,
+      "candidate_accuracy": 0.12708333333333333,
+      "accuracy_among_parsed": 0.1292372881355932,
+      "standard_pass_at_k": {
+        "pass_at_1": 0.12708333333333333,
+        "pass_at_4": 0.22941391941391945,
+        "pass_at_8": 0.31427350427350426,
+        "pass_at_16": 0.4
+      },
+      "fixed_prefix_pass_at_k": {
+        "prefix_pass_at_1": 0.06666666666666667,
+        "prefix_pass_at_4": 0.2,
+        "prefix_pass_at_8": 0.3,
+        "prefix_pass_at_16": 0.4
+      },
+      "oracle_pass_at_16": 0.4,
+      "question_composition": {
+        "all_wrong": 18,
+        "mixed": 10,
+        "all_correct": 2,
+        "mixed_question_coverage": 0.3333333333333333
+      },
+      "majority_cluster": {
+        "top1": 0.13333333333333333,
+        "tie_rate": 0.23333333333333334
+      },
+      "correct_cluster_support": {
+        "questions_with_correct": 12,
+        "min": 1,
+        "median": 2.0,
+        "max": 16,
+        "mean": 5.083333333333333
+      },
+      "parse_methods": {
+        "boxed": 329,
+        "hash": 121,
+        "last_number": 22,
+        "unparsed": 8
+      },
+      "correct_by_parse_method": {
+        "boxed": 61
+      }
+    },
+    "HMMT_FEB_2026": {
+      "questions": 33,
+      "candidates": 528,
+      "candidate_parse_rate": 0.9829545454545454,
+      "candidate_accuracy": 0.11174242424242424,
+      "accuracy_among_parsed": 0.11368015414258188,
+      "standard_pass_at_k": {
+        "pass_at_1": 0.11174242424242424,
+        "pass_at_4": 0.2012820512820513,
+        "pass_at_8": 0.23513691695509878,
+        "pass_at_16": 0.2727272727272727
+      },
+      "fixed_prefix_pass_at_k": {
+        "prefix_pass_at_1": 0.06060606060606061,
+        "prefix_pass_at_4": 0.21212121212121213,
+        "prefix_pass_at_8": 0.21212121212121213,
+        "prefix_pass_at_16": 0.2727272727272727
+      },
+      "oracle_pass_at_16": 0.2727272727272727,
+      "question_composition": {
+        "all_wrong": 24,
+        "mixed": 9,
+        "all_correct": 0,
+        "mixed_question_coverage": 0.2727272727272727
+      },
+      "majority_cluster": {
+        "top1": 0.18181818181818182,
+        "tie_rate": 0.24242424242424243
+      },
+      "correct_cluster_support": {
+        "questions_with_correct": 9,
+        "min": 1,
+        "median": 6.0,
+        "max": 14,
+        "mean": 6.555555555555555
+      },
+      "parse_methods": {
+        "boxed": 408,
+        "hash": 89,
+        "last_number": 22,
+        "unparsed": 9
+      },
+      "correct_by_parse_method": {
+        "boxed": 59
+      }
+    }
+  },
+  "pooled": {
+    "questions": 63,
+    "candidates": 1008,
+    "candidate_parse_rate": 0.9831349206349206,
+    "candidate_accuracy": 0.11904761904761904,
+    "accuracy_among_parsed": 0.12108980827447023,
+    "standard_pass_at_k": {
+      "pass_at_1": 0.11904761904761904,
+      "pass_at_4": 0.2146781789638933,
+      "pass_at_8": 0.27282100615433946,
+      "pass_at_16": 0.3333333333333333
+    },
+    "fixed_prefix_pass_at_k": {
+      "prefix_pass_at_1": 0.06349206349206349,
+      "prefix_pass_at_4": 0.20634920634920634,
+      "prefix_pass_at_8": 0.25396825396825395,
+      "prefix_pass_at_16": 0.3333333333333333
+    },
+    "oracle_pass_at_16": 0.33333333333333337,
+    "question_composition": {
+      "all_wrong": 42,
+      "mixed": 19,
+      "all_correct": 2,
+      "mixed_question_coverage": 0.30158730158730157
+    },
+    "majority_cluster": {
+      "top1": 0.15873015873015872,
+      "tie_rate": 0.23809523809523808
+    },
+    "correct_cluster_support": {
+      "questions_with_correct": 21,
+      "min": 1,
+      "median": 3.0,
+      "max": 16,
+      "mean": 5.714285714285714
+    },
+    "parse_methods": {
+      "boxed": 737,
+      "hash": 210,
+      "last_number": 44,
+      "unparsed": 17
+    },
+    "correct_by_parse_method": {
+      "boxed": 120
+    }
+  },
+  "dataset_macro": {
+    "candidate_parse_rate": 0.9831439393939394,
+    "candidate_accuracy": 0.11941287878787879,
+    "oracle_pass_at_16": 0.33636363636363636,
+    "pass_at_1": 0.11941287878787879,
+    "pass_at_4": 0.21534798534798538,
+    "pass_at_8": 0.27470521061430153,
+    "pass_at_16": 0.33636363636363636,
+    "majority_cluster_top1": 0.1575757575757576,
+    "mixed_question_coverage": 0.303030303030303
+  },
+  "question_records": [
+    {
+      "question_uid": "93462cc1ba3a35b5e71a",
+      "source_dataset": "AIME_2026",
+      "problem_id": 1,
+      "parsed_candidates": 16,
+      "correct_candidates": 16,
+      "majority_support": 16,
+      "majority_tie_count": 1,
+      "majority_correct": true
+    },
+    {
+      "question_uid": "b9212614ac9968545650",
+      "source_dataset": "AIME_2026",
+      "problem_id": 10,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 5,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "b94886b65f64679802ac",
+      "source_dataset": "AIME_2026",
+      "problem_id": 11,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 7,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "d170941b68eeacd5caa8",
+      "source_dataset": "AIME_2026",
+      "problem_id": 12,
+      "parsed_candidates": 16,
+      "correct_candidates": 2,
+      "majority_support": 4,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "f81e1561ba42ef908861",
+      "source_dataset": "AIME_2026",
+      "problem_id": 13,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 9,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "4379f0fdadcab3b9eb27",
+      "source_dataset": "AIME_2026",
+      "problem_id": 14,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 3,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "68026385a04709a2e62b",
+      "source_dataset": "AIME_2026",
+      "problem_id": 15,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 4,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "ee91c7d1b29876fa5a68",
+      "source_dataset": "AIME_2026",
+      "problem_id": 16,
+      "parsed_candidates": 16,
+      "correct_candidates": 3,
+      "majority_support": 10,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "6b4d1df8d8c5bf687818",
+      "source_dataset": "AIME_2026",
+      "problem_id": 17,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 3,
+      "majority_tie_count": 2,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "876590de84a371da4cf1",
+      "source_dataset": "AIME_2026",
+      "problem_id": 18,
+      "parsed_candidates": 15,
+      "correct_candidates": 0,
+      "majority_support": 8,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "c7db66f5ac6c0e639c70",
+      "source_dataset": "AIME_2026",
+      "problem_id": 19,
+      "parsed_candidates": 16,
+      "correct_candidates": 2,
+      "majority_support": 2,
+      "majority_tie_count": 2,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "0038838e9559a38d8f6e",
+      "source_dataset": "AIME_2026",
+      "problem_id": 2,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 1,
+      "majority_tie_count": 16,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "1e000223befdb82d190b",
+      "source_dataset": "AIME_2026",
+      "problem_id": 20,
+      "parsed_candidates": 16,
+      "correct_candidates": 4,
+      "majority_support": 4,
+      "majority_tie_count": 1,
+      "majority_correct": true
+    },
+    {
+      "question_uid": "43a28592bac44560ba95",
+      "source_dataset": "AIME_2026",
+      "problem_id": 21,
+      "parsed_candidates": 16,
+      "correct_candidates": 2,
+      "majority_support": 4,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "1fe14f6c17feb0133acb",
+      "source_dataset": "AIME_2026",
+      "problem_id": 22,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 4,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "65f76eb23290b3b01167",
+      "source_dataset": "AIME_2026",
+      "problem_id": 23,
+      "parsed_candidates": 13,
+      "correct_candidates": 0,
+      "majority_support": 3,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "102c43ce065d1f172db4",
+      "source_dataset": "AIME_2026",
+      "problem_id": 24,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 4,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "953f0ec117bbbda66d76",
+      "source_dataset": "AIME_2026",
+      "problem_id": 25,
+      "parsed_candidates": 15,
+      "correct_candidates": 2,
+      "majority_support": 2,
+      "majority_tie_count": 3,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "b26de0f6b8871eab232f",
+      "source_dataset": "AIME_2026",
+      "problem_id": 26,
+      "parsed_candidates": 13,
+      "correct_candidates": 1,
+      "majority_support": 3,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "114bb98516dcbf392b86",
+      "source_dataset": "AIME_2026",
+      "problem_id": 27,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 3,
+      "majority_tie_count": 2,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "e57e31f8940e0742c22f",
+      "source_dataset": "AIME_2026",
+      "problem_id": 28,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 7,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "66feb6b4c1319dcd36f1",
+      "source_dataset": "AIME_2026",
+      "problem_id": 29,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 5,
+      "majority_tie_count": 2,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "2815cc49a4f67af53346",
+      "source_dataset": "AIME_2026",
+      "problem_id": 3,
+      "parsed_candidates": 16,
+      "correct_candidates": 1,
+      "majority_support": 8,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "d20ec71fe9475af16ef2",
+      "source_dataset": "AIME_2026",
+      "problem_id": 30,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 13,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "cb6fd39bd02694a299fe",
+      "source_dataset": "AIME_2026",
+      "problem_id": 4,
+      "parsed_candidates": 16,
+      "correct_candidates": 1,
+      "majority_support": 3,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "453d1863ac24b8e6fbe1",
+      "source_dataset": "AIME_2026",
+      "problem_id": 5,
+      "parsed_candidates": 16,
+      "correct_candidates": 11,
+      "majority_support": 11,
+      "majority_tie_count": 1,
+      "majority_correct": true
+    },
+    {
+      "question_uid": "5304a5efebfec88ebfd8",
+      "source_dataset": "AIME_2026",
+      "problem_id": 6,
+      "parsed_candidates": 16,
+      "correct_candidates": 16,
+      "majority_support": 16,
+      "majority_tie_count": 1,
+      "majority_correct": true
+    },
+    {
+      "question_uid": "b89f335f075e033f2bbb",
+      "source_dataset": "AIME_2026",
+      "problem_id": 7,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 1,
+      "majority_tie_count": 16,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "99431bedd4f86455368f",
+      "source_dataset": "AIME_2026",
+      "problem_id": 8,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 4,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "db00fc25de0bfb882f6c",
+      "source_dataset": "AIME_2026",
+      "problem_id": 9,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 4,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "5d8b08437b52c83467f1",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 1,
+      "parsed_candidates": 16,
+      "correct_candidates": 14,
+      "majority_support": 14,
+      "majority_tie_count": 1,
+      "majority_correct": true
+    },
+    {
+      "question_uid": "79d750ca3914585b1f5a",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 10,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 6,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "77c8f0e98205b9136e77",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 11,
+      "parsed_candidates": 16,
+      "correct_candidates": 13,
+      "majority_support": 13,
+      "majority_tie_count": 1,
+      "majority_correct": true
+    },
+    {
+      "question_uid": "42bae7ae68abcb89982f",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 12,
+      "parsed_candidates": 16,
+      "correct_candidates": 2,
+      "majority_support": 6,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "a4f384211b1f9ca19a56",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 13,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 7,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "5f670da1305b3fb8d8a0",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 14,
+      "parsed_candidates": 16,
+      "correct_candidates": 8,
+      "majority_support": 8,
+      "majority_tie_count": 1,
+      "majority_correct": true
+    },
+    {
+      "question_uid": "c448b6f89e037de8a0ce",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 15,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 3,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "04ce5805228dc619a058",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 16,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 7,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "7d0d2118cfd609b6fac9",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 17,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 5,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "6244b40dd994cc96d937",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 18,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 1,
+      "majority_tie_count": 16,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "1cc3f0a14eafda5c56cc",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 19,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 8,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "1699e335ac1cffb75bc9",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 2,
+      "parsed_candidates": 15,
+      "correct_candidates": 0,
+      "majority_support": 4,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "86319a0302e742725293",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 20,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 2,
+      "majority_tie_count": 3,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "4275e7dfbc2f06602c39",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 21,
+      "parsed_candidates": 16,
+      "correct_candidates": 8,
+      "majority_support": 8,
+      "majority_tie_count": 1,
+      "majority_correct": true
+    },
+    {
+      "question_uid": "69020a9fc75cca723cfd",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 22,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 3,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "59bea6f1ac8ba412ffd2",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 23,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 3,
+      "majority_tie_count": 2,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "8432308c226e889cb77f",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 24,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 7,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "adbaf62231c18a6ebdc8",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 25,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 4,
+      "majority_tie_count": 2,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "97457be62ea0f28b0f68",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 26,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 6,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "e28d7a24cf6f192609ed",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 27,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 3,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "97e059b825691dff6ca0",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 28,
+      "parsed_candidates": 14,
+      "correct_candidates": 0,
+      "majority_support": 5,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "9e11e0c4ca24669bc9ff",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 29,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 12,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "309c497786610bcc8af0",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 3,
+      "parsed_candidates": 16,
+      "correct_candidates": 1,
+      "majority_support": 1,
+      "majority_tie_count": 16,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "e36f461bfcb081b6629b",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 30,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 3,
+      "majority_tie_count": 3,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "35dd002451a205c9b54f",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 31,
+      "parsed_candidates": 16,
+      "correct_candidates": 1,
+      "majority_support": 11,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "ee1ee5bd2a18e074f0f5",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 32,
+      "parsed_candidates": 16,
+      "correct_candidates": 6,
+      "majority_support": 6,
+      "majority_tie_count": 1,
+      "majority_correct": true
+    },
+    {
+      "question_uid": "4ec35449e65d282e0d72",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 33,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 13,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "10f8611c14058f3f687a",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 4,
+      "parsed_candidates": 15,
+      "correct_candidates": 6,
+      "majority_support": 6,
+      "majority_tie_count": 1,
+      "majority_correct": true
+    },
+    {
+      "question_uid": "e85ad260f850a17d7805",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 5,
+      "parsed_candidates": 15,
+      "correct_candidates": 0,
+      "majority_support": 3,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "d549384d2b3675e5d4ed",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 6,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 2,
+      "majority_tie_count": 2,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "5a4839e88ca4f00234c0",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 7,
+      "parsed_candidates": 13,
+      "correct_candidates": 0,
+      "majority_support": 1,
+      "majority_tie_count": 13,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "02dd3288c7c848d0ba67",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 8,
+      "parsed_candidates": 15,
+      "correct_candidates": 0,
+      "majority_support": 4,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    },
+    {
+      "question_uid": "0cc012634855adc7c39b",
+      "source_dataset": "HMMT_FEB_2026",
+      "problem_id": 9,
+      "parsed_candidates": 16,
+      "correct_candidates": 0,
+      "majority_support": 7,
+      "majority_tie_count": 1,
+      "majority_correct": false
+    }
+  ]
+}
