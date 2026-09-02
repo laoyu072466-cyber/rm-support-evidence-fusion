@@ -1,0 +1,98 @@
+{
+  "version": "arc_challenge_qwen2_7b_nonthinking_smoke_v1",
+  "generator_track": "ARC_qwen2_7b_smoke_v1",
+  "labels_loaded": false,
+  "generation_config": "configs/arc_challenge_qwen2_7b_nonthinking_smoke_v1.json",
+  "generation_config_sha256": "3315f6883cac6b4de500c0963505153b68df02066c6006b1d0dd80c96524f58e",
+  "questions": 6,
+  "candidates_per_question": 8,
+  "candidates": 48,
+  "dataset_questions": {
+    "train": 4,
+    "pilot": 2
+  },
+  "parse": {
+    "parsed_candidates": 45,
+    "parse_rate": 0.9375,
+    "methods": {
+      "boxed_choice_label": 35,
+      "boxed_choice_label_and_text": 10,
+      "unparsed": 3
+    },
+    "boxed_stop_rate": 0.9375
+  },
+  "generated_tokens": {
+    "min": 9,
+    "median": 134.0,
+    "p90": 304.1,
+    "p95": 358.49999999999994,
+    "max": 592,
+    "mean": 138.04166666666666
+  },
+  "answer_clusters_per_question": {
+    "min": 1,
+    "median": 1.5,
+    "max": 4
+  },
+  "output_file": "outputs/arc_challenge_v1/qwen2_7b_smoke_candidates.jsonl",
+  "output_sha256": "ec7bea8e32bd5131f4b1e32616aa2394e9a2e4070e3e2842fb4254b74ffcecd5",
+  "part_files": 6,
+  "part_sha256": {
+    "000_2f955b37ec7860b598ea.json": "2a995c4fb078f5b9c07a4d7940796afd04d8b9f30e9ba87b0c8a3c2ba9fb530f",
+    "001_438ab7a6dd91f3cc8aa3.json": "6bcd5bdb13e52c8d46076963697d8528be98d86bbea1776062299e93941aea83",
+    "002_714ca65aa87f7c47d653.json": "13e05f83230a0d3b984beca1bdeaee91a3eed9f88dc6ae3a0ccb3e9ffaaac10b",
+    "003_024daeba510f664cf621.json": "9b0b667eecf63bfa172a95247120ba7203372dbd00a6cc1b9aa07a3de2fbca54",
+    "004_3dc1e2cf5ac5a29f025a.json": "c2b8caec89ddf72f0e3c687195f61053df2211a25b4246df24b7772535f8cb64",
+    "005_a9c4d3e846b4c0fd814b.json": "4637ed19220e80767686f244b56442f012b34863b952979ef190a4e7679b44d6"
+  },
+  "elapsed_this_run_seconds": 54.675,
+  "peak_gpu_gb": 14.406,
+  "task_type": "multiple_choice_science",
+  "sealed_test_labels_loaded": false,
+  "choice_clusters_per_question": {
+    "min": 1,
+    "median": 1.5,
+    "max": 4,
+    "questions_with_no_parsed_choice": 0,
+    "mean": 1.8333333333333333
+  },
+  "smoke_decision": {
+    "status": "accept_generator_with_lightweight_recovery",
+    "parse_threshold": 0.95,
+    "observed_parse_rate": 0.9375,
+    "unparsed_candidates": 3,
+    "mixed_question_threshold": 0.5,
+    "observed_mixed_question_coverage": 0.5,
+    "mean_choice_clusters": 1.8333333333333333,
+    "temperature_change_required": false,
+    "test_split_used": false,
+    "labels_used": false,
+    "effective_parse_rate_after_safe_normalization": 0.9583333333333334,
+    "safe_normalization_candidates": 1,
+    "restart_recovery_candidates": 2,
+    "generic_parser_relaxation_allowed": false
+  },
+  "unparsed_candidate_diagnostics": [
+    {
+      "source_id": "TIMSS_1995_8_N3",
+      "candidate_index": 6,
+      "classification": "task_drift",
+      "action": "restart_finalize",
+      "reason": "Generated an unrelated combinatorics problem and ended with boxed 20; invalid as an ARC option."
+    },
+    {
+      "source_id": "NYSEDREGENTS_2004_8_31",
+      "candidate_index": 5,
+      "classification": "task_drift",
+      "action": "restart_finalize",
+      "reason": "Generated an unrelated apples problem and ended with boxed 168; invalid as an ARC option."
+    },
+    {
+      "source_id": "NYSEDREGENTS_2014_8_20",
+      "candidate_index": 0,
+      "classification": "positional_label_alias",
+      "action": "normalize_D_to_numeric_label_4",
+      "reason": "The source uses labels 1/2/3/4, while the final answer uses D; the fourth-position mapping is deterministic."
+    }
+  ]
+}

@@ -619,11 +619,13 @@ def finalize_manifest():
 
     clusters = defaultdict(set)
     ordered_uids = []
+    seen_uids = set()
 
     for row in rows:
         uid = row["question_uid"]
 
-        if uid not in clusters:
+        if uid not in seen_uids:
+            seen_uids.add(uid)
             ordered_uids.append(uid)
 
         answer = row[
@@ -666,6 +668,7 @@ def finalize_manifest():
             "median": float(np.median(
                 cluster_counts
             )),
+            "mean": float(np.mean(cluster_counts)),
             "max": max(cluster_counts),
             (
                 "questions_with_no_"
