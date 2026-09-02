@@ -1,5 +1,5 @@
 {
-  "version": "fresh_math_2026_qwen3_8b_rm_baselines_v1",
+  "version": "fresh_math_2026_qwen3_8b_rm_baselines_v2",
   "evaluation_status": "post_track_a_reveal_exploratory",
   "labels_loaded_for_evaluation": true,
   "labels_used_for_generation": false,
@@ -11,7 +11,8 @@
   "reward_model": "Skywork-Reward-V2-Qwen3-1.7B",
   "weighted_consensus_tau": 4.0,
   "budget_protocol": "exact expectation over every uniform subset without replacement",
-  "pair_protocol": "macro strict over mixed-label questions only",
+  "pair_protocol": "macro strict over mixed-label questions only; exact score ties count as non-wins",
+  "supersedes": "v1 used candidate-index tie-breaking inside the reported strict Pair metric",
   "datasets": {
     "AIME_2026": {
       "questions": 30,
@@ -41,7 +42,7 @@
         "raw_rm": {
           "top1": 0.26666666666666666,
           "top1_correct_questions": 8,
-          "pair_macro_strict": 0.86002886002886,
+          "pair_macro_strict": 0.856998556998557,
           "pair_questions": 12,
           "best_at_k": {
             "best_at_1": 0.15625,
@@ -1024,7 +1025,7 @@
         "raw_rm": {
           "top1": 0.18181818181818182,
           "top1_correct_questions": 6,
-          "pair_macro_strict": 0.6471781305114638,
+          "pair_macro_strict": 0.645326278659612,
           "pair_questions": 9,
           "best_at_k": {
             "best_at_1": 0.13446969696969696,
@@ -2098,7 +2099,7 @@
       "raw_rm": {
         "top1": 0.2222222222222222,
         "top1_correct_questions": 14,
-        "pair_macro_strict": 0.7688071188071189,
+        "pair_macro_strict": 0.7662818662818663,
         "pair_questions": 21,
         "best_at_k": {
           "best_at_1": 0.14484126984126985,
@@ -4043,7 +4044,7 @@
       }
     ]
   },
-  "elapsed_seconds": 67.273,
-  "git_head": "bce3f1a76439522d46e195d55cbe9246e538c3c8",
-  "created_utc": "2026-09-02T02:49:58.213925+00:00"
+  "elapsed_seconds": 67.719,
+  "git_head": "0a9f137a0f1b5bf43c1a701a08679853e8fcb50c",
+  "created_utc": "2026-09-02T03:00:31.014701+00:00"
 }

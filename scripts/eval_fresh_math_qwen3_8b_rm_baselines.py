@@ -278,9 +278,10 @@ def candidate_rank_key(
     method,
 ):
     if method == "raw_rm":
+        # Pair-Macro Strict 中同分不借助
+        # 候选索引打破平局。
         return (
             float(candidate["score"]),
-            -candidate["candidate_index"],
         )
 
     groups = group_subset(
@@ -295,7 +296,6 @@ def candidate_rank_key(
         return (
             float(len(group)),
             float(candidate["score"]),
-            -candidate["candidate_index"],
         )
 
     if method == "weighted_tau4":
@@ -309,7 +309,6 @@ def candidate_rank_key(
         return (
             aggregate,
             float(candidate["score"]),
-            -candidate["candidate_index"],
         )
 
     raise KeyError(method)
@@ -900,7 +899,7 @@ def main():
     output = {
         "version": (
             "fresh_math_2026_qwen3_8b_"
-            "rm_baselines_v1"
+            "rm_baselines_v2"
         ),
         "evaluation_status": (
             "post_track_a_reveal_exploratory"
@@ -931,7 +930,12 @@ def main():
         ),
         "pair_protocol": (
             "macro strict over mixed-label "
-            "questions only"
+            "questions only; exact score ties "
+            "count as non-wins"
+        ),
+        "supersedes": (
+            "v1 used candidate-index tie-breaking "
+            "inside the reported strict Pair metric"
         ),
         "datasets": results,
         "pooled": pooled,
