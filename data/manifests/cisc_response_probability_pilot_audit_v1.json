@@ -1,0 +1,50 @@
+{
+  "version": "cisc_response_probability_pilot_audit_v1",
+  "official_confidence": "geometric mean response-token probability",
+  "results": {
+    "GSM8K_PILOT_Qwen2_1p5B": {
+      "name": "GSM8K_PILOT_Qwen2_1p5B",
+      "questions": 189,
+      "candidates": 2985,
+      "correct_candidates": 1869,
+      "incorrect_candidates": 1116,
+      "mean_nll_positive": 0.3400580950216886,
+      "mean_nll_negative": 0.4011037552322004,
+      "mean_response_probability_positive": 0.7218779383231902,
+      "mean_response_probability_negative": 0.6869895814418215,
+      "mixed_questions": 189,
+      "within_question_pairs": 8762,
+      "pair_wins": 4825,
+      "pair_losses": 3937,
+      "pair_ties": 0,
+      "wqd_micro_half_tie": 0.5506733622460626,
+      "wqd_macro_half_tie": 0.5656110423967566,
+      "confidence_top1": 0.6613756613756614,
+      "mean_within_question_confidence_std": 0.1049406915601754,
+      "response_probability_definition": "exp(-token_nll_f32[:, 0])",
+      "labels_used_only_for_pilot_diagnostic": true
+    },
+    "MATH_PILOT_Qwen2_7B": {
+      "name": "MATH_PILOT_Qwen2_7B",
+      "questions": 158,
+      "candidates": 2040,
+      "correct_candidates": 1337,
+      "incorrect_candidates": 703,
+      "mean_nll_positive": 0.3510556484335057,
+      "mean_nll_negative": 0.43885780698162735,
+      "mean_response_probability_positive": 0.7156116651180651,
+      "mean_response_probability_negative": 0.6584792799664043,
+      "mixed_questions": 158,
+      "within_question_pairs": 4578,
+      "pair_wins": 3142,
+      "pair_losses": 1436,
+      "pair_ties": 0,
+      "wqd_micro_half_tie": 0.6863259065093927,
+      "wqd_macro_half_tie": 0.6875516866430067,
+      "confidence_top1": 0.7974683544303798,
+      "mean_within_question_confidence_std": 0.10484337130608824,
+      "response_probability_definition": "exp(-token_nll_f32[:, 0])",
+      "labels_used_only_for_pilot_diagnostic": true
+    }
+  }
+}

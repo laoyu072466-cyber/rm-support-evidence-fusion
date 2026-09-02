@@ -1,0 +1,93 @@
+{
+  "version": "cisc_ptrue_smoke_v1",
+  "created_at": "2026-09-02T03:28:58.740129+00:00",
+  "official_reference": "https://github.com/taubenfeld/CISC/blob/main/src/confidence_extraction.py",
+  "confidence_method": "CISC P(True)",
+  "confidence_options": [
+    "0",
+    "1"
+  ],
+  "option_normalization": "softmax over next-token logits for 0 and 1",
+  "labels_used_for_scoring": false,
+  "config_file": "configs/cisc_ptrue_smoke.json",
+  "config_sha256": "d5d3f65f838d1ed369558a584120dfe830f1664aa15f1ce11c8c8ea01a3340ab",
+  "results": [
+    {
+      "name": "GSM8K_PILOT_Qwen2_1p5B",
+      "model_name": "Qwen2-1.5B",
+      "dataset": "data/processed/prototype_v2/gsm_pilot_validation.jsonl",
+      "dataset_sha256": "26e1652192504c2e8fe609c65290fdff86d9cd8e0b5d34a56e4050099bd60a3f",
+      "questions": 8,
+      "candidates": 32,
+      "statistics": {
+        "count": 32,
+        "min": 0.18242551386356354,
+        "p05": 0.2018132209777832,
+        "median": 0.287810280919075,
+        "mean": 0.29495593439787626,
+        "p95": 0.419753111898899,
+        "max": 0.4687906503677368,
+        "std": 0.06585562546115983
+      },
+      "synthetic_probe": {
+        "synthetic_correct": {
+          "input_tokens": 82,
+          "logit_0": 14.25,
+          "logit_1": 13.375,
+          "logit_confidence": -0.875,
+          "p_true_binary_normalized": 0.29421496391296387
+        },
+        "synthetic_wrong": {
+          "input_tokens": 82,
+          "logit_0": 14.125,
+          "logit_1": 13.25,
+          "logit_confidence": -0.875,
+          "p_true_binary_normalized": 0.29421496391296387
+        }
+      },
+      "peak_gpu_gb": 3.716,
+      "elapsed_seconds": 2.866,
+      "output_file": "data/cache/cisc_ptrue_smoke_v1/GSM8K_PILOT_Qwen2_1p5B.jsonl",
+      "output_sha256": "ed78781a3f5e8f83920dcb1b53257095bb7be20a54e38041d226781ba9cd27d1"
+    },
+    {
+      "name": "MATH_PILOT_Qwen2_7B",
+      "model_name": "Qwen2-7B",
+      "dataset": "data/processed/prototype_v2/math_pilot_validation.jsonl",
+      "dataset_sha256": "eba33790e2a52c74e5dc6e79bd46f26082034f785330fdd630606cf67044334b",
+      "questions": 8,
+      "candidates": 32,
+      "statistics": {
+        "count": 32,
+        "min": 0.5467381477355957,
+        "p05": 0.562176525592804,
+        "median": 0.6076632142066956,
+        "mean": 0.6172282621264458,
+        "p95": 0.665410578250885,
+        "max": 0.6791787147521973,
+        "std": 0.03555897051694811
+      },
+      "synthetic_probe": {
+        "synthetic_correct": {
+          "input_tokens": 82,
+          "logit_0": 13.0625,
+          "logit_1": 13.8125,
+          "logit_confidence": 0.75,
+          "p_true_binary_normalized": 0.6791787147521973
+        },
+        "synthetic_wrong": {
+          "input_tokens": 82,
+          "logit_0": 13.125,
+          "logit_1": 13.75,
+          "logit_confidence": 0.625,
+          "p_true_binary_normalized": 0.6513549089431763
+        }
+      },
+      "peak_gpu_gb": 14.676,
+      "elapsed_seconds": 4.202,
+      "output_file": "data/cache/cisc_ptrue_smoke_v1/MATH_PILOT_Qwen2_7B.jsonl",
+      "output_sha256": "a72178afacee2904c6859dffd525061c1b1b369c6730aa694864cb57cd0fdb6e"
+    }
+  ],
+  "elapsed_seconds": 7.258
+}
