@@ -1,0 +1,78 @@
+{
+  "version": "arc_challenge_qwen2_1p5b_nonthinking_smoke_v1",
+  "task_type": "multiple_choice_science",
+  "dataset": {
+    "name": "ARC_CHALLENGE",
+    "questions": "data/processed/arc_challenge_v1/qwen2_1p5b_smoke_questions.jsonl",
+    "questions_sha256": "b64506fd1f8b4bf93c7e5ab023a8e070545c8fff8fa9330137b32d157b80c421",
+    "expected_questions": 6,
+    "source_files": {
+      "train": {
+        "path": "data/external/arc_challenge_v1/train_questions.jsonl",
+        "sha256": "15279521ff600dc0e7048ebfa76ae9e5388bfce455233f8b088d29cae6148af4",
+        "questions": 1119
+      },
+      "pilot": {
+        "path": "data/external/arc_challenge_v1/pilot_questions.jsonl",
+        "sha256": "74d0cda5d3df1d987f7e0383ef4eb86c06185746b87674a94f6987fe9f820acc",
+        "questions": 299
+      }
+    },
+    "selection_policy": {
+      "train": [
+        "three_choices",
+        "five_choices",
+        "numeric_labels",
+        "standard_four_letters"
+      ],
+      "pilot": [
+        "three_choices",
+        "numeric_labels"
+      ]
+    },
+    "labels_loaded": false,
+    "sealed_test_labels_loaded": false,
+    "test_split_used": false
+  },
+  "model": {
+    "path": "models/generator/Qwen2-1.5B",
+    "name": "Qwen2-1.5B",
+    "mode": "standard",
+    "config_sha256": "f8c6c681f7c28386e333775bb78de28f9de3ce6a676059dc35792022adcb7e36",
+    "chat_template_sha256": "af9c0233881b083b52ff773580215222b5440ac3d0beeeca99b76329b048f8db",
+    "dtype": "bfloat16",
+    "attention": "sdpa"
+  },
+  "prompt": {
+    "template": "{problem}\n\nAnalyze the question step by step and select exactly one option. Use only the option labels shown above. Do not use boxed notation during the reasoning. End with exactly one final line in this form:\nFinal Answer: \\boxed{OPTION_LABEL}",
+    "chat_role": "user",
+    "add_generation_prompt": true,
+    "enable_thinking": false
+  },
+  "sampling": {
+    "candidates_per_question": 8,
+    "batch_candidates": 4,
+    "base_seed": 20260907,
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "total_sequence_limit": 1024
+  },
+  "stopping": {
+    "primary": "first complete final boxed expression that maps to a valid option",
+    "invalid_boxed_expression": "continue",
+    "fallback": "EOS or total sequence limit",
+    "per_candidate_independent": true,
+    "postprocess": "truncate after first valid final option box"
+  },
+  "protocol": {
+    "labels_used_for_selection": false,
+    "labels_used_for_generation": false,
+    "labels_used_for_smoke_diagnostics": false,
+    "test_labels_sealed": true,
+    "smoke_accuracy_is_not_computed": true,
+    "generator_selected_without_test_labels": true,
+    "test_split_used": false,
+    "comparison_variable": "generator_capacity"
+  }
+}
