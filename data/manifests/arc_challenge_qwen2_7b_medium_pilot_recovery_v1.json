@@ -1,0 +1,84 @@
+{
+  "version": "arc_challenge_qwen2_7b_medium_pilot_recovery_v1",
+  "created_at": "2026-09-02T11:29:31.511621+00:00",
+  "labels_loaded": false,
+  "test_split_used": false,
+  "questions": 128,
+  "candidates": 2048,
+  "primary_output_file": "outputs/arc_challenge_v1/qwen2_7b_medium_pilot_candidates.jsonl",
+  "primary_output_sha256": "eb613189dc6ade7cddea4e937cb8512c5bfa4a70b95435f67462d914bd6399d0",
+  "recovery_config": "configs/arc_challenge_qwen2_7b_medium_pilot_recovery_v1.json",
+  "recovery_config_file_sha256": "3729bd67f17e093248f2faf054aa940985af1e78955d6cffb957c586ffc4f756",
+  "recovery_config_stable_sha256": "f5a916004b74fced87a90ed6b29f1a6521637122ae0937a59a7d00944d88754a",
+  "recovery": {
+    "attempted": 77,
+    "success": 69,
+    "success_rate": 0.8961038961038961,
+    "failed": 8,
+    "generated_tokens": 6170
+  },
+  "final_parse": {
+    "parsed_candidates": 2040,
+    "unparsed_candidates": 8,
+    "parse_rate": 0.99609375,
+    "methods": {
+      "boxed_choice_label_and_text": 335,
+      "boxed_choice_label": 1625,
+      "boxed_choice_positional_alias": 11,
+      "recovery_boxed_choice_label": 65,
+      "unparsed": 8,
+      "recovery_boxed_choice_label_and_text": 4
+    }
+  },
+  "answer_clusters_per_question": {
+    "min": 1,
+    "median": 2.0,
+    "mean": 2.34375,
+    "max": 4,
+    "multi_cluster_questions": 97
+  },
+  "elapsed_seconds": 76.55692172050476,
+  "peak_gpu_gb": 14.271185398101807,
+  "output_file": "outputs/arc_challenge_v1/qwen2_7b_medium_pilot_recovered_candidates.jsonl",
+  "output_sha256": "4ec477bcaef3fc7146508ade766ce44a77bf549adbeaedbecf83dae39c256a91",
+  "recovery_integrity_audit": {
+    "labels_loaded": false,
+    "test_split_used": false,
+    "primary_output_unchanged": true,
+    "candidate_identity_preserved": true,
+    "attempted": 77,
+    "success": 69,
+    "failed": 8,
+    "untouched_primary_candidates": 1971,
+    "integrity": {
+      "promoted_recoveries": 69,
+      "failed_primary_retained": 8,
+      "untouched_primary_preserved": 1971
+    },
+    "by_split": {
+      "pilot": {
+        "untouched": 496,
+        "attempted": 16,
+        "success": 12,
+        "failed": 4
+      },
+      "train": {
+        "untouched": 1475,
+        "attempted": 61,
+        "success": 57,
+        "failed": 4
+      }
+    },
+    "final_parsed_candidates": 2040,
+    "final_unparsed_candidates": 8,
+    "final_parse_rate": 0.99609375,
+    "new_answer_cluster_recoveries": 3,
+    "questions_with_cluster_increase": 0,
+    "questions_with_cluster_decrease": 0,
+    "primary_output_sha256": "eb613189dc6ade7cddea4e937cb8512c5bfa4a70b95435f67462d914bd6399d0",
+    "recovered_output_sha256": "4ec477bcaef3fc7146508ade766ce44a77bf549adbeaedbecf83dae39c256a91",
+    "recovery_config_file_sha256": "3729bd67f17e093248f2faf054aa940985af1e78955d6cffb957c586ffc4f756",
+    "recovery_config_stable_sha256": "f5a916004b74fced87a90ed6b29f1a6521637122ae0937a59a7d00944d88754a",
+    "decision": "freeze_recovered_candidates_before_train_pilot_label_reveal"
+  }
+}
