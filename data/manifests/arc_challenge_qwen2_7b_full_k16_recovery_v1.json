@@ -1,0 +1,47 @@
+{
+  "version": "arc_challenge_qwen2_7b_full_k16_recovery_v1",
+  "created_at": "2026-09-03T03:14:11.741173+00:00",
+  "labels_loaded": false,
+  "test_questions_used": true,
+  "test_labels_used": false,
+  "sealed_test_labels_loaded": false,
+  "questions": 2590,
+  "candidates": 41440,
+  "primary_output_file": "outputs/arc_challenge_v1/qwen2_7b_full_k16_candidates.jsonl",
+  "primary_output_sha256": "14f83e6a1b2077600081d9060e8d7ef6f3d46d878a04265c41883a9c71e3148c",
+  "recovery_config": "configs/arc_challenge_qwen2_7b_full_k16_recovery_v1.json",
+  "recovery_config_file_sha256": "e4439b948c3f548021f88e80c40ddb832185d00d7b76d31ca4b6a394dbfbb5fc",
+  "recovery_config_stable_sha256": "5df70deed27f019a4f58663ef7859d97d3da7342046cf72b120ad6a0423ac622",
+  "recovery": {
+    "attempted": 1365,
+    "success": 1281,
+    "success_rate": 0.9384615384615385,
+    "failed": 84,
+    "generated_tokens": 88602
+  },
+  "final_parse": {
+    "parsed_candidates": 41356,
+    "unparsed_candidates": 84,
+    "parse_rate": 0.9979729729729729,
+    "methods": {
+      "boxed_choice_label": 33787,
+      "boxed_choice_label_and_text": 6088,
+      "recovery_boxed_choice_label": 1256,
+      "boxed_choice_positional_alias": 189,
+      "unparsed": 84,
+      "recovery_boxed_choice_label_and_text": 25,
+      "boxed_choice_text": 11
+    }
+  },
+  "answer_clusters_per_question": {
+    "min": 1,
+    "median": 2.0,
+    "mean": 2.05984555984556,
+    "max": 4,
+    "multi_cluster_questions": 1696
+  },
+  "elapsed_seconds": 1025.148410320282,
+  "peak_gpu_gb": 14.42436408996582,
+  "output_file": "outputs/arc_challenge_v1/qwen2_7b_full_k16_recovered_candidates.jsonl",
+  "output_sha256": "eb72914f82678c4738fab24ea055a62b00f8c207372d3f3ba85d785591267191"
+}
