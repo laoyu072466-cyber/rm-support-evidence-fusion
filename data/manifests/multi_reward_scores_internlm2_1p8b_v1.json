@@ -1,6 +1,6 @@
 {
   "version": "multi_reward_full_scoring_v1",
-  "created_at": "2026-09-03T03:40:00.490372+00:00",
+  "created_at": "2026-09-03T03:44:48.041501+00:00",
   "model_key": "internlm2_1p8b",
   "model_name": "InternLM2-1.8B-Reward",
   "model_path": "models/reward/InternLM2_1p8B_Reward",
@@ -32,8 +32,8 @@
         "max": 3.6171875,
         "std": 1.1581082662793756
       },
-      "reused": false,
-      "elapsed_seconds": 13.069
+      "reused": true,
+      "elapsed_seconds": 0.0
     },
     "math_pilot": {
       "candidates": 2040,
@@ -51,14 +51,114 @@
         "max": 3.91015625,
         "std": 1.147262003188912
       },
+      "reused": true,
+      "elapsed_seconds": 0.0
+    },
+    "gsm_id_test": {
+      "candidates": 17902,
+      "source_file": "data/processed/prototype_v2/gsm_id_test_mixed.jsonl",
+      "source_sha256": "9e41ca864144410060f519bb15bc3f94251ff6a3645d2412a4feac9d3af6e834",
+      "score_file": "data/cache/reward_scores_full_v1/InternLM2-1.8B-Reward/gsm_id_test.scores_f32.npy",
+      "score_sha256": "02c65fe1138a61bceacf0341f836effd326c23e26b5315a06d3ebd3696b28d71",
+      "statistics": {
+        "count": 17902,
+        "min": -3.408203125,
+        "p05": -2.00390625,
+        "median": 0.005260467529296875,
+        "mean": -0.005482918712602969,
+        "p95": 1.9540527343750007,
+        "max": 3.814453125,
+        "std": 1.2003825349685155
+      },
       "reused": false,
-      "elapsed_seconds": 13.07
+      "elapsed_seconds": 78.157
+    },
+    "math_id_test": {
+      "candidates": 4167,
+      "source_file": "data/processed/prototype_v2/math_id_test_mixed.jsonl",
+      "source_sha256": "cb84caba48d26e39fa0f1a4e4a0fe26ec180793f817cce80ef8e50b4ed5b1cdb",
+      "score_file": "data/cache/reward_scores_full_v1/InternLM2-1.8B-Reward/math_id_test.scores_f32.npy",
+      "score_sha256": "ce1d5b3976d3b3b343747124dd8bcdad5b3def33834c86e1503909a539dd413e",
+      "statistics": {
+        "count": 4167,
+        "min": -3.259765625,
+        "p05": -1.26865234375,
+        "median": 0.69873046875,
+        "mean": 0.6375953723750928,
+        "p95": 2.4011718749999993,
+        "max": 3.5,
+        "std": 1.12063198054217
+      },
+      "reused": false,
+      "elapsed_seconds": 30.487
+    },
+    "svamp_ood": {
+      "candidates": 13913,
+      "source_file": "data/processed/prototype_v2/svamp_ood_mixed.jsonl",
+      "source_sha256": "d7621b8b1d631251ea717150b3bfdf9c22b8e7cfb86afa745191b1cb2fff8077",
+      "score_file": "data/cache/reward_scores_full_v1/InternLM2-1.8B-Reward/svamp_ood.scores_f32.npy",
+      "score_sha256": "a1fecf6d8f6385a75bf78e6b825519fb0b48c25945b7a0a709e40f27d482e99a",
+      "statistics": {
+        "count": 13913,
+        "min": -3.490234375,
+        "p05": -2.078125,
+        "median": -0.418212890625,
+        "mean": -0.40202056306001227,
+        "p95": 1.3441406249999996,
+        "max": 3.033203125,
+        "std": 1.0440954202402806
+      },
+      "reused": false,
+      "elapsed_seconds": 43.83
+    },
+    "gsm_train": {
+      "candidates": 24221,
+      "source_file": "data/processed/prototype_v2/gsm_train.jsonl",
+      "source_sha256": "ab4713ddc3f2493d88e70a971f3f8e90b65f9a69f1ca409ff9f31568cb337860",
+      "score_file": "data/cache/reward_scores_full_v1/InternLM2-1.8B-Reward/gsm_train.scores_f32.npy",
+      "score_sha256": "ccc390f80b65250dca9bfd8580b59308443b6eef7d36ee04f2f43309cea60e6a",
+      "statistics": {
+        "count": 24221,
+        "min": -3.66015625,
+        "p05": -1.658203125,
+        "median": 0.466552734375,
+        "mean": 0.40188805231158775,
+        "p95": 2.302734375,
+        "max": 3.646484375,
+        "std": 1.1878785697636474
+      },
+      "reused": false,
+      "elapsed_seconds": 108.732
+    },
+    "math_train": {
+      "candidates": 16229,
+      "source_file": "data/processed/prototype_v2/math_train.jsonl",
+      "source_sha256": "21af8ba32f42164c48d220fc2bb68e40d80673427833c7a0f6a8cf74c8d9c6de",
+      "score_file": "data/cache/reward_scores_full_v1/InternLM2-1.8B-Reward/math_train.scores_f32.npy",
+      "score_sha256": "822aa0771feb3bc0077897f5550f03867575b4d455d392594f5fbb2ba8aac863",
+      "statistics": {
+        "count": 16229,
+        "min": -3.154296875,
+        "p05": -1.015234375,
+        "median": 1.068359375,
+        "mean": 0.9917656480366204,
+        "p95": 2.73828125,
+        "max": 3.970703125,
+        "std": 1.137550040969423
+      },
+      "reused": false,
+      "elapsed_seconds": 103.521
     }
   },
-  "peak_gpu_gb": 6.072,
-  "elapsed_seconds": 29.258,
+  "peak_gpu_gb": 7.882,
+  "elapsed_seconds": 369.177,
   "completed_splits": [
     "gsm_pilot",
-    "math_pilot"
+    "math_pilot",
+    "gsm_id_test",
+    "math_id_test",
+    "svamp_ood",
+    "gsm_train",
+    "math_train"
   ]
 }
