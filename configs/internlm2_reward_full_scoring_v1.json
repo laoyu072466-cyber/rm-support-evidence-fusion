@@ -1,0 +1,52 @@
+{
+  "version": "internlm2_reward_full_scoring_v1",
+  "output_root": "data/cache/reward_scores_full_v1",
+  "manifest_root": "data/manifests",
+  "models": {
+    "internlm2_1p8b": {
+      "name": "InternLM2-1.8B-Reward",
+      "path": "models/reward/InternLM2_1p8B_Reward",
+      "initial_batch_size": 16,
+      "interface": "official_get_scores"
+    }
+  },
+  "splits": [
+    {
+      "name": "gsm_pilot",
+      "file": "data/processed/prototype_v2/gsm_pilot_validation.jsonl"
+    },
+    {
+      "name": "math_pilot",
+      "file": "data/processed/prototype_v2/math_pilot_validation.jsonl"
+    },
+    {
+      "name": "gsm_id_test",
+      "file": "data/processed/prototype_v2/gsm_id_test_mixed.jsonl"
+    },
+    {
+      "name": "math_id_test",
+      "file": "data/processed/prototype_v2/math_id_test_mixed.jsonl"
+    },
+    {
+      "name": "svamp_ood",
+      "file": "data/processed/prototype_v2/svamp_ood_mixed.jsonl"
+    },
+    {
+      "name": "gsm_train",
+      "file": "data/processed/prototype_v2/gsm_train.jsonl"
+    },
+    {
+      "name": "math_train",
+      "file": "data/processed/prototype_v2/math_train.jsonl"
+    }
+  ],
+  "scoring": {
+    "input": "official chat template: user=problem, assistant=solution_text",
+    "output": "InternLM2ForRewardModel.get_scores; official reward token",
+    "dtype": "float16",
+    "batching": "official get_scores",
+    "sorting": "character_length",
+    "checkpoint": "numpy memmap after every batch",
+    "labels_used": false
+  }
+}
