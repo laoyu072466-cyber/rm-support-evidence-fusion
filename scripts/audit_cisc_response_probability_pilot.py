@@ -6,7 +6,7 @@ import math
 import numpy as np
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 CACHE = (
     ROOT / "data/cache/generator_cluster_features_v1"
 )

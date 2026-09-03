@@ -16,7 +16,7 @@ from transformers import (
 )
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from generate_fresh_math_qwen3_8b_nonthinking_smoke import (

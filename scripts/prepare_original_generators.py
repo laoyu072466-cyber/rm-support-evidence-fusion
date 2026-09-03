@@ -4,7 +4,7 @@ import os
 
 from modelscope import snapshot_download
 
-project = Path("/root/autodl-tmp/rm_traj_project")
+project = Path(__file__).resolve().parents[1]
 old_root = Path("/root/autodl-tmp/vfrm/models")
 new_root = project / "models/generator"
 

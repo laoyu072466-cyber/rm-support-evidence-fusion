@@ -12,7 +12,7 @@ from transformers import (
 )
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 DATA_ROOT = ROOT / "data/processed/prototype_v2"
 CACHE_ROOT = ROOT / "data/cache/generator_hidden_smoke_v1"
 

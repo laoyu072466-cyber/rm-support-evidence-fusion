@@ -13,7 +13,7 @@ from trajectory_head import (
 )
 
 
-PROJECT = Path("/root/autodl-tmp/rm_traj_project")
+PROJECT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = PROJECT / "configs/trajectory_head.json"
 NORMALIZATION_PATH = (
     PROJECT

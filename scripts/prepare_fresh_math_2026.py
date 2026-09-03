@@ -7,7 +7,7 @@ import subprocess
 from datasets import load_dataset
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "data/external/fresh_math_2026"
 MANIFEST_PATH = (
     ROOT / "data/manifests/fresh_math_2026_source_manifest.json"

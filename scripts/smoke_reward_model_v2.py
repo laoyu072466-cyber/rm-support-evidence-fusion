@@ -9,7 +9,7 @@ from transformers import (
     AutoTokenizer,
 )
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data/processed/prototype_v2"
 MODEL_PATH = (
     ROOT / "models/reward/"

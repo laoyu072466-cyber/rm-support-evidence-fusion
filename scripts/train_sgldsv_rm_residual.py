@@ -14,7 +14,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 from torch.nn.utils.rnn import pad_sequence
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 CACHE_PATH = (
     ROOT / "data/cache/sgldsv_full_v1/"
     "Skywork-Reward-V2-Qwen3-1.7B/block_21"

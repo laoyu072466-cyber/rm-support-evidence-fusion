@@ -10,7 +10,7 @@ except Exception:
     roc_auc_score = None
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 SPECS = [
     (
         "GSM8K / Qwen2-1.5B",

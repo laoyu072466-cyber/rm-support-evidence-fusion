@@ -6,7 +6,7 @@ import re
 import statistics
 import unicodedata
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 BASE = (
     ROOT / "data/imported/"
     "SGLDSV_CANDIDATE_DATASETS_20260813"

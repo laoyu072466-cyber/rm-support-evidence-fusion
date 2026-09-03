@@ -9,7 +9,7 @@ import datasets
 from datasets import load_dataset
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / "data/external/arc_challenge_v1"
 MANIFEST_PATH = (
     ROOT / "data/manifests/"

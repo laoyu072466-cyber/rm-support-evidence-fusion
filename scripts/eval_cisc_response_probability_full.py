@@ -7,7 +7,7 @@ import time
 import numpy as np
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import audit_answer_cluster_consensus as base

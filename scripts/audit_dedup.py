@@ -8,7 +8,7 @@ import unicodedata
 import pyarrow.parquet as pq
 from rapidfuzz import fuzz, process
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data/raw"
 OUT = ROOT / "data/interim/dedup"
 OUT.mkdir(parents=True, exist_ok=True)

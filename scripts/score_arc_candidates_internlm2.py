@@ -2,7 +2,7 @@ from pathlib import Path
 import sys
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import score_internlm2_reward as adapter

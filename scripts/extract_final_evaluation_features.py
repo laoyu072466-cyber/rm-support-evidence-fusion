@@ -12,7 +12,7 @@ from transformers import (
 )
 
 
-PROJECT = Path("/root/autodl-tmp/rm_traj_project")
+PROJECT = Path(__file__).resolve().parents[1]
 DATA_ROOT = PROJECT / "data/processed/prototype_v2"
 MODEL_PATH = (
     PROJECT

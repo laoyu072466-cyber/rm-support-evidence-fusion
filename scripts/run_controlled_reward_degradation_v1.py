@@ -13,7 +13,7 @@ import numpy as np
 from scipy.stats import pearsonr, spearmanr
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import eval_multi_reward_reproduction as reproduction

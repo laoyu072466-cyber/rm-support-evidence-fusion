@@ -10,7 +10,7 @@ import pandas as pd
 from rapidfuzz import fuzz, process
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 QUESTIONS_PATH = (
     ROOT / "data/external/fresh_math_2026/questions.jsonl"
 )

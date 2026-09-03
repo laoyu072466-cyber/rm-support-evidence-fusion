@@ -9,7 +9,7 @@ import torch
 import torch.nn.functional as F
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 CACHE = ROOT / "data/cache/generator_hidden_smoke_v1"
 RM_CACHE = (
     ROOT

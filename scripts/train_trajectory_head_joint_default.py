@@ -14,7 +14,7 @@ import torch.nn.functional as F
 from torch.nn.utils.rnn import pad_sequence
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 CACHE = (
     ROOT / "data/cache/trajectory_features_v1/"
     "Skywork-Reward-V2-Qwen3-1.7B/layer_28"

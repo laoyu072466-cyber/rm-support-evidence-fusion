@@ -9,7 +9,7 @@ import torch
 import torch.nn.functional as F
 
 
-PROJECT = Path("/root/autodl-tmp/rm_traj_project")
+PROJECT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = PROJECT / "configs/hidden_layer_selection.json"
 FEATURE_ROOT = (
     PROJECT

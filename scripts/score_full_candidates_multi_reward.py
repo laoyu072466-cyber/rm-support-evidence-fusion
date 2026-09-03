@@ -15,7 +15,7 @@ from transformers import (
 )
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = (
     ROOT / "configs/multi_reward_full_scoring_v2.json"
 )

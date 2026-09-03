@@ -9,7 +9,7 @@ import numpy as np
 import torch
 from torch.nn.utils.rnn import pad_sequence
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import smoke_sgldsv_current_rm as base

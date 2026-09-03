@@ -8,7 +8,7 @@ import os
 import numpy as np
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 
 CANDIDATE_PATH = (
     ROOT / "outputs/arc_challenge_v1/"

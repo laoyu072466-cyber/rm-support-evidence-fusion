@@ -6,7 +6,7 @@ import math
 import re
 import unicodedata
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / "data/raw"
 DEDUP = ROOT / "data/interim/dedup"
 SPLIT_DIR = ROOT / "data/splits"

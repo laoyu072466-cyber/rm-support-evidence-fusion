@@ -14,7 +14,7 @@ from audit_answer_cluster_consensus import (
 )
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 
 CANDIDATE_PATH = (
     ROOT

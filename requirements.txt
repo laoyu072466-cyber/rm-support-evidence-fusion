@@ -1,0 +1,15 @@
+accelerate==1.7.0
+datasets==4.8.4
+huggingface-hub==0.36.2
+modelscope==1.39.1
+numpy==2.3.2
+pandas==3.0.5
+pyarrow==25.0.1
+rapidfuzz==3.14.5
+safetensors==0.5.3
+scikit-learn==1.9.0
+scipy==1.18.1
+sentencepiece==0.2.0
+tokenizers==0.21.4
+torch==2.8.0
+transformers==4.51.3

@@ -5,7 +5,7 @@ import time
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 MODEL_PATH = ROOT / "models/generator/Qwen3-4B"
 DATA_PATH = ROOT / "data/splits/omni_train.jsonl"
 OUTPUT_PATH = ROOT / "data/candidates/smoke_one.json"

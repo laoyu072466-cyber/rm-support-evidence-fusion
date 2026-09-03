@@ -5,7 +5,7 @@ import math
 import numpy as np
 
 
-PROJECT = Path("/root/autodl-tmp/rm_traj_project")
+PROJECT = Path(__file__).resolve().parents[1]
 CACHE_ROOT = (
     PROJECT
     / "data/cache/trajectory_features_v1"

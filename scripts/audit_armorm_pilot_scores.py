@@ -8,7 +8,7 @@ from scipy.stats import rankdata
 from sklearn.metrics import roc_auc_score
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 
 OUTPUT = (
     ROOT / "data/manifests/"

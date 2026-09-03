@@ -7,7 +7,7 @@ import numpy as np
 from scipy.stats import pearsonr, spearmanr
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = (
     ROOT / "data/manifests/"
     "reward_strength_gain_trend_v1.json"

@@ -16,7 +16,7 @@ from transformers import (
 )
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import generate_arc_challenge_qwen2_7b_medium_pilot as arc

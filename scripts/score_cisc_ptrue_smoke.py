@@ -13,7 +13,7 @@ import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 CONFIG_PATH = ROOT / "configs/cisc_ptrue_smoke.json"
 OUTPUT_DIR = ROOT / "data/cache/cisc_ptrue_smoke_v1"
 MANIFEST_PATH = (

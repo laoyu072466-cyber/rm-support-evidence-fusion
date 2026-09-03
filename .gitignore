@@ -14,3 +14,14 @@ uploads/
 data/imported/
 
 data/processed/
+data/external/
+.env
+.env.*
+!.env.example
+.venv/
+*.pem
+*.key
+*.p12
+*.pfx
+*credentials*.json
+*secret*.json

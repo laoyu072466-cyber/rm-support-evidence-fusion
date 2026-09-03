@@ -9,7 +9,7 @@ import os
 import numpy as np
 
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 
 QUESTIONS_PATH = (
     ROOT / "data/processed/arc_challenge_v1/"

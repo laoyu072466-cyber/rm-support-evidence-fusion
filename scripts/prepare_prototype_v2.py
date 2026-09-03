@@ -8,7 +8,7 @@ import unicodedata
 
 import pyarrow.parquet as pq
 
-ROOT = Path("/root/autodl-tmp/rm_traj_project")
+ROOT = Path(__file__).resolve().parents[1]
 IMPORTED = (
     ROOT / "data/imported/"
     "SGLDSV_CANDIDATE_DATASETS_20260813"
