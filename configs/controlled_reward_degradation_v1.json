@@ -1,0 +1,234 @@
+{
+  "version": "controlled_reward_degradation_v1",
+  "created_at": "2026-09-03T05:31:54.828337+00:00",
+  "protocol_tag": "controlled-reward-degradation-protocol-v1",
+  "analysis_type": "post_hoc_controlled_mechanism",
+  "hypothesis": "Fusion gain increases as the same reward model is progressively weakened.",
+  "base_reward_model": {
+    "name": "Skywork-Reward-V2-Qwen3-4B",
+    "score_root": "data/cache/reward_scores_full_v1/Skywork-Reward-V2-Qwen3-4B",
+    "score_manifest": "data/manifests/multi_reward_scores_qwen3_4b_v1.json",
+    "reference_result": "data/manifests/multi_reward_reproduction_qwen3_4b_v1.json"
+  },
+  "data": {
+    "gsm_train": {
+      "file": "data/processed/prototype_v2/gsm_train.jsonl",
+      "count": 24221,
+      "data_sha256": "ab4713ddc3f2493d88e70a971f3f8e90b65f9a69f1ca409ff9f31568cb337860",
+      "source_score_sha256": "dae91cab7367cf5adf2f9b7fda70412709ae98ea2e374605b6472d249124ce2a"
+    },
+    "gsm_pilot": {
+      "file": "data/processed/prototype_v2/gsm_pilot_validation.jsonl",
+      "count": 2985,
+      "data_sha256": "26e1652192504c2e8fe609c65290fdff86d9cd8e0b5d34a56e4050099bd60a3f",
+      "source_score_sha256": "a1f94c5c652229809b10a31ba336782e23f0440d37e577403aeeabda05a99d1e"
+    },
+    "gsm_id_test": {
+      "file": "data/processed/prototype_v2/gsm_id_test_mixed.jsonl",
+      "count": 17902,
+      "data_sha256": "9e41ca864144410060f519bb15bc3f94251ff6a3645d2412a4feac9d3af6e834",
+      "source_score_sha256": "fcb115d4c94921be3069134d0505982da1e3404c2d3a551f2b4882d948f72080"
+    },
+    "svamp_ood": {
+      "file": "data/processed/prototype_v2/svamp_ood_mixed.jsonl",
+      "count": 13913,
+      "data_sha256": "d7621b8b1d631251ea717150b3bfdf9c22b8e7cfb86afa745191b1cb2fff8077",
+      "source_score_sha256": "18aaa3420e23b920908efd5b43b095d0672882928a5b04a77fef23bebdf12b9a"
+    },
+    "math_train": {
+      "file": "data/processed/prototype_v2/math_train.jsonl",
+      "count": 16229,
+      "data_sha256": "21af8ba32f42164c48d220fc2bb68e40d80673427833c7a0f6a8cf74c8d9c6de",
+      "source_score_sha256": "05bb22bac52cd9a592968d3c6654dffe52ea2e0058ab11900090a3621b8e13eb"
+    },
+    "math_pilot": {
+      "file": "data/processed/prototype_v2/math_pilot_validation.jsonl",
+      "count": 2040,
+      "data_sha256": "eba33790e2a52c74e5dc6e79bd46f26082034f785330fdd630606cf67044334b",
+      "source_score_sha256": "7a5f4c971bc3989ecb4aaffb1283d8299c2aab7eb6f0480b5e39a43f80499e00"
+    },
+    "math_id_test": {
+      "file": "data/processed/prototype_v2/math_id_test_mixed.jsonl",
+      "count": 4167,
+      "data_sha256": "cb84caba48d26e39fa0f1a4e4a0fe26ec180793f817cce80ef8e50b4ed5b1cdb",
+      "source_score_sha256": "f181d6945cb887d0290eb65abc2a78fb34fb5983a2321e4f8e560d334c7ec336"
+    }
+  },
+  "degradation": {
+    "definition": "For each question, standardize candidate RM scores to population z-scores, then add sigma times deterministic standard Gaussian noise.",
+    "group_key": "question_uid",
+    "candidate_key": "candidate_index",
+    "labels_used": false,
+    "sigma_grid": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "nonzero_sigma_seeds": [
+      20260913,
+      20260914,
+      20260915,
+      20260916,
+      20260917
+    ],
+    "zero_sigma_seed": 0,
+    "variants": [
+      {
+        "id": "sigma_0_seed_0",
+        "sigma": 0.0,
+        "seed": 0
+      },
+      {
+        "id": "sigma_0p25_seed_20260913",
+        "sigma": 0.25,
+        "seed": 20260913
+      },
+      {
+        "id": "sigma_0p25_seed_20260914",
+        "sigma": 0.25,
+        "seed": 20260914
+      },
+      {
+        "id": "sigma_0p25_seed_20260915",
+        "sigma": 0.25,
+        "seed": 20260915
+      },
+      {
+        "id": "sigma_0p25_seed_20260916",
+        "sigma": 0.25,
+        "seed": 20260916
+      },
+      {
+        "id": "sigma_0p25_seed_20260917",
+        "sigma": 0.25,
+        "seed": 20260917
+      },
+      {
+        "id": "sigma_0p5_seed_20260913",
+        "sigma": 0.5,
+        "seed": 20260913
+      },
+      {
+        "id": "sigma_0p5_seed_20260914",
+        "sigma": 0.5,
+        "seed": 20260914
+      },
+      {
+        "id": "sigma_0p5_seed_20260915",
+        "sigma": 0.5,
+        "seed": 20260915
+      },
+      {
+        "id": "sigma_0p5_seed_20260916",
+        "sigma": 0.5,
+        "seed": 20260916
+      },
+      {
+        "id": "sigma_0p5_seed_20260917",
+        "sigma": 0.5,
+        "seed": 20260917
+      },
+      {
+        "id": "sigma_1_seed_20260913",
+        "sigma": 1.0,
+        "seed": 20260913
+      },
+      {
+        "id": "sigma_1_seed_20260914",
+        "sigma": 1.0,
+        "seed": 20260914
+      },
+      {
+        "id": "sigma_1_seed_20260915",
+        "sigma": 1.0,
+        "seed": 20260915
+      },
+      {
+        "id": "sigma_1_seed_20260916",
+        "sigma": 1.0,
+        "seed": 20260916
+      },
+      {
+        "id": "sigma_1_seed_20260917",
+        "sigma": 1.0,
+        "seed": 20260917
+      },
+      {
+        "id": "sigma_2_seed_20260913",
+        "sigma": 2.0,
+        "seed": 20260913
+      },
+      {
+        "id": "sigma_2_seed_20260914",
+        "sigma": 2.0,
+        "seed": 20260914
+      },
+      {
+        "id": "sigma_2_seed_20260915",
+        "sigma": 2.0,
+        "seed": 20260915
+      },
+      {
+        "id": "sigma_2_seed_20260916",
+        "sigma": 2.0,
+        "seed": 20260916
+      },
+      {
+        "id": "sigma_2_seed_20260917",
+        "sigma": 2.0,
+        "seed": 20260917
+      },
+      {
+        "id": "sigma_4_seed_20260913",
+        "sigma": 4.0,
+        "seed": 20260913
+      },
+      {
+        "id": "sigma_4_seed_20260914",
+        "sigma": 4.0,
+        "seed": 20260914
+      },
+      {
+        "id": "sigma_4_seed_20260915",
+        "sigma": 4.0,
+        "seed": 20260915
+      },
+      {
+        "id": "sigma_4_seed_20260916",
+        "sigma": 4.0,
+        "seed": 20260916
+      },
+      {
+        "id": "sigma_4_seed_20260917",
+        "sigma": 4.0,
+        "seed": 20260917
+      }
+    ],
+    "expected_variants": 26
+  },
+  "selection": {
+    "fit": "Train",
+    "configuration": "Pilot",
+    "test_labels_used_for_selection": false
+  },
+  "evaluation": {
+    "datasets": [
+      "GSM8K_ID",
+      "SVAMP_OOD",
+      "MATH_ID"
+    ],
+    "existing_test_benchmark": true,
+    "confirmatory_new_test": false,
+    "bootstrap_samples_per_variant": 20000,
+    "primary_strength_proxy": "raw_test_top1",
+    "primary_gain": "top1_delta"
+  },
+  "outputs": {
+    "score_root": "data/cache/controlled_reward_degradation_v1",
+    "score_manifest": "data/manifests/controlled_reward_degradation_scores_v1.json",
+    "result_manifest": "data/manifests/controlled_reward_degradation_results_v1.json"
+  }
+}
