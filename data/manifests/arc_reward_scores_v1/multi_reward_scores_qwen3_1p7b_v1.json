@@ -1,0 +1,47 @@
+{
+  "version": "multi_reward_full_scoring_v1",
+  "created_at": "2026-09-03T03:58:40.794034+00:00",
+  "model_key": "qwen3_1p7b",
+  "model_name": "Skywork-Reward-V2-Qwen3-1.7B",
+  "model_path": "models/reward/Skywork-Reward-V2-Qwen3-1.7B",
+  "model_config_sha256": "106d39725452746837071561f56464fd3f1d9a5a1e0ae926de02e6a0a4fa9b11",
+  "scoring": {
+    "task": "ARC-Challenge",
+    "candidates": 41440,
+    "input": "chat template with user=problem and assistant=solution_text",
+    "output": "model-specific scalar reward",
+    "sorting": "character_length",
+    "checkpoint": "numpy memmap after every batch",
+    "labels_used": false,
+    "sealed_test_labels_loaded": false,
+    "candidate_source_tag": "arc-challenge-qwen2-7b-full-k16-recovered-v1",
+    "candidate_sha256": "eb72914f82678c4738fab24ea055a62b00f8c207372d3f3ba85d785591267191"
+  },
+  "labels_used_for_scoring": false,
+  "splits": {
+    "arc_full_recovered": {
+      "candidates": 41440,
+      "source_file": "outputs/arc_challenge_v1/qwen2_7b_full_k16_recovered_candidates.jsonl",
+      "source_sha256": "eb72914f82678c4738fab24ea055a62b00f8c207372d3f3ba85d785591267191",
+      "score_file": "data/cache/arc_reward_scores_v1/Skywork-Reward-V2-Qwen3-1.7B/arc_full_recovered.scores_f32.npy",
+      "score_sha256": "e2b92df8becba8fa4d9dd4606d5ea4a5b89a6ae7eb78aa5529af600b4a5d94b0",
+      "statistics": {
+        "count": 41440,
+        "min": -10.1875,
+        "p05": -1.28125,
+        "median": 5.40625,
+        "mean": 5.26270957729531,
+        "p95": 11.4375,
+        "max": 16.875,
+        "std": 3.9886390994498133
+      },
+      "reused": false,
+      "elapsed_seconds": 267.768
+    }
+  },
+  "peak_gpu_gb": 4.809,
+  "elapsed_seconds": 271.847,
+  "completed_splits": [
+    "arc_full_recovered"
+  ]
+}

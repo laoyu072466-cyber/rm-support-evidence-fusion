@@ -1,0 +1,47 @@
+{
+  "version": "multi_reward_full_scoring_v1",
+  "created_at": "2026-09-03T04:07:30.900895+00:00",
+  "model_key": "armorm_8b",
+  "model_name": "ArmoRM-Llama3-8B-v0.1",
+  "model_path": "models/reward/ArmoRM-Llama3-8B-v0.1",
+  "model_config_sha256": "acdcfe3c365ed76bbbe775fb118b5d40202971d038261ec6af51f4f4367d0fbf",
+  "scoring": {
+    "task": "ARC-Challenge",
+    "candidates": 41440,
+    "input": "chat template with user=problem and assistant=solution_text",
+    "output": "model-specific scalar reward",
+    "sorting": "character_length",
+    "checkpoint": "numpy memmap after every batch",
+    "labels_used": false,
+    "sealed_test_labels_loaded": false,
+    "candidate_source_tag": "arc-challenge-qwen2-7b-full-k16-recovered-v1",
+    "candidate_sha256": "eb72914f82678c4738fab24ea055a62b00f8c207372d3f3ba85d785591267191"
+  },
+  "labels_used_for_scoring": false,
+  "splits": {
+    "arc_full_recovered": {
+      "candidates": 41440,
+      "source_file": "outputs/arc_challenge_v1/qwen2_7b_full_k16_recovered_candidates.jsonl",
+      "source_sha256": "eb72914f82678c4738fab24ea055a62b00f8c207372d3f3ba85d785591267191",
+      "score_file": "data/cache/arc_reward_scores_v1/ArmoRM-Llama3-8B-v0.1/arc_full_recovered.scores_f32.npy",
+      "score_sha256": "09472611d6e1a4129f18772850c9f16ed2b38e44d1d8dc0d1cb0d9da1e7388cc",
+      "statistics": {
+        "count": 41440,
+        "min": 0.0023651123046875,
+        "p05": 0.08251953125,
+        "median": 0.1474609375,
+        "mean": 0.14321598030885674,
+        "p95": 0.1875,
+        "max": 0.23046875,
+        "std": 0.03189619024945238
+      },
+      "reused": false,
+      "elapsed_seconds": 869.18
+    }
+  },
+  "peak_gpu_gb": 15.068,
+  "elapsed_seconds": 875.754,
+  "completed_splits": [
+    "arc_full_recovered"
+  ]
+}

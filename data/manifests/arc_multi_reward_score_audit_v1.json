@@ -1,0 +1,102 @@
+{
+  "version": "arc_multi_reward_score_audit_v1",
+  "created_at": "2026-09-03T04:30:33.059684+00:00",
+  "labels_loaded": false,
+  "sealed_test_labels_loaded": false,
+  "candidate_source_tag": "arc-challenge-qwen2-7b-full-k16-recovered-v1",
+  "candidates": {
+    "file": "outputs/arc_challenge_v1/qwen2_7b_full_k16_recovered_candidates.jsonl",
+    "sha256": "eb72914f82678c4738fab24ea055a62b00f8c207372d3f3ba85d785591267191",
+    "questions": 2590,
+    "candidates": 41440,
+    "candidates_per_question": 16,
+    "question_splits": {
+      "train": 1119,
+      "pilot": 299,
+      "test": 1172
+    },
+    "candidate_splits": {
+      "train": 17904,
+      "pilot": 4784,
+      "test": 18752
+    },
+    "unique_candidate_identities": 41440,
+    "forbidden_label_fields": {}
+  },
+  "models": {
+    "qwen3_1p7b": {
+      "model_key": "qwen3_1p7b",
+      "model_name": "Skywork-Reward-V2-Qwen3-1.7B",
+      "model_path": "models/reward/Skywork-Reward-V2-Qwen3-1.7B",
+      "manifest_file": "data/manifests/arc_reward_scores_v1/multi_reward_scores_qwen3_1p7b_v1.json",
+      "manifest_sha256": "2dcbb53f8e9d3137c6b0bb0509a832d6ba416352960715ab66513a78ec3ac685",
+      "score_file": "data/cache/arc_reward_scores_v1/Skywork-Reward-V2-Qwen3-1.7B/arc_full_recovered.scores_f32.npy",
+      "score_sha256": "e2b92df8becba8fa4d9dd4606d5ea4a5b89a6ae7eb78aa5529af600b4a5d94b0",
+      "statistics": {
+        "count": 41440,
+        "min": -10.1875,
+        "p05": -1.28125,
+        "median": 5.40625,
+        "mean": 5.26270957729531,
+        "p95": 11.4375,
+        "max": 16.875,
+        "std": 3.9886390994498133
+      },
+      "labels_used_for_scoring": false,
+      "sealed_test_labels_loaded": false
+    },
+    "internlm2_1p8b": {
+      "model_key": "internlm2_1p8b",
+      "model_name": "InternLM2-1.8B-Reward",
+      "model_path": "models/reward/InternLM2_1p8B_Reward",
+      "manifest_file": "data/manifests/arc_reward_scores_v1/multi_reward_scores_internlm2_1p8b_v1.json",
+      "manifest_sha256": "332ac78663cf4816a088548cfc1e23c79052b41b5f73d8f2d7ea64434025d632",
+      "score_file": "data/cache/arc_reward_scores_v1/InternLM2-1.8B-Reward/arc_full_recovered.scores_f32.npy",
+      "score_sha256": "16785a1da4b7da38884137fedb43c39b1874763fdc54659d9b7ff1449482a31c",
+      "statistics": {
+        "count": 41440,
+        "min": -2.640625,
+        "p05": -0.93994140625,
+        "median": 0.8271484375,
+        "mean": 0.763364000546541,
+        "p95": 2.267578125,
+        "max": 3.7109375,
+        "std": 0.9824948161907807
+      },
+      "labels_used_for_scoring": false,
+      "sealed_test_labels_loaded": false
+    },
+    "armorm_8b": {
+      "model_key": "armorm_8b",
+      "model_name": "ArmoRM-Llama3-8B-v0.1",
+      "model_path": "models/reward/ArmoRM-Llama3-8B-v0.1",
+      "manifest_file": "data/manifests/arc_reward_scores_v1/multi_reward_scores_armorm_8b_v1.json",
+      "manifest_sha256": "8777e6b1316da05655cf4f43ea2f2639dee929c86925e20845d44e861c9a95e7",
+      "score_file": "data/cache/arc_reward_scores_v1/ArmoRM-Llama3-8B-v0.1/arc_full_recovered.scores_f32.npy",
+      "score_sha256": "09472611d6e1a4129f18772850c9f16ed2b38e44d1d8dc0d1cb0d9da1e7388cc",
+      "statistics": {
+        "count": 41440,
+        "min": 0.0023651123046875,
+        "p05": 0.08251953125,
+        "median": 0.1474609375,
+        "mean": 0.14321598030885674,
+        "p95": 0.1875,
+        "max": 0.23046875,
+        "std": 0.03189619024945238
+      },
+      "labels_used_for_scoring": false,
+      "sealed_test_labels_loaded": false
+    }
+  },
+  "checks": {
+    "candidate_identity_preserved": true,
+    "candidate_sha256_verified": true,
+    "three_reward_models_present": true,
+    "all_score_arrays_float32": true,
+    "all_score_arrays_finite": true,
+    "all_score_sha256_verified": true,
+    "all_manifests_label_free": true,
+    "test_labels_still_sealed": true
+  },
+  "decision": "freeze_scores_before_train_pilot_label_configuration"
+}
