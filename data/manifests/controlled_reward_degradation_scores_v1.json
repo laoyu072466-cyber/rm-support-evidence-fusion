@@ -1,0 +1,218 @@
+{
+  "version": "controlled_reward_degradation_scores_v1",
+  "created_at": "2026-09-03T05:32:04.212759+00:00",
+  "configuration": "configs/controlled_reward_degradation_v1.json",
+  "configuration_sha256": "0940ebeb9d5a7408d8c8a235411757ce57046a26c29d0144a31f7083cc8924bb",
+  "base_reward_model": "Skywork-Reward-V2-Qwen3-4B",
+  "labels_used": false,
+  "variants": [
+    {
+      "id": "sigma_0_seed_0",
+      "sigma": 0.0,
+      "seed": 0,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_0_seed_0",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_0_seed_0/score_manifest.json",
+      "score_manifest_sha256": "d8f890781879ce8ef3e0fd9499b33ff5a7c1d4f4029561afbe55a898f2091797"
+    },
+    {
+      "id": "sigma_0p25_seed_20260913",
+      "sigma": 0.25,
+      "seed": 20260913,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_0p25_seed_20260913",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_0p25_seed_20260913/score_manifest.json",
+      "score_manifest_sha256": "1371bbb08624fbbe3aec68761e044d306412c52e631f8aef910afe76398b2fb3"
+    },
+    {
+      "id": "sigma_0p25_seed_20260914",
+      "sigma": 0.25,
+      "seed": 20260914,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_0p25_seed_20260914",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_0p25_seed_20260914/score_manifest.json",
+      "score_manifest_sha256": "ee3c03ca2fd6d92d9c78bc7d88702c98cc608ab77fa0743fe2330b138c8a8216"
+    },
+    {
+      "id": "sigma_0p25_seed_20260915",
+      "sigma": 0.25,
+      "seed": 20260915,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_0p25_seed_20260915",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_0p25_seed_20260915/score_manifest.json",
+      "score_manifest_sha256": "efa3ca18f6534dc77ad336b5e5afa02ebd6004457ef83e792d6ed37ed95e463e"
+    },
+    {
+      "id": "sigma_0p25_seed_20260916",
+      "sigma": 0.25,
+      "seed": 20260916,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_0p25_seed_20260916",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_0p25_seed_20260916/score_manifest.json",
+      "score_manifest_sha256": "91f551da23123b6d5c498ac5a7e363d71bd360a96e8ce341f5489ba311a9c258"
+    },
+    {
+      "id": "sigma_0p25_seed_20260917",
+      "sigma": 0.25,
+      "seed": 20260917,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_0p25_seed_20260917",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_0p25_seed_20260917/score_manifest.json",
+      "score_manifest_sha256": "8197d77c6eca6e04df53896f8238c1590abdd6ae1cd8fcc3d2d6ef32ea98d70e"
+    },
+    {
+      "id": "sigma_0p5_seed_20260913",
+      "sigma": 0.5,
+      "seed": 20260913,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_0p5_seed_20260913",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_0p5_seed_20260913/score_manifest.json",
+      "score_manifest_sha256": "45eed3953f16c84f84ee166c1153de140e728f2efd866220aa3972cf3c28d363"
+    },
+    {
+      "id": "sigma_0p5_seed_20260914",
+      "sigma": 0.5,
+      "seed": 20260914,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_0p5_seed_20260914",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_0p5_seed_20260914/score_manifest.json",
+      "score_manifest_sha256": "c32215c585af773085418078030b0a84cbf21e3d7896d5577fadfc56083e8af8"
+    },
+    {
+      "id": "sigma_0p5_seed_20260915",
+      "sigma": 0.5,
+      "seed": 20260915,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_0p5_seed_20260915",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_0p5_seed_20260915/score_manifest.json",
+      "score_manifest_sha256": "1b98e6191f5dd4c831e425bb97004d29d9c62e87b70f16c865d9f9febd7d23ba"
+    },
+    {
+      "id": "sigma_0p5_seed_20260916",
+      "sigma": 0.5,
+      "seed": 20260916,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_0p5_seed_20260916",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_0p5_seed_20260916/score_manifest.json",
+      "score_manifest_sha256": "a1eff553f6c3363aa3386a9b053d52adec6e8c4e42047475d6f3b396fc6a25c1"
+    },
+    {
+      "id": "sigma_0p5_seed_20260917",
+      "sigma": 0.5,
+      "seed": 20260917,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_0p5_seed_20260917",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_0p5_seed_20260917/score_manifest.json",
+      "score_manifest_sha256": "1e72df76118957d7c99f94953666266ddaf1395c954239678d1ec3724d5f2942"
+    },
+    {
+      "id": "sigma_1_seed_20260913",
+      "sigma": 1.0,
+      "seed": 20260913,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_1_seed_20260913",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_1_seed_20260913/score_manifest.json",
+      "score_manifest_sha256": "f0dc6710894056628a50a1ccde3af4bc0db23ed769d9db6e23f71515c852cdb0"
+    },
+    {
+      "id": "sigma_1_seed_20260914",
+      "sigma": 1.0,
+      "seed": 20260914,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_1_seed_20260914",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_1_seed_20260914/score_manifest.json",
+      "score_manifest_sha256": "1e539086a08dd27650b869a4eeacb148244cb656ca1d057b07df9232c5bf7bd3"
+    },
+    {
+      "id": "sigma_1_seed_20260915",
+      "sigma": 1.0,
+      "seed": 20260915,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_1_seed_20260915",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_1_seed_20260915/score_manifest.json",
+      "score_manifest_sha256": "bba0ef9831dfcbc55446ab37618541c54d974efdcfb90e1a7b454ea0a3f8fc6d"
+    },
+    {
+      "id": "sigma_1_seed_20260916",
+      "sigma": 1.0,
+      "seed": 20260916,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_1_seed_20260916",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_1_seed_20260916/score_manifest.json",
+      "score_manifest_sha256": "bb2d266242801ec20824df9c6350191d56abb3c44e1b64810c5e1d2bb0fcb411"
+    },
+    {
+      "id": "sigma_1_seed_20260917",
+      "sigma": 1.0,
+      "seed": 20260917,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_1_seed_20260917",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_1_seed_20260917/score_manifest.json",
+      "score_manifest_sha256": "008a3d864a7c74f43533fa51f44aa3c6926c74e934e241a08fcf8a0675438b47"
+    },
+    {
+      "id": "sigma_2_seed_20260913",
+      "sigma": 2.0,
+      "seed": 20260913,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_2_seed_20260913",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_2_seed_20260913/score_manifest.json",
+      "score_manifest_sha256": "8294afff6dafb520fc29e4aba2b973e4d6dcce5bbc69c0414550bdadb4ce6a5e"
+    },
+    {
+      "id": "sigma_2_seed_20260914",
+      "sigma": 2.0,
+      "seed": 20260914,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_2_seed_20260914",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_2_seed_20260914/score_manifest.json",
+      "score_manifest_sha256": "955316e8620bdc910689c4e7882ae6ac70e300c4c70ddea592778f207ccc66c0"
+    },
+    {
+      "id": "sigma_2_seed_20260915",
+      "sigma": 2.0,
+      "seed": 20260915,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_2_seed_20260915",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_2_seed_20260915/score_manifest.json",
+      "score_manifest_sha256": "7201f0b0f06277bd0f87162aad7c5dd83f57fe9a4233e229abbde4a23da4650e"
+    },
+    {
+      "id": "sigma_2_seed_20260916",
+      "sigma": 2.0,
+      "seed": 20260916,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_2_seed_20260916",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_2_seed_20260916/score_manifest.json",
+      "score_manifest_sha256": "371aeb855f429a0ebdad9d864de407a3d83539ed4f74171984d549e89a3d400d"
+    },
+    {
+      "id": "sigma_2_seed_20260917",
+      "sigma": 2.0,
+      "seed": 20260917,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_2_seed_20260917",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_2_seed_20260917/score_manifest.json",
+      "score_manifest_sha256": "180d7712cb9710a132d210ac095c31f85b05bfa9d3a6ee55b576909f45879aba"
+    },
+    {
+      "id": "sigma_4_seed_20260913",
+      "sigma": 4.0,
+      "seed": 20260913,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_4_seed_20260913",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_4_seed_20260913/score_manifest.json",
+      "score_manifest_sha256": "b1e0eec0a54da5ce74cfca21631d7a250cbeda6375a33b945080757c5027d949"
+    },
+    {
+      "id": "sigma_4_seed_20260914",
+      "sigma": 4.0,
+      "seed": 20260914,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_4_seed_20260914",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_4_seed_20260914/score_manifest.json",
+      "score_manifest_sha256": "e5a50f46b9636d3c03fa45c2c440f63e3c38f7766bee35ae221c6c191606fde9"
+    },
+    {
+      "id": "sigma_4_seed_20260915",
+      "sigma": 4.0,
+      "seed": 20260915,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_4_seed_20260915",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_4_seed_20260915/score_manifest.json",
+      "score_manifest_sha256": "efc90d2e16403c0e05a3af1611fed09ddeae98d9a5f50eca586636a2bfd8de18"
+    },
+    {
+      "id": "sigma_4_seed_20260916",
+      "sigma": 4.0,
+      "seed": 20260916,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_4_seed_20260916",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_4_seed_20260916/score_manifest.json",
+      "score_manifest_sha256": "fa65d84125c977aa540a66e9108f771fe02c18ded22f52a4aac6b624f4fb9a7e"
+    },
+    {
+      "id": "sigma_4_seed_20260917",
+      "sigma": 4.0,
+      "seed": 20260917,
+      "score_root": "data/cache/controlled_reward_degradation_v1/sigma_4_seed_20260917",
+      "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_4_seed_20260917/score_manifest.json",
+      "score_manifest_sha256": "275126d756b78d6779f293f8b65586917b03d3e742691de74e3daa86395f86e0"
+    }
+  ]
+}

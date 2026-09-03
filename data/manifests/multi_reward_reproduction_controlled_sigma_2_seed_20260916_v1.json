@@ -1,0 +1,326 @@
+{
+  "version": "multi_reward_reproduction_v1",
+  "base_reward_model": "Skywork-Reward-V2-Qwen3-4B degraded sigma=2.0 seed=20260916",
+  "score_root": "data/cache/controlled_reward_degradation_v1/sigma_2_seed_20260916",
+  "score_manifest": "data/cache/controlled_reward_degradation_v1/sigma_2_seed_20260916/score_manifest.json",
+  "score_manifest_sha256": "371aeb855f429a0ebdad9d864de407a3d83539ed4f74171984d549e89a3d400d",
+  "feature_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "configuration_selection": "independent Train fit and Pilot selection for each reward model",
+  "test_labels_used_for_selection": false,
+  "bootstrap_samples": 20000,
+  "bootstrap_seed": 20260903,
+  "results": {
+    "GSM8K": {
+      "selected": {
+        "regularization": 0.1,
+        "beta": 2.0,
+        "threshold": 0.0,
+        "top1": 0.9259259259259259,
+        "pair_macro_strict": 0.9536569691331597,
+        "damage_rate": 0.007042253521126761
+      },
+      "tests": {
+        "GSM8K_ID": {
+          "point": {
+            "questions": 1142,
+            "raw_top1": 0.6234676007005254,
+            "method_top1": 0.7504378283712785,
+            "top1_delta": 0.12697022767075306,
+            "raw_pair": 0.6763772982709059,
+            "method_pair": 0.8819973854589659,
+            "pair_delta": 0.20562008718806005,
+            "damage_rate": 0.04073033707865169,
+            "correction_rate": 0.4046511627906977,
+            "budget": {
+              "k4": {
+                "eligible_questions": 1142,
+                "coverage": 1.0,
+                "pass_at_k": 0.797771405477185,
+                "raw_best_at_k": 0.5587916170227905,
+                "method_best_at_k": 0.7079428598255219,
+                "best_at_k_delta": 0.14915124280273143
+              },
+              "k8": {
+                "eligible_questions": 1142,
+                "coverage": 1.0,
+                "pass_at_k": 0.9216479861838882,
+                "raw_best_at_k": 0.5994932679696252,
+                "method_best_at_k": 0.7462095794845357,
+                "best_at_k_delta": 0.14671631151491046
+              }
+            }
+          }
+        },
+        "SVAMP_OOD": {
+          "point": {
+            "questions": 883,
+            "raw_top1": 0.7010192525481314,
+            "method_top1": 0.8187995469988675,
+            "top1_delta": 0.11778029445073612,
+            "raw_pair": 0.6717154736124158,
+            "method_pair": 0.9030658940908091,
+            "pair_delta": 0.23135042047839327,
+            "damage_rate": 0.029079159935379646,
+            "correction_rate": 0.4621212121212121,
+            "budget": {
+              "k4": {
+                "eligible_questions": 883,
+                "coverage": 1.0,
+                "pass_at_k": 0.8539745079382678,
+                "raw_best_at_k": 0.6342292978193317,
+                "method_best_at_k": 0.7829603515900232,
+                "best_at_k_delta": 0.14873105377069137
+              },
+              "k8": {
+                "eligible_questions": 883,
+                "coverage": 1.0,
+                "pass_at_k": 0.9471373725054358,
+                "raw_best_at_k": 0.675275774936024,
+                "method_best_at_k": 0.8164918760615251,
+                "best_at_k_delta": 0.1412161011255009
+              }
+            }
+          }
+        }
+      }
+    },
+    "MATH": {
+      "selected": {
+        "regularization": 0.001,
+        "beta": 2.0,
+        "threshold": 1.0,
+        "top1": 0.930379746835443,
+        "pair_macro_strict": 0.9627418631532555,
+        "damage_rate": 0.0078125
+      },
+      "tests": {
+        "MATH_ID": {
+          "point": {
+            "questions": 340,
+            "raw_top1": 0.6029411764705882,
+            "method_top1": 0.7058823529411765,
+            "top1_delta": 0.10294117647058823,
+            "raw_pair": 0.6532335846343199,
+            "method_pair": 0.8225482777026895,
+            "pair_delta": 0.16931469306836955,
+            "damage_rate": 0.05365853658536585,
+            "correction_rate": 0.34074074074074073,
+            "budget": {
+              "k4": {
+                "eligible_questions": 340,
+                "coverage": 1.0,
+                "pass_at_k": 0.8090664074487603,
+                "raw_best_at_k": 0.5610673640085405,
+                "method_best_at_k": 0.6747209816327464,
+                "best_at_k_delta": 0.11365361762420587
+              },
+              "k8": {
+                "eligible_questions": 330,
+                "coverage": 0.9705882352941176,
+                "pass_at_k": 0.9358951149860241,
+                "raw_best_at_k": 0.5828193019102109,
+                "method_best_at_k": 0.7035531471895109,
+                "best_at_k_delta": 0.12073384527929984
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "dataset_points": {
+    "GSM8K_ID": {
+      "questions": 1142,
+      "raw_top1": 0.6234676007005254,
+      "method_top1": 0.7504378283712785,
+      "top1_delta": 0.12697022767075306,
+      "raw_pair": 0.6763772982709059,
+      "method_pair": 0.8819973854589659,
+      "pair_delta": 0.20562008718806005,
+      "damage_rate": 0.04073033707865169,
+      "correction_rate": 0.4046511627906977,
+      "budget": {
+        "k4": {
+          "eligible_questions": 1142,
+          "coverage": 1.0,
+          "pass_at_k": 0.797771405477185,
+          "raw_best_at_k": 0.5587916170227905,
+          "method_best_at_k": 0.7079428598255219,
+          "best_at_k_delta": 0.14915124280273143
+        },
+        "k8": {
+          "eligible_questions": 1142,
+          "coverage": 1.0,
+          "pass_at_k": 0.9216479861838882,
+          "raw_best_at_k": 0.5994932679696252,
+          "method_best_at_k": 0.7462095794845357,
+          "best_at_k_delta": 0.14671631151491046
+        }
+      }
+    },
+    "SVAMP_OOD": {
+      "questions": 883,
+      "raw_top1": 0.7010192525481314,
+      "method_top1": 0.8187995469988675,
+      "top1_delta": 0.11778029445073612,
+      "raw_pair": 0.6717154736124158,
+      "method_pair": 0.9030658940908091,
+      "pair_delta": 0.23135042047839327,
+      "damage_rate": 0.029079159935379646,
+      "correction_rate": 0.4621212121212121,
+      "budget": {
+        "k4": {
+          "eligible_questions": 883,
+          "coverage": 1.0,
+          "pass_at_k": 0.8539745079382678,
+          "raw_best_at_k": 0.6342292978193317,
+          "method_best_at_k": 0.7829603515900232,
+          "best_at_k_delta": 0.14873105377069137
+        },
+        "k8": {
+          "eligible_questions": 883,
+          "coverage": 1.0,
+          "pass_at_k": 0.9471373725054358,
+          "raw_best_at_k": 0.675275774936024,
+          "method_best_at_k": 0.8164918760615251,
+          "best_at_k_delta": 0.1412161011255009
+        }
+      }
+    },
+    "MATH_ID": {
+      "questions": 340,
+      "raw_top1": 0.6029411764705882,
+      "method_top1": 0.7058823529411765,
+      "top1_delta": 0.10294117647058823,
+      "raw_pair": 0.6532335846343199,
+      "method_pair": 0.8225482777026895,
+      "pair_delta": 0.16931469306836955,
+      "damage_rate": 0.05365853658536585,
+      "correction_rate": 0.34074074074074073,
+      "budget": {
+        "k4": {
+          "eligible_questions": 340,
+          "coverage": 1.0,
+          "pass_at_k": 0.8090664074487603,
+          "raw_best_at_k": 0.5610673640085405,
+          "method_best_at_k": 0.6747209816327464,
+          "best_at_k_delta": 0.11365361762420587
+        },
+        "k8": {
+          "eligible_questions": 330,
+          "coverage": 0.9705882352941176,
+          "pass_at_k": 0.9358951149860241,
+          "raw_best_at_k": 0.5828193019102109,
+          "method_best_at_k": 0.7035531471895109,
+          "best_at_k_delta": 0.12073384527929984
+        }
+      }
+    }
+  },
+  "test_macro": {
+    "datasets": 3,
+    "questions": 2365,
+    "raw_top1": 0.6424760099064151,
+    "method_top1": 0.7583732427704408,
+    "top1_delta": 0.1158972328640258,
+    "raw_pair": 0.6671087855058805,
+    "method_pair": 0.8692038524174882,
+    "pair_delta": 0.2020950669116076,
+    "damage_rate": 0.04115601119979906,
+    "correction_rate": 0.4025043718842169,
+    "budget": {
+      "k4": {
+        "raw_best_at_k": 0.584696092950221,
+        "method_best_at_k": 0.7218747310160971,
+        "best_at_k_delta": 0.13717863806587624,
+        "pass_at_k": 0.8202707736214044,
+        "coverage": 1.0
+      },
+      "k8": {
+        "raw_best_at_k": 0.61919611493862,
+        "method_best_at_k": 0.7554182009118572,
+        "best_at_k_delta": 0.13622208597323707,
+        "pass_at_k": 0.934893491225116,
+        "coverage": 0.9901960784313726
+      }
+    }
+  },
+  "paired_bootstrap_macro": {
+    "top1_delta": {
+      "ci95": [
+        0.09763220354693775,
+        0.13380731027835863
+      ],
+      "probability_positive": 1.0,
+      "point": 0.1158972328640258
+    },
+    "pair_delta": {
+      "ci95": [
+        0.18901429881261675,
+        0.21467947799765436
+      ],
+      "probability_positive": 1.0,
+      "point": 0.2020950669116076
+    },
+    "damage_rate": {
+      "ci95": [
+        0.029605480717799875,
+        0.05388329300069957
+      ],
+      "probability_positive": 1.0,
+      "point": 0.04115601119979906
+    },
+    "correction_rate": {
+      "ci95": [
+        0.3656709718086807,
+        0.43901918242451754
+      ],
+      "probability_positive": 1.0,
+      "point": 0.4025043718842169
+    },
+    "best_at_4_delta": {
+      "ci95": [
+        0.127277152188678,
+        0.1470850849891323
+      ],
+      "probability_positive": 1.0,
+      "point": 0.13717863806587624
+    },
+    "best_at_8_delta": {
+      "ci95": [
+        0.12155386875815365,
+        0.1507685728196633
+      ],
+      "probability_positive": 1.0,
+      "point": 0.13622208597323707
+    }
+  },
+  "reference_qwen3_1p7b": {
+    "base_reward_model": "Skywork-Reward-V2-Qwen3-1.7B",
+    "raw_top1": 0.8080966116188856,
+    "method_top1": 0.830445295555394,
+    "top1_delta": 0.02234868393650844,
+    "raw_pair": 0.830883,
+    "method_pair": 0.909742,
+    "pair_delta": 0.078859,
+    "damage_rate": 0.021721,
+    "best_at_4_delta": 0.057225,
+    "best_at_8_delta": 0.046716
+  },
+  "comparison_to_qwen3_1p7b": {
+    "raw_top1_difference": -0.1656206017124705,
+    "method_top1_difference": -0.07207205278495321,
+    "top1_delta_difference": 0.09354854892751735,
+    "damage_rate_difference": 0.019435011199799058
+  },
+  "elapsed_seconds": 29.157
+}
