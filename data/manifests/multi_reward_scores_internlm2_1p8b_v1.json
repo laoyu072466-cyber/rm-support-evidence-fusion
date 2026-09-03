@@ -1,0 +1,64 @@
+{
+  "version": "multi_reward_full_scoring_v1",
+  "created_at": "2026-09-03T03:40:00.490372+00:00",
+  "model_key": "internlm2_1p8b",
+  "model_name": "InternLM2-1.8B-Reward",
+  "model_path": "models/reward/InternLM2_1p8B_Reward",
+  "model_config_sha256": "a50c39e11d22fb4250c2fa82724dbd59c8b2b1885fa85ca4565b4f710dc0c957",
+  "scoring": {
+    "input": "official chat template: user=problem, assistant=solution_text",
+    "output": "InternLM2ForRewardModel.get_scores; official reward token",
+    "dtype": "float16",
+    "batching": "official get_scores",
+    "sorting": "character_length",
+    "checkpoint": "numpy memmap after every batch",
+    "labels_used": false
+  },
+  "labels_used_for_scoring": false,
+  "splits": {
+    "gsm_pilot": {
+      "candidates": 2985,
+      "source_file": "data/processed/prototype_v2/gsm_pilot_validation.jsonl",
+      "source_sha256": "26e1652192504c2e8fe609c65290fdff86d9cd8e0b5d34a56e4050099bd60a3f",
+      "score_file": "data/cache/reward_scores_full_v1/InternLM2-1.8B-Reward/gsm_pilot.scores_f32.npy",
+      "score_sha256": "977822a4329b1eda8f268c81cbcd7205c9021d7638788be9e584f72209deab44",
+      "statistics": {
+        "count": 2985,
+        "min": -3.158203125,
+        "p05": -1.5472656249999999,
+        "median": 0.3935546875,
+        "mean": 0.39137105877874684,
+        "p95": 2.2449218749999984,
+        "max": 3.6171875,
+        "std": 1.1581082662793756
+      },
+      "reused": false,
+      "elapsed_seconds": 13.069
+    },
+    "math_pilot": {
+      "candidates": 2040,
+      "source_file": "data/processed/prototype_v2/math_pilot_validation.jsonl",
+      "source_sha256": "eba33790e2a52c74e5dc6e79bd46f26082034f785330fdd630606cf67044334b",
+      "score_file": "data/cache/reward_scores_full_v1/InternLM2-1.8B-Reward/math_pilot.scores_f32.npy",
+      "score_sha256": "3996f7134c6d3312a157b07e0c29409e1162493187834e36be07e4d346c0f869",
+      "statistics": {
+        "count": 2040,
+        "min": -2.951171875,
+        "p05": -0.9428955078125,
+        "median": 1.11083984375,
+        "mean": 1.041162591822007,
+        "p95": 2.81259765625,
+        "max": 3.91015625,
+        "std": 1.147262003188912
+      },
+      "reused": false,
+      "elapsed_seconds": 13.07
+    }
+  },
+  "peak_gpu_gb": 6.072,
+  "elapsed_seconds": 29.258,
+  "completed_splits": [
+    "gsm_pilot",
+    "math_pilot"
+  ]
+}
