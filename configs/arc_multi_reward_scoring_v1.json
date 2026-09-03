@@ -1,0 +1,46 @@
+{
+  "version": "arc_multi_reward_scoring_v1",
+  "output_root": "data/cache/arc_reward_scores_v1",
+  "manifest_root": "data/manifests/arc_reward_scores_v1",
+  "models": {
+    "qwen3_1p7b": {
+      "name": "Skywork-Reward-V2-Qwen3-1.7B",
+      "path": "models/reward/Skywork-Reward-V2-Qwen3-1.7B",
+      "initial_batch_size": 32,
+      "interface": "sequence_classification_logit",
+      "dtype": "bfloat16"
+    },
+    "internlm2_1p8b": {
+      "name": "InternLM2-1.8B-Reward",
+      "path": "models/reward/InternLM2_1p8B_Reward",
+      "initial_batch_size": 16,
+      "interface": "official_get_scores",
+      "dtype": "float16"
+    },
+    "armorm_8b": {
+      "name": "ArmoRM-Llama3-8B-v0.1",
+      "path": "models/reward/ArmoRM-Llama3-8B-v0.1",
+      "initial_batch_size": 8,
+      "interface": "sequence_classification_logit",
+      "dtype": "bfloat16"
+    }
+  },
+  "splits": [
+    {
+      "name": "arc_full_recovered",
+      "file": "outputs/arc_challenge_v1/qwen2_7b_full_k16_recovered_candidates.jsonl"
+    }
+  ],
+  "scoring": {
+    "task": "ARC-Challenge",
+    "candidates": 41440,
+    "input": "chat template with user=problem and assistant=solution_text",
+    "output": "model-specific scalar reward",
+    "sorting": "character_length",
+    "checkpoint": "numpy memmap after every batch",
+    "labels_used": false,
+    "sealed_test_labels_loaded": false,
+    "candidate_source_tag": "arc-challenge-qwen2-7b-full-k16-recovered-v1",
+    "candidate_sha256": "eb72914f82678c4738fab24ea055a62b00f8c207372d3f3ba85d785591267191"
+  }
+}
