@@ -1,0 +1,239 @@
+{
+  "version": "reward_strength_gain_trend_v1",
+  "created_at": "2026-09-03T03:56:28.376909+00:00",
+  "datasets": [
+    "GSM8K_ID",
+    "SVAMP_OOD",
+    "MATH_ID"
+  ],
+  "aggregation": "unweighted macro average across the same three frozen test datasets",
+  "models": [
+    {
+      "name": "Skywork-Reward-V2-Qwen3-1.7B",
+      "family": "Skywork-Qwen",
+      "parameters_b": 1.7,
+      "raw_top1": 0.8080966116188856,
+      "method_top1": 0.830445295555394,
+      "top1_delta": 0.02234868393650844,
+      "pair_delta": 0.078859,
+      "best_at_4_delta": 0.057225,
+      "best_at_8_delta": 0.046716,
+      "source": "answer-cluster-gate-mechanism-v1"
+    },
+    {
+      "name": "Skywork-Reward-V2-Qwen3-4B",
+      "family": "Skywork-Qwen",
+      "parameters_b": 4.0,
+      "raw_top1": 0.8179606272776886,
+      "method_top1": 0.8354196861978197,
+      "top1_delta": 0.017459058920131075,
+      "pair_delta": 0.06587205395880376,
+      "best_at_4_delta": 0.04891891375807899,
+      "best_at_8_delta": 0.04015417518924323,
+      "source": "multi-reward-qwen3-4b-reproduction-v1"
+    },
+    {
+      "name": "Skywork-Reward-V2-Llama-3.1-8B",
+      "family": "Skywork-Llama",
+      "parameters_b": 8.0,
+      "raw_top1": 0.7360033873583189,
+      "method_top1": 0.7938109037221702,
+      "top1_delta": 0.057807516363851175,
+      "pair_delta": 0.10088646827462172,
+      "best_at_4_delta": 0.0770366685419377,
+      "best_at_8_delta": 0.07593753808032204,
+      "source": "multi-reward-llama-8b-reproduction-v1"
+    },
+    {
+      "name": "ArmoRM-Llama3-8B-v0.1",
+      "family": "ArmoRM",
+      "parameters_b": 8.0,
+      "raw_top1": 0.7573707146769154,
+      "method_top1": 0.8115191747106802,
+      "top1_delta": 0.05414846003376469,
+      "pair_delta": 0.08631744840247997,
+      "best_at_4_delta": 0.06727019359112334,
+      "best_at_8_delta": 0.06720169842778495,
+      "source": "multi-reward-armorm-reproduction-v1"
+    },
+    {
+      "name": "InternLM2-1.8B-Reward",
+      "family": "InternLM",
+      "parameters_b": 1.8,
+      "raw_top1": 0.6501680184482732,
+      "method_top1": 0.7679811784648448,
+      "top1_delta": 0.1178131600165716,
+      "pair_delta": 0.15199931217105067,
+      "best_at_4_delta": 0.11387623212456659,
+      "best_at_8_delta": 0.12488338053594839,
+      "source": "multi-reward-internlm2-1p8b-reproduction-v1"
+    }
+  ],
+  "correlations": {
+    "top1_delta": {
+      "pearson": -0.9954150510080283,
+      "spearman": -0.9999999999999999,
+      "linear_slope": -0.5924503642313574,
+      "linear_intercept": 0.5005754785483695,
+      "strict_inverse_monotonic": true,
+      "leave_one_out": [
+        {
+          "excluded_model": "Skywork-Reward-V2-Qwen3-1.7B",
+          "pearson": -0.9943518034420522,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "Skywork-Reward-V2-Qwen3-4B",
+          "pearson": -0.9942163370430427,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "Skywork-Reward-V2-Llama-3.1-8B",
+          "pearson": -0.9999218418389618,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "ArmoRM-Llama3-8B-v0.1",
+          "pearson": -0.9959223149609719,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "InternLM2-1.8B-Reward",
+          "pearson": -0.9885100869030151,
+          "spearman": -1.0
+        }
+      ],
+      "leave_one_out_pearson_range": [
+        -0.9999218418389618,
+        -0.9885100869030151
+      ]
+    },
+    "pair_delta": {
+      "pearson": -0.9781899078017656,
+      "spearman": -0.9999999999999999,
+      "linear_slope": -0.48468083674277784,
+      "linear_intercept": 0.46219737089926655,
+      "strict_inverse_monotonic": true,
+      "leave_one_out": [
+        {
+          "excluded_model": "Skywork-Reward-V2-Qwen3-1.7B",
+          "pearson": -0.9896598116092071,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "Skywork-Reward-V2-Qwen3-4B",
+          "pearson": -0.970072178118058,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "Skywork-Reward-V2-Llama-3.1-8B",
+          "pearson": -0.9811796072431103,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "ArmoRM-Llama3-8B-v0.1",
+          "pearson": -0.9888991499120395,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "InternLM2-1.8B-Reward",
+          "pearson": -0.9401300879769003,
+          "spearman": -1.0
+        }
+      ],
+      "leave_one_out_pearson_range": [
+        -0.9896598116092071,
+        -0.9401300879769003
+      ]
+    },
+    "best_at_4_delta": {
+      "pearson": -0.9899417843477344,
+      "spearman": -0.9999999999999999,
+      "linear_slope": -0.3711262413482662,
+      "linear_intercept": 0.35266484993025354,
+      "strict_inverse_monotonic": true,
+      "leave_one_out": [
+        {
+          "excluded_model": "Skywork-Reward-V2-Qwen3-1.7B",
+          "pearson": -0.995585938578451,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "Skywork-Reward-V2-Qwen3-4B",
+          "pearson": -0.9859936529222715,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "Skywork-Reward-V2-Llama-3.1-8B",
+          "pearson": -0.991422604018578,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "ArmoRM-Llama3-8B-v0.1",
+          "pearson": -0.9944608776740755,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "InternLM2-1.8B-Reward",
+          "pearson": -0.9766619313789298,
+          "spearman": -1.0
+        }
+      ],
+      "leave_one_out_pearson_range": [
+        -0.995585938578451,
+        -0.9766619313789298
+      ]
+    },
+    "best_at_8_delta": {
+      "pearson": -0.9962740438034983,
+      "spearman": -0.9999999999999999,
+      "linear_slope": -0.4953811109829942,
+      "linear_intercept": 0.4444562221687572,
+      "strict_inverse_monotonic": true,
+      "leave_one_out": [
+        {
+          "excluded_model": "Skywork-Reward-V2-Qwen3-1.7B",
+          "pearson": -0.9969329747501569,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "Skywork-Reward-V2-Qwen3-4B",
+          "pearson": -0.9951432146942875,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "Skywork-Reward-V2-Llama-3.1-8B",
+          "pearson": -0.998455910081725,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "ArmoRM-Llama3-8B-v0.1",
+          "pearson": -0.9968598916480074,
+          "spearman": -1.0
+        },
+        {
+          "excluded_model": "InternLM2-1.8B-Reward",
+          "pearson": -0.998314296702991,
+          "spearman": -1.0
+        }
+      ],
+      "leave_one_out_pearson_range": [
+        -0.998455910081725,
+        -0.9951432146942875
+      ]
+    }
+  },
+  "internlm_gap_recovery": {
+    "reference_model": "Skywork-Reward-V2-Qwen3-1.7B",
+    "initial_raw_top1_gap": 0.15792859317061236,
+    "remaining_method_top1_gap": 0.06246411709054922,
+    "gap_recovered": 0.09546447608006314,
+    "fraction_gap_recovered": 0.6044787341132811
+  },
+  "interpretation": {
+    "supported_claim": "Across five frozen reward models, weaker raw ranking is associated with larger fusion gains.",
+    "causal_claim_allowed": false,
+    "reason": "The five real reward models differ in architecture, scale, and training data; controlled score degradation is still required."
+  },
+  "labels_accessed_by_this_analysis": false
+}
